@@ -176,3 +176,5 @@ label.md-header__button[for="__drawer"]{display:none!important}
 .vab-panel a.is-active{color:#003f72;font-weight:700;background:#e6f0f8}
 .vab-nav-btn+.vab-panel{left:.4rem}
 .vab-toc-wrap .vab-panel{right:0}
+
+.md-content__inner:not(:has(.vab-hero)){margin-left:auto!important;margin-right:auto!important}
