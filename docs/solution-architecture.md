@@ -33,15 +33,7 @@ Veteran Access Bridge connects **Avery**, an SI voice agent using IBM watsonx Or
 
 ## Trust-boundary detail
 
-```mermaid
-flowchart LR
-  A["Avery: selects MCP tool"] --> M["Authenticated + scoped MCP request"]
-  H["Trusted voice host: identity / current confirmation"] --> S["Deterministic scheduling service"]
-  M --> S
-  S --> D[("Synthetic appointment / CRM database")]
-  S --> V["Approved VA sandbox reads"]
-  S --> R["Receipt / denial / review"]
-```
+[![Trust-boundary detail: Avery requests via scoped MCP; trusted voice host and deterministic scheduling service decide; writes go to synthetic database, sandbox reads, receipts](assets/trust-boundary.png)](assets/trust-boundary.png)
 
 **Core principle:** SI can request an operation. Only trusted services determine whether it is valid, permitted and committed. Routine scoped internal Primary Care service policy and Community Care human-review paths are intentionally distinct.
 
