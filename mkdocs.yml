@@ -1,0 +1,52 @@
+site_name: Veteran Access Bridge
+site_description: Governed MCP server for synthetic Veteran healthcare scheduling · GSA SI & MCP hackathon
+site_url: https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/
+repo_url: https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server
+repo_name: gsa-mcp-hackathon/veteran-access-bridge-mcp-server
+theme:
+  name: material
+  variant: classic
+  logo: assets/mark.svg
+  favicon: assets/mark.svg
+  palette:
+    primary: custom
+    accent: custom
+  font: false
+  features:
+    - navigation.top
+    - navigation.sections
+    - navigation.indexes
+    - content.code.copy
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+nav:
+  - Home: index.md
+  - Solution & Architecture: solution-architecture.md
+  - MCP Implementation: mcp-implementation.md
+  - Security & Governance: security-governance.md
+  - Evaluation & Results:
+      - evaluation/index.md
+      - Method & Gold Questions: evaluation/method-gold.md
+      - Validation & Agent Evidence: evaluation/validation-agent.md
+      - Security & Adversarial: evaluation/security-adversarial.md
+  - Demonstration: demonstration.md
+  - Developer Guide:
+      - developer-guide/index.md
+      - Local MCP Server: developer-guide/local-mcp-server.md
+      - VHA Sandbox: developer-guide/vha-sandbox.md
+      - Supabase: developer-guide/supabase.md
+      - IBM Orchestrate: developer-guide/ibm-orchestrate.md
+      - DeepEval: developer-guide/deepeval.md
+      - Phoenix: developer-guide/phoenix.md
+      - Release Checklist: developer-guide/release-checklist.md
+extra_css:
+  - stylesheets/home.css
+  - stylesheets/security-architecture.css
+extra_javascript:
+  - assets/evaluation-report.js
+  - assets/header-menu.js
+  - assets/security-architecture.js
+copyright: 'Veteran Access Bridge · Independent synthetic technical demonstration · Not a VA-operated scheduling service'
