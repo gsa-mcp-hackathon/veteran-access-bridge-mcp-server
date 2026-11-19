@@ -1,47 +1,73 @@
 # Security & Governance
 
-> **The LLM is not the security boundary.**
+**The LLM is not the security boundary.** Avery selects tools and coordinates a conversation. Independent trusted services determine whether information may be disclosed and whether a synthetic appointment may be committed.
 
-Avery can select a relevant MCP tool and request an action. The trusted server and host independently decide whether the caller, case, consent, slot and service policy authorize it. **All appointment writes in this project are synthetic.**
+<div class="sec-kpi"><div><b>Identity</b><span>Verified host + case scope</span></div><div><b>Consent</b><span>Current caller confirmation</span></div><div><b>Policy</b><span>Deterministic authorization</span></div><div><b>Receipt</b><span>Verified persisted outcome</span></div></div>
 
-## Governing a tool request
+## 01 · The protected request path
 
-```mermaid
-flowchart TD
-  R["Incoming MCP request"] --> A{"Service authentication valid?"}
-  A -->|No| D["Deny without fabricated result"]
-  A -->|Yes| S{"Trusted caller / case scope valid?"}
-  S -->|No| D
-  S -->|Yes| W{"Read or protected write?"}
-  W -->|Read| E["Return scoped evidence"]
-  W -->|Write| C{"Fresh slot + current confirmation?"}
-  C -->|No| D
-  C -->|Yes| P{"Applicable policy / authority satisfied?"}
-  P -->|No| H["Human review or denial"]
-  P -->|Yes| B["Idempotent synthetic commit + receipt"]
-```
+<div class="sec-flow" aria-label="Protected MCP request path">
+ <div class="sec-flow-node"><strong>SI Agent</strong><span>Avery selects a tool, but cannot issue its own authority</span></div>
+ <div class="sec-flow-arrow">→</div>
+ <div class="sec-flow-node"><strong>MCP Boundary</strong><span>Authenticate, validate tool arguments, enforce trusted case scope</span></div>
+ <div class="sec-flow-arrow">→</div>
+ <div class="sec-flow-node focal"><strong>Deterministic Services</strong><span>Confirm current identity, consent, slot and policy</span></div>
+ <div class="sec-flow-arrow">→</div>
+ <div class="sec-flow-node"><strong>Decision</strong><span>Scoped read · Denial / review · Idempotent synthetic commit + receipt</span></div>
+</div>
 
-## Critical controls
+!!! info "A booking request is not a booking authorization"
+    **Selection ≠ confirmation ≠ persisted booking.** A valid MCP bearer token or a UI login is not scheduling authority. Routine internal synthetic Primary Care may use a separately trusted service-policy grant after confirmation; other workflows may require staff/Community Care review.
 
-| Control | Enforcement |
-|---|---|
-| Identity / session binding | Trusted host verifies synthetic caller and binds room, participant, case and time scope. |
-| Credential versus authority | An MCP bearer token or reviewer login is **not** booking permission. |
-| Current confirmation | Option selection != caller confirmation != persisted booking. |
-| Policy and Community Care | A wait-time threshold is a review signal, **not** Community Care eligibility/authorization. |
-| Routine internal Primary Care | A separate, trusted scoped service-policy grant may permit synthetic booking after caller confirmation; not every path needs manual scheduler approval. |
-| Database writes | RLS/restricted roles, idempotency keys, receipts and independent post-write validation. |
-| Knowledge/retrieval | Untrusted KB text cannot grant consent, identity, signing material or authority. |
-| Client security | Browser sees authorized projections; privileged MCP and database credentials are never exposed. |
+## 02 · Defense by control layer
 
-## Adversarial verification
+| Enforcement layer | What it checks | Evidence |
+|---|---|---|
+| Service authentication | Authenticated remote MCP access; missing or invalid service credentials denied | [Scope/session service](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/src/veteran_access_bridge/mcp/session_scope.py) |
+| Trusted caller and case | Identity and call/participant/case binding, expired/mismatched claims denied | [Trusted Primary Care checks](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f0cb216d5cc78601fdc85c40d37394e085/docs/evaluation/judge-review/control-results.csv) |
+| Current consent | Verified confirmation from the active call; cannot be inferred from tool text | [Consent suite](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f0cb216d5cc78601fdc85c40d37394e085/docs/evaluation/judge-review/primary-care-control-suites.csv) |
+| Eligibility and authority | Wait-standard logic, patient classification, slot freshness and service-policy gates | [Booking service](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/src/veteran_access_bridge/services/booking.py) |
+| Persistence & CRM | Restricted data roles, replay guards, idempotency, receipt validation and case-bound writes | [Booking/CRM suites](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f0cb216d5cc78601fdc85c40d37394e085/docs/evaluation/judge-review/control-results.csv) |
+| Untrusted text | KB content/tool results cannot grant patient scope, signing keys or booking authority | [Adversarial evaluation](evaluation/security-adversarial.md) |
 
-The November 16 server evaluation reported **76/76 hostile argument probes** and **261/261 scope/schema assertions** in its documented configuration. These are bounded checks; they do not establish comprehensive penetration-test or production compliance certification.
+## 03 · Security evaluation: observed results vs. risk
 
-A model attempting a prohibited operation must receive server-level denial rather than reliance on prompt obedience. See [adversarial scope tests](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/tests/test_mcp_scope_adversarial.py) and [November 16 evaluation](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/docs/evaluation/server-wide-evaluation-20261116.md).
+<div class="sec-split"><section><div class="sec-eyebrow">DETERMINISTIC CONTROLS · NOV 19</div><strong>135 / 135</strong><p>Local checks passed across six suites, including trusted session assertions, consent, protected bookings, CRM receipts and case isolation. Phoenix organized the saved results.</p><a href="evaluation/gold-phoenix/">Inspect Phoenix control suites →</a></section><section><div class="sec-eyebrow">ADVERSARIAL MCP INPUTS · NOV 16</div><strong>76 / 76</strong><p>Bounded hostile-argument probes. A separate 261/261 record covered overlapping schema/scope assertions. These are not live red-team penetration tests.</p><a href="evaluation/mcp-validation/">Inspect MCP probes →</a></section><section><div class="sec-eyebrow">VOICE DEFENSE · NOV 15</div><strong>5 turns</strong><p>Five restricted voice requests recorded zero observed MCP attempts; three permitted follow-ups succeeded. No contemporaneous paired DB snapshots were retained for the restricted requests.</p><a href="evaluation/security-adversarial/">Inspect voice tests and limitations →</a></section></div>
 
-## Boundaries and open work
+## 04 · How controls handle attacks
 
-The acceptance record proves one synthetic scheduling journey at one revision. Broader database concurrency, recovery of uncertain writes, cross-MCP injection, poisoning/SSRF and dependency follow-up remain independently documented open areas. Masked text captions are not an audio-retention guarantee. Do not infer HIPAA accreditation, VA production approval or general attack resistance.
+<details><summary><strong>Cross-case disclosure and forged scope</strong> — caller asks about another case</summary>
 
-[Security follow-up](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/docs/evaluation/security-followup-20261115.md) · [Acceptance evidence](evaluation-results.md) · [Architecture](solution-architecture.md)
+**Expected:** reject foreign-case reads and writes unless backed by the correct trusted caller/case context. **Observed:** bounded local session/case tests passed; the separate voice defense sample recorded zero MCP attempts for restricted prompts. **Gap:** the historical voice test lacks paired before/after SQL snapshots tied to its own sessions.
+
+[Control-check artifacts](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f0cb216d5cc78601fdc85c40d37394e085/docs/evaluation/judge-review/control-results.csv)
+</details>
+
+<details><summary><strong>Consent and unauthorized booking</strong> — model requests a protected write</summary>
+
+**Expected:** require current, persisted call-bound consent, fresh option, applicable policy and a trusted host grant before a synthetic write. **Observed:** protected Primary Care and consent local suites passed; the recorded successful voice booking had a persisted receipt. **Gap:** hosted multi-writer concurrency and uncertain-write recovery are not universally covered.
+
+[Individual booking checks](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f0cb216d5cc78601fdc85c40d37394e085/docs/evaluation/judge-review/control-results.csv)
+</details>
+
+<details><summary><strong>Prompt injection and untrusted knowledge</strong> — source text attempts to confer authority</summary>
+
+**Expected:** treat document/KB/tool-result instructions as untrusted data; no content can authorize identity or booking. **Observed:** authorization checks exist independently of model output. **Gap:** broad tool-result injection, cross-MCP poisoning and SSRF coverage is incomplete; do not mark these as passed.
+
+[Adversarial scope tests](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/tests/test_mcp_scope_adversarial.py)
+</details>
+
+<details><summary><strong>Replay, CRM manipulation and confirmation fraud</strong></summary>
+
+**Expected:** reject expired and replayed assertions, protect CRM receipt provenance, and avoid duplicate or conflicting writes. **Observed:** local protected booking, trusted host and CRM suites passed. **Gap:** process loss and hosted race conditions require separately correlated integration evidence.
+
+[Suite summary](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f0cb216d5cc78601fdc85c40d37394e085/docs/evaluation/judge-review/primary-care-control-suites.csv)
+</details>
+
+## 05 · Known limitations and required follow-up
+
+**Not a production security certification.** The documentation covers synthetic records and selected tests. Remaining evaluation includes paired DB before/after snapshots for the same voice session, independently authenticated overlapping caller sessions, operator alert receipts where applicable, more injection/poisoning/SSRF cases, dependency remediation, and hosted concurrency.
+
+<div class="sec-evidence"><strong>Security evidence index</strong><p><a href="evaluation/gold-phoenix/">Gold + Phoenix grouped control results</a> · <a href="evaluation/security-adversarial/">Prompt-injection and voice adversarial record</a> · <a href="evaluation/final-review/">End-to-end and remaining gates</a></p></div>
+
+*Independent synthetic technical prototype. No live VA scheduling access, protected real-patient data, production authorization, or HIPAA/VA accreditation claimed.*

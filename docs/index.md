@@ -85,7 +85,7 @@
     <a class="engineering-card" href="solution-architecture/"><span class="engineering-symbol">▥</span><h3>Architecture</h3><p>System components, integrations, and trust boundaries.</p><span class="card-open">Read documentation →</span></a>
     <a class="engineering-card" href="mcp-implementation/"><span class="engineering-symbol">◇</span><h3>MCP Implementation</h3><p>FastMCP contracts, tool inventory and trusted services.</p><span class="card-open">Read documentation →</span></a>
     <a class="engineering-card" href="security-governance/"><span class="engineering-symbol">⬡</span><h3>Security & Governance</h3><p>Identity, consent, policy and auditable authority.</p><span class="card-open">Read documentation →</span></a>
-    <a class="engineering-card" href="evaluation-results/"><span class="engineering-symbol">▤</span><h3>Evaluation & Results</h3><p>Dated test evidence and interactive checkpoint report.</p><span class="card-open">Read documentation →</span></a>
+    <a class="engineering-card" href="evaluation/"><span class="engineering-symbol">▤</span><h3>Evaluation & Results</h3><p>Dated test evidence and interactive checkpoint report.</p><span class="card-open">Read documentation →</span></a>
     <a class="engineering-card" href="demonstration/"><span class="engineering-symbol">▷</span><h3>Demonstration</h3><p>The verified synthetic scheduling journey.</p><span class="card-open">Read documentation →</span></a>
     <a class="engineering-card" href="developer-guide/"><span class="engineering-symbol">⌘</span><h3>Developer Guide</h3><p>CLI setup, sandbox, Supabase, IBM, DeepEval and Phoenix.</p><span class="card-open">Read documentation →</span></a>
   </div>
