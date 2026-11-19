@@ -4,16 +4,7 @@
 
 ## Published configuration
 
-<div class="mi-stack" role="group" aria-label="Published configuration layers">
-<div class="mi-mod mi-avery"><b>Avery — published SI agent</b><span>IBM watsonx Orchestrate · Claude Sonnet 4.6 (Anthropic via AWS Bedrock)*</span><div class="mi-tiles"><i>Instructions</i><i>8 published guidelines</i><i>21 attached MCP tools</i></div></div>
-<div class="mi-arrow">Conversation and tool selection · verified results return</div>
-<div class="mi-mod mi-host"><b>Trusted voice host + MCP client</b><span>Live conversation, trusted context, structured MCP invocation</span><div class="mi-tiles"><i>Caller verification state</i><i>Session context &amp; scope</i><i>Structured tool requests</i><i>Results to Avery</i></div></div>
-<div class="mi-arrow">MCP tool invocation ↔ structured results</div>
-<div class="mi-mod mi-server"><b>Veteran Access Bridge MCP server</b><span>Python FastMCP · 29 registered tools (21 attached to Avery)</span><div class="mi-tiles"><i>Veteran &amp; VHA information</i><i>Scheduling &amp; access</i><i>Knowledge retrieval</i><i>CRM &amp; follow-up</i></div></div>
-<div class="mi-arrow">Protected backend operations</div>
-<div class="mi-mod mi-enforce"><b>Deterministic services &amp; policy enforcement</b><span>Governed validations and durable operations, independent of the LLM</span><div class="mi-tiles mi-six"><i>Identity checks</i><i>Scope validation</i><i>Consent validation</i><i>Booking preconditions</i><i>Durable CRM writes</i><i>Audit &amp; receipts</i></div></div>
-<div class="mi-systems"><b>External systems and data:</b> VA sandbox (approved reads only) · Supabase (synthetic appointments and CRM) · Knowledge sources (scoped retrieval)</div>
-</div>
+[![Published MCP configuration: Avery, trusted voice host, MCP server and deterministic services](assets/mcp-implementation-overview.png)](assets/mcp-implementation-overview.png){ target=_blank }
 
 <small>*Model name is project-owner confirmed. The Nov 18 reconciliation preserved the agent model but did not record its identifier. This visual summarizes architecture, not a live runtime trace, and no production VA scheduling is represented.</small>
 
