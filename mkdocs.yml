@@ -45,6 +45,7 @@ nav:
 extra_css:
   - stylesheets/home.css
   - stylesheets/security-architecture.css
+  - stylesheets/homepage.css
 extra_javascript:
   - assets/evaluation-report.js
   - assets/header-menu.js
