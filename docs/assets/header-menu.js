@@ -7,8 +7,8 @@
     document.querySelectorAll(selector + " a.md-nav__link[href]").forEach(function (a) {
       if (selector.indexOf("primary") > -1 && a.closest(".md-nav--secondary")) return;
       var depth = 0, el = a.parentElement;
-      while (el && !el.matches(".md-nav--primary, .md-nav--secondary, .md-sidebar")) {
-        if (el.tagName === "UL") depth++;
+      while (el && !el.matches(".md-sidebar")) {
+        if (el.matches("li.md-nav__item")) depth++;
         el = el.parentElement;
       }
       out.push({ href: a.getAttribute("href"), text: a.textContent.trim(), depth: Math.max(depth - 1, 0), active: a.classList.contains("md-nav__link--active") });
