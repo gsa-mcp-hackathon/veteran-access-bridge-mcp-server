@@ -1,73 +1,12 @@
 # Security & Governance
 
-**The LLM is not the security boundary.** Avery selects tools and coordinates a conversation. Independent trusted services determine whether information may be disclosed and whether a synthetic appointment may be committed.
+## Explore our implemented security boundaries
 
-<div class="sec-kpi"><div><b>Identity</b><span>Verified host + case scope</span></div><div><b>Consent</b><span>Current caller confirmation</span></div><div><b>Policy</b><span>Deterministic authorization</span></div><div><b>Receipt</b><span>Verified persisted outcome</span></div></div>
-
-## 01 · The protected request path
-
-<div class="sec-flow" aria-label="Protected MCP request path">
- <div class="sec-flow-node"><strong>SI Agent</strong><span>Avery selects a tool, but cannot issue its own authority</span></div>
- <div class="sec-flow-arrow">→</div>
- <div class="sec-flow-node"><strong>MCP Boundary</strong><span>Authenticate, validate tool arguments, enforce trusted case scope</span></div>
- <div class="sec-flow-arrow">→</div>
- <div class="sec-flow-node focal"><strong>Deterministic Services</strong><span>Confirm current identity, consent, slot and policy</span></div>
- <div class="sec-flow-arrow">→</div>
- <div class="sec-flow-node"><strong>Decision</strong><span>Scoped read · Denial / review · Idempotent synthetic commit + receipt</span></div>
+<div class="vsa">
+<div class="wrap"><p class="intro">Select any component to open its security details, exact recorded test evidence, GitHub source, and limits. The diagram is adapted to <strong>our real implementation</strong>—not a hypothetical OAuth gateway or production VA network.</p><p class="key"><strong>Core rule:</strong> Avery can select an MCP tool. The trusted host and deterministic backend independently decide whether the call has authority to perform the action.</p><section class="canvas" aria-label="Interactive architecture"><div class="topline"><div><div class="eyebrow">CLICKABLE SYSTEM ARCHITECTURE</div><div class="hint">Click a rounded component to inspect its security evidence <span aria-hidden="true">↗</span></div></div><div class="legend"><span class="implemented">● Implemented / tested</span><span class="partial">● Partial evaluation</span></div></div>
+<div class="diagram"><div class="zone"><div class="zoneheader">① CALLER & AGENT <small>Outside authority boundary</small></div><button class="node" data-key="veteran"><strong><span class="icon">☎</span>Veteran · Voice call</strong><span class="sub">Speech enters the trusted LiveKit conversation runtime.</span><span class="foot"><span class="chip">Voice only</span></span></button><div class="vertical">↓</div><button class="node purple" data-key="agent"><strong><span class="icon">✧</span>Avery · SI Agent</strong><span class="sub">IBM watsonx Orchestrate · Claude Sonnet 4.6 via AWS Bedrock (user-confirmed)</span><span class="foot"><span class="chip">8 guidelines</span><span class="chip info">21 attached tools</span></span></button><div class="spacer"></div><button class="node gold" data-key="host"><strong><span class="icon">♧</span>Trusted Voice Host</strong><span class="sub">Verifies spoken identity, binds call/participant, captures current confirmation.</span><span class="foot"><span class="chip">Independent authority</span></span></button></div><div class="arrow" aria-hidden="true">→</div>
+<div class="zone"><div class="zoneheader">② MCP ACCESS BOUNDARY <small>Remote access controls</small></div><button class="node blue" data-key="bearer"><strong><span class="icon">⚿</span>MCP service-auth gate</strong><span class="sub">Authenticated HTTP requests; wrong or missing bearer credentials denied.</span><span class="foot"><span class="chip">3/3 HTTP 401</span></span></button><div class="vertical">↓</div><button class="node blue" data-key="scope"><strong><span class="icon">▣</span>Session / case scope gate</strong><span class="sub">Opaque short-lived turn capabilities, case binding, tool allowlists, replay denial.</span><span class="foot"><span class="chip">261/261 local checks</span></span></button><div class="vertical">↓</div><button class="node" data-key="tools"><strong><span class="icon">☷</span>Python FastMCP · Tools</strong><span class="sub">29 server tools registered; 21 attached to Avery in reviewed publication.</span><span class="foot"><span class="chip info">8 intentionally not attached</span></span></button></div><div class="arrow" aria-hidden="true">→</div>
+<div class="zone"><div class="zoneheader">③ GOVERNED BACKEND <small>Synthetic data and protected writes</small></div><button class="node green" data-key="policy"><strong><span class="icon">✓</span>Policy & booking authority</strong><span class="sub">Verified identity · explicit current consent · fresh option · signed host grant.</span><span class="foot"><span class="chip">135/135 grouped local controls</span></span></button><div class="vertical">↓</div><button class="node green" data-key="write"><strong><span class="icon">⟳</span>Idempotent writes & receipts</strong><span class="sub">Rejects forged/replayed writes; verifies persistence before reporting success.</span><span class="foot"><span class="chip">Local regression passed</span><span class="chip limit">Hosted fault tests open</span></span></button><div class="vertical">↓</div><button class="node" data-key="db"><strong><span class="icon">▤</span>Supabase PostgreSQL</strong><span class="sub">Synthetic appointments, consent, audit events and CRM data.</span><span class="foot"><span class="chip">18/18 audited tables RLS</span></span></button></div></div>
+<div class="bottom"><div class="note"><strong>◉ Voice adversarial defense</strong>5 restricted voice requests: no MCP attempts observed in tested intervals; independent same-call database snapshots remain an evidence gap.<br><button data-key="voiceattack">Inspect recorded voice attacks ↗</button></div><div class="note"><strong>▣ Reviewer login (separate boundary)</strong>Secure cookie, expiry, logout revocation, bounded requests and limited login attempts protect the frontend—not Veteran identity.<br><button data-key="reviewer">Inspect reviewer security ↗</button></div><div class="note"><strong>△ Open security coverage</strong>No verified centralized OAuth2 MCP IdP, gateway, WAF, SIEM or secure internal-network tunnel; cross-MCP, SSRF and model-output injection remain partial.<br><button data-key="gaps">Inspect known gaps ↗</button></div></div><p class="disclaimer">Historical checkpoints: November 14–19, 2026. Test denominators describe different experiments. No production VA appointment writes, security certification, or comprehensive attack-resistance claim.</p></section><footer class="footer">Veteran Access Bridge · Independent synthetic prototype · Click controls are local visual explanations; no network requests or state-changing actions are performed.</footer></div>
+<dialog class="modal" id="detail" aria-labelledby="modalTitle"><div class="modhead"><div><small id="modalKind">SECURITY COMPONENT</small><h2 id="modalTitle">Component</h2></div><button class="close" id="close" aria-label="Close details">×</button></div><div class="modbody"><div class="sectionlabel">What it does</div><p id="desc"></p><div class="sectionlabel">Tested evidence</div><div class="result" id="evidence"></div><div class="sectionlabel">Evidence boundary / limitations</div><div class="limitation" id="limit"></div><div class="sectionlabel">GitHub source</div><a class="source" id="link" target="_blank" rel="noopener noreferrer">View repository evidence ↗</a></div></dialog>
 </div>
-
-!!! info "A booking request is not a booking authorization"
-    **Selection ≠ confirmation ≠ persisted booking.** A valid MCP bearer token or a UI login is not scheduling authority. Routine internal synthetic Primary Care may use a separately trusted service-policy grant after confirmation; other workflows may require staff/Community Care review.
-
-## 02 · Defense by control layer
-
-| Enforcement layer | What it checks | Evidence |
-|---|---|---|
-| Service authentication | Authenticated remote MCP access; missing or invalid service credentials denied | [Scope/session service](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/src/veteran_access_bridge/mcp/session_scope.py) |
-| Trusted caller and case | Identity and call/participant/case binding, expired/mismatched claims denied | [Trusted Primary Care checks](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f0cb216d5cc78601fdc85c40d37394e085/docs/evaluation/judge-review/control-results.csv) |
-| Current consent | Verified confirmation from the active call; cannot be inferred from tool text | [Consent suite](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f0cb216d5cc78601fdc85c40d37394e085/docs/evaluation/judge-review/primary-care-control-suites.csv) |
-| Eligibility and authority | Wait-standard logic, patient classification, slot freshness and service-policy gates | [Booking service](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/src/veteran_access_bridge/services/booking.py) |
-| Persistence & CRM | Restricted data roles, replay guards, idempotency, receipt validation and case-bound writes | [Booking/CRM suites](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f0cb216d5cc78601fdc85c40d37394e085/docs/evaluation/judge-review/control-results.csv) |
-| Untrusted text | KB content/tool results cannot grant patient scope, signing keys or booking authority | [Adversarial evaluation](evaluation/security-adversarial.md) |
-
-## 03 · Security evaluation: observed results vs. risk
-
-<div class="sec-split"><section><div class="sec-eyebrow">DETERMINISTIC CONTROLS · NOV 19</div><strong>135 / 135</strong><p>Local checks passed across six suites, including trusted session assertions, consent, protected bookings, CRM receipts and case isolation. Phoenix organized the saved results.</p><a href="evaluation/method-gold/#phoenix-grouped-control-checks">Inspect Phoenix control suites →</a></section><section><div class="sec-eyebrow">ADVERSARIAL MCP INPUTS · NOV 16</div><strong>76 / 76</strong><p>Bounded hostile-argument probes. A separate 261/261 record covered overlapping schema/scope assertions. These are not live red-team penetration tests.</p><a href="evaluation/validation-agent/#mcp-server-validation">Inspect MCP probes →</a></section><section><div class="sec-eyebrow">VOICE DEFENSE · NOV 15</div><strong>5 turns</strong><p>Five restricted voice requests recorded zero observed MCP attempts; three permitted follow-ups succeeded. No contemporaneous paired DB snapshots were retained for the restricted requests.</p><a href="evaluation/security-adversarial/">Inspect voice tests and limitations →</a></section></div>
-
-## 04 · How controls handle attacks
-
-<details><summary><strong>Cross-case disclosure and forged scope</strong> — caller asks about another case</summary>
-
-**Expected:** reject foreign-case reads and writes unless backed by the correct trusted caller/case context. **Observed:** bounded local session/case tests passed; the separate voice defense sample recorded zero MCP attempts for restricted prompts. **Gap:** the historical voice test lacks paired before/after SQL snapshots tied to its own sessions.
-
-[Control-check artifacts](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f0cb216d5cc78601fdc85c40d37394e085/docs/evaluation/judge-review/control-results.csv)
-</details>
-
-<details><summary><strong>Consent and unauthorized booking</strong> — model requests a protected write</summary>
-
-**Expected:** require current, persisted call-bound consent, fresh option, applicable policy and a trusted host grant before a synthetic write. **Observed:** protected Primary Care and consent local suites passed; the recorded successful voice booking had a persisted receipt. **Gap:** hosted multi-writer concurrency and uncertain-write recovery are not universally covered.
-
-[Individual booking checks](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f0cb216d5cc78601fdc85c40d37394e085/docs/evaluation/judge-review/control-results.csv)
-</details>
-
-<details><summary><strong>Prompt injection and untrusted knowledge</strong> — source text attempts to confer authority</summary>
-
-**Expected:** treat document/KB/tool-result instructions as untrusted data; no content can authorize identity or booking. **Observed:** authorization checks exist independently of model output. **Gap:** broad tool-result injection, cross-MCP poisoning and SSRF coverage is incomplete; do not mark these as passed.
-
-[Adversarial scope tests](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/tests/test_mcp_scope_adversarial.py)
-</details>
-
-<details><summary><strong>Replay, CRM manipulation and confirmation fraud</strong></summary>
-
-**Expected:** reject expired and replayed assertions, protect CRM receipt provenance, and avoid duplicate or conflicting writes. **Observed:** local protected booking, trusted host and CRM suites passed. **Gap:** process loss and hosted race conditions require separately correlated integration evidence.
-
-[Suite summary](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f0cb216d5cc78601fdc85c40d37394e085/docs/evaluation/judge-review/primary-care-control-suites.csv)
-</details>
-
-## 05 · Known limitations and required follow-up
-
-**Not a production security certification.** The documentation covers synthetic records and selected tests. Remaining evaluation includes paired DB before/after snapshots for the same voice session, independently authenticated overlapping caller sessions, operator alert receipts where applicable, more injection/poisoning/SSRF cases, dependency remediation, and hosted concurrency.
-
-<div class="sec-evidence"><strong>Security evidence index</strong><p><a href="evaluation/method-gold/#phoenix-grouped-control-checks">Gold + Phoenix grouped control results</a> · <a href="evaluation/security-adversarial/">Prompt-injection and voice adversarial record</a> · <a href="evaluation/validation-agent/#what-remains-open">End-to-end and remaining gates</a></p></div>
-
-*Independent synthetic technical prototype. No live VA scheduling access, protected real-patient data, production authorization, or HIPAA/VA accreditation claimed.*
