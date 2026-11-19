@@ -27,9 +27,9 @@ The searchable report below uses a **bundled local JSON file**; it makes no live
 
 ## Evaluation design reference
 
-![Third-party MCP-AgentBench data construction and outcome-oriented MCP-Eval workflow; illustrative methodology reference, not our executed results](assets/mcp-agentbench-reference.png)
+![Veteran Access Bridge Gold Question #6: gold test construction from a verified synthetic fixture and MCP evaluation comparing the expected answer with the observed get_scheduling_encounter tool response](assets/gold-test-construction-mcp-evaluation.png)
 
-*Methodology inspiration supplied for this documentation: a **third-party MCP-AgentBench** figure describing scenario construction, human reference answers, agent tool trajectories, and an outcome judgment. It is **not** our project’s evaluation result or proof of implemented benchmark coverage. Our actual evidence is in the checkpoint report and linked execution artifacts.*
+*Gold Question #6 walkthrough: a local deterministic synthetic fixture (FastMCP `get_scheduling_encounter`) is used to build the reference answer, which is then compared with the observed tool response. This visual details question #6 only; it is a direct MCP evaluation, **not** an IBM voice-call trial, and no appointment is booked. Our actual evidence is in the checkpoint report and linked execution artifacts.*
 
 ### How we apply outcome-oriented evaluation
 
