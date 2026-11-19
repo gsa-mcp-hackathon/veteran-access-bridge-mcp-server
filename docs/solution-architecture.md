@@ -2,46 +2,53 @@
 
 **A governed MCP server for Veteran healthcare scheduling**
 
-Veteran Access Bridge connects Avery, an SI voice agent orchestrated with IBM watsonx Orchestrate, to structured scheduling tools and trusted backend services. **The MCP server is the primary hackathon deliverable**; Avery demonstrates how an SI agent can use it in a synthetic Veteran healthcare call.
+Veteran Access Bridge connects **Avery**, an SI voice agent using IBM watsonx Orchestrate, to structured scheduling tools and trusted backend services. The **MCP server is the primary hackathon deliverable**; Avery demonstrates how an SI agent uses it during a synthetic Veteran healthcare call.
 
-**SYSTEM ARCHITECTURE · CALLING SCENARIO**
+## Calling-scenario architecture
 
-![Veteran Access Bridge calling scenario MCP architecture](assets/architecture-calling-scenario.png)
+![Original Veteran Access Bridge MCP calling-scenario architecture showing Avery, IBM orchestrator, MCP client/server, VHA interfaces, synthetic CDW, knowledge base, and CRM](assets/architecture-calling-scenario.png)
 
-*Original approved architecture diagram, reproduced without content edits.* [Open the full-size diagram](assets/architecture-calling-scenario.png).
+*[Open full-size original architecture diagram](assets/architecture-calling-scenario.png). This preserved diagram describes an earlier **21-tool calling-scenario inventory**. The independently reviewed November 18 configuration had **29 registered tools** when optional features were enabled, with **21 MCP attachments on Avery**. Counts from different versions are not interchangeable.*
 
-!!! info "How to read this diagram"
-    The illustration represents the original **21-tool calling-scenario inventory**, not the full later server configuration. The November 18, 2026 review separately recorded **29 tools** with CRM and voice features enabled and **21 MCP attachments** assigned to Avery. The diagram depicts synthetic CDW and sandbox/API boundaries; it does **not** represent production VA scheduling access.
+## What each layer does
 
-## What the components do
+| Component | Responsibility |
+|---|---|
+| **Browser and LiveKit voice host** | Caller audio and scoped interface. Trusted host handles verified participant/session context and current confirmation. |
+| **Avery · IBM watsonx Orchestrate** | Conversational coordination; selects MCP tools and responds using returned evidence. |
+| **Veteran Access Bridge · Python FastMCP** | Typed tool schemas, authentication, case/identity scope, validated requests and structured results. |
+| **Deterministic services** | Eligibility, access standards, ranking, appointment selection, consent/policy gates, idempotent commits. |
+| **VHA sandbox adapters** | Configured read-only government sandbox interfaces; not production VistA/HSRM/EPS booking. |
+| **Supabase PostgreSQL / synthetic CDW** | Simulated appointment and CRM state, restricted writes, record-backed receipts. |
+| **Knowledge / RAG** | Retrieval of supporting content; retrieved text is evidence, never authority. |
 
-| Layer | Role |
-| --- | --- |
-| **Avery + voice host** | Receives the caller request through the voice application. IBM watsonx Orchestrate selects appropriate MCP tools; the trusted voice host manages verified session and confirmation context. |
-| **Veteran Access Bridge MCP Server** | Exposes typed tools, validates requests, enforces scope and returns structured evidence rather than model-generated scheduling facts. |
-| **Deterministic services** | Evaluate eligibility, access standards, policy, slot freshness, confirmation and permissions independently of the model. |
-| **External services and synthetic data** | Supply authorized sandbox reads, synthetic appointment inventory and persisted CRM/appointment evidence. |
+## Engineering decisions
 
-## Why we designed it this way
+<div class="feature-grid">
+<div class="feature"><strong>Normalize before SI</strong><p>Canonical encounter data, explicit source provenance and typed tool outputs.</p></div>
+<div class="feature"><strong>Policy as code</strong><p>Eligibility and access-standard checks run in deterministic backend services.</p></div>
+<div class="feature"><strong>Authority outside the LLM</strong><p>Identity, consent, scope and booking rights cannot be issued by model prose.</p></div>
+<div class="feature"><strong>Auditable writes</strong><p>Persisted receipts and independent reads distinguish a completed booking from a spoken claim.</p></div>
+</div>
 
-**01 · Normalize before SI**  
-The agent receives consistent case information, source provenance and eligible options rather than reconciling different source formats on its own.
+## Trust-boundary detail
 
-**02 · Policy as code**  
-Scheduling rules and Community Care review decisions are evaluated by deterministic services. An available slot or an access-standard exception never grants authorization by itself.
+```mermaid
+flowchart LR
+  A["Avery: selects MCP tool"] --> M["Authenticated + scoped MCP request"]
+  H["Trusted voice host: identity / current confirmation"] --> S["Deterministic scheduling service"]
+  M --> S
+  S --> D[("Synthetic appointment / CRM database")]
+  S --> V["Approved VA sandbox reads"]
+  S --> R["Receipt / denial / review"]
+```
 
-**03 · Authority outside the model**  
-Identity, caller scope, current consent, booking prerequisites and applicable service policy are enforced independently. A model’s request does not commit an appointment.
+**Core principle:** SI can request an operation. Only trusted services determine whether it is valid, permitted and committed. Routine scoped internal Primary Care service policy and Community Care human-review paths are intentionally distinct.
 
-**04 · Durable, auditable outcomes**  
-A successful synthetic booking is confirmed by persisted records and an explicit receipt—not only by Avery saying that an appointment was booked.
+## Evidence
 
-## Evidence from a demonstrated call
+A November 16 controlled RTC call selected five IBM MCP tool types and reached one independently verified **synthetic appointment**, one **host-written CRM note**, and a `BOOKED_SIMULATED` receipt. This proof belongs to the recorded revision, not to an assumed later build.
 
-On **November 16, 2026**, a controlled real-time call using generated caller speech exercised IBM-selected patient, knowledge, appointment-search, selection and booking tools. Independent database reads verified **one synthetic appointment**, **one host-written CRM note**, and the receipt **`BOOKED_SIMULATED`** for that historical execution. This demonstrates that tested path; it is not a claim of production VA booking or a rerun on later revisions.
+[Historical booking acceptance](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/docs/operations/avery-agent-led-scheduling-20261116.md) · [Machine-readable evidence](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/docs/evaluation/agent-led-voice-20261116.json) · [MCP Implementation](mcp-implementation.md)
 
-[Review the recorded demonstration](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/docs/operations/avery-agent-led-scheduling-20261116.md) · [Inspect the machine-readable proof](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/docs/evaluation/agent-led-voice-20261116.json)
-
-**Explore further:** [MCP tool contracts](https://github.com/wbgreen0405/veteran-access-bridge/tree/5b6cd072f23b4d4edce2e19c4f75faa774c87988/src/veteran_access_bridge/mcp/tools) · [Backend services](https://github.com/wbgreen0405/veteran-access-bridge/tree/5b6cd072f23b4d4edce2e19c4f75faa774c87988/src/veteran_access_bridge/services) · [Security and scope tests](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/tests/test_mcp_scope_adversarial.py)
-
-<small>Technical prototype using synthetic data. No production VA scheduling authority is claimed. Architecture image preserved from the supplied PowerPoint; inventory notes are dated November 18, 2026.</small>
+<small>Synthetic technical demonstration only. Diagram shows a historical design, not proof of production VA data access or authorization.</small>

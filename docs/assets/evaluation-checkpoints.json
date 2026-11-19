@@ -1,0 +1,101 @@
+[
+  {
+    "id": "linux-1116",
+    "date": "2026-11-16",
+    "category": "Server",
+    "name": "Linux backend regression",
+    "observed": "1,380 passed \u00b7 19 skipped",
+    "state": "pass",
+    "scope": "Historical Linux test run; no combined score with Windows"
+  },
+  {
+    "id": "contracts-1116",
+    "date": "2026-11-16",
+    "category": "MCP",
+    "name": "MCP contract probes",
+    "observed": "108 / 108 passed",
+    "state": "pass",
+    "scope": "25-tool local configuration, bounded contract assertions"
+  },
+  {
+    "id": "arguments-1116",
+    "date": "2026-11-16",
+    "category": "Security",
+    "name": "Hostile argument probes",
+    "observed": "76 / 76 passed",
+    "state": "pass",
+    "scope": "Local argument suite, not complete attack coverage"
+  },
+  {
+    "id": "scope-1116",
+    "date": "2026-11-16",
+    "category": "Security",
+    "name": "Schema & scope assertions",
+    "observed": "261 / 261 passed",
+    "state": "pass",
+    "scope": "Overlapping local assertions; not independent cases"
+  },
+  {
+    "id": "voice-1116",
+    "date": "2026-11-16",
+    "category": "Voice",
+    "name": "Synthetic RTC booking",
+    "observed": "PASS \u00b7 1 appointment + 1 CRM note",
+    "state": "pass",
+    "scope": "One accepted historical call / committed receipt BOOKED_SIMULATED"
+  },
+  {
+    "id": "identity-1118",
+    "date": "2026-11-18",
+    "category": "Voice",
+    "name": "Spoken identity only",
+    "observed": "PASS \u00b7 masked captions",
+    "state": "pass",
+    "scope": "No booking in this later identity-only trial"
+  },
+  {
+    "id": "windows-1118",
+    "date": "2026-11-18",
+    "category": "Server",
+    "name": "Windows full pytest",
+    "observed": "1,624 passed \u00b7 19 skipped \u00b7 1 failed",
+    "state": "mixed",
+    "scope": "Linux-only os.O_NOFOLLOW private-key test failed on Windows"
+  },
+  {
+    "id": "lock-1118",
+    "date": "2026-11-18",
+    "category": "Developer",
+    "name": "Locked dependency install",
+    "observed": "FAILED \u00b7 lock update required",
+    "state": "open",
+    "scope": "Editable dependency install passed; lock unrepaired"
+  },
+  {
+    "id": "lint-1118",
+    "date": "2026-11-18",
+    "category": "Developer",
+    "name": "Focused lint",
+    "observed": "FAILED \u00b7 one E501",
+    "state": "open",
+    "scope": "tests/test_search_availability.py:305, existing finding"
+  },
+  {
+    "id": "mcp-1118",
+    "date": "2026-11-18",
+    "category": "MCP",
+    "name": "Local baseline discovery",
+    "observed": "21 registered schemas",
+    "state": "pass",
+    "scope": "In-process discovery; not HTTP auth or 29-tool execution"
+  },
+  {
+    "id": "config-1118",
+    "date": "2026-11-18",
+    "category": "MCP",
+    "name": "Enabled inventory and Avery attachments",
+    "observed": "29 registered \u00b7 21 attached",
+    "state": "pass",
+    "scope": "Configuration verification; not full behavioral coverage"
+  }
+]

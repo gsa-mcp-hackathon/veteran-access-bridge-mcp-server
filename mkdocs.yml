@@ -1,9 +1,11 @@
 site_name: Veteran Access Bridge
-site_description: GSA MCP and SI Agent Government Hackathon
+site_description: Governed MCP server for synthetic Veteran healthcare scheduling · GSA SI & MCP hackathon
 site_url: https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/
 repo_url: https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server
+repo_name: gsa-mcp-hackathon/veteran-access-bridge-mcp-server
 theme:
   name: material
+  variant: classic
   logo: assets/mark.svg
   favicon: assets/mark.svg
   palette:
@@ -12,9 +14,23 @@ theme:
   font: false
   features:
     - navigation.top
+    - navigation.sections
     - content.code.copy
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
 nav:
   - Home: index.md
+  - Solution & Architecture: solution-architecture.md
+  - MCP Implementation: mcp-implementation.md
+  - Security & Governance: security-governance.md
+  - Evaluation & Results: evaluation-results.md
+  - Demonstration: demonstration.md
+  - Developer Guide: developer-guide.md
 extra_css:
   - stylesheets/home.css
-copyright: 'Veteran Access Bridge · Synthetic demonstration · No production VA scheduling'
+extra_javascript:
+  - assets/evaluation-report.js
+copyright: 'Veteran Access Bridge · Independent synthetic technical demonstration · Not a VA-operated scheduling service'

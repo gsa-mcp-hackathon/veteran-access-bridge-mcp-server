@@ -2,12 +2,13 @@
   <div>
     <p class="eyebrow">GSA MCP SERVER &amp; SI AGENT GOVERNMENT HACKATHON</p>
     <h1>One Veteran.<br>One Conversation.<br><span>Connected Care.</span></h1>
-    <h2>SI-Powered Veteran Healthcare Call Center</h2>
-    <p>A governed Model Context Protocol server connecting Avery's voice interactions with structured healthcare scheduling tools, trusted services, and auditable workflows.</p>
-    <div class="actions"><a href="#our-solution">Explore the Architecture</a><a href="#demonstrated-tested-verified">See the Evidence</a></div>
+    <h2>A Governed MCP Server for Veteran Healthcare Scheduling</h2>
+    <p>Structured MCP tools connect Avery's SI voice experience with trusted healthcare scheduling services, independent policy controls, and auditable synthetic outcomes.</p>
+    <div class="actions"><a href="solution-architecture/">Explore the MCP Server</a><a href="demonstration/">View Demonstration</a></div>
     <p class="stack">IBM watsonx Orchestrate · Python FastMCP · LiveKit · Deepgram</p>
   </div>
-  <div class="hero-illustration" role="img" aria-label="Avery's hollow lavender waveform orb on a navy background, visual representation only">
+  <div class="hero-illustration" role="img" aria-label="MCP symbol plus Avery hollow lavender waveform orb; conceptual project identity">
+    <div class="hero-mcp-sign"><img src="assets/mcp-symbol-source.png" alt=""/><span>MCP SERVER</span></div><div class="hero-plus" aria-hidden="true">+</div>
     <div class="avery-orb-stage"><svg class="avery-wave-orb" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
   <defs>
     <linearGradient id="avery-rim" x1="0" y1="0" x2="1" y2="1">
@@ -74,19 +75,19 @@
     <div><strong>76/76</strong><span>Hostile argument probes</span></div>
     <div><strong>1</strong><span>Verified synthetic booking</span></div>
   </div>
-  <p class="disclosure">Historical November 16, 2026 checkpoints, not one combined evaluation. Linux regression also recorded 19 skipped tests. Public evidence links will be added after the reviewed backend-only migration.</p>
+  <p class="disclosure">Historical November 16, 2026 checkpoints, not one combined evaluation. Linux regression also recorded 19 skipped tests. The linked reports retain their original execution dates and source snapshots.</p>
 </section>
 
 <section class="section" id="explore">
   <p class="eyebrow">EXPLORE THE PROJECT</p><h2>Go Deeper Into the Engineering</h2>
-  <p class="intro">This homepage is the first documentation milestone. Dedicated documentation will follow the backend-only hackathon submission.</p>
-  <div class="grid three">
-    <article><b>▥</b><h3>Architecture</h3><p>Components and trust boundaries.</p></article>
-    <article><b>◇</b><h3>MCP Implementation</h3><p>Tool contracts and services.</p></article>
-    <article><b>⬡</b><h3>Governance</h3><p>Identity, consent, and authorization.</p></article>
-    <article><b>▤</b><h3>Evaluation</h3><p>Versioned results and limits.</p></article>
-    <article><b>▷</b><h3>Demonstration</h3><p>Verified scheduling journey.</p></article>
-    <article><b>⌘</b><h3>Developer Guide</h3><p>Reproduce with synthetic fixtures.</p></article>
+  <p class="intro">Explore concise documentation of the challenge, architecture, governance, evidence and synthetic demonstration.</p>
+  <div class="grid three engineering-cards">
+    <a class="engineering-card" href="solution-architecture/"><span class="engineering-symbol">▥</span><h3>Architecture</h3><p>System components, integrations, and trust boundaries.</p><span class="card-open">Read documentation →</span></a>
+    <a class="engineering-card" href="mcp-implementation/"><span class="engineering-symbol">◇</span><h3>MCP Implementation</h3><p>FastMCP contracts, tool inventory and trusted services.</p><span class="card-open">Read documentation →</span></a>
+    <a class="engineering-card" href="security-governance/"><span class="engineering-symbol">⬡</span><h3>Security & Governance</h3><p>Identity, consent, policy and auditable authority.</p><span class="card-open">Read documentation →</span></a>
+    <a class="engineering-card" href="evaluation-results/"><span class="engineering-symbol">▤</span><h3>Evaluation & Results</h3><p>Dated test evidence and interactive checkpoint report.</p><span class="card-open">Read documentation →</span></a>
+    <a class="engineering-card" href="demonstration/"><span class="engineering-symbol">▷</span><h3>Demonstration</h3><p>The verified synthetic scheduling journey.</p><span class="card-open">Read documentation →</span></a>
+    <a class="engineering-card" href="developer-guide/"><span class="engineering-symbol">⌘</span><h3>Developer Guide</h3><p>CLI setup, sandbox, Supabase, IBM, DeepEval and Phoenix.</p><span class="card-open">Read documentation →</span></a>
   </div>
   <p class="repo-link"><a href="https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server">View the submission repository ↗</a></p>
 </section>
