@@ -183,4 +183,4 @@ For Python-based tracing, follow [Phoenix OpenInference setup](https://github.co
 - [ ] Keep sandbox and Supabase credentials in approved secret storage—never in GitHub Pages or Markdown.
 - [ ] Do not reuse consumed historical booking cases, claim production VA writes, or treat a generated sentence as a booking receipt.
 
-[Reproducibility source guide](https://github.com/wbgreen0405/veteran-access-bridge/wiki/Reproducibility) · [IBM CLI runbook](https://github.com/wbgreen0405/veteran-access-bridge/wiki/IBM-watsonx-Orchestrate-CLI-Setup-and-Verification) · [Evaluation Results](evaluation-results.md)
+[Reproducibility source guide](https://github.com/wbgreen0405/veteran-access-bridge/wiki/Reproducibility) · [IBM CLI runbook](https://github.com/wbgreen0405/veteran-access-bridge/wiki/IBM-watsonx-Orchestrate-CLI-Setup-and-Verification) · [Evaluation Results](evaluation/index.md)

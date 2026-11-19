@@ -28,12 +28,9 @@ nav:
   - Security & Governance: security-governance.md
   - Evaluation & Results:
       - Overview: evaluation/index.md
-      - Baseline & Early Evaluation: evaluation/baseline.md
-      - MCP Server Validation: evaluation/mcp-validation.md
-      - Phoenix — Gold & Controls: evaluation/gold-phoenix.md
-      - IBM & DeepEval: evaluation/agent-deepeval.md
+      - Method & Gold Questions: evaluation/method-gold.md
+      - Validation & Agent Evidence: evaluation/validation-agent.md
       - Security & Adversarial: evaluation/security-adversarial.md
-      - End-to-End & Final Review: evaluation/final-review.md
   - Demonstration: demonstration.md
   - Developer Guide: developer-guide.md
 extra_css:

@@ -2,21 +2,27 @@
 
 **Purpose:** distinguish direct deterministic controls from adversarial agent behavior and still-open attack classes.
 
-<div class="ev-meta"><span>Data: synthetic identities and cases</span><span>Controls: Python and MCP negative probes</span><span>Voice: bounded recorded attack turns</span><span>Security certification: not claimed</span></div>
+Synthetic identities and cases only. Security certification is **not** claimed.
 
 ## Attack design → trace → outcome
 
-<div class="eval-three"><div><b>01 · Scenarios</b><p>Cross-case access, forged scope/consent, prompt instructions, unauthorized booking</p></div><div><b>02 · Evidence</b><p>Tool attempt counts, scope denials, state diffs, paired authorized follow-up</p></div><div><b>03 · Decision</b><p>Pass where exact oracle holds; incomplete where before/after or run linkage is absent</p></div></div>
+<div class="ev2-flow">
+<div><b>1 · Scenarios</b><span>Cross-case access, forged scope or consent, prompt instructions, unauthorized booking</span></div>
+<i>→</i>
+<div><b>2 · Evidence</b><span>Tool attempt counts, scope denials, state diffs, paired authorized follow-up</span></div>
+<i>→</i>
+<div><b>3 · Decision</b><span>Pass where the exact oracle holds; incomplete where before/after or run linkage is absent</span></div>
+</div>
 
 ## Dated evaluations
 
-| Family | Recorded observation | What it does **not** prove |
-|---|---|---|
-| Local protected-write/consent/CRM controls, November 19 | **135/135** deterministic checks passed; Phoenix grouped saved suites | Not 135 LLM prompt-injection trials |
-| November 16 hostile argument probes | **76/76** | No comprehensive cross-MCP/poisoning claim |
-| November 16 scope & schema | **261/261**; overlapping local assertions | Not hosted multi-actor isolation |
-| November 15 adversarial voice sample | Five restricted requests had zero observed MCP attempts; three permitted follow-up sessions succeeded | Small selected sample; no independent paired before/after SQL assertions for the five turns |
-| Voice/database reconciliation November 19 | Zero of three Nov 15 sessions matched the retained Nov 16 SQL audit | Different session windows cannot establish that no protected record changed |
+| Family | Outcome | Recorded observation | What it does **not** prove |
+|---|---|---|---|
+| Protected-write, consent and CRM controls (Nov 19) | <span class="ev2-badge ok">135/135</span> | Deterministic checks passed; Phoenix grouped saved suites | Not 135 LLM prompt-injection trials |
+| Hostile argument probes (Nov 16) | <span class="ev2-badge ok">76/76</span> | Bounded input probes | No comprehensive cross-MCP or poisoning claim |
+| Scope and schema (Nov 16) | <span class="ev2-badge ok">261/261</span> | Overlapping local assertions | Not hosted multi-actor isolation |
+| Adversarial voice sample (Nov 15) | <span class="ev2-badge warn">sample</span> | Five restricted requests had zero observed MCP attempts; three permitted follow-ups succeeded | Small selected sample; no paired before/after SQL assertions for the five turns |
+| Voice and database reconciliation (Nov 19) | <span class="ev2-badge warn">gap</span> | Zero of three Nov 15 sessions matched the retained Nov 16 SQL audit | Different session windows cannot show that no protected record changed |
 
 ## Prompt injection vs. enforced boundary
 
@@ -26,11 +32,12 @@ Prompts and tool results are not identity assertions. A logged refusal is eviden
 
 ## Unfinished security evidence
 
-- Paired pre-/post-state snapshots bound to **the same call and case** for cross-case mutation checks.
-- Concurrent independently authenticated session isolation.
-- Linked operator alert and acknowledgment evidence where a policy expects an alert.
-- Broad tool-result prompt injection, poisoning, SSRF and cross-MCP scenarios.
-- Hosted database races, uncertain-write recovery and remaining dependency triage.
+!!! danger "Open"
+    - Paired pre-/post-state snapshots bound to **the same call and case** for cross-case mutation checks.
+    - Concurrent independently authenticated session isolation.
+    - Linked operator alert and acknowledgment evidence where a policy expects an alert.
+    - Broad tool-result prompt injection, poisoning, SSRF and cross-MCP scenarios.
+    - Hosted database races, uncertain-write recovery and remaining dependency triage.
 
 ## Original artifacts
 
@@ -40,4 +47,4 @@ Prompts and tool results are not identity assertions. A logged refusal is eviden
 - [Security follow-up](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/docs/evaluation/security-followup-20261115.md)
 - [Adversarial MCP scope tests](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/tests/test_mcp_scope_adversarial.py)
 
-**Next:** [End-to-End & Final Review](final-review.md)
+**See also:** [Security & Governance](../security-governance.md) · [Validation & agent evidence](validation-agent.md)
