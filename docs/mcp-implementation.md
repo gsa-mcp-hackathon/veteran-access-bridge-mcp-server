@@ -2,6 +2,12 @@
 
 **The MCP server is the primary deliverable.** Python FastMCP provides discoverable contracts; thin wrappers call deterministic, independently testable services.
 
+## Interactive overview
+
+<iframe class="mcp-interactive" src="../assets/mcp-implementation-interactive.html" title="Interactive MCP implementation overview" loading="lazy"></iframe>
+
+[Open the interactive overview full-size](assets/mcp-implementation-interactive.html){ target=_blank }
+
 ## What is registered?
 
 | Configuration | Tool count | Scope |
