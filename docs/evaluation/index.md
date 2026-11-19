@@ -41,7 +41,7 @@ Separate checks, each with its **original date and denominator**. These results 
 
 ??? note "Reproduce a read-only check"
 
-    Use the [Developer Guide](../developer-guide.md) for the local server, MCP Inspector, IBM CLI, DeepEval and optional Phoenix setup.
+    Use the [Developer Guide](../developer-guide/index.md) for the local server, MCP Inspector, IBM CLI, DeepEval and optional Phoenix setup.
 
     ```json
     {"name":"get_scheduling_encounter","arguments":{"case_id":"DEMO-PC-5000999-001"}}

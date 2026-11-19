@@ -51,4 +51,4 @@ The searchable report below uses a **bundled local JSON file**; it makes no live
 
 The 48-scenario evaluation design remains partial. Hosted database concurrency, uncertain-write recovery, tool-result injection, poisoning/cross-MCP/SSRF, dependency lock repair and final recorded browser presentation require their own verification. No measured operational time savings or production VA scheduling acceptance is claimed.
 
-**Next:** [Demonstration](demonstration.md) · [Developer Guide](developer-guide.md)
+**Next:** [Demonstration](demonstration.md) · [Developer Guide](developer-guide/index.md)

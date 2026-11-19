@@ -31,7 +31,7 @@ The acceptance report for CASE-047 records a successful real-time generated-audi
 {"name":"get_scheduling_encounter","arguments":{"case_id":"DEMO-CARD-5000335-001"}}
 ```
 
-Use the synthetic Cardiology and Primary Care fixture IDs listed in [Developer Guide](developer-guide.md), then try `UNKNOWN-CASE`. These read-only tests establish deterministic MCP behavior, **not** a new voice booking.
+Use the synthetic Cardiology and Primary Care fixture IDs listed in [Developer Guide](developer-guide/index.md), then try `UNKNOWN-CASE`. These read-only tests establish deterministic MCP behavior, **not** a new voice booking.
 
 ## What to show judges in five minutes
 

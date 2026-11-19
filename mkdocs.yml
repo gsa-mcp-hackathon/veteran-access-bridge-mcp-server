@@ -32,7 +32,15 @@ nav:
       - Validation & Agent Evidence: evaluation/validation-agent.md
       - Security & Adversarial: evaluation/security-adversarial.md
   - Demonstration: demonstration.md
-  - Developer Guide: developer-guide.md
+  - Developer Guide:
+      - Overview: developer-guide/index.md
+      - Local MCP Server: developer-guide/local-mcp-server.md
+      - VHA Sandbox: developer-guide/vha-sandbox.md
+      - Supabase: developer-guide/supabase.md
+      - IBM Orchestrate: developer-guide/ibm-orchestrate.md
+      - DeepEval: developer-guide/deepeval.md
+      - Phoenix: developer-guide/phoenix.md
+      - Release Checklist: developer-guide/release-checklist.md
 extra_css:
   - stylesheets/home.css
 extra_javascript:
