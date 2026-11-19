@@ -37,4 +37,5 @@ extra_css:
   - stylesheets/home.css
 extra_javascript:
   - assets/evaluation-report.js
+  - assets/toc-toggle.js
 copyright: 'Veteran Access Bridge · Independent synthetic technical demonstration · Not a VA-operated scheduling service'

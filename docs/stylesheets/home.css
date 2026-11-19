@@ -157,3 +157,8 @@ a.ev2-card:hover{background:#0a4f8a}a.ev2-card.ev2-gap:hover{background:#8f342b}
 .mi-arrow{align-self:center;background:#064c83;color:#fff;font-size:.72rem;font-weight:700;padding:4px 12px;border-radius:99px}
 .mi-systems{margin-top:6px;padding:11px 14px;border:1px solid #a3c1e5;border-radius:10px;background:#eef3ff;font-size:.78rem;color:#18395f}
 @media(max-width:850px){.mi-tiles,.mi-tiles.mi-six,.mi-avery .mi-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.md-nav--secondary>.md-nav__title{cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none}
+.md-nav--secondary>.md-nav__title::after{content:'\25BE';font-size:.9rem;transition:transform .2s}
+.md-nav--secondary:not(.toc-open)>.md-nav__title::after{transform:rotate(-90deg)}
+.md-nav--secondary:not(.toc-open)>.md-nav__list{display:none}
