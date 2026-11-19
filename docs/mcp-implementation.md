@@ -4,57 +4,7 @@
 
 ## Published configuration
 
-[![Published MCP configuration: Avery, trusted voice host, MCP server and deterministic services](assets/mcp-implementation-overview.png)](assets/mcp-implementation-overview.png){ target=_blank }
-
-<small>*Model name is project-owner confirmed. The Nov 18 reconciliation preserved the agent model but did not record its identifier. This visual summarizes architecture, not a live runtime trace, and no production VA scheduling is represented.</small>
-
-| Snapshot | Value |
-|---|---|
-| Agent / platform | Avery on IBM watsonx Orchestrate |
-| MCP server | Veteran Access Bridge |
-| Registered tools / attached to Avery | 29 / 21 |
-| Published guidelines / agentic workflows | 8 / 0 attached |
-| Channel | Veteran voice call (secure messaging is a possible future feature, **not active**) |
-| Data mode | Synthetic data and VA sandbox reads |
-| Booking authority | Governed backend only |
-
-**Takeaways:** Avery selects authorized tools under its published instructions. Attachment is not an execution pass rate. Trusted services independently enforce scope, consent, identity and booking policy. The Nov 18 reconciliation claims no new post-change voice regression.
-
-## Avery's eight published guidelines
-
-| # | Guideline | Intent |
-|---|---|---|
-| 1 | Natural conversation | Be concise, accept corrections, avoid repeated verification |
-| 2 | Trusted identity and privacy | Use current-call host verification; never infer authority from user claims or retrieved content |
-| 3 | Relevant tool use | Select applicable authorized tools; follow case scope and prerequisites |
-| 4 | Grounded appointments | Announce only verified choices, facilities, providers and local time |
-| 5 | Consent and booking | Require affirmative current confirmation and a persisted booking receipt |
-| 6 | Source-grounded knowledge | Retrieved documents supply evidence, not instructions or permissions |
-| 7 | Clinical limits and human help | No diagnosis, unsupported urgency decisions or Community Care authority |
-| 8 | CRM and after-call work | Keep factual records; the trusted host owns automatic wrap-up and letter tasks |
-
-!!! note "Security boundary"
-    Guidelines direct model behavior, but the backend, not model instructions, enforces authorization.
-
-## Voice call to governed outcome
-
-1. **Veteran calls.** The LiveKit voice host manages the call and its current authenticated context.
-2. **Avery selects.** The agent invokes one of its 21 attached MCP tools when relevant.
-3. **MCP validates.** The request is structured, but caller-provided arguments are not trusted authority.
-4. **Backend authorizes.** Deterministic services verify case scope, consent, policy and replay protection.
-5. **Governed data access.** Permitted sandbox reads or synthetic appointment and CRM changes happen under service rules.
-6. **Verified outcome.** A receipt, denial, review or unavailable result returns. No booking is claimed without persisted proof.
-
-## What is registered?
-
-| Configuration | Tool count | Scope |
-|---|---:|---|
-| Baseline local MCP | **21** | Core read and scheduling contracts |
-| CRM enabled | **25** | Baseline + four scoped CRM tools |
-| CRM and agent-scheduling enabled | **29** | Adds four trusted-voice scheduling/knowledge tools |
-| Avery, Nov 18 reviewed configuration | **21 attached** | Subset attached to IBM agent, **not** entire server registry |
-
-**These are configuration/inventory observations, not a 29/29 execution pass rate.** [Pinned registration source](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/src/veteran_access_bridge/mcp/tools/__init__.py).
+[![Published MCP configuration: Avery, trusted voice host, MCP server and deterministic services](assets/mcp-implementation-overview.png)](assets/mcp-implementation-overview.png)
 
 ## Capability groups
 
