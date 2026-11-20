@@ -1,5 +1,7 @@
 # Veteran Access Bridge MCP Server
 
+**Project author:** William Green
+
 Veteran Access Bridge is a **Model Context Protocol (MCP) server for Veteran appointment scheduling**. It gives super intelligence (SI) applications tools to retrieve information from the VA Patient Health sandbox, look up VA facilities, search for eligible appointments, and request a simulated booking. The backend restricts patient-specific operations to the verified caller’s case and requires confirmation before saving an appointment.
 
 The Primary Care demonstration shows the server in use. A Veteran calls through a browser and speaks with Avery, an IBM watsonx Orchestrate voice agent. A reviewer can follow the conversation alongside the MCP tool calls, see the chosen appointment, and inspect the confirmation that the booking was saved.
