@@ -11,3 +11,7 @@ Start with one question in the gold matrix. Read across the row from the caller'
 | **Security evidence** | [Security and adversarial evaluation](security-adversarial.md) describes the tested boundaries and outstanding work. |
 
 Record the submission commit with any new run. The gold matrix, automated control checks and live call each answer a different question and retain their own denominator.
+
+### Rerun the 16 gold questions
+
+After [installing the local server](../developer-guide/local-mcp-server.md), run `uv run --no-sync python eval/primary-care/run_gold.py` from the repository root. Each line identifies the question and MCP tool. Compare the final count with the recorded gold matrix above.
