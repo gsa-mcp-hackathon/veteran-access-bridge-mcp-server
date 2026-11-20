@@ -1,0 +1,44 @@
+name: Reproduce database schema
+on:
+  pull_request:
+    paths: ["db/**", "supabase/**", ".github/workflows/database-schema.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  schema:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_HOST_AUTH_METHOD: trust
+        ports:
+          - 5432/tcp
+        options: --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      PGHOST: localhost
+      PGPORT: ${{ job.services.postgres.ports[5432] }}
+      PGUSER: postgres
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reproduce the local schema
+        run: |
+          createdb local_schema
+          for file in db/schema/00{1,3,4}_*.sql; do
+            psql -X -v ON_ERROR_STOP=1 -d local_schema -f "$file"
+          done
+      - name: Reproduce the scheduling and CRM schema
+        run: |
+          createdb hosted_schema
+          export PGDATABASE=hosted_schema
+          psql -X -v ON_ERROR_STOP=1 -c 'CREATE ROLE anon NOLOGIN; CREATE ROLE authenticated NOLOGIN; CREATE ROLE service_role NOLOGIN;'
+          for file in db/schema/00{1,3}_*.sql; do
+            psql -X -v ON_ERROR_STOP=1 -f "$file"
+          done
+          for file in supabase/migrations/*.sql; do
+            psql -X --single-transaction -v ON_ERROR_STOP=1 -f "$file"
+          done
+          psql -X -v ON_ERROR_STOP=1 -f db/schema/005_crm_test_candidate.sql
+          count=$(psql -XAt -v ON_ERROR_STOP=1 -c "SELECT count(*) FROM pg_class WHERE relnamespace = 'vab_test'::regnamespace AND relname IN ('crm_interaction','crm_follow_up','crm_event') AND relrowsecurity AND relforcerowsecurity")
+          test "$count" = 3
