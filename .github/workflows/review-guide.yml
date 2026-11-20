@@ -1,0 +1,42 @@
+name: Verify developer guide
+on:
+  pull_request:
+    paths:
+      - 'docs/developer-guide/**'
+      - 'scripts/read_scheduling_encounter.py'
+      - 'requirements.txt'
+      - 'uv.lock'
+      - 'deploy/ibm/Dockerfile'
+      - '.github/workflows/review-guide.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          python -m pip install -r requirements.txt
+          python -m pip install --no-deps -e .
+      - name: Read an encounter and check unknown-case handling
+        run: |
+          python scripts/read_scheduling_encounter.py > "$RUNNER_TEMP/encounter.json"
+          python -c 'import json,sys; r=json.load(open(sys.argv[1])); assert r["patient_classification"]=="ESTABLISHED" and r["read_only"] and not r["booking_created"]' "$RUNNER_TEMP/encounter.json"
+          if python scripts/read_scheduling_encounter.py UNKNOWN-CASE 2>"$RUNNER_TEMP/unknown.log"; then exit 1; fi
+          grep -F "Unknown synthetic case_id" "$RUNNER_TEMP/unknown.log"
+      - name: Build the submitted server and call its authenticated endpoint
+        run: |
+          docker build -f deploy/ibm/Dockerfile -t vab-mcp:review .
+          export VAB_MCP_API_KEY="$(python -c 'import secrets; print(secrets.token_urlsafe(32))')"
+          docker run -d --rm --name vab-mcp-review -p 127.0.0.1:8080:8080 -e VAB_MCP_TRANSPORT=streamable-http -e VAB_MCP_API_KEY vab-mcp:review
+          trap 'docker stop vab-mcp-review' EXIT
+          curl --fail --retry 20 --retry-all-errors --retry-delay 1 http://127.0.0.1:8080/health
+          python scripts/read_scheduling_encounter.py --local-http --list-tools > "$RUNNER_TEMP/tools.txt"
+          grep -Fx get_scheduling_encounter "$RUNNER_TEMP/tools.txt"
+          if python scripts/read_scheduling_encounter.py --local-http 2>"$RUNNER_TEMP/scope.log"; then exit 1; fi
+          grep -F "Trusted MCP session scope required" "$RUNNER_TEMP/scope.log"

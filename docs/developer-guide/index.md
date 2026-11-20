@@ -1,6 +1,6 @@
 # Developer Guide
 
-**CLI-first reproduction and integration setup.** Read-only fixture tests need no IBM, VA, Supabase or production credentials. Optional hosted integrations require authorized access and environment-specific configuration. Commands distinguish **project-documented** runs from **general setup recipes that have not been rerun for this site**.
+Start with a Primary Care encounter. The local path lets you inspect and run the MCP server with bundled data. The connected path explains how to run it over HTTP and which accounts support the complete browser call.
 
 <div class="feature-grid">
 <div class="feature"><strong><a href="local-mcp-server/">1 · Local MCP server</a></strong><p>Quickest independent check: run the server and fixture tests locally.</p></div>
@@ -12,4 +12,4 @@
 <div class="feature"><strong><a href="release-checklist/">7 · Release & evidence checklist</a></strong><p>What to record before claiming results.</p></div>
 </div>
 
-Start with [Local MCP server](local-mcp-server.md).
+[Run your first MCP request](local-mcp-server.md) · [Run over HTTP and connect services](connected-product.md)

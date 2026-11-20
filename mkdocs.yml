@@ -37,6 +37,7 @@ nav:
   - Developer Guide:
       - developer-guide/index.md
       - Local MCP Server: developer-guide/local-mcp-server.md
+      - HTTP and connected services: developer-guide/connected-product.md
       - VHA Sandbox: developer-guide/vha-sandbox.md
       - Supabase: developer-guide/supabase.md
       - IBM Orchestrate: developer-guide/ibm-orchestrate.md
