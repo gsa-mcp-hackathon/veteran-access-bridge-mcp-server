@@ -1,0 +1,7 @@
+"Suite","Expected","Checks","Passed"
+"tests.test_booking_crm","All checks pass","10","10"
+"tests.test_crm_receipt","All checks pass","12","12"
+"tests.test_primary_care_field_contract.PrimaryCareFieldContractTests","All checks pass","14","14"
+"tests.test_private_primary_care_booking","All checks pass","41","41"
+"tests.test_synthetic_veteran_consent","All checks pass","11","11"
+"tests.test_trusted_primary_care","All checks pass","47","47"

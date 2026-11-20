@@ -1,0 +1,71 @@
+{
+  "_fixture_meta": {
+    "synthetic": true,
+    "case_id": "DEMO-PC-5000999-001",
+    "generated_for": "patient_id:5000999 specialty:PRIMARY_CARE",
+    "source_system": "FEDERAL_EHR_FHIR",
+    "description": "Deterministic Federal EHR/FHIR-style established Primary Care slot fixtures for approved synthetic and sandbox-backed demo cases."
+  },
+  "slots": [
+    {
+      "slot_id": "FEHR-SLOT-PC-5000999-001",
+      "patient_id": "5000999",
+      "specialty": "PRIMARY_CARE",
+      "facility_id": "FEHR-PC-001",
+      "facility_name": "Federal EHR Primary Care Clinic",
+      "provider": "Dr. Synthetic PCP C",
+      "slot_start": "2026-11-18T14:00:00Z",
+      "slot_end": "2026-11-18T14:30:00Z",
+      "availability_status": "AVAILABLE",
+      "wait_days": 17,
+      "drive_minutes": 20,
+      "synthetic": true,
+      "environment": "local-demo",
+      "source_system": "FEDERAL_EHR_FHIR",
+      "freshness": "fixture-deterministic",
+      "clinic_id": "PC-FEHR-001",
+      "stop_code": "323",
+      "stop_code_group": "PRIMARY_CARE",
+      "resource_id": "FEHR-PCP-C",
+      "resource_type": "PHYSICIAN",
+      "template_type": "ESTABLISHED",
+      "modality": "IN_PERSON",
+      "eligible_patient_classifications": [
+        "ESTABLISHED"
+      ],
+      "eligible_appointment_intents": [
+        "FOLLOW_UP"
+      ]
+    },
+    {
+      "slot_id": "FEHR-SLOT-PC-5000335-001",
+      "patient_id": "5000335",
+      "specialty": "PRIMARY_CARE",
+      "facility_id": "FEHR-PC-001",
+      "facility_name": "Federal EHR Primary Care Clinic",
+      "provider": "Dr. Synthetic PCP C",
+      "slot_start": "2026-11-18T14:00:00Z",
+      "slot_end": "2026-11-18T14:30:00Z",
+      "availability_status": "AVAILABLE",
+      "wait_days": 17,
+      "drive_minutes": 20,
+      "synthetic": true,
+      "environment": "local-demo",
+      "source_system": "FEDERAL_EHR_FHIR",
+      "freshness": "fixture-deterministic",
+      "clinic_id": "PC-FEHR-001",
+      "stop_code": "323",
+      "stop_code_group": "PRIMARY_CARE",
+      "resource_id": "FEHR-PCP-C",
+      "resource_type": "PHYSICIAN",
+      "template_type": "ESTABLISHED",
+      "modality": "IN_PERSON",
+      "eligible_patient_classifications": [
+        "ESTABLISHED"
+      ],
+      "eligible_appointment_intents": [
+        "FOLLOW_UP"
+      ]
+    }
+  ]
+}

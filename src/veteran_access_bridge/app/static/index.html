@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Veteran Access Bridge — MSA Scheduling Workspace</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="clean-dashboard">
+  <header class="app-header clean-header">
+    <div class="brand-lockup">
+      <div class="brand-mark">VA</div>
+      <div><strong>Veteran Access Bridge</strong><span>Scheduling Assistant</span></div>
+    </div>
+    <div class="header-call-state"><i></i><span>MSA Monitoring Call</span></div>
+    <div class="msa-profile">
+      <span class="avatar small">MS</span>
+      <div><strong>MSA User</strong><span>VHA Medical Support Assistant</span></div>
+    </div>
+  </header>
+
+  <div id="incomingBanner" class="sr-status incoming-banner">
+    <span>Incoming Primary Care call</span>
+    <span id="incomingDuration">00:00</span>
+    <button id="openCallBtn" type="button">Open interaction</button>
+  </div>
+
+  <main id="liveWorkspace" class="dashboard-shell">
+    <aside class="left-rail">
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <button type="button" data-nav="dashboard">⌂ <span>Dashboard</span></button>
+        <button id="liveCallMode" class="active" type="button" data-nav="live">☎ <span>Live Call</span><b>1</b></button>
+        <button type="button" data-nav="queue">☷ <span>Call Queue</span><b>3</b></button>
+        <button type="button" data-nav="encounters">▣ <span>Encounters</span></button>
+        <button type="button" data-nav="analytics">▥ <span>Analytics</span></button>
+        <button type="button" data-nav="reports">▤ <span>Reports</span></button>
+        <button type="button" data-nav="settings">⚙ <span>Settings</span></button>
+      </nav>
+
+      <section class="queue-section">
+        <span class="rail-label">Active calls (1)</span>
+        <button id="queueCase" class="call-list-item active" type="button">
+          <span class="queue-avatar live">MR</span>
+          <span><strong>Mariano Ruelas</strong><small id="queueDuration">00:00</small></span>
+          <i class="presence-dot"></i>
+        </button>
+
+        <span class="rail-label">Queued calls (3)</span>
+        <div class="call-list-item">
+          <span class="queue-avatar">CT</span><span><strong>Carla Torres</strong><small>Waiting • 00:01</small></span><i class="queue-dot waiting"></i>
+        </div>
+        <div class="call-list-item">
+          <span class="queue-avatar">DW</span><span><strong>David Wilson</strong><small>Waiting • 00:03</small></span><i class="queue-dot"></i>
+        </div>
+        <div class="call-list-item">
+          <span class="queue-avatar">SL</span><span><strong>Susan Lee</strong><small>Waiting • 00:05</small></span><i class="queue-dot"></i>
+        </div>
+      </section>
+      <div id="queueStatus" hidden>LIVE</div>
+    </aside>
+
+    <section class="main-stage">
+      <article class="call-card compact-call-card">
+        <div class="call-title-row">
+          <div>
+            <span class="eyebrow">Live Call</span>
+            <h1>Live Call</h1>
+          </div>
+          <div class="call-state"><i></i><span>Avery Handling Call</span></div>
+          <div class="call-progress"><i></i><span>Call in Progress</span><strong id="turnLatency">—</strong></div>
+        </div>
+
+        <div class="call-summary-grid">
+          <div class="veteran-summary">
+            <span class="avatar hero-avatar">MR</span>
+            <div>
+              <span class="meta-label">Veteran</span>
+              <h2>Mariano Ruelas</h2>
+              <p>XXX-XX-4321</p>
+              <div class="summary-meta">
+                <span>☎ Veteran (PSTN)</span>
+                <span>● Chicago VAMC</span>
+                <span>▣ Primary Care Scheduling Request</span>
+              </div>
+              <div class="veteran-audio-meter" aria-label="Veteran microphone level">
+                <span>Veteran mic</span>
+                <div class="veteran-wave" aria-hidden="true">
+                  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                </div>
+                <strong id="veteranMicStatus">Waiting</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="call-control-panel">
+            <div class="call-controls">
+              <button id="voiceToggleBtn" class="round-action" type="button"><span>🎙</span><small>Connect</small></button>
+              <button id="endCallBtn" class="round-action danger" type="button"><span>☎</span><small>End Call</small></button>
+              <button id="holdCallBtn" class="round-action" type="button"><span>Ⅱ</span><small>Hold</small></button>
+            </div>
+            <div class="monitoring-note">
+              <strong>◉ MSA is monitoring this call</strong>
+              <p>Avery is handling the conversation. You can take over if assistance is needed.</p>
+              <button id="joinBtn" class="outline-primary" type="button">Take Over Call</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="avery-strip">
+          <span class="avery-avatar">A</span>
+          <div><strong>Avery</strong><small>watsonx Orchestrate</small></div>
+          <span class="speaking-pill">Handling Veteran</span>
+          <div id="voiceWave" class="voice-wave" aria-hidden="true"></div>
+          <span id="voiceStatus">Phone/SIP transport pending</span>
+          <span id="micState">MSA monitoring</span>
+          <span id="ttsState">Avery agent connected</span>
+          <span id="voiceSupportText" hidden></span>
+          <span id="interimTranscript" hidden></span>
+          <span class="mic-meter" hidden><i id="micLevelBar"></i></span>
+        </div>
+        <div class="runtime-proof" aria-label="Runtime connection proof">
+          <span><b>Orchestrate</b><i id="orchestrateProof" class="proof pending"></i><strong id="orchestrateProofText">Not verified</strong></span>
+          <span><b>Agent</b><strong id="runtimeAgentId">—</strong></span>
+          <span><b>Thread</b><strong id="runtimeThreadId">—</strong></span>
+          <span><b>MCP</b><i id="mcpProof" class="proof pending"></i><strong id="mcpProofText">Configured / no tool observed</strong></span>
+        </div>
+
+        <div class="sr-status">
+          <span id="patientClassification">Loading…</span>
+          <span id="requestSource">Call</span>
+          <span id="accessStandard">—</span>
+          <span id="accessStandardDetail">Governed comparator</span>
+        </div>
+      </article>
+
+      <article class="conversation-card">
+        <div class="work-tabs compact-tabs" role="tablist" aria-label="Live call views">
+          <button class="work-tab active" data-panel="conversationPanel" type="button">▱ Conversation Transcript</button>
+          <button class="work-tab" data-panel="activityPanel" type="button">⚙ Avery Activity (Tool Calls)</button>
+        </div>
+
+        <section id="conversationPanel" class="tab-panel active">
+          <div class="panel-status-row">
+            <span></span>
+            <span class="substatus"><i></i> Live transcription</span>
+          </div>
+          <div id="transcript" class="transcript clean-transcript">
+            <div class="system-message"><span>System</span>Incoming synthetic Primary Care call waiting for connection.</div>
+          </div>
+        </section>
+
+        <section id="activityPanel" class="tab-panel">
+          <div class="section-heading">
+            <div><span class="eyebrow">Avery Activity</span><h3>Observed tool calls and governed results</h3></div>
+            <span class="substatus"><i></i> Live</span>
+          </div>
+          <p class="explain-note">Operational events only — never hidden chain-of-thought.</p>
+          <div id="workflowActivity" class="workflow-activity">
+            <div class="activity-item pending"><i></i><div><strong>Waiting for interaction</strong><small>Operational events will appear here as the call progresses.</small></div></div>
+          </div>
+          <div id="activityPreview" hidden></div>
+        </section>
+
+        <section id="encounterPanel" class="tab-panel">
+          <div class="section-heading">
+            <div><span class="eyebrow">Scheduling Encounter</span><h3>Governed context</h3></div>
+            <span id="encounterState" class="status-pill">LOADING</span>
+          </div>
+          <p id="encounterSubtitle">Loading governed scheduling context…</p>
+          <div class="encounter-facts">
+            <div><span>Scheduling date</span><strong id="canonicalPid">—</strong></div>
+            <div><span>Classification</span><strong id="railClassification">—</strong></div>
+            <div><span>Eligible slots</span><strong id="eligibleCount">—</strong></div>
+            <div><span>Excluded slots</span><strong id="excludedCount">—</strong></div>
+            <div><span>Access comparator</span><strong id="comparatorWait">—</strong></div>
+            <div><span>Preferred time</span><strong id="preferredTime">Unknown</strong></div>
+          </div>
+          <div id="conflictExplanation" class="handoff-card" hidden></div>
+          <div id="calendarSlots" class="calendar-slots"><div class="loading-card">Loading governed slot evidence…</div></div>
+          <div id="demoActionPanel" class="lifecycle-strip">
+            <div><span>Workflow</span><strong id="demoState">OPTIONS READY</strong></div>
+            <p id="demoNextAction">Select one governed eligible option.</p>
+            <div class="lifecycle-actions">
+              <button id="verifyBtn" type="button" disabled>Verify</button>
+              <button id="confirmBtn" type="button" disabled>Veteran confirms</button>
+              <button id="approveBtn" type="button" disabled>MSA approves</button>
+              <button id="bookBtn" type="button" disabled>Record simulated booking</button>
+            </div>
+            <div id="bookingResult" class="handoff-card" hidden></div>
+          </div>
+          <button id="refreshEncounterBtn" class="text-button" type="button">Refresh governed evidence</button>
+          <div id="evidenceSummary" class="evidence-grid"></div>
+        </section>
+
+        <section id="handoffPanel" class="tab-panel">
+          <div class="section-heading">
+            <div><span class="eyebrow">Warm Handoff</span><h3>Avery transfer status</h3></div>
+            <span id="humanControl" class="status-pill monitor">MSA MONITORING</span>
+          </div>
+          <div class="handoff-status-card">
+            <strong id="handoffReason">No transfer requested.</strong>
+            <p>Context remains visible and preserved if the MSA joins or accepts a transfer.</p>
+          </div>
+          <div class="handoff-actions">
+            <button id="monitorBtn" type="button">Monitor</button>
+            <button id="railJoinBtn" type="button">Join call</button>
+            <button id="acceptTransferBtn" type="button">Accept transfer</button>
+          </div>
+          <div class="next-action"><span>Next permitted action</span><strong id="nextAction">Review governed options</strong></div>
+          <span id="handoffPeekState" hidden>Handling call</span>
+        </section>
+      </article>
+      <section id="operationalView" class="operational-view" hidden aria-live="polite"></section>
+    </section>
+
+    <aside id="monitoringRail" class="monitoring-rail">
+      <div class="rail-tabs">
+        <button class="active" type="button" data-monitor-target="analysisCard">MSA Monitoring</button>
+        <button type="button" data-monitor-target="contextCard">Call Context</button>
+        <button type="button" data-monitor-target="actionsCard">Suggested Actions</button>
+      </div>
+
+      <section id="analysisCard" class="monitor-card">
+        <div class="monitor-card-title"><strong>▥ Call Analysis</strong><span class="status-pill live">Normal</span></div>
+        <ul class="check-list">
+          <li>Intent: Book appointment</li>
+          <li>Sentiment: Positive</li>
+          <li>No escalation needed</li>
+          <li>Avery progressing as expected</li>
+        </ul>
+      </section>
+
+      <section id="contextCard" class="monitor-card">
+        <div class="monitor-card-title"><strong>▣ Call Context</strong><button data-open-panel="encounterPanel" type="button">Edit</button></div>
+        <dl class="context-list">
+          <div><dt>Veteran</dt><dd>Mariano Ruelas</dd></div>
+          <div><dt>Domain</dt><dd>Primary Care</dd></div>
+          <div><dt>Location</dt><dd>Chicago VAMC</dd></div>
+          <div><dt>Request</dt><dd>New appointment</dd></div>
+          <div><dt>Preferred</dt><dd id="monitorPreferred">Morning</dd></div>
+          <div><dt>Classification</dt><dd id="monitorClassification">Established</dd></div>
+        </dl>
+      </section>
+
+      <section id="actionsCard" class="monitor-card">
+        <div class="monitor-card-title"><strong>✦ Suggested Actions</strong></div>
+        <div class="suggested-actions">
+          <button data-open-panel="encounterPanel" type="button">View available appointment slots <span>›</span></button>
+          <button data-open-panel="encounterPanel" type="button">Check Veteran eligibility <span>›</span></button>
+          <button data-open-panel="activityPanel" type="button">Review Avery tool activity <span>›</span></button>
+        </div>
+      </section>
+
+      <section class="monitor-card handoff-readiness">
+        <div class="monitor-card-title"><strong>↻ Handoff Readiness</strong><span class="status-pill live">Ready if needed</span></div>
+        <ul class="check-list">
+          <li>Live transcript available</li>
+          <li>Avery tool activity visible</li>
+          <li>Call context summarized</li>
+          <li>One-click handoff controls</li>
+        </ul>
+        <button data-open-panel="handoffPanel" class="outline-primary" type="button">Review Handoff</button>
+      </section>
+
+      <form id="msaAssistantForm" hidden>
+        <input id="msaAssistantInput" type="text" autocomplete="off">
+      </form>
+    </aside>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/livekit-client/dist/livekit-client.umd.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
