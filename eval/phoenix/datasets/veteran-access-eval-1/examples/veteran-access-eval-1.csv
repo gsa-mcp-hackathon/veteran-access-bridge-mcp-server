@@ -1,0 +1,13 @@
+query,responses
+"For synthetic case DEMO-CARD-5000335-001, use the current scheduling encounter. What encounter state and patient classification are returned?","AWAITING_SCHEDULER_REVIEW; NEW"
+"For DEMO-CARD-5000335-001, how many raw internal slots are evaluated and how many are eligible after deterministic scheduling rules?","5 raw slots; 4 eligible options"
+"For DEMO-CARD-5000335-001, which internal slot is excluded from eligibility and why?","VISTA-SLOT-CARD-5000335-002; excluded because it is STALE"
+"For DEMO-CARD-5000335-001, which eligible option ranks first for the Veteran's recorded preference?","OPT-VISTA-SLOT-CARD-5000335-001"
+"For DEMO-CARD-5000335-001, what option is the access-standard comparator, what is the wait from the canonical PID, and what specialty threshold applies?","OPT-FEHR-SLOT-CARD-5000335-001; 35 days; 28-day Specialty standard"
+"For DEMO-CARD-5000335-001, does the access-standard breach authorize Community Care or create a booking?","No. Community Care review is recommended, authorization remains NOT_EVALUATED, and booking_created is false."
+"For synthetic case DEMO-PC-5000999-001, what care category, patient classification, and encounter state are returned?","PRIMARY_CARE; ESTABLISHED; OPTIONS_ASSEMBLED"
+"For DEMO-PC-5000999-001, how many raw slots are evaluated and how many are eligible?","3 raw slots; 2 eligible options"
+"For DEMO-PC-5000999-001, why is VISTA-SLOT-PC-5000999-002 excluded?","PATIENT_CLASSIFICATION_MISMATCH, APPOINTMENT_INTENT_MISMATCH, and TEMPLATE_MISMATCH"
+"For DEMO-PC-5000999-001, what is the earliest eligible comparator wait, what Primary Care threshold applies, and is the standard exceeded?","14 days; 20-day Primary Care standard; no, the standard is not exceeded"
+"For DEMO-PC-5000999-001, is Community Care review recommended, has authorization been evaluated, and did EPS or booking run?","No Community Care review recommendation; authorization is NOT_EVALUATED; eps_invoked is false; booking_created is false"
+"For synthetic case DEMO-CARD-DOES-NOT-EXIST, retrieve the current scheduling encounter. What should the agent do if the case is unavailable?","Fail closed, explain that the synthetic case is unknown or unavailable, and do not invent patient, consult, authorization, slot, or booking facts."

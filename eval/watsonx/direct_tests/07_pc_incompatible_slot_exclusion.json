@@ -1,0 +1,32 @@
+{
+  "agent": "veteran_access_agent",
+  "goals": {
+    "get_scheduling_encounter": [
+      "summarize"
+    ]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "get_scheduling_encounter",
+      "tool_name": "get_scheduling_encounter",
+      "args": {
+        "case_id": "DEMO-PC-5000999-001"
+      }
+    },
+    {
+      "type": "text",
+      "name": "summarize",
+      "response": "VISTA-SLOT-PC-5000999-002 is not eligible because its new-patient classification, visit intent, and template do not match the established Primary Care scheduling request.",
+      "keywords": [
+        "not",
+        "eligible",
+        "new",
+        "established",
+        "template"
+      ]
+    }
+  ],
+  "story": "For DEMO-PC-5000999-001, explain why VISTA-SLOT-PC-5000999-002 is not eligible.",
+  "starting_sentence": "Why is this Primary Care slot not eligible?"
+}

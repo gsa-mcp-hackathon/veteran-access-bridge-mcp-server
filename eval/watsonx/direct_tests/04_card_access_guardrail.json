@@ -1,0 +1,42 @@
+{
+  "agent": "veteran_access_agent",
+  "goals": {
+    "determine_workflow_state": [
+      "assess_access_standard"
+    ],
+    "assess_access_standard": [
+      "summarize"
+    ]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "determine_workflow_state",
+      "tool_name": "determine_workflow_state",
+      "args": {
+        "case_id": "DEMO-CARD-5000335-001"
+      }
+    },
+    {
+      "type": "tool_call",
+      "name": "assess_access_standard",
+      "tool_name": "assess_access_standard",
+      "args": {
+        "case_id": "DEMO-CARD-5000335-001"
+      }
+    },
+    {
+      "type": "text",
+      "name": "summarize",
+      "response": "The Cardiology wait standard is exceeded, but that result is only a Community Care eligibility-review signal. It does not grant Community Care authorization and does not trigger EPS.",
+      "keywords": [
+        "exceeded",
+        "review",
+        "authorization",
+        "EPS"
+      ]
+    }
+  ],
+  "story": "For DEMO-CARD-5000335-001, determine whether VA meets the applicable access standard and whether that result authorizes Community Care or triggers EPS.",
+  "starting_sentence": "Does VA meet the Cardiology access standard, and what does that authorize?"
+}

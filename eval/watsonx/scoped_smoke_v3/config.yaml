@@ -1,0 +1,19 @@
+test_paths:
+- eval/watsonx/scoped_smoke_v3/A01.json
+- eval/watsonx/scoped_smoke_v3/A02.json
+- eval/watsonx/scoped_smoke_v3/A03.json
+- eval/watsonx/scoped_smoke_v3/A11.json
+- eval/watsonx/scoped_smoke_v3/A19.json
+- eval/watsonx/scoped_smoke_v3/A22.json
+- eval/watsonx/scoped_smoke_v3/A25.json
+- eval/watsonx/scoped_smoke_v3/A26.json
+output_dir: eval/results/ibm-scope-v3
+auth_config:
+  url: https://api.ca-tor.watson-orchestrate.cloud.ibm.com/instances/194b6edd-bf14-4b92-b44a-751d836e022e
+  tenant_name: veteran-access-dev
+provider_config:
+  provider: gateway
+  vendor: ibm
+n_runs: 1
+max_user_turns: 4
+enable_verbose_logging: false

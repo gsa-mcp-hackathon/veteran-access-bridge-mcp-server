@@ -2,6 +2,8 @@
 
 From the repository root, run `uv sync --locked --group dev`, then `uv run --no-sync pytest -q tests`. To run just one suite, append its file path in place of `tests`. These checks use local test data.
 
+The table highlights seven Primary Care suites. The same command also runs the other original backend test modules, including MCP transport, voice projections, scheduling state and database contracts. Hosted checks can skip when their prerequisites are absent.
+
 | What you want to verify | Test source |
 | --- | --- |
 | Primary Care scheduling scenarios | [Scheduling scenarios](test_m6_2_primary_care_scenarios.py) |

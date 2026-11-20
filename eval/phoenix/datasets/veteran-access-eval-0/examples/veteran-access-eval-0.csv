@@ -1,0 +1,11 @@
+query,responses
+"For synthetic case DEMO-CARD-5000335-001, determine whether the case is allowed to proceed to scheduling availability search. What workflow state does the server return?","READY_TO_SEARCH"
+"For DEMO-CARD-5000335-001, first check the workflow state and then search availability. How many source systems return a source result?","3"
+"For DEMO-CARD-5000335-001, after confirming the workflow can proceed, which three source systems are represented in the availability search?","VISTA_ISS, FEDERAL_EHR_FHIR, COMMUNITY_CARE_EPS"
+"For DEMO-CARD-5000335-001, after the workflow gate passes, how many total access options are returned across all three synthetic sources?","8"
+"For DEMO-CARD-5000335-001, after confirming READY_TO_SEARCH, how many VistA/ISS access options are returned?","3"
+"For DEMO-CARD-5000335-001, after confirming READY_TO_SEARCH, how many Federal EHR/FHIR access options are returned?","2"
+"For DEMO-CARD-5000335-001, after confirming READY_TO_SEARCH, how many Community Care/EPS access options are returned?","3"
+"For DEMO-CARD-5000335-001, inspect the Community Care options. How many are AVAILABLE_NOT_AUTHORIZED and how many are AUTHORIZED_NOT_VERIFIED?","2 AVAILABLE_NOT_AUTHORIZED and 1 AUTHORIZED_NOT_VERIFIED"
+"For DEMO-CARD-5000335-001, is any Community Care option VERIFIED_BOOKABLE?","No"
+"For DEMO-CARD-5000335-001, does search_availability construct a SchedulingHandoff?","No; creates_scheduling_handoff is false."

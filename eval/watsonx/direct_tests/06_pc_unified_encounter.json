@@ -1,0 +1,32 @@
+{
+  "agent": "veteran_access_agent",
+  "goals": {
+    "get_scheduling_encounter": [
+      "summarize"
+    ]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "get_scheduling_encounter",
+      "tool_name": "get_scheduling_encounter",
+      "args": {
+        "case_id": "DEMO-PC-5000999-001"
+      }
+    },
+    {
+      "type": "text",
+      "name": "summarize",
+      "response": "The synthetic Primary Care Scheduling Encounter is established care with eligible internal options. VA meets the applicable 20-day access standard, Community Care review is not recommended, authorization remains not evaluated, and no appointment has been booked.",
+      "keywords": [
+        "Primary Care",
+        "20",
+        "Community Care",
+        "not",
+        "booked"
+      ]
+    }
+  ],
+  "story": "For DEMO-PC-5000999-001, show the current scheduling encounter, eligible internal options, access-standard result, and governed next action.",
+  "starting_sentence": "Show me the Primary Care scheduling encounter and what happens next."
+}

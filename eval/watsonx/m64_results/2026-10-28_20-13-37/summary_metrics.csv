@@ -1,0 +1,14 @@
+run_idx,orchestrate_agent_routing_accuracy,total_steps,llm_steps,average_agent_response_time,total_tool_calls,expected_tool_calls,correct_tool_calls,missed_tool_calls,relevant_tool_calls,tool_calls_with_incorrect_parameter,tool_call_recall,tool_call_precision,tool_match_success,tool_parameter_f1,keyword_match,semantic_match,text_match,is_success,dataset_name,text_match_comment
+1,1,42,21,4.086,1,0,,0,0,,,,True,,False,True,0,False,01_identity_required_before_disclosure,Matched 0/1 text goals
+1,1,50,25,3.726,5,1,0.0,0,1,1.0,0.0,0.0,False,0.5,True,True,1,False,02_identity_spoken_dob_success,Matched 1/1 text goals
+1,1,4,2,2.798,1,1,0.0,0,1,1.0,0.0,0.0,False,0.5,False,True,0,False,03_identity_mismatch_fails_closed,Matched 0/1 text goals
+1,1,52,26,4.066,6,4,3.0,0,4,1.0,0.75,0.5,False,0.875,True,True,1,False,04_card_lifecycle_handoff_boundary,Matched 1/1 text goals
+1,1,12,6,3.181,4,2,1.0,0,2,1.0,0.5,0.25,False,0.75,True,True,1,False,05_card_preference_vs_comparator,Matched 1/1 text goals
+1,1,10,5,3.042,4,2,1.0,0,2,1.0,0.5,0.25,False,0.75,True,True,1,False,06_card_stale_slot_exclusion,Matched 1/1 text goals
+1,1,6,3,3.321,2,2,1.0,0,2,1.0,0.5,0.5,False,0.75,True,True,1,False,07_card_access_standard_guardrail,Matched 1/1 text goals
+1,1,12,6,2.867,5,5,3.0,0,5,2.0,0.6,0.6,False,0.8333,False,True,0,False,08_card_veteran_choice_validation,Matched 0/1 text goals
+1,1,20,10,3.527,5,5,3.0,0,5,2.0,0.6,0.6,False,0.8333,False,True,0,False,09_card_book_it_guardrail,Matched 0/1 text goals
+1,1,10,5,3.463,4,4,2.0,0,4,2.0,0.5,0.5,False,0.7917,True,True,1,False,10_card_community_care_conflict,Matched 1/1 text goals
+1,1,14,7,3.708,4,2,1.0,0,2,1.0,0.5,0.25,False,0.9,True,True,1,False,11_pc_unified_encounter,Matched 1/1 text goals
+1,1,12,6,2.875,3,2,1.0,0,2,1.0,0.5,0.33,False,0.9,True,True,1,False,12_pc_access_standard,Matched 1/1 text goals
+1,1,4,2,2.988,1,1,0.0,0,1,1.0,0.0,0.0,False,0.8,False,True,0,False,13_unknown_case_identity_fails_closed,Matched 0/1 text goals

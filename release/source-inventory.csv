@@ -1,0 +1,858 @@
+Source path,Source Git blob,Disposition,Submission path or reason
+.bob/mcp.json,cb284d0485f6286f68345d55a4d7e9b10ad69bff,Upstream only,Development tooling
+.bob/skills/README.md,163151116ab51c44fc30dbbcc7771cb23ddd7633,Upstream only,Development tooling
+.bob/skills/mcp-builder/SKILL.md,7e2e342a2cd8e3b43a7b94ba93dbb5365318257f,Upstream only,Development tooling
+.bob/skills/mcp-builder/references/evaluation.md,d1cb52aed87bb4996f7ba49dc399549fb6365b28,Upstream only,Development tooling
+.bob/skills/mcp-builder/references/mcp_best_practices.md,024627b820f93569a275eb18452fc4c48fdec854,Upstream only,Development tooling
+.bob/skills/mcp-builder/references/node_mcp_server.md,dad685baf1052084ba49062eb1be243b98e7c259,Upstream only,Development tooling
+.bob/skills/mcp-builder/references/python_mcp_server.md,1506b5df0ceb6bf9b078849843d25de892853b01,Upstream only,Development tooling
+.bob/skills/mcp-eval/SKILL.md,5235eb3f35f9f204effab8eaf0979411e925ebd2,Upstream only,Development tooling
+.bob/skills/vab-mcp-design/SKILL.md,40be576bf62ec1148c7e23c81dc8834857fa69f4,Upstream only,Development tooling
+.bob/skills/vab-mcp-design/references/bob-development-workbench.md,5aefa21198d3d6bd22f600aacb278c8c4c3f9f61,Upstream only,Development tooling
+.bob/skills/vab-mcp-design/references/community-care-lifecycle.md,2a44312cc5e3303dd333de4dcf097cf69495067e,Upstream only,Development tooling
+.bob/skills/vab-mcp-design/references/tool-contracts.md,da447bca210a21a9bad017b3868c41549266848d,Upstream only,Development tooling
+.bob/skills/vab-mcp-design/references/watsonx-orchestrate.md,76e05301facd7cedffbcb0e4f869051a5005c3c9,Upstream only,Development tooling
+.bob/skills/vab-plan-first/SKILL.md,b034d9e63491f4cb71530b81ea8e14a641f8f745,Upstream only,Development tooling
+.bob/skills/vab-plan-first/references/architecture-and-workflow.md,866343a7fe1d4ff0faf36ed805e4a4bf5241746f,Upstream only,Development tooling
+.bob/skills/vab-plan-first/references/community-care-boundaries.md,7298f691c9e070003cd54ad222af73affbbb379f,Upstream only,Development tooling
+.bob/skills/vab-safety-review/SKILL.md,b08e1488dc3241c18d55622734969a34d65bb96a,Upstream only,Development tooling
+.bob/skills/vab-safety-review/references/booking-and-human-approval.md,7ee0c761d4a8af9ac83be9f5dc738806cda5c345,Upstream only,Development tooling
+.bob/skills/vab-safety-review/references/community-care-safety.md,b03ab88f4c2f650c5877ac45e3c9a53975170d44,Upstream only,Development tooling
+.bob/skills/vab-safety-review/references/provenance-and-failure.md,31a8a3009a668e924cad9675295967dd53499bfa,Upstream only,Development tooling
+.bob/skills/vab-safety-review/references/rbac-obo-remote-mcp.md,f5c8d1f9ee91d76d44d5e1e8979443d35930713e,Upstream only,Development tooling
+.bob/skills/vab-test-and-ci/SKILL.md,e1fcc872a8d8644a061e519d9e60c8ebd2f6bbc3,Upstream only,Development tooling
+.bob/skills/vab-test-and-ci/references/ci-and-packaging.md,9456833c6356fd312f32079ff256f7ca6f28e656,Upstream only,Development tooling
+.bob/skills/vab-test-and-ci/references/evaluation-contract.md,ca737f341193d95defcee591dcdfb6c6b66c3835,Upstream only,Development tooling
+.bob/skills/vab-test-and-ci/references/mcp-inspector.md,6cb0cda015da361fe3a062860891c0816ced6223,Upstream only,Development tooling
+.bob/skills/vab-test-and-ci/references/phoenix-evaluation.md,9bbe0f92cbc8d55ed7106e89539cd17d919668c8,Upstream only,Development tooling
+.devcontainer/devcontainer.json,62744b30c192d9a395c44a7001a0c2173cf75c24,Original,.devcontainer/devcontainer.json
+.devcontainer/post-create.sh,df943a6ba5d7e79e3a1983f3323ec7ec7cbdf290,Original,.devcontainer/post-create.sh
+.env.example,f1589c2250e0f0b6c892a780f7d4929e4f1205e7,Original,.env.example
+.gitattributes,fa236ed923f5b9dd2aca2c6373185b9f4e3f3f9c,Upstream only,Development repository metadata or setup instructions
+.github/workflows/check-hosted-avery-rollout.yml,acfb3c70045767825659a3ac09aa3677165d95b2,Upstream only,Original CI and publishing workflows
+.github/workflows/ci.yml,ae62772b0175c03cd073c6a75eb26c5b4508f091,Upstream only,Original CI and publishing workflows
+.github/workflows/mcp-evaluation.yml,7d3e7c8e4767a0f32ba9a79d4b22de32a472943c,Upstream only,Original CI and publishing workflows
+.github/workflows/publish-avery-worker.yml,d458d067f8651d56853951cd4c7e54bed5778b40,Upstream only,Original CI and publishing workflows
+.github/workflows/publish-container.yml,aad9cb466e461c753c95b853453446d9e650daf2,Upstream only,Original CI and publishing workflows
+.github/workflows/publish-kb-isolated.yml,972b1942e92fba99e897b30098b510e470334ba0,Upstream only,Original CI and publishing workflows
+.gitignore,cfe3952d3fd9d4bcf854e356c9c7cc9aaef787c3,Submission edition,.gitignore
+.python-version,e4fba2183587225f216eeada4c78dfab6b2e65f5,Original,.python-version
+AGENTS.md,4d81856630d067185ef57d3ff7926c047d06b010,Upstream only,Development repository metadata or setup instructions
+QUICKSTART.md,9e8ccd7324d32af3c0b2f1e0fd0b90f887370d1e,Upstream only,Development repository metadata or setup instructions
+README.md,1c41e7ae6185f5e55dee755f392006adb1a26d63,Submission edition,README.md
+SECURITY.md,5334369bf39c7193a3b79a295fa54e0f3d76190d,Original,SECURITY.md
+agents/avery-case-context-v3.md,66289ac0f10244a2a0e57b926493b4cea0825b66,Original,agents/avery-case-context-v3.md
+agents/avery-case-context-v4.md,76c1e4a4c9246998efdd813a18dc623474eda8f9,Original,agents/avery-case-context-v4.md
+agents/avery-consolidated-v5.md,c6cbeb38008bb3ef80df43b2046c17543ab132d9,Original,agents/avery-consolidated-v5.md
+agents/avery-consolidated-v6.md,eca2b29fc30b1da48326381ced500a7b02a2242e,Original,agents/avery-consolidated-v6.md
+agents/avery-crm-candidate.md,dab362b1a5fc6d0b372761e51a1a23b6930adef6,Original,agents/avery-crm-candidate.md
+agents/avery-response-evidence-v2.md,673bc264daaf554b9eb9914c72c5cf2d77e90958,Original,agents/avery-response-evidence-v2.md
+agents/avery-scoped-reads-v10.md,1306f6f1a7d1b8b81421d151c94022ff32811be1,Original,agents/avery-scoped-reads-v10.md
+agents/avery-scoped-reads-v11.md,2832de15b371a6835d513937c07b8effbaea7ce3,Original,agents/avery-scoped-reads-v11.md
+agents/avery-scoped-reads-v7.md,47421326470e4e2ffa0fba6aa4f1f18a845279e3,Original,agents/avery-scoped-reads-v7.md
+agents/avery-scoped-reads-v8.md,584330589f919a3d396a09b5dc677098dc57038f,Original,agents/avery-scoped-reads-v8.md
+agents/avery-scoped-reads-v9.md,e5bf02d461f8e992a1ff4433bcdbdbcd0bbccb31,Original,agents/avery-scoped-reads-v9.md
+agents/veteran-access-agent-m64.yaml,8967aea999859e3d5883437269933c9f31d0581e,Original,agents/veteran-access-agent-m64.yaml
+agents/veteran-access-agent.yaml,1570d330b064a9343d1c348c6015cd12f757827e,Original,agents/veteran-access-agent.yaml
+apps/web/.env.example,14240de22030435a71eb78ff893aedf3ca8fd4ef,Upstream only,Historical frontend
+apps/web/README.md,b458a913eeaa0e4f83e53d5cc3eeeab34d88ec86,Upstream only,Historical frontend
+apps/web/app/globals.css,86b5c1b08fc6731a8b105209d342eceb5dfc5ee4,Upstream only,Historical frontend
+apps/web/app/layout.tsx,0ba70d621983d4ebe9ba61900d82da8827817804,Upstream only,Historical frontend
+apps/web/app/page.tsx,918adb7191c4d96e0267896fece672bb451ec770,Upstream only,Historical frontend
+apps/web/app/veteran-chat/page.tsx,9822f061a2c884b64c75183be34e26b117360ee6,Upstream only,Historical frontend
+apps/web/app/veteran-voice/page.tsx,5e74445d3a7224d270086d01a334452c38a8007d,Upstream only,Historical frontend
+apps/web/components/msa-workspace.tsx,ae1073fb97a4e33bad491d096d79d444b572f2e4,Upstream only,Historical frontend
+apps/web/lib/interaction-events.ts,df5182197a386e69bff00359d29b6e5147f93396,Upstream only,Historical frontend
+apps/web/next-env.d.ts,ce4e94a6b10f160ee021fe18939af160d2927dcf,Upstream only,Historical frontend
+apps/web/next.config.ts,d72f55124a2f5d3775fad7107be3dac1fe496100,Upstream only,Historical frontend
+apps/web/package.json,00158042efe726af1152a0cba9bbc592d3158b21,Upstream only,Historical frontend
+apps/web/tsconfig.json,1a0ca4a34fe96c15554af6446dbe6aca722fa8c7,Upstream only,Historical frontend
+archive/pre-consolidation/README.md,33ad36225c44d5232be9721182f67bbc1668c45f,Upstream only,Pre-release archive
+archive/pre-consolidation/orchestrate-mcp/data/fixtures/demo/README.md,70e9919c4baed351c28f29d8c1a046b861527047,Original at reviewer path,data/fixtures/demo/README.md
+archive/pre-consolidation/orchestrate-mcp/data/fixtures/demo/community-slots-cardiology.json,27e424d2b0a40a31e5303895f4e48e99c68c5339,Original at reviewer path,data/fixtures/demo/community-slots-cardiology.json
+archive/pre-consolidation/orchestrate-mcp/data/fixtures/demo/federal-ehr-slots-cardiology.json,544c21094d92e69486b6e9480470218118524dcb,Original at reviewer path,data/fixtures/demo/federal-ehr-slots-cardiology.json
+archive/pre-consolidation/orchestrate-mcp/data/fixtures/demo/mariano-cardiology-case.json,e292551e6de27a60d036eabc292dc528a2e53c86,Original at reviewer path,data/fixtures/demo/mariano-cardiology-case.json
+archive/pre-consolidation/orchestrate-mcp/data/fixtures/demo/vista-slots-cardiology.json,9d781e79365b2dd58f09ea251ca5305814ebdd90,Original at reviewer path,data/fixtures/demo/vista-slots-cardiology.json
+archive/pre-consolidation/orchestrate-mcp/main.py,742b88340ded73ffa69f6c49e9f4aa7c201fe6a6,Original at reviewer path,main.py
+archive/pre-consolidation/orchestrate-mcp/pyproject.toml,c5c219075b5eb70f4e3a172c31c44a4e4e6eaa26,Upstream only,Pre-release archive
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/__init__.py,711bc966a5dd8c2873c5eea4675de6e80491b1f9,Upstream only,Pre-release archive
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/adapters/__init__.py,72b43d8dcd6be2515e5d008d2cfaafe493b0b0bd,Original at reviewer path,src/veteran_access_bridge/adapters/__init__.py
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/adapters/community.py,42776d31a0409f780844cc2645528116d9cb1059,Original at reviewer path,src/veteran_access_bridge/adapters/community.py
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/adapters/federal_ehr.py,0390a6a7afeca5e23c2b003f6a12c120b82f820d,Upstream only,Pre-release archive
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/adapters/fixtures/__init__.py,9fae59f0676e1fc741de831059c15e7bfa556369,Original at reviewer path,src/veteran_access_bridge/adapters/fixtures/__init__.py
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/adapters/fixtures/community-slots-cardiology.json,27e424d2b0a40a31e5303895f4e48e99c68c5339,Original at reviewer path,data/fixtures/demo/community-slots-cardiology.json
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/adapters/fixtures/federal-ehr-slots-cardiology.json,544c21094d92e69486b6e9480470218118524dcb,Original at reviewer path,data/fixtures/demo/federal-ehr-slots-cardiology.json
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/adapters/fixtures/vista-slots-cardiology.json,9d781e79365b2dd58f09ea251ca5305814ebdd90,Original at reviewer path,data/fixtures/demo/vista-slots-cardiology.json
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/adapters/vista.py,70b761e7e985b65f144ef803847b5ab5b32578bc,Upstream only,Pre-release archive
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/domain/__init__.py,207e793861299bf263ccfbff2108e8ca2b0922f4,Upstream only,Pre-release archive
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/domain/models.py,672e5c2e308bed46970c34ee3df2d74d0959271e,Upstream only,Pre-release archive
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/domain/workflow.py,bab18e01727126245b408586a9c5f5331e6f378f,Original at reviewer path,src/veteran_access_bridge/domain/workflow.py
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/mcp/__init__.py,7d02eaf260023efa7ee0387357ff0e23e5a885d9,Original at reviewer path,src/veteran_access_bridge/mcp/__init__.py
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/mcp/app.py,32f1d52529de754a2eee2db9b76489c225b9f46f,Upstream only,Pre-release archive
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/mcp/cases.py,2b6abbc5d11d125753b0f26dd5ffe87fc5066501,Upstream only,Pre-release archive
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/mcp/config.py,2dfbe888d8d7023640948bd525b5a517acbe9e6c,Upstream only,Pre-release archive
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/mcp/fixtures/__init__.py,56b25e92bd438c8d66f43b8dd056784f1f4ecc81,Original at reviewer path,src/veteran_access_bridge/mcp/fixtures/__init__.py
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/mcp/fixtures/mariano-cardiology-case.json,d5f0c123d13b3f9ce062591853994258b5b5c290,Upstream only,Pre-release archive
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/mcp/routes.py,f1657d84b4b153191c85468608949fa73250c4eb,Upstream only,Pre-release archive
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/mcp/serialization.py,ac90d7542b9194ebf702f5f82fa2d8e60f40d3f3,Upstream only,Pre-release archive
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/mcp/tools/__init__.py,e9e4481dc5da9a661901a3033ff139b8f7e5ce50,Upstream only,Pre-release archive
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/mcp/tools/determine_workflow_state.py,536db7ad1af86bba2ccc7ef8ae2252ecc9d6c4e9,Upstream only,Pre-release archive
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/mcp/tools/search_availability.py,eeb809fed2d0431d8d1a1aa8364bb09b107f09a1,Upstream only,Pre-release archive
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/services/__init__.py,cf764a2ddc9c1ed6f3c3a0b18d7c6ac3004906d6,Upstream only,Pre-release archive
+archive/pre-consolidation/orchestrate-mcp/veteran_access_bridge/services/search.py,b00181fafa4c4954887119cd8d398e47ea118d9d,Original at reviewer path,src/veteran_access_bridge/services/search.py
+data/fixtures/demo/README.md,70e9919c4baed351c28f29d8c1a046b861527047,Original,data/fixtures/demo/README.md
+data/fixtures/demo/community-slots-cardiology.json,27e424d2b0a40a31e5303895f4e48e99c68c5339,Original,data/fixtures/demo/community-slots-cardiology.json
+data/fixtures/demo/federal-ehr-slots-cardiology.json,544c21094d92e69486b6e9480470218118524dcb,Original,data/fixtures/demo/federal-ehr-slots-cardiology.json
+data/fixtures/demo/mariano-cardiology-case.json,e292551e6de27a60d036eabc292dc528a2e53c86,Original,data/fixtures/demo/mariano-cardiology-case.json
+data/fixtures/demo/vista-slots-cardiology.json,9d781e79365b2dd58f09ea251ca5305814ebdd90,Original,data/fixtures/demo/vista-slots-cardiology.json
+db/schema/001_initial.sql,0b3c6b64d2f942349e5b6124dc0a2041c1c6366e,Original,db/schema/001_initial.sql
+db/schema/003_scheduling_lifecycle_evidence.sql,3491d69325a6423841a790499d7bef4aba32b15c,Original,db/schema/003_scheduling_lifecycle_evidence.sql
+db/schema/004_scheduling_decision_order.sql,f70bc5003c64fd6c35a607320ce046a16ae14412,Original,db/schema/004_scheduling_decision_order.sql
+db/schema/005_crm_test_candidate.sql,e564b7416261835c8dea9d8269b46dac5d73143b,Original,db/schema/005_crm_test_candidate.sql
+deploy/demo/Dockerfile,c3560b0d1654e0e8bda0c515d85a891faa3acca6,Original,deploy/demo/Dockerfile
+deploy/demo/README.md,f09c5ba1ed817b49b04b5fbc60dbc447646934f8,Original,deploy/demo/README.md
+deploy/ibm/.dockerignore,d1d66a93118cfaf91a882e2bfd4cee602b6dece8,Original,deploy/ibm/.dockerignore
+deploy/ibm/Dockerfile,d9499fdcabce019ce64f42c4c4e4d9090d5d567f,Original,deploy/ibm/Dockerfile
+deploy/ibm/README.md,309fd1b4d7534da09956c2114a03e4dad009742e,Original,deploy/ibm/README.md
+deploy/ibm/avery-worker/Dockerfile,35967d48a938eae254cc0c916afab2d9cafa0511,Original,deploy/ibm/avery-worker/Dockerfile
+deploy/ibm/avery-worker/Dockerfile.dockerignore,3fd700d7156f7940721975135b6d7265c5423b10,Original,deploy/ibm/avery-worker/Dockerfile.dockerignore
+deploy/ibm/code-engine/README.md,7463d17b7eefb342042a7ab5fdf7ff0f2867517f,Original,deploy/ibm/code-engine/README.md
+deploy/ibm/code-engine/deploy.ps1,83df0dd0407208f51a39c62de808a6684047b155,Original,deploy/ibm/code-engine/deploy.ps1
+deploy/ibm/code-engine/smoke_runtime.py,80fe05d0f537c0ec3ca5e07e8f3b52e2065ae476,Original,deploy/ibm/code-engine/smoke_runtime.py
+deploy/ibm/code-engine/validate-m63.ps1,367b0499589ce9ca41329f749d2298d77841ea69,Original,deploy/ibm/code-engine/validate-m63.ps1
+deploy/ibm/evaluation/answer-preparation-candidate.md,12d6b23c81c70f781a11dce7510462a0f2a4fac6,Original,deploy/ibm/evaluation/answer-preparation-candidate.md
+deploy/ibm/evaluation/configure_sync_flow.py,3f39521ac1b4f754e345e323a8f113f9ecaaae26,Original,deploy/ibm/evaluation/configure_sync_flow.py
+deploy/ibm/evaluation/create_stack.py,fbfd3bf35a4ea5fe67aff9ccb0795f57e4b26a02,Original,deploy/ibm/evaluation/create_stack.py
+deploy/ibm/evaluation/plan.json,fe769b33683b92a55bb264f8a874d05cdd5ffa77,Original,deploy/ibm/evaluation/plan.json
+deploy/ibm/evaluation/prepare_answer_candidate.py,6d9e21b2312e51731bb3f4f73ef0156f89e4ad08,Original,deploy/ibm/evaluation/prepare_answer_candidate.py
+deploy/ibm/local-mcp-toolkit/.env.example,df2c3abdfac785f5630ca704d1e190bfd1a5684b,Original,deploy/ibm/local-mcp-toolkit/.env.example
+deploy/ibm/local-mcp-toolkit/README.md,f295fcb56a9c3b210f29e0cdd157719aa83a151e,Original,deploy/ibm/local-mcp-toolkit/README.md
+deploy/ibm/local-mcp-toolkit/register-toolkit.ps1,f99f0337b3031a595b44c48d9d04888b52f7f033,Original,deploy/ibm/local-mcp-toolkit/register-toolkit.ps1
+deploy/ibm/local-mcp-toolkit/requirements.txt,096be27c305b846750d2f446f1e63200ce4218d9,Original,deploy/ibm/local-mcp-toolkit/requirements.txt
+deploy/ibm/local-mcp-toolkit/server.py,16866469f9dfffe1b65464568fd30660f4ea8bda,Original,deploy/ibm/local-mcp-toolkit/server.py
+deploy/ibm/local-mcp-toolkit/toolkit.yaml,312d70e1e9a539c438f326ef1659acf389285651,Original,deploy/ibm/local-mcp-toolkit/toolkit.yaml
+deploy/ibm/orchestrate/README.md,2733b7c9608e148e2cce4de3f88a16393b3e9ae8,Original,deploy/ibm/orchestrate/README.md
+deploy/ibm/orchestrate/avery-agent-scheduling-v13.md,ef6ec324e5218a057d082a0cba19a3ae4c7f3908,Original,deploy/ibm/orchestrate/avery-agent-scheduling-v13.md
+deploy/ibm/orchestrate/avery-guidelines-v1.json,173983b9480454165762393379d356c18b4649ad,Original,deploy/ibm/orchestrate/avery-guidelines-v1.json
+deploy/ibm/orchestrate/cleanup-legacy-toolkits.ps1,c5bd6de275b7b14a8bb121773f3d7c2201def14c,Original,deploy/ibm/orchestrate/cleanup-legacy-toolkits.ps1
+deploy/ibm/orchestrate/configure-m63.ps1,7a8b4f010113b2bbae94f25b22050601f0e6c540,Original,deploy/ibm/orchestrate/configure-m63.ps1
+deploy/ibm/orchestrate/configure-m64.ps1,aa26dcc10bebcc7801a1ffc5b68acf7f1d655967,Original,deploy/ibm/orchestrate/configure-m64.ps1
+deploy/ibm/orchestrate/require_voice_context.py,9ac542f4842face0a77c35ebae4ba35a2178e08f,Original,deploy/ibm/orchestrate/require_voice_context.py
+deploy/ibm/orchestrate/run-m63-evaluation.ps1,3c06ef69961f1d32ec88d7ba04618460cabdd2cb,Original,deploy/ibm/orchestrate/run-m63-evaluation.ps1
+deploy/ibm/orchestrate/run-m63-regression.ps1,47dda33f68a610f38d5c2111daaf41843bed688e,Original,deploy/ibm/orchestrate/run-m63-regression.ps1
+deploy/ibm/orchestrate/run-m64-evaluation.ps1,cb0a817391302b15fd48a36346f8ac647ccd0c0a,Original,deploy/ibm/orchestrate/run-m64-evaluation.ps1
+deploy/ibm/orchestrate/update-m63-agent.ps1,f414b3f14a0840c5837fc9ecd84bb4ded16e12f4,Original,deploy/ibm/orchestrate/update-m63-agent.ps1
+docs/IMPLEMENTATION_PLAN.md,d9a185d32c680bacba1fcd28712623db47ce03d0,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/README.md,84aa1aca6bedd5820a675e47e8ff364838b47cda,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/WORKFLOW_AND_GUARDRAILS.md,d560683c0d74231fa12db601a4f7d4e212eceae7,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/architecture/canonical-ui-backend-boundary.md,f12ed78089f5736873c399c44b2b8e312f71bab0,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/architecture/current-system.md,9746dfaad78eaab32b31a32ffd5a138d78d35cca,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/architecture/scheduling-policy-and-scenarios.md,da632fd3ad3aac6d1481dc2e6c10d8733c588f5e,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/checkpoints/2026-11-10-avery-voice-live-activity-checkpoint.md,2da67f1c5059ef206aa8e029f078a8c9f914c109,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/contracts/command-center-frontend-backend-integration.md,ac735e0df43485e406efae06b900edacdc0d5e42,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/crm-call-management.md,10abd45d3e1c289a61f01f975dd206afb696326b,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/crm-reviewer-walkthrough.md,9d4fced3f23691a64c562267ba3de6075c372713,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/data/DATA_SOURCE_PLAN.md,a137a8680a9381eae0b8e0ff12531c564b882e81,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/data/SYNTHEA_DECISIONS.md,8755c5995aee5b0f91f6b5750c81defb7ac4f098,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/decisions/2026-10-16-m1-availability-search.md,c4bfa3cfc4a21005744c6a98b7255561eb4c94a8,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/deployment/ibm-watsonx-orchestrate.md,4a77ed37215741cab27b7d486b29cc885ffc2112,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/after-call-work-20261116.json,d63467451db721d035530a9656fdec2b17f9625a,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/agent-led-voice-20261116.json,14ea7a34ef16a65646e59baa885bd182cc37f252,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/agent-read-proof-20261115.png,fae82683712065510b3a17c5bb9304539f736dab,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/agent-selected-read-20261115.md,1a4b510b7faad34c9e6d5a17dde95feac02bab32,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/answer-preparation-and-wrapup-20261117.md,665854eaceef966f3e2cd8f2f8fff996659dbd4c,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/answer-preparation-candidate-20261117.json,6767d45a1bc875904cdab881c70c63d6e565d1ce,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/answer-preparation-promotion-20261117.md,63f0fda8dd2b1bc9a656de3e0f266d7a258ed7d6,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/appointment-confirmation-case048.txt,05779e7e97729dfe6670792ca40941c0f6945a85,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/automatic-booking-crm-20261116.md,3ecdfad15447d6741c28567d07cee1d9a525db39,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/avery-improvement-plan-20261117.md,016347734455a14509f44f63f1bee18ae5175135,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/avery-improvement-writeup-20261114.md,ebed2eb85492b9c445eb514752cf1e7718c5873e,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/avery-latency-experiment-20261117.md,b6348545ec3b187072d25e17041b31f2665d5523,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/avery-scope-repair-20261114.md,19f6709a1926176ab78175ccb1a6950284c7ede5,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/browser-expiry-20261115.png,8d184f552ea2aa79a859ccf5bad482e181264400,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/browser-identity-mcp-20261118.json,41ff2eff5a4673e5e1b7b0c31fe9185f9c5e493c,Original at reviewer path,release/evidence/browser-identity-mcp-20261118.json
+docs/evaluation/caller-fixes-20261115.md,ae05305bf1d43c66a90b04a23a9e528526b9a8e1,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/caller-pause-baseline-20261117.json,e573ed9f832440194d56f4a6665be6de105bc03a,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/caller-pause-baseline-20261117.md,6c4780a06df8ffc5129f6b63b04075de1db5f800,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/closeout-scorecard-20261115.svg,f3736f47cfbdcb211e74aaf4f26a2eee1c9c0109,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/closeout-status-20261115.md,8bc98dbe79a2b08f0aa9150c673872b1e4efcf70,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/consolidation-execution-20261115.md,2d09b2a9a240cdc3a2a35d1d49cdde2fbe3020ed,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/conversational-identity-20261116.json,2f505b376f60486ed05e9b2cbc3341cac2f1f48c,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/crm-rollout-20261116.md,404d602efcd682f95ec649247b0e9b9e119e4f7c,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/current-release-latency-sample-20261117.json,ef8a7cfbdb5f646adaa828a18ef9ace4fde221b5,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/current-release-scenario-design.md,88ef9008a14fd888210f9052ad1101ca0278536f,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/dynamic-sandbox-callers-20261116.json,f4a3ccea9ccae27c3c2caa27d24f3f9b3fa992fe,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/agent-read-20261115/ibm-tool-observations.json,059f7a50d58bbea5180e81f22eeefed29f0bb954,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/agent-read-20261115/read10-events.json,40e1e96efe5812058ef4d7e52b07a5d121eab8af,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/agent-read-20261115/read10-verification.json,5bbd169f5e0f59577332d3831007c5eb5beb6486,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/agent-read-20261115/registry.json,8754af7854e4e97a330d490e50924548dafa3604,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/agent-read-20261115/rtc-cleanup.json,14cc21b449a95570942b7854ba68bd739e395cb6,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/agent-read-20261115/v9-denials.json,5011fcd43d5d8c23795a97e86163dae1d9d54c63,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/automatic-crm-20261116/automatic-note-voice-01-public.json,a1db33c9ee085c2b33921fd1511778774f05e2e6,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/automatic-crm-20261116/automatic-note-voice-02-public.json,a10e723611808867f3ae12feed86d3bcd6f933ac,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/automatic-crm-20261116/automatic-note-voice-03-public.json,14f9f52a8b5d791f3cb6303a2fe16bce4ccb4f62,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/automatic-crm-20261116/automatic-note-voice-04-public.json,2308e60c5f3e400c622ec1f9b151cb67642d5079,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/automatic-crm-20261116/slot-reverification.json,f7771e4434c5ec399ed33b11faefab9cde524af6,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/crm-20261116/rollout.json,64e58f11c9cbf3769daeead81791a86556a34fb0,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/crm-20261116/supabase-acceptance.json,8f2ff6d7bd2b842563051a01a50f0fe3e3d3670d,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/crm-20261116/voice-attempt-01.json,b41bee71ab1103f1ca57a7b2ae9f0bbfa93925f9,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/crm-20261116/voice-attempt-02.json,b25a9c4a8de4b6eabad122558cd9b84aaf1ac2ed,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/crm-20261116/voice-attempt-03.json,e5d856f76d7f757a30a1cf20e942cf41aa7836b2,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/release-closeout-20261115/adversarial-arguments.json,1ae1bcb0e72c174f3410b876655739528d2eceb5,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/release-closeout-20261115/backend-dependency-findings.json,29e3843719f2fd9ab32acfc777e11da364907b5e,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/release-closeout-20261115/database-role-audit.json,d129bca96dacaa8448e4676b3ee2c654c53c4fd6,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/release-closeout-20261115/frontend-audit.json,e315cca00ec326de27f87b4952602abbf501b1c8,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/release-closeout-20261115/mcp-contracts.json,33559f051dff485dec96fc274a970c4e558829e5,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/release-closeout-20261115/transport.json,fd611ab61cf18f877c6afe247217b5b4a906218f,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/release-closeout-20261115/v11-authority-verification.json,c4290a4a14e7a8cd20c10503f80cc7889d1bbb74,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/release-closeout-20261115/v11-cross-case-verification.json,70850e43ad5cffe71174899ad889a9500253eb85,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/release-closeout-20261115/v11-denials-review.json,31a5294bdc9f60a9542640bdd2f0b19927e78e94,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/release-closeout-20261115/v11-read01-verification.json,acc90f8c48893c49dca713864025a05765231447,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/release-closeout-20261115/v11-secrets-verification.json,f4e55f5de93fe1ea9075cbb7968990e262969145,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/release-closeout-20261115/voice-deepeval-corrected.json,481f78b06f65fe437f9c3520f732f2eae92ae8c8,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/release-closeout-20261115/voice-deepeval.json,3371d0dd8c380ad97990acae311271da5459ce7e,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/security-followup-20261115/frontend-audit-after.json,b1d1ff4bc65e40bb43d3b741993316ee1c9f4064,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/security-followup-20261115/manifest.json,455cda9d6ede1864fd62208e1dd6feb6fa3cdf1f,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/security-followup-20261115/reviewer-http-smoke.json,381ed4f2cbe4dffd58a0f6354d7527d5dda8bfe4,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/security-followup-20261115/reviewer-live-rollout.json,41ed4bcc00705b86ab6ee3a9d4086ad78e4ea861,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/server-wide-20261116/arguments-all/adversarial-arguments.json,1cc773edb2412647d4ab4359901d397fb255364e,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/server-wide-20261116/arguments/adversarial-arguments.json,09028f8281ce2cb84eec34f491a7741b87caea3b,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/server-wide-20261116/contracts-final/local-tool-timing.json,2112d52ae379fec4246414a954a95d4e20ded16c,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/server-wide-20261116/contracts-final/mcp-probes.json,f50137ec1d6af8b3c818b3786095360b1b8fa472,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/server-wide-20261116/linux-ci.json,2d57a14d321287bb8bc107814d8ce9e141d63d71,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/server-wide-20261116/regression-final.xml,8b6b0f35b9f2492ed46b0351b1da9ad7d17ae69a,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/server-wide-20261116/regression.xml,ba98ec8c8032a5595c3d5e643901c0a7ea0967ee,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/server-wide-20261116/scope-matrix.json,bb222a2b656833676beb7f7a980041b3b8d0f003,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/server-wide-20261116/summary.json,892097d63479dfe701db13c6dfcf0ea59ad49d1f,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/evidence/server-wide-20261116/tool-coverage.csv,3e38ddfa0aeaf6ced68979008de719cc31516b86,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/facility-cache-benchmark-20261117.json,e421f5f69b77c7eb1c03f9f0f5e86c28325f867f,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/frontend-deployed-20261115.png,2edec453aaec6d72f76545f1b28ca3d97735254a,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/guidelines-and-tool-inventory-20261118.md,cde374f48124bae4a4ab5d82f6a2a04173e2ae34,Original at reviewer path,release/evidence/guidelines-and-tool-inventory-20261118.md
+docs/evaluation/guidelines-recovery-20261118.md,0b33633518cbd8caa85988605c5db820418612ba,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/isolated-stack-execution-20261117.md,f8299ca165c9205ebfc9d71a0db0e4ebdb8f0b36,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/isolated-test-stack-readiness-20261117.md,d9f5d88a210ee3fb94a8815da25f33b0ca9403fb,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/judge-review/Primary-Care-Caller-Scenarios.csv,dbf01794d6f393f9c45fc2d0c95cbf4274f29f75,Original at reviewer path,release/evidence/Primary-Care-Caller-Scenarios.csv
+docs/evaluation/judge-review/Primary-Care-Slot-Decision.png,a9ae1d1a5880fb7b38b9f125b6eb2f5bf5d7b090,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/judge-review/Primary-Care-Slot-Decision.pptx,9cc5c3e73667c7929f759092ea6169d326e60cbf,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/judge-review/README.md,a8931f5a0da10e43a72a07efe3f383764443a073,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/judge-review/Veteran-Access-Bridge-Judge-Dashboard.html,48f161ceff9b98c5ae4d8dda5ef5a7874ca8abf1,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/judge-review/Voice-Security-Evidence.png,498f895281c1f9c74daf37039ddae2f22492fb1a,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/judge-review/Voice-Security-Evidence.pptx,5d6ff339cd28a5f19c46d9a7b913865d6983420a,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/judge-review/control-results.csv,c45ddb24ab389ae3f3123c4c3dddf7c084d5e4f7,Original at reviewer path,release/evidence/control-results.csv
+docs/evaluation/judge-review/primary-care-control-suites.csv,cdc1e0501bb673f59b5b8e61682e83ac9bcce98d,Original at reviewer path,docs/evaluation/evidence/primary-care-control-suites.csv
+docs/evaluation/judge-review/primary-care-gold-questions.csv,453ef08a26abc391c9de8c7ce36aa715188d6f31,Original at reviewer path,eval/primary-care/questions.csv
+docs/evaluation/judge-review/primary-care-mcp-gold.csv,8c911533866adae3ccaf7b27002c5717774e4dca,Original at reviewer path,docs/evaluation/evidence/primary-care-mcp-gold.csv
+docs/evaluation/judge-review/reconcile_voice_evidence.py,fc11af1e4ee139b167da7b4a959506424c7aa61c,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/judge-review/voice-evidence-reconciliation.csv,13a42288f904a018557c9c82bcef0a94a5cf6255,Original at reviewer path,release/evidence/voice-evidence-reconciliation.csv
+docs/evaluation/kb-candidate-pilot-20261117.json,11c600384a4cdaf4af650dc9bf6d5dec6458ed04,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/kb-latency-probe-20261117.json,db5dbf24d7d26c50c71280caabde31565b6d1e45,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/kb-stage-profile-20261117.json,a5622f0fc3ac1fe852e6d9c47c18bb2126152ab4,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/latency-candidate-implementation-20261117.md,4c8474246f35e83f4f2d8d2b6bc09d36df500bad,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/latency-candidate-tests-20261117.txt,bcf9b61451a19fa53c13efb8953bc67283cbd7c7,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/latency-extended-tests-20261117.txt,a68b9dce7bea1fcccea758bbfc08a0a130783646,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/latency-findings-20261117.md,166feb574cbb1acc75d9e042148963b18328e14e,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/latency-gates-20261117.txt,e8de9e060d31130c6410c8ccd37d24fd3be30223,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/latency-pilot-baseline-20261117.json,2742ad9eec238ad2983aa8ac6cc9472b10c8b489,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/latency-remaining-work-20261117.md,6ccbf254c9f5861abc533aecd97ac9ffa4688039,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/live-acceptance-20261115.md,830c0398d33097245dc5785a8b1dc4bd239b2914,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/live-scorecard-20261115.svg,bb4bb656954d08618393d420066164e9210d9482,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/mcp-session-scope-remediation-20261114.md,25fc268b72fd80944fedf9e95a7d93c8853ec7ae,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/pause-batch-20261117.json,0ccf862e508d362c05c887fc44453fbc3b730994,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/pause-batch-20261117.md,387ba88addbc7f21f26271b8357ee48e70bb6216,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/recorded-demo-evidence-plan-20261117.md,83c219f474175c8af00d127ff210b8cd0db38c79,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/release-closeout-20261115.md,11af6d02382425cc5118985ad1d634d3ac577959,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/release-scorecard-20261115.png,e347c21eaa20a091e6ec82e5a196fd51bfa8d3fc,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/release-scorecard-20261115.svg,07e2c20616dd8c867d3a1a754e1839ced42e7873,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/security-followup-20261115.md,40344249acd06eda77b389b65ee760ed4d4cc727,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/server-wide-evaluation-20261116.md,1bf2193a5e2da68c8eb79c2382c031fd5f949057,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/server-wide-tool-coverage-20261116.md,127c25d42bbe9784e43056d0b795595ff21ac121,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/spoken-last-four-20261118.md,6fed9f8d409a601e8c669f57cdbace88b19cd4d7,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/submission-scorecard-20261114.html,5eed239918f1a88f48e998598da426793dc6f902,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/submission-wrapup-20261114.md,700901210cc8c4805bccf40f89d9abcfdef39550,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/tool-reconciliation-20261115.md,14a9cd5f73928451d3406cc884fc2ba0f2afbdd1,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/watsonx-orchestrate-evaluation-plan.md,5abaabef634ca45819e0b6ecdd77eab19eab0a8e,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/workflow-async-diagnosis-20261117.json,b4a95f9054744808479b886ac3ac4b6071e413f3,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/workflow-lifecycle-verdict-20261117.md,c40ed6da2f8682d33ec90efc50d2fe9f0112a3a0,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evaluation/wrapup-evidence-20261114.json,213eeda4685b1c637240a651a952ad2576424b36,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evidence/issue-20/01-mcp-inspector-tools-discovered.png,63969936e2e6137100da2fdfc7da249d10dcb73c,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evidence/issue-20/02-determine-workflow-state-success.png,d46ec7cd50d640ddfa1dfca70315be4783c0581d,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evidence/issue-20/03-search-availability-success.png,811cf698998dc8f10cd37cbb3c50273cc848772a,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evidence/issue-20/06-veteran-access-agent-end-to-end-test.png,f8d7b444b8edcf68c602fa071265db63638d3a80,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evidence/issue-20/07-orchestrate-evaluation-results.png,6c436cb7c8ce49fd2eda8cd1d8aacb2e4821add1,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evidence/issue-20/README.md,c5ef81deefcc7a2726a2b531331a4a0d9df44c6f,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/evidence/issue-20/evaluation.csv,d4627b8ec5c30cfbed714951fc3e34319c7dab5e,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/mcp-inspector.md,8283430da3555beeb5bbaf3d847bd7cb42e77c1e,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/after-call-work-20261116.md,d7d5f3272d88df07d7f6c66e3636468b597d1dba,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/approved-va-sandbox-synthetic-identities.md,07489b33f40da956e560d6316f01273baf5dae26,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/avery-agent-led-scheduling-20261116.md,4b18e50375487cb140d24f41025eeb9e5afa7efc,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/avery-m64-codespace-ibm-cli-relogin-deploy.md,f31e3b5697921920776f91541b33950ae884ce86,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/avery-simple-caller-20261116.md,8251ae83045d273e3c77360f768d4b4f42d277d9,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/conversational-identity-20261116.md,a3b99633458847293932e1d3690618f820e79238,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/dynamic-sandbox-callers-20261116.md,a29e9e3035a1b289287ce2134ee0318dfed9b169,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/facility-display-20261117.md,e3ffe08038a8c4890a887a1ac15e7ed940a258e3,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/github-codespaces-voice.md,fbdd8cc6322eac8a6b13f1f8d58494e713a58baf,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/hosted-caller-activity-rollout.md,9b8d691460b0ae2ab535dcd3214f188e44bea71a,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/hosted-screen-a-avery-voice-deployment.md,518a119e04ccadcf9bd5cf9b5d156514ed165f26,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/ibm-phone-sip-provisioning.md,e4c9535c6039a10462b60d1634831f12f5021b5e,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/livekit-deepgram-reference-review.md,0f30f01c522eeab72a5fd45a185f84ef7a6761d5,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/open-source-webrtc-voice.md,5fedd4f7b15b987687bd6416cf6b443945a0156e,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/primary-care-live-conversation-acceptance.md,a4a1651ac4012bc8f77ec5b69272364ab76216a4,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/speech-benchmark-20261117.json,b2d7dd4b6e2897a78c77ae8b7c91b86d68611116,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/voice-accessibility-latency-20261117.md,95aec52cb55af165e7fe62b2b3b55395107019db,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/voice-call-polish-20261116.md,b7add57c62dbf13606be95725c5a85a33dfca8d1,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/voice-call-polish-booking-20261117.json,7d7c17ab483702c171e8f238be0a5f42de3ba485,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/operations/voice-latency-numeric-20261117.json,d4c4495f5e3e529980893947fec8134658e2b69b,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/KB_GITHUB_ACTIONS_GHCR_RUNBOOK.md,0e9dd92b174c4359085afb8e1614273385654665,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/avery-autonomous-primary-care-policy-grant.md,165008c8373901fec9c86e242a99f19092debd2a,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/avery-facility-workflow-20261117.md,d9c59bf7da470655d5a4d839360321b225e8a88c,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/avery-headless-autonomous-scheduling.md,329c640545afc552d4e1d4be5a0773bb980463b1,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/avery-last-four-20261117.md,ba719ba0a85964975a241186fd605fda78105031,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/browser-booking-acceptance.md,b60cc98c64f02ab88b70ef003b509acedfa91e1d,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/browser-intake-connection-acceptance.md,7495bad4b4c4609b0ff543206fba983e584ab415,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/containerize-remote-mcp-plan.md,e1e18e1ebb081f1e34e01c10946e1eeebcd779db,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/eps-hsrm-integration-plan.md,292f3fafcad52ba821b916ff757d9a6f7a60e0f4,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/evidence/avery-voice-20261114.json,6ed0bf5e42c99de63b849529920193a1f89e1aee,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/evidence/browser-booking-20261114.json,dc9ac77e6155ed88945c654006a4712b8bb9285f,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/m1-availability-search-plan.md,396c098382475473fcea0a9a55ce99d6058e26a5,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/m2-5-verification-plan.md,8be2bb691f39e4eacd04bd16be521e5e64e07e09,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/m2-6-veteran-confirmation-plan.md,871ab02aac750810cb3b89f8deb69e67eb6b4814,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/m2-7-booking-gate-plan.md,afd2ef6e41e3235af28b128fab0882bed99cf6b9,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/m2-8-lifecycle-outcomes-plan.md,518d93164d4f510860703f8524e5aabcc972b1d1,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/m2-lifecycle-state-machine-plan.md,46d1aa5a4c842e78cfd687a25ac5e07b0de6e9b5,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/m3-m6-demo-implementation.md,cd58ff3ff0a5e5d2fd4bf7204b83a22b014eb29e,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/m6-1-access-standard-assessment.md,fb82a84f49a803575f01dc7e80a37ed78ec08c2a,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/m6-2-scheduling-contracts.md,89d2a134fd56170439405552659fd37ebff286af,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/msa-livekit-authoritative-monitor-sandbox-2026-11-09.md,8855c4bacbc5f79303680d625e589c20e810ac84,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/msa-primary-care-demo-workflow.md,1b70034110621a676e149ca6ca68258fdaa8414d,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/orchestrate-native-chat-voice-integration.md,4aa3912ec4f39f9498f84695ad5ac321c918d79c,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/primary-care-state-machine.md,31e41d8e1996d96c85ed6f37ff7a04bb931310d5,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/private-va-trusted-host-issuer-integration.md,a1b003e5f9daeb8e0f4b8525c362e484bb5b0359,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/plans/trusted-avery-voice-acceptance.md,d627e1925f0122975d2cbe41a0118fe2d703d5f2,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/sprint-a-supabase-credential-bootstrap.md,998ce20f70cea31fe1cc2d26bb420be7d5be5d0c,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/sprint-b-21-tool-reconciliation.md,2a7b3bb1387e0c16f60e55838901d6c670641adc,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/sprint-b-durable-scheduling-mode.md,56f1034607b1079ebe7da2ec9a4f982ead1b5dcb,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/sprint6-isolated-postgres-acceptance.md,a6c84701f21306375ee60b6c8ff12fcbc5876501,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/sprint6-supabase-test-schema-acceptance.md,b24e32293ad2a1cd90dae55c4cc728272851d92a,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/README.md,53f424a5c3a2d06483a65b08929f0f83e62dc003,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/architecture.md,33c4286ffbc43e0dd2a1545b15fb35a9f2f748b8,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/artifacts/README.md,5c3ef74b6687e36f8a709cc38483a0bec5600b9e,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/artifacts/Veteran-Access-Bridge-Evaluation-Review-v2.docx,839cf5a8ef672c61be1c19af775f5a214e241373,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/artifacts/Veteran-Access-Bridge-Evaluation-Review.docx,9c9b988c5d502ab61d212211409f53650eda32f0,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/artifacts/Veteran-Access-Bridge-Presentation-Review-v2.pptx,88f7f8ef88c6155b9fd7fa2e15bbf88c7941925b,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/artifacts/Veteran-Access-Bridge-Presentation-Review.pptx,7cb31dbd56e865ce7fb5b094fa634c125aaf5520,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/artifacts/review-v2-manifest.json,3c5cdfd67a8c1bc4fb4f024da8440370fe9b6288,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/closeout-gates-20261115.md,2e18eaedc0a2f4ae15ae3f0c3d1d9c3112395031,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/community-care-closed-loop-research.md,3f3f862959087f11bf3829c66860340b8d3d3aee,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/crm-gap-and-design-notes-20261115.md,5e66e162aca29e07ab3bea0ca96f3d1831e2b444,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/decision-log.md,3399ba5bc698e9b839453147120584e0ba1d3590,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/demo-rehearsal-20261115.md,6ab5f91e1608d1cbb3b7fd3b6e6201766362f9ee,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/demo-script.md,eb4160577bae2c4166a8588e5f2d71624afda08d,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/documentation-reconciliation-20261118.md,a6ac4ac4e1fb830da747591bc401dc548acbffff,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/evaluation.md,0a670aeb6b90ffcbf80fb67239f40e69d0747450,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/evidence-ledger.md,f59d9c8a67f53e8cf251face5688c7156a2b701c,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/presentation.md,827fe8fde012ddb98a3f4c35577eb8ed7e494bf8,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/repository-cleanup-20261115.md,906b97a90a26f9d5df606dea60df3b7ac8434a88,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+docs/submission/submission-checklist-20261115.md,2c06cee2851e34b2fb18471190eee52c4917ed63,Upstream only,Development documentation or historical evidence; see GSA Pages for reviewer material
+eval/BASELINE-20261114.md,758c46c91feb0efb1ac038db9a2bb06c439527c2,Original,eval/BASELINE-20261114.md
+eval/DEEPEVAL-PILOT-20261114.md,a83152d06376fc5f5b808d6a9877e724ed74e03a,Original,eval/DEEPEVAL-PILOT-20261114.md
+eval/IBM-SMOKE-20261114.md,b4397ea24a75e6c8058c22dcc7a96915ffc45d1c,Original,eval/IBM-SMOKE-20261114.md
+eval/README.md,7e7b42bb0cfd608a1b2f23aff59ecbb260d80092,Submission edition,eval/README.md
+eval/SECURITY-RUN-20261114.md,9573c5a0986f076766f6bfb19159b29e6f1c2fd5,Original,eval/SECURITY-RUN-20261114.md
+eval/deepeval/README.md,ac3741e16f33844d612baeb7d35f719fbec73b1d,Original,eval/deepeval/README.md
+eval/deepeval/import_ibm_smoke.py,229a3f49e1d0649da909920cd154cdcd874ab1fe,Original,eval/deepeval/import_ibm_smoke.py
+eval/deepeval/import_voice_read.py,27ed8a81ed2b50950c7a67bccd05d0fd9beb9704,Original,eval/deepeval/import_voice_read.py
+eval/deepeval/prepare_avery_scope.py,b94c0cadab2f0804aae2242c2e2fddfac2f1785e,Original,eval/deepeval/prepare_avery_scope.py
+eval/deepeval/prepare_avery_wording.py,9b1001c99e2b9a3af2bca98160ac142fe2540b78,Original,eval/deepeval/prepare_avery_wording.py
+eval/deepeval/prepare_consolidated_agent.py,e063d1e2f2b328d3abffdc7843e683416fed4b08,Original,eval/deepeval/prepare_consolidated_agent.py
+eval/deepeval/requirements.txt,845ee723f90949e49c8f778fde76d29610703de3,Original,eval/deepeval/requirements.txt
+eval/deepeval/review_agent_read.py,79d3b0a29e61ef8755ec7817172f70c2f4b9ba83,Original,eval/deepeval/review_agent_read.py
+eval/deepeval/review_denial_traces.py,898aab351c6cf87343c8c97438a9e2ca7a64fbbf,Original,eval/deepeval/review_denial_traces.py
+eval/deepeval/review_voice_security.py,4c9d8413915121491072ee69251cf891b00f95e4,Original,eval/deepeval/review_voice_security.py
+eval/deepeval/run_ibm_scoped.py,1aeef743a0d4cc5f077f435e62a04453394d7306,Original,eval/deepeval/run_ibm_scoped.py
+eval/deepeval/score_current_conversations.py,9242ae4b03a5ba958e4f77433ed1b4a02c6c01ed,Original,eval/deepeval/score_current_conversations.py
+eval/deepeval/score_traces.py,cb53c6c895f39807a84e28d2ac0e5654e1bb31bd,Original,eval/deepeval/score_traces.py
+eval/deepeval/server_wide_injection_cases.json,98c85056291d719e6865fcea9b06bccf771659a3,Upstream only,Historical run detail or separate evaluation utility
+eval/deepeval/test_avery_scope.py,6d42d4c493b7dd92c239eafa8fc7ce49622be52d,Original,eval/deepeval/test_avery_scope.py
+eval/deepeval/test_consolidated_configuration.py,9f32cdf535ea800961aa4e3150cd5f6e88399f63,Original,eval/deepeval/test_consolidated_configuration.py
+eval/deepeval/test_context_guard.py,4d4b1f1fa43191872a58d52fe4e040fabfcd4dcb,Original,eval/deepeval/test_context_guard.py
+eval/deepeval/test_current_conversations.py,b5dfacc565d0fd94e8fb024d94dd9dc9b507ca31,Original,eval/deepeval/test_current_conversations.py
+eval/deepeval/test_ibm_import.py,0d75f8473f4e6699dfd891d3c94a1b786254efc3,Original,eval/deepeval/test_ibm_import.py
+eval/deepeval/test_ibm_scoped.py,5915f72e2bee69802e3a44717bf0d2eca997c14a,Original,eval/deepeval/test_ibm_scoped.py
+eval/deepeval/test_prepare_consolidated.py,ec8a32ff3a2d63ddcd49e250e795132e5d78133f,Original,eval/deepeval/test_prepare_consolidated.py
+eval/deepeval/test_review_agent_read.py,6e1ffa56e50e2fdf9053c6c692b4e14b211db4aa,Original,eval/deepeval/test_review_agent_read.py
+eval/deepeval/test_review_denial_traces.py,107fbd75d93a29c6682ed2c4c3a4354bbbe92838,Original,eval/deepeval/test_review_denial_traces.py
+eval/deepeval/test_review_voice_security.py,c752ab969566619a733532a7143caaee07898860,Original,eval/deepeval/test_review_voice_security.py
+eval/deepeval/test_scope_configuration.py,76d5c649bd62ffa04645a568bdb2f1e01eeb18d5,Original,eval/deepeval/test_scope_configuration.py
+eval/deepeval/test_trace_adapter.py,9e35c2bcfa93dfec26fb932341798b0859aab8d9,Original,eval/deepeval/test_trace_adapter.py
+eval/deepeval/verify_consolidated_configuration.py,e1d7b21e22d831935403a564872b958c63f84e6a,Original,eval/deepeval/verify_consolidated_configuration.py
+eval/deepeval/verify_scope_configuration.py,e889ab75cf05ae74ee7c253f8ab31de6c7f59741,Original,eval/deepeval/verify_scope_configuration.py
+eval/deterministic/scenario_matrix.yaml,4cda0a19a26883089f420b275dd230ead236ef7b,Original,eval/deterministic/scenario_matrix.yaml
+eval/inventory_mcp.py,1500a22cf99ad02f6cc8709215ff6a09001c2374,Original,eval/inventory_mcp.py
+eval/phoenix/README.md,521f355e43b6be06d0dff09502ae2cfa5e1ce5e2,Original,eval/phoenix/README.md
+eval/phoenix/agent.py,15b76361eed392ca264015b165cd4a4b30149b51,Original,eval/phoenix/agent.py
+eval/phoenix/create_dataset.py,36dad30131bf09685e6c28e16d368e24551fb9ea,Original,eval/phoenix/create_dataset.py
+eval/phoenix/datasets.yaml,fdf58ca7b49e5c41478d05ade3876ba312aab193,Original,eval/phoenix/datasets.yaml
+eval/phoenix/datasets/veteran-access-eval-0/evaluation.xml,a1ef81b24fb3312d0feba974ab1c266cfaf9d4ce,Original,eval/phoenix/datasets/veteran-access-eval-0/evaluation.xml
+eval/phoenix/datasets/veteran-access-eval-0/examples/veteran-access-eval-0.csv,147fe428c8b9dc739dccf11a8c91e457d89d8dc7,Original,eval/phoenix/datasets/veteran-access-eval-0/examples/veteran-access-eval-0.csv
+eval/phoenix/datasets/veteran-access-eval-1/evaluation.xml,1657178416bc42295664d20fd33ed24375fe6d33,Original,eval/phoenix/datasets/veteran-access-eval-1/evaluation.xml
+eval/phoenix/datasets/veteran-access-eval-1/examples/veteran-access-eval-1.csv,fd658331b4c7cd84b998363abde896b6f0cb1b14,Original,eval/phoenix/datasets/veteran-access-eval-1/examples/veteran-access-eval-1.csv
+eval/phoenix/judges/__init__.py,659cbd54aba41195979d14c8eb9df18dee44cc2d,Original,eval/phoenix/judges/__init__.py
+eval/phoenix/judges/common.py,1ea0bb6018149b08c68deea712cf6d2549d7f1cc,Original,eval/phoenix/judges/common.py
+eval/phoenix/judges/correctness_judge.py,17dcedd382dad297c2f20bc36af71d192b051460,Original,eval/phoenix/judges/correctness_judge.py
+eval/phoenix/judges/governance_judge.py,e2621ca69b3675adf6ac712b85d90c794e1516a2,Original,eval/phoenix/judges/governance_judge.py
+eval/phoenix/judges/relevance_judge.py,43768c13603068d06b9b137b8f18caa036bcccf2,Original,eval/phoenix/judges/relevance_judge.py
+eval/phoenix/prompts/system_prompt_v1.txt,a710af1c868cb03a28d03daf1fc74de5023f730a,Original,eval/phoenix/prompts/system_prompt_v1.txt
+eval/phoenix/prompts/system_prompt_v2.txt,8f9d27516e789ee7990c89800ab6c5e62d040fac,Original,eval/phoenix/prompts/system_prompt_v2.txt
+eval/phoenix/prompts/system_prompt_v3.txt,9799f2a3f6070e044e724ae033478358f61a1b96,Original,eval/phoenix/prompts/system_prompt_v3.txt
+eval/phoenix/pyproject.toml,b44fedf4559e83bff65bdad016605fdfac95fc19,Original,eval/phoenix/pyproject.toml
+eval/phoenix/run_experiment.py,5bb261e9c59f3357c478dee76a69fd858d7d6ace,Original,eval/phoenix/run_experiment.py
+eval/preflight_ibm_fixtures.py,4f1474f0dc1d96000043e3664139b5a957712312,Original,eval/preflight_ibm_fixtures.py
+eval/probe_mcp_adversarial.py,8f5370da64572e18d81bf1bb8d9bda6d00d96b53,Upstream only,Historical run detail or separate evaluation utility
+eval/probe_mcp_contracts.py,ef09ddf7e8d38762d824171115da15cdd9908b06,Original,eval/probe_mcp_contracts.py
+eval/probe_server_wide.py,b5601b4a373265b135141a4c5550e45681a1d0b6,Upstream only,Historical run detail or separate evaluation utility
+eval/run_voice_security.py,2b4ff1a91fd062ff87f4b1e2748e030627ba3b5b,Upstream only,Historical run detail or separate evaluation utility
+eval/summarize_server_wide.py,bbb76a5400f62a224934c8072d303bc91c35b9d6,Original,eval/summarize_server_wide.py
+eval/voice/benchmark_facility_cache.py,abdde5659d8d626cc29349dda23c9d3e6929176d,Original,eval/voice/benchmark_facility_cache.py
+eval/voice/benchmark_knowledge_query.py,74336c4fea2b33cf3936f399aa4833263ba6bc84,Original,eval/voice/benchmark_knowledge_query.py
+eval/voice/collect_existing_latency.py,1d4d66b1304b2e84b2557d713954dc474117a3dd,Original,eval/voice/collect_existing_latency.py
+eval/voice/ibm_options_flow.py,4e1e99be995add376ed209080db85eda98a7dc9b,Original,eval/voice/ibm_options_flow.py
+eval/voice/isolated_read_call.py,d381342cc3f1c4f3036fcd39dd326e2a641676f5,Original,eval/voice/isolated_read_call.py
+eval/voice/masked_identity_call.py,7087c50466c21f46b4b407ff192687d13522835c,Original,eval/voice/masked_identity_call.py
+eval/voice/options_workflow_candidate.py,d2a365bc4ec191629ba751465098dec0dd4ad554,Original,eval/voice/options_workflow_candidate.py
+eval/voice/pause_threshold_batch.py,cdf2b8670c652b2fe09479dadf21e517e3a761f7,Original,eval/voice/pause_threshold_batch.py
+eval/voice/spoken_identity_call.py,dd1ac63c86ccf9cb434cd478593144b42f4e666d,Original,eval/voice/spoken_identity_call.py
+eval/voice/synthetic_speech_benchmark.py,a9f2cbfdfe95a20e8dd63c8983164e5c63da9680,Original,eval/voice/synthetic_speech_benchmark.py
+eval/watsonx/.gitignore,c10d28ca40bfc63e49a2b13622b40d1ab1bd243e,Original,eval/watsonx/.gitignore
+eval/watsonx/README.md,a73ed5e5a910f84c3e4c8bb1b44786de9ff41691,Original,eval/watsonx/README.md
+eval/watsonx/current_release_smoke/A01.json,7c486adae4e16b61562aaaa3623f224327bb971b,Original,eval/watsonx/current_release_smoke/A01.json
+eval/watsonx/current_release_smoke/A02.json,07d734e3fe03014487f06d461173baf871466485,Original,eval/watsonx/current_release_smoke/A02.json
+eval/watsonx/current_release_smoke/A03.json,caddbd9ba06603105e64795c2f5f2208d6744fc6,Original,eval/watsonx/current_release_smoke/A03.json
+eval/watsonx/current_release_smoke/A11.json,16e7bf4a35a42a0ed8d7dfec2351d115fc7aac62,Original,eval/watsonx/current_release_smoke/A11.json
+eval/watsonx/current_release_smoke/A19.json,c86e6b35dd9fa4aedfa347a04cd78a45d7a7cd5a,Original,eval/watsonx/current_release_smoke/A19.json
+eval/watsonx/current_release_smoke/A22.json,a86d5979bd27d237ee96c407b17a9b39341fda98,Original,eval/watsonx/current_release_smoke/A22.json
+eval/watsonx/current_release_smoke/README.md,382762bc4343cf51c75dd13be917a708811593a3,Original,eval/watsonx/current_release_smoke/README.md
+eval/watsonx/current_release_smoke/config.yaml,4113863daf0529ed9f1ed9a4880a55ca6d092d8d,Original,eval/watsonx/current_release_smoke/config.yaml
+eval/watsonx/direct_tests/01_card_unified_encounter.json,69e3c4860b9eaa36df4f3186dbf770c44e25240c,Original,eval/watsonx/direct_tests/01_card_unified_encounter.json
+eval/watsonx/direct_tests/02_card_preference_vs_comparator.json,5c59ef5f83149a1b1e6be601ba5485f09fec63dc,Original,eval/watsonx/direct_tests/02_card_preference_vs_comparator.json
+eval/watsonx/direct_tests/03_card_stale_exclusion.json,90f1d1c583d4e6d60cc3b7d8077350696675ffcd,Original,eval/watsonx/direct_tests/03_card_stale_exclusion.json
+eval/watsonx/direct_tests/04_card_access_guardrail.json,12c6b0eca400c6a721610dd912cf43ac4d4405df,Original,eval/watsonx/direct_tests/04_card_access_guardrail.json
+eval/watsonx/direct_tests/05_card_no_booking_guardrail.json,bf2c63e992c59a1808614a9795f8541ddfdef0c0,Original,eval/watsonx/direct_tests/05_card_no_booking_guardrail.json
+eval/watsonx/direct_tests/06_pc_unified_encounter.json,498a85baa450d7695eb5e4092ff4a5b832d835c0,Original,eval/watsonx/direct_tests/06_pc_unified_encounter.json
+eval/watsonx/direct_tests/07_pc_incompatible_slot_exclusion.json,d0dd6d2eea39402c1f7d34090e4bab8d770fbbed,Original,eval/watsonx/direct_tests/07_pc_incompatible_slot_exclusion.json
+eval/watsonx/direct_tests/08_pc_access_standard.json,437d481b44718ac823a2cc94aefd2a31708e6735,Original,eval/watsonx/direct_tests/08_pc_access_standard.json
+eval/watsonx/direct_tests/09_pc_no_inference.json,84ee36681db1cd79b980f4ee6f23490fe6018234,Original,eval/watsonx/direct_tests/09_pc_no_inference.json
+eval/watsonx/direct_tests/10_unknown_case_no_fabrication.json,dc06706b19641f94badfe246bec9654f50638519,Original,eval/watsonx/direct_tests/10_unknown_case_no_fabrication.json
+eval/watsonx/m64_direct_tests/01_identity_required_before_disclosure.json,030877a69600602c0d4326a236fc223de0e43222,Original,eval/watsonx/m64_direct_tests/01_identity_required_before_disclosure.json
+eval/watsonx/m64_direct_tests/02_identity_spoken_dob_success.json,07d734e3fe03014487f06d461173baf871466485,Original,eval/watsonx/m64_direct_tests/02_identity_spoken_dob_success.json
+eval/watsonx/m64_direct_tests/03_identity_mismatch_fails_closed.json,caddbd9ba06603105e64795c2f5f2208d6744fc6,Original,eval/watsonx/m64_direct_tests/03_identity_mismatch_fails_closed.json
+eval/watsonx/m64_direct_tests/04_card_lifecycle_handoff_boundary.json,5b119485f83a0a2a151da57c1188c9c4a6ac30c7,Original,eval/watsonx/m64_direct_tests/04_card_lifecycle_handoff_boundary.json
+eval/watsonx/m64_direct_tests/05_card_preference_vs_comparator.json,92abc244faa238a511fb443954165e0be4f61415,Original,eval/watsonx/m64_direct_tests/05_card_preference_vs_comparator.json
+eval/watsonx/m64_direct_tests/06_card_stale_slot_exclusion.json,70901d00b2c0782071f43be1734d015392f3b36c,Original,eval/watsonx/m64_direct_tests/06_card_stale_slot_exclusion.json
+eval/watsonx/m64_direct_tests/07_card_access_standard_guardrail.json,05236c5edc73209ca84bc833c6d233e62e2b378c,Original,eval/watsonx/m64_direct_tests/07_card_access_standard_guardrail.json
+eval/watsonx/m64_direct_tests/08_card_veteran_choice_validation.json,bfe49d26551dcd05a04161f4e04597e9e84affa5,Original,eval/watsonx/m64_direct_tests/08_card_veteran_choice_validation.json
+eval/watsonx/m64_direct_tests/09_card_book_it_guardrail.json,511d11843bf768fc54cda640f69432b256be64a6,Original,eval/watsonx/m64_direct_tests/09_card_book_it_guardrail.json
+eval/watsonx/m64_direct_tests/10_card_community_care_conflict.json,eb2c46f0adc3082aea4dd2559bcc0e8879a24b80,Original,eval/watsonx/m64_direct_tests/10_card_community_care_conflict.json
+eval/watsonx/m64_direct_tests/11_pc_unified_encounter.json,16e7bf4a35a42a0ed8d7dfec2351d115fc7aac62,Original,eval/watsonx/m64_direct_tests/11_pc_unified_encounter.json
+eval/watsonx/m64_direct_tests/12_pc_access_standard.json,6721fc4ff4d5ba87c3134ad6625118b552cb7860,Original,eval/watsonx/m64_direct_tests/12_pc_access_standard.json
+eval/watsonx/m64_direct_tests/13_unknown_case_identity_fails_closed.json,bea0b56548983ada7149e6b9665b94aaca3d4308,Original,eval/watsonx/m64_direct_tests/13_unknown_case_identity_fails_closed.json
+eval/watsonx/m64_results/2026-10-28_20-13-37/01_identity_required_before_disclosure.metadata.json,98740c48ae02f7e26fc250a6d3ad1f8be130e11d,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/02_identity_spoken_dob_success.metadata.json,22f18921ac69211bb04ec34d36b590c4da6bee15,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/03_identity_mismatch_fails_closed.metadata.json,1e4bb6f4be597638a3022243f3338c6d7d77adc5,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/04_card_lifecycle_handoff_boundary.metadata.json,625471f7f3569cfa34b4490104ddfefdabed9b17,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/05_card_preference_vs_comparator.metadata.json,3ca20afb4f7dda66ffc01195440bf0a2e0c2decd,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/06_card_stale_slot_exclusion.metadata.json,8d87e27f074f80fff5df97a87ee8b5a28a3e4852,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/07_card_access_standard_guardrail.metadata.json,cc6953b884b6152e2673d4228c93d4c726b7093b,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/08_card_veteran_choice_validation.metadata.json,fdf70e9813368000618784fa63228ef70f5b61b2,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/09_card_book_it_guardrail.metadata.json,744d22e667492cce28ba4855c833a3a47a3d5784,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/10_card_community_care_conflict.metadata.json,fdea64037eec00af2bf9c5d8e1c13675b05036dd,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/11_pc_unified_encounter.metadata.json,8f2cfecef6bf8b37bf95a83eeb5fbbd358ae4c62,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/12_pc_access_standard.metadata.json,3c2d50ef3ce0427b590d40f371568a92eb1a236d,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/13_unknown_case_identity_fails_closed.metadata.json,4a06047c2b5d5b637944811322713d2fa9136cd8,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/average_metrics.json,b895b0ff9bdc51500518612f37c69ead7969169e,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/config.yml,1406122914d9e56c4c0ff237d1e5b53b1029fd82,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/debug/evaluation_order.txt,52689d3996affd5ab84b45ac1740be72f4fabaed,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/01_identity_required_before_disclosure.messages.analyze.json,6a8efca369a0f91b0a2a19457f45c53a3c7f6090,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/01_identity_required_before_disclosure.messages.json,17fe8edc2240ab99d348dfc96ddc9f741085b2db,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/01_identity_required_before_disclosure.metrics.json,43a8b527499db93872298c7f5798a05181d85403,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/02_identity_spoken_dob_success.messages.analyze.json,9e2167f613f6fb1e125084afe57a9f6ec6f24c09,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/02_identity_spoken_dob_success.messages.json,e00800135fcc6de6f5321396bf88b807ed742111,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/02_identity_spoken_dob_success.metrics.json,39c90b15b2ec09d4a845c178b0f71172acfcf66b,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/03_identity_mismatch_fails_closed.messages.analyze.json,70d91cab423eed5b5fea7716acee193b652c8744,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/03_identity_mismatch_fails_closed.messages.json,f3d8f1d9df7f08ce0870693a75ebcb623eaf433c,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/03_identity_mismatch_fails_closed.metrics.json,4712a8b143d9f98ef0422ce0c0f7e6eacf599b43,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/04_card_lifecycle_handoff_boundary.messages.analyze.json,51d0425445cef7493743a297e0c22b88de532910,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/04_card_lifecycle_handoff_boundary.messages.json,82f04441b2cecacbbf73a12e9ecf9122eb3c5b75,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/04_card_lifecycle_handoff_boundary.metrics.json,e9c0a0627021ce2c7505ae65455ae6ae9e1571f9,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/05_card_preference_vs_comparator.messages.analyze.json,6c563f666325c64aca0fee38e5f187e8f3be41b2,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/05_card_preference_vs_comparator.messages.json,abafd1e10d720638bd88eb98198ec81a1b8803cb,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/05_card_preference_vs_comparator.metrics.json,d65bc75082d1e033f0eec0f1154de0e0d3f5b0d9,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/06_card_stale_slot_exclusion.messages.analyze.json,28b329abfc425f3bc92456cd40027a89601c84b6,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/06_card_stale_slot_exclusion.messages.json,8a3b53d26c36e1d87af063e8254a74d503ab8d52,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/06_card_stale_slot_exclusion.metrics.json,8b247e2b6007f2e58c535dbd534c6f392a864d75,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/07_card_access_standard_guardrail.messages.analyze.json,6a62a3989f4e35b2c598b38b72b286b5b6c6271d,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/07_card_access_standard_guardrail.messages.json,8f2154f6de50a8ae6175053c3380ebe0744e88a3,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/07_card_access_standard_guardrail.metrics.json,b0a3bbd580430dbd4e9b45ffec14bfd99d1e7d81,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/08_card_veteran_choice_validation.messages.analyze.json,92403016bdb6fc2a235b838afbd8186bda599961,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/08_card_veteran_choice_validation.messages.json,d7c0781827bada6411b61f2b42f0b0c101185324,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/08_card_veteran_choice_validation.metrics.json,c812994d60adced287216af1f32f5dc78959da7f,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/09_card_book_it_guardrail.messages.analyze.json,0474f72fecbadff6aa219007a7a1c15a5b480e5a,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/09_card_book_it_guardrail.messages.json,5c771fa54ce69a1c53fdced2ef3aa995d9617713,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/09_card_book_it_guardrail.metrics.json,5a4d2968c4d557f4c500e5084f8cec0f3162929e,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/10_card_community_care_conflict.messages.analyze.json,1470f633c8d465f92e356203c2057ed696b1ab34,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/10_card_community_care_conflict.messages.json,b9d252ba420a0df69580863a532da9f534c40525,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/10_card_community_care_conflict.metrics.json,ae4de7ce604cb3ca055bb4db759cf26be103ade2,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/11_pc_unified_encounter.messages.analyze.json,dac79977bc31ec4fbdc804c3b35f07fe6264c81f,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/11_pc_unified_encounter.messages.json,17521b51268b8691ad85c5ae9e377b3689d0edd5,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/11_pc_unified_encounter.metrics.json,1583ad4fd9bfcd2e6803c2410f32862c45ffbb45,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/12_pc_access_standard.messages.analyze.json,b8b8be0a68e5b8e611a61791b3f8ec44017114d9,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/12_pc_access_standard.messages.json,1c97b93da34078cd172289c063158ba6782fe8bf,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/12_pc_access_standard.metrics.json,590c0c28a6c953d3a3bac4dc33f33d997d616e21,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/13_unknown_case_identity_fails_closed.messages.analyze.json,4ce52cb1edb74fa92279a27bcdf6a7591ca1a07a,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/13_unknown_case_identity_fails_closed.messages.json,71c59a793a51cd944558a123e682b82e7b7e7f50,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/messages/13_unknown_case_identity_fails_closed.metrics.json,c0355a75c4e58076028cbbba1c23d578bfcaafb3,Upstream only,Historical run detail or separate evaluation utility
+eval/watsonx/m64_results/2026-10-28_20-13-37/summary_metrics.csv,0cb3a18581c2241e32585bedaa7310fb0f830db0,Original,eval/watsonx/m64_results/2026-10-28_20-13-37/summary_metrics.csv
+eval/watsonx/regression_tests/01_card_unified_encounter.json,69e3c4860b9eaa36df4f3186dbf770c44e25240c,Original,eval/watsonx/regression_tests/01_card_unified_encounter.json
+eval/watsonx/regression_tests/02_card_preference_vs_comparator.json,5c59ef5f83149a1b1e6be601ba5485f09fec63dc,Original,eval/watsonx/regression_tests/02_card_preference_vs_comparator.json
+eval/watsonx/regression_tests/05_card_no_booking_guardrail.json,bf2c63e992c59a1808614a9795f8541ddfdef0c0,Original,eval/watsonx/regression_tests/05_card_no_booking_guardrail.json
+eval/watsonx/regression_tests/08_pc_access_standard.json,437d481b44718ac823a2cc94aefd2a31708e6735,Original,eval/watsonx/regression_tests/08_pc_access_standard.json
+eval/watsonx/regression_tests/09_pc_no_inference.json,84ee36681db1cd79b980f4ee6f23490fe6018234,Original,eval/watsonx/regression_tests/09_pc_no_inference.json
+eval/watsonx/regression_tests/10_unknown_case_no_fabrication.json,dc06706b19641f94badfe246bec9654f50638519,Original,eval/watsonx/regression_tests/10_unknown_case_no_fabrication.json
+eval/watsonx/scoped_smoke_v3/A01.json,30241c4928949363ed3523eeacb1da55fcca95bf,Original,eval/watsonx/scoped_smoke_v3/A01.json
+eval/watsonx/scoped_smoke_v3/A02.json,d07e703619ceb1473c58f0e66734f384dd96b53c,Original,eval/watsonx/scoped_smoke_v3/A02.json
+eval/watsonx/scoped_smoke_v3/A03.json,0f2cce67b6f9509e1ff6644006c709517d79b94a,Original,eval/watsonx/scoped_smoke_v3/A03.json
+eval/watsonx/scoped_smoke_v3/A11.json,be8ebba4e6f49c0c1a40e47c89899ab8a895e1de,Original,eval/watsonx/scoped_smoke_v3/A11.json
+eval/watsonx/scoped_smoke_v3/A19.json,bacf104ed037bf3e5dfb916346c240632c35a4a5,Original,eval/watsonx/scoped_smoke_v3/A19.json
+eval/watsonx/scoped_smoke_v3/A22.json,f661d16855a6c0136af80eb087e17bdca433249a,Original,eval/watsonx/scoped_smoke_v3/A22.json
+eval/watsonx/scoped_smoke_v3/A25.json,25a5b841ef3d5c5416c1c1db3635489c0b01c310,Original,eval/watsonx/scoped_smoke_v3/A25.json
+eval/watsonx/scoped_smoke_v3/A26.json,b413cf4f37463d2ace4a0df2cd9fa5b257b145d3,Original,eval/watsonx/scoped_smoke_v3/A26.json
+eval/watsonx/scoped_smoke_v3/A27.json,5262b08b73187cbdbcec182693bc0640ef12d42f,Original,eval/watsonx/scoped_smoke_v3/A27.json
+eval/watsonx/scoped_smoke_v3/README.md,fb3f2942e88d4bcbc4526123362c82d13155da9b,Original,eval/watsonx/scoped_smoke_v3/README.md
+eval/watsonx/scoped_smoke_v3/config.yaml,045c2db485d220087f0e19ef3fb035a7cfeb0651,Original,eval/watsonx/scoped_smoke_v3/config.yaml
+eval/watsonx/tool_definitions/m63_tools.py,0f26d041932328735499c1153a2a75e3381b813c,Original,eval/watsonx/tool_definitions/m63_tools.py
+eval/watsonx/tools/README.md,1722110b83ba4c68d01879e8e9c210b80872f4a5,Original,eval/watsonx/tools/README.md
+eval/watsonx/user_stories/m63_user_stories.csv,8397563f6d58029092d91f3eb8ffe1688fdc610b,Original,eval/watsonx/user_stories/m63_user_stories.csv
+eval/watsonx/user_stories/m64_user_stories.csv,b064b77721f87019e152977c996d882eff7ae732,Original,eval/watsonx/user_stories/m64_user_stories.csv
+main.py,742b88340ded73ffa69f6c49e9f4aa7c201fe6a6,Original,main.py
+pyproject.toml,5c138d50a17d4288b418f19b1fb634b41c69b908,Original,pyproject.toml
+scripts/accept_agent_selected_read.py,d8d80586703f0b94a2ce6a289e41eb69e220237f,Original,scripts/accept_agent_selected_read.py
+scripts/accept_browser_voice_booking.py,f157db674b510123bd4cd47b58d2507370f55a34,Original,scripts/accept_browser_voice_booking.py
+scripts/accept_crm_voice.py,a139f9ae140d27603455b170b7781318ba8cf73e,Original,scripts/accept_crm_voice.py
+scripts/accept_synthetic_veteran_auth.py,a68c84fa6d3c1a1217ac47b4770eda25eb593e05,Original,scripts/accept_synthetic_veteran_auth.py
+scripts/check_sprint6_pg_preflight.py,654a67a9e65ba2db3800b34e23e35de6b0fde357,Original,scripts/check_sprint6_pg_preflight.py
+scripts/data-sources/01-va-health-facilities.ps1,b4177f3d5ac27da39d19afaa878a058e325a04d0,Original,scripts/data-sources/01-va-health-facilities.ps1
+scripts/data-sources/02-va-facility-services.ps1,7a3ee70fbc0199b899d0677acd9bca6abe749a3a,Original,scripts/data-sources/02-va-facility-services.ps1
+scripts/data-sources/03-va-cardiology-service.ps1,c65c407c4f5b7f62d8f5e09f2a7f1f64ad09747b,Original,scripts/data-sources/03-va-cardiology-service.ps1
+scripts/data-sources/04-va-nearby-cardiology.ps1,a522c5b91d14050f1681185116e5905e8fdf8103,Original,scripts/data-sources/04-va-nearby-cardiology.ps1
+scripts/data-sources/05-va-facility-ids.ps1,fcf08a4d20a6065fab95ead4e75bf5a15bd5e6ce,Original,scripts/data-sources/05-va-facility-ids.ps1
+scripts/data-sources/06-community-care-eligibility-template.ps1,189483489145b3550862ab280b00b9f2f5c773eb,Original,scripts/data-sources/06-community-care-eligibility-template.ps1
+scripts/data-sources/README.md,fda4137819e423c26714a7af10ae6b179f3a5465,Original,scripts/data-sources/README.md
+scripts/data-sources/community-care-ccg-assertion.js,2b7f5428fcfa9183b9788c692c677056bea04413,Original,scripts/data-sources/community-care-ccg-assertion.js
+scripts/deploy-hosted-avery-voice.sh,6c3dc4ee0b1446ed05555c7b172bf5ed72e0c2c0,Original,scripts/deploy-hosted-avery-voice.sh
+scripts/list_local_mcp_tools.py,e26a861e79daebc8f0a0d42489c74c4d5b011c81,Original,scripts/list_local_mcp_tools.py
+scripts/mcp/inspect.ps1,5ae1c7aa50cc3de3b2610e9c09b41fffc5fdc313,Original,scripts/mcp/inspect.ps1
+scripts/prepare_agent_voice_rehearsal.py,9a6d08b276ad0a2c96966b299ab3c02d7fac5f3c,Original,scripts/prepare_agent_voice_rehearsal.py
+scripts/prepare_crm_voice_fixture.py,08b5cde061a88bb2a913a5fa5baa205670832c89,Original,scripts/prepare_crm_voice_fixture.py
+scripts/prepare_simple_voice_patient.py,56b90231ada3c42b6b2ebe6b88825b93b9cb6ba8,Original,scripts/prepare_simple_voice_patient.py
+scripts/run-livekit-local.ps1,a9ab952ecee58f9abff79b03072489bb3abf2a69,Original,scripts/run-livekit-local.ps1
+scripts/run-vab-codespace.sh,ed9c9158a5d79d1ae4399c2b1a097a6823eaf6f1,Original,scripts/run-vab-codespace.sh
+scripts/run-vab-local.ps1,105f50791f8ff447af0c9baacd194d40698c4fc4,Original,scripts/run-vab-local.ps1
+scripts/run-voice-worker-codespace.sh,5a1d169c182315592c22f580a0d9b66a7c056642,Original,scripts/run-voice-worker-codespace.sh
+scripts/run-voice-worker-local.ps1,12aba9e2cdebd20433fa2b40a61835e682756ea0,Original,scripts/run-voice-worker-local.ps1
+scripts/setup-local.ps1,92f4e78c5308214f903841617be2745cc5ba9a84,Original,scripts/setup-local.ps1
+scripts/setup-local.sh,8531c435d3d001ebf774845fa5acf380b765a993,Original,scripts/setup-local.sh
+scripts/synthea/01-setup-and-generate-synthea.ps1,75eafc3e9fc2f29d745f9e70b60c19840400f982,Original,scripts/synthea/01-setup-and-generate-synthea.ps1
+scripts/synthea/02-validate-synthea-output.ps1,97cc07138c9aef12ad76525ff2d9b4127474e721,Original,scripts/synthea/02-validate-synthea-output.ps1
+scripts/synthea/03-inspect-cohort.ps1,854f332346958b5cf533c7e9a9dcc6dc161c0ba1,Original,scripts/synthea/03-inspect-cohort.ps1
+scripts/synthea/README.md,5d0e2802ba6587a05fb0a1f89f50f792c393b241,Original,scripts/synthea/README.md
+scripts/verify_crm_supabase.py,ef52538f8a4761a75463b22eefa85a9cf8723455,Original,scripts/verify_crm_supabase.py
+scripts/verify_synthetic_voice_slot.py,14dc70a6a68a6bb4dd9ef0404a2d8331101f37bf,Original,scripts/verify_synthetic_voice_slot.py
+server.json,17504051a9a5a82f70c5ef7d44f7eb661686e936,Upstream only,Development repository metadata or setup instructions
+src/veteran_access_bridge/__init__.py,9d32c33ea7e67603bcea64a87f5225ea66ae3e5f,Original,src/veteran_access_bridge/__init__.py
+src/veteran_access_bridge/adapters/__init__.py,72b43d8dcd6be2515e5d008d2cfaafe493b0b0bd,Original,src/veteran_access_bridge/adapters/__init__.py
+src/veteran_access_bridge/adapters/community.py,42776d31a0409f780844cc2645528116d9cb1059,Original,src/veteran_access_bridge/adapters/community.py
+src/veteran_access_bridge/adapters/eps.py,6b0d6f2e5297ce9eb7884e70379e7bf3b46c95fb,Original,src/veteran_access_bridge/adapters/eps.py
+src/veteran_access_bridge/adapters/federal_ehr.py,47fb41efcdf07466b3caf9bb5c95722030fe7aed,Original,src/veteran_access_bridge/adapters/federal_ehr.py
+src/veteran_access_bridge/adapters/fixtures/__init__.py,9fae59f0676e1fc741de831059c15e7bfa556369,Original,src/veteran_access_bridge/adapters/fixtures/__init__.py
+src/veteran_access_bridge/adapters/fixtures/community-slots-cardiology.json,27e424d2b0a40a31e5303895f4e48e99c68c5339,Original,src/veteran_access_bridge/adapters/fixtures/community-slots-cardiology.json
+src/veteran_access_bridge/adapters/fixtures/eps-slots.json,a9ccb7f85d214a3324d82d5df06eeb1a63a660d0,Original,src/veteran_access_bridge/adapters/fixtures/eps-slots.json
+src/veteran_access_bridge/adapters/fixtures/federal-ehr-slots-cardiology.json,2570ebea434ecc16aa973d7333b3d99da5763309,Original,src/veteran_access_bridge/adapters/fixtures/federal-ehr-slots-cardiology.json
+src/veteran_access_bridge/adapters/fixtures/federal-ehr-slots-primary-care.json,ddada4f4eb7867deece718f8bb2e7683b721ac70,Original,src/veteran_access_bridge/adapters/fixtures/federal-ehr-slots-primary-care.json
+src/veteran_access_bridge/adapters/fixtures/hsrm-authorizations.json,8c49b9258f919409045036b261cb69ae9fe9d7d2,Original,src/veteran_access_bridge/adapters/fixtures/hsrm-authorizations.json
+src/veteran_access_bridge/adapters/fixtures/vista-slots-cardiology.json,6ed5c63e2fecdfb39b507724b29fcc83696a9c69,Original,src/veteran_access_bridge/adapters/fixtures/vista-slots-cardiology.json
+src/veteran_access_bridge/adapters/fixtures/vista-slots-primary-care.json,40fca38ce348d079637ba9d222a988a4b37f5bd3,Original,src/veteran_access_bridge/adapters/fixtures/vista-slots-primary-care.json
+src/veteran_access_bridge/adapters/hsrm.py,4f83ca2377441396b512de01be4e5387835a32cd,Original,src/veteran_access_bridge/adapters/hsrm.py
+src/veteran_access_bridge/adapters/pg_booking_preflight.py,32ae226d84bd0a0d626ba7e5834090591bf18df5,Original,src/veteran_access_bridge/adapters/pg_booking_preflight.py
+src/veteran_access_bridge/adapters/pg_eps_recovery.py,1b08da7a43475bed3559db1605b2cb116012e98d,Original,src/veteran_access_bridge/adapters/pg_eps_recovery.py
+src/veteran_access_bridge/adapters/pg_evidence_journal.py,6ca18a8c96a9d733db8c3af443cb5e9bd2d864a5,Original,src/veteran_access_bridge/adapters/pg_evidence_journal.py
+src/veteran_access_bridge/adapters/pg_scheduling_database_boundary.py,a0d1bb136c257b1b69d83fa177690ed18596c397,Original,src/veteran_access_bridge/adapters/pg_scheduling_database_boundary.py
+src/veteran_access_bridge/adapters/pg_scheduling_options.py,618627d0462dff514825be75ef422d15b542d332,Original,src/veteran_access_bridge/adapters/pg_scheduling_options.py
+src/veteran_access_bridge/adapters/pg_scheduling_sql.py,a4c1060cb5ea0328d34ee866ceb80b078f3b121e,Original,src/veteran_access_bridge/adapters/pg_scheduling_sql.py
+src/veteran_access_bridge/adapters/pg_synthetic_eps_booking.py,bff7b75feb512e66197f41a8bee3dcccecc01cd9,Original,src/veteran_access_bridge/adapters/pg_synthetic_eps_booking.py
+src/veteran_access_bridge/adapters/supabase_scheduling_connection.py,3e0df077957785a09abd7e05546faf22d2ac72aa,Original,src/veteran_access_bridge/adapters/supabase_scheduling_connection.py
+src/veteran_access_bridge/adapters/supabase_sprint6_preflight.py,84f4cbcdd09550098fa856c7ffac3876c499981e,Original,src/veteran_access_bridge/adapters/supabase_sprint6_preflight.py
+src/veteran_access_bridge/adapters/synthetic_ids.py,e0ed02cfa00732bffd18bf3c6d65a1aab50ca310,Original,src/veteran_access_bridge/adapters/synthetic_ids.py
+src/veteran_access_bridge/adapters/va_ccg.py,9500bdc666cb377a895811a1329edd2ef8a42bd3,Original,src/veteran_access_bridge/adapters/va_ccg.py
+src/veteran_access_bridge/adapters/va_facilities.py,71e79696ebfa0770f3f34679168d84076ba86417,Original,src/veteran_access_bridge/adapters/va_facilities.py
+src/veteran_access_bridge/adapters/va_fhir_readers.py,bcc2558cd086ecea6c1dcbd9dcb9ec87bcafed94,Original,src/veteran_access_bridge/adapters/va_fhir_readers.py
+src/veteran_access_bridge/adapters/vista.py,8e4b660fee18388935128911f4cd4ca0108fb4ae,Original,src/veteran_access_bridge/adapters/vista.py
+src/veteran_access_bridge/app/__init__.py,c3e54716efd9896ae315ab06292049555aa4f4a0,Original,src/veteran_access_bridge/app/__init__.py
+src/veteran_access_bridge/app/asgi.py,e082a51d5311df42a0d003199303da332db59717,Original,src/veteran_access_bridge/app/asgi.py
+src/veteran_access_bridge/app/auth.py,fe0b0858f44ffe3b0c8cf8d1fe955804b99b6571,Original,src/veteran_access_bridge/app/auth.py
+src/veteran_access_bridge/app/browser_primary_care.py,06f811a1ea1287d18c648b752cb90f2962ac456e,Original,src/veteran_access_bridge/app/browser_primary_care.py
+src/veteran_access_bridge/app/calendar_projection.py,502d014cd3a8d924b614086ed7fb5273b8124a96,Original,src/veteran_access_bridge/app/calendar_projection.py
+src/veteran_access_bridge/app/embed_auth.py,52cdd09d4d7f89081e9b3777f8b551ce60634b28,Original,src/veteran_access_bridge/app/embed_auth.py
+src/veteran_access_bridge/app/facade.py,222cdc0b738f21d904093c5e14894a0b97658c8d,Original,src/veteran_access_bridge/app/facade.py
+src/veteran_access_bridge/app/handoff_projection.py,2624bbfd5632e1e334fe0647238a26d77a90036f,Original,src/veteran_access_bridge/app/handoff_projection.py
+src/veteran_access_bridge/app/live_interactions.py,a8163612d5883df7ed447defecdd0a58c376c1a7,Original,src/veteran_access_bridge/app/live_interactions.py
+src/veteran_access_bridge/app/primary_care_demo.py,7955495a66a1951882a56f171a5eadfb9b0794c2,Original,src/veteran_access_bridge/app/primary_care_demo.py
+src/veteran_access_bridge/app/private_primary_care_booking.py,3950b40f7f5e1e4f3bf674af9cfe2fa3949a32a3,Original,src/veteran_access_bridge/app/private_primary_care_booking.py
+src/veteran_access_bridge/app/runtime_settings.py,bb6258aeadb92fa3f7ac91f60f2fd83a15e9d8a4,Original,src/veteran_access_bridge/app/runtime_settings.py
+src/veteran_access_bridge/app/runtime_smoke.py,51ccad29f5208ea8cad6b4f9b3ebcf9561c6217c,Original,src/veteran_access_bridge/app/runtime_smoke.py
+src/veteran_access_bridge/app/server.py,7f2e6a0ceb393085d3db3954d98065e0365a55a9,Original,src/veteran_access_bridge/app/server.py
+src/veteran_access_bridge/app/static/__init__.py,d3651a2e79edb6f2a7995601b001e032a6b4ba39,Original,src/veteran_access_bridge/app/static/__init__.py
+src/veteran_access_bridge/app/static/app.js,bf36311fea85b156d69fb4920fa5a5428d7d0075,Original,src/veteran_access_bridge/app/static/app.js
+src/veteran_access_bridge/app/static/index.html,73b11806c1942a8b58e8ef85dbaf3413426cc47f,Original,src/veteran_access_bridge/app/static/index.html
+src/veteran_access_bridge/app/static/styles.css,d358500c1c3058f0e131ac64ef76335f116be438,Original,src/veteran_access_bridge/app/static/styles.css
+src/veteran_access_bridge/app/synthetic_veteran_consent.py,02227a8a744d96582b187371ab8077730cbb4752,Original,src/veteran_access_bridge/app/synthetic_veteran_consent.py
+src/veteran_access_bridge/app/synthetic_veteran_host_issuer.py,5d69c71863807032a79abfcd46046279c8c5a0dd,Original,src/veteran_access_bridge/app/synthetic_veteran_host_issuer.py
+src/veteran_access_bridge/app/synthetic_veteran_session.py,a613413e736d07b795bfe104edd54b5fc60cf1c9,Original,src/veteran_access_bridge/app/synthetic_veteran_session.py
+src/veteran_access_bridge/app/telemetry.py,a3c6d043139b56e924b4f7ee8c63c6ee26ea93c3,Original,src/veteran_access_bridge/app/telemetry.py
+src/veteran_access_bridge/app/trusted_voice_booking.py,50925cbf65a2d213a530384290c13e7294c4a365,Original,src/veteran_access_bridge/app/trusted_voice_booking.py
+src/veteran_access_bridge/app/voice_booking_projection.py,850020b51509f3912d430b728ae949b3c45bde4c,Original,src/veteran_access_bridge/app/voice_booking_projection.py
+src/veteran_access_bridge/domain/__init__.py,2f9e56afab7cdf13ab84ce0195b496a7526b3b62,Original,src/veteran_access_bridge/domain/__init__.py
+src/veteran_access_bridge/domain/avery_script.py,35bbb9a61b8189f43fcecc3239800923c0de39c5,Original,src/veteran_access_bridge/domain/avery_script.py
+src/veteran_access_bridge/domain/correlation.py,d2fc28b06c058a9a9876a681b2d898602c1e3906,Original,src/veteran_access_bridge/domain/correlation.py
+src/veteran_access_bridge/domain/guardrails.py,bcf1b89106075d7ffe5f504ae96a1fcac80b0f97,Original,src/veteran_access_bridge/domain/guardrails.py
+src/veteran_access_bridge/domain/interaction_events.py,3aebb8f208189a9fecf25fe7457d569d24f6c895,Original,src/veteran_access_bridge/domain/interaction_events.py
+src/veteran_access_bridge/domain/models.py,59d7a3dbde4d7bfc4da187d8bd2fe8ff2c31aef4,Original,src/veteran_access_bridge/domain/models.py
+src/veteran_access_bridge/domain/primary_care_fields.py,93efd2ccf9ec3eb4aff1c0b876b0102857e9c017,Original,src/veteran_access_bridge/domain/primary_care_fields.py
+src/veteran_access_bridge/domain/voice_session.py,ad18d0cbc0eb4ce63a9cbd741ce2b69ffcbfa859,Original,src/veteran_access_bridge/domain/voice_session.py
+src/veteran_access_bridge/domain/workflow.py,bab18e01727126245b408586a9c5f5331e6f378f,Original,src/veteran_access_bridge/domain/workflow.py
+src/veteran_access_bridge/integrations/__init__.py,8eb1eba196e6f83cb6c83a26987ad4796b45e639,Original,src/veteran_access_bridge/integrations/__init__.py
+src/veteran_access_bridge/integrations/contracts.py,11a073807b1cdbdb34e59bb0e89efe80554f8d15,Original,src/veteran_access_bridge/integrations/contracts.py
+src/veteran_access_bridge/integrations/ibm_phone.py,682aa4adf0523ca7bfb233c7001a76af492c70a7,Original,src/veteran_access_bridge/integrations/ibm_phone.py
+src/veteran_access_bridge/mcp/__init__.py,7d02eaf260023efa7ee0387357ff0e23e5a885d9,Original,src/veteran_access_bridge/mcp/__init__.py
+src/veteran_access_bridge/mcp/app.py,c7827d1d86a23f08894520e53cb0b8651ef9c97b,Original,src/veteran_access_bridge/mcp/app.py
+src/veteran_access_bridge/mcp/approved_sandbox_patients.py,e27253f470d1c34d1df96a1429d9087c2013d429,Original,src/veteran_access_bridge/mcp/approved_sandbox_patients.py
+src/veteran_access_bridge/mcp/cases.py,ca66da7ac1a82dd14334a4b64e6975ea6614fe5b,Original,src/veteran_access_bridge/mcp/cases.py
+src/veteran_access_bridge/mcp/config.py,ff16d7309f734082ee15300965e5c980e122669a,Original,src/veteran_access_bridge/mcp/config.py
+src/veteran_access_bridge/mcp/crm_receipt.py,a12a64b676050fd938f20792742d019593e64feb,Original,src/veteran_access_bridge/mcp/crm_receipt.py
+src/veteran_access_bridge/mcp/durable_runtime.py,1216282691d478bb546cfc0aa40b4eb2cae07dba,Original,src/veteran_access_bridge/mcp/durable_runtime.py
+src/veteran_access_bridge/mcp/fixtures/__init__.py,56b25e92bd438c8d66f43b8dd056784f1f4ecc81,Original,src/veteran_access_bridge/mcp/fixtures/__init__.py
+src/veteran_access_bridge/mcp/fixtures/mariano-cardiology-case.json,6e71ea3e9a829067d0612c0f53d8d6541645b020,Original,src/veteran_access_bridge/mcp/fixtures/mariano-cardiology-case.json
+src/veteran_access_bridge/mcp/fixtures/primary-care-established-case.json,5f6f4768b1db7cbf68ee6c995cf059e500a88709,Original,src/veteran_access_bridge/mcp/fixtures/primary-care-established-case.json
+src/veteran_access_bridge/mcp/fixtures/primary-care-sandbox-mariano-case.json,bdce2423c96e7d41603f405771df66c814e29d43,Original,src/veteran_access_bridge/mcp/fixtures/primary-care-sandbox-mariano-case.json
+src/veteran_access_bridge/mcp/fixtures/primary-care-unidentified-voice-intake.json,e1dbfb357f206a4130a7141a6dd2d6b64d1b7c77,Original,src/veteran_access_bridge/mcp/fixtures/primary-care-unidentified-voice-intake.json
+src/veteran_access_bridge/mcp/fixtures/synthetic-primary-care-caller-roster.json,a7f084c3bc5641de2d21fe7c07d9e2bcf9f7d6d4,Original,src/veteran_access_bridge/mcp/fixtures/synthetic-primary-care-caller-roster.json
+src/veteran_access_bridge/mcp/routes.py,943b7cf977bf3b1c86f012748a61862fea21a9ba,Original,src/veteran_access_bridge/mcp/routes.py
+src/veteran_access_bridge/mcp/serialization.py,5a01904f921e0f12498633553aa2475a39667acd,Original,src/veteran_access_bridge/mcp/serialization.py
+src/veteran_access_bridge/mcp/session_scope.py,c390562936d44edebee81470b4553dda738e7f89,Original,src/veteran_access_bridge/mcp/session_scope.py
+src/veteran_access_bridge/mcp/state.py,19d40d83790f6de69edde8224a89bfe7a34d8913,Original,src/veteran_access_bridge/mcp/state.py
+src/veteran_access_bridge/mcp/tools/__init__.py,9f86b1e8664cf5614e4a06db2674e998477f6e82,Original,src/veteran_access_bridge/mcp/tools/__init__.py
+src/veteran_access_bridge/mcp/tools/assess_access_standard.py,d3cb2b909ebeb7e3439921beabcee0306b25ac62,Original,src/veteran_access_bridge/mcp/tools/assess_access_standard.py
+src/veteran_access_bridge/mcp/tools/check_community_care_eligibility.py,813c9c7561c6c78e79a7fd48233c6e91028e6b3d,Original,src/veteran_access_bridge/mcp/tools/check_community_care_eligibility.py
+src/veteran_access_bridge/mcp/tools/crm.py,92b3b75b6b810c4d377a45d2699f0030db991ef1,Original,src/veteran_access_bridge/mcp/tools/crm.py
+src/veteran_access_bridge/mcp/tools/determine_workflow_state.py,86d6b517be2527f864cc2e0521a1d309f35e2022,Original,src/veteran_access_bridge/mcp/tools/determine_workflow_state.py
+src/veteran_access_bridge/mcp/tools/get_case_lifecycle_state.py,22d4ac90917a6bd90aa56c2d748788fa52f3af84,Original,src/veteran_access_bridge/mcp/tools/get_case_lifecycle_state.py
+src/veteran_access_bridge/mcp/tools/get_scheduling_encounter.py,4cd037bff8ddcf6371d605ed197c8d8547060c42,Original,src/veteran_access_bridge/mcp/tools/get_scheduling_encounter.py
+src/veteran_access_bridge/mcp/tools/get_scheduling_handoff.py,fb1732fb407c50f3c83019d1d6610cc2c24a393c,Original,src/veteran_access_bridge/mcp/tools/get_scheduling_handoff.py
+src/veteran_access_bridge/mcp/tools/prepare_scheduling_handoff.py,85ae1f5ff02c3eca50a30d6eb4ea4afb69f5405e,Original,src/veteran_access_bridge/mcp/tools/prepare_scheduling_handoff.py
+src/veteran_access_bridge/mcp/tools/prepare_veteran_confirmation_request.py,2610067ab1bf8923d9a53292a98962fb71664494,Original,src/veteran_access_bridge/mcp/tools/prepare_veteran_confirmation_request.py
+src/veteran_access_bridge/mcp/tools/record_lifecycle_event.py,ba15c7cc4831685cb9d5fa43d86951604d7b7667,Original,src/veteran_access_bridge/mcp/tools/record_lifecycle_event.py
+src/veteran_access_bridge/mcp/tools/record_option_selection.py,94ed5ddca31b565321e4e921400dbd0855283088,Original,src/veteran_access_bridge/mcp/tools/record_option_selection.py
+src/veteran_access_bridge/mcp/tools/record_veteran_confirmation.py,969c18d8c62c59d63b4c40888c9e3b600f572c98,Original,src/veteran_access_bridge/mcp/tools/record_veteran_confirmation.py
+src/veteran_access_bridge/mcp/tools/search_availability.py,394ac4a1be061c72b2840a14b2722e25eef90dff,Original,src/veteran_access_bridge/mcp/tools/search_availability.py
+src/veteran_access_bridge/mcp/tools/va_sandbox_readonly.py,8b15dc41f887e325de956c47a8ca4ff679244a44,Original,src/veteran_access_bridge/mcp/tools/va_sandbox_readonly.py
+src/veteran_access_bridge/mcp/tools/validate_booking_preconditions.py,f00053ee6b7441b69d39f53869c08e6fb5ff4507,Original,src/veteran_access_bridge/mcp/tools/validate_booking_preconditions.py
+src/veteran_access_bridge/mcp/tools/validate_option_selection.py,0f4bf0a386303da910a6a7a5b4f3a821b3652cdc,Original,src/veteran_access_bridge/mcp/tools/validate_option_selection.py
+src/veteran_access_bridge/mcp/tools/verify_synthetic_identity.py,bd3ad86416979696c1f5f850249ad72c9eb5014c,Original,src/veteran_access_bridge/mcp/tools/verify_synthetic_identity.py
+src/veteran_access_bridge/mcp/tools/voice_workflow.py,e02d7cc821a7f9af4a4705b82e9b5ecb674ef5c4,Original,src/veteran_access_bridge/mcp/tools/voice_workflow.py
+src/veteran_access_bridge/mcp/voice_demo_patients.py,9fb3269f426db0e1bd66cf7aca677a768bf47f6b,Original,src/veteran_access_bridge/mcp/voice_demo_patients.py
+src/veteran_access_bridge/services/__init__.py,9803dc412492fa7fb980e864baff6722a1f045d9,Original,src/veteran_access_bridge/services/__init__.py
+src/veteran_access_bridge/services/access_standard.py,a5e6f9135f2a578646036f29a21f1e5cde2cf5ed,Original,src/veteran_access_bridge/services/access_standard.py
+src/veteran_access_bridge/services/after_call.py,7ace5809245d1e4c7bb46ec9ff5dec7f66edfe76,Original,src/veteran_access_bridge/services/after_call.py
+src/veteran_access_bridge/services/booking.py,58faffdb7a2d839f140e6f5b47fb9c7e18ecb48a,Original,src/veteran_access_bridge/services/booking.py
+src/veteran_access_bridge/services/booking_crm.py,b5b21c01d3e4bcb801fa772d55f2e6dd342b824e,Original,src/veteran_access_bridge/services/booking_crm.py
+src/veteran_access_bridge/services/call_knowledge.py,3a695c5cce451966db99ad3da828b430378cbcf4,Original,src/veteran_access_bridge/services/call_knowledge.py
+src/veteran_access_bridge/services/call_patient_lookup.py,d8dd4c7a5ac50ccf33f2858ddf5348cad33eeb5a,Original,src/veteran_access_bridge/services/call_patient_lookup.py
+src/veteran_access_bridge/services/call_slot_verification.py,84233e78b997fa6c6a8cc3f803b8b19aaa625e1c,Original,src/veteran_access_bridge/services/call_slot_verification.py
+src/veteran_access_bridge/services/clinic_classification.py,10df8656c1d78c8c05718803ec922c1f3e0ae3fd,Original,src/veteran_access_bridge/services/clinic_classification.py
+src/veteran_access_bridge/services/confirmation.py,a80cd2cb4e199764b000e880ace3ddb0aa025a92,Original,src/veteran_access_bridge/services/confirmation.py
+src/veteran_access_bridge/services/crm.py,ddea72407682c37c701d033beebec1390f938f8e,Original,src/veteran_access_bridge/services/crm.py
+src/veteran_access_bridge/services/demo_facility_context.py,d3a380dd0c54c2fdc0605c8fa6820d31a8d6600d,Original,src/veteran_access_bridge/services/demo_facility_context.py
+src/veteran_access_bridge/services/encounter_lifecycle.py,5cd92bd42b72cbab6bfd8657da03d0ecd02d9a84,Original,src/veteran_access_bridge/services/encounter_lifecycle.py
+src/veteran_access_bridge/services/events.py,950b79e3047d6a6b27723fe92ca3625fc45e1085,Original,src/veteran_access_bridge/services/events.py
+src/veteran_access_bridge/services/guardrails.py,d2f4a08a28f541b4462121e7112910507800f493,Original,src/veteran_access_bridge/services/guardrails.py
+src/veteran_access_bridge/services/handoff.py,837363455dcbd554b0a8cbad9750e91b6f9ef108,Original,src/veteran_access_bridge/services/handoff.py
+src/veteran_access_bridge/services/interaction_events.py,e3eb90a0e736642eeb2f6dff9164afe01a76e69b,Original,src/veteran_access_bridge/services/interaction_events.py
+src/veteran_access_bridge/services/internal_slot_bridge.py,acc335b9a107ff753b2f113304c0e77f304720e3,Original,src/veteran_access_bridge/services/internal_slot_bridge.py
+src/veteran_access_bridge/services/latency_timing.py,e1db321bca5b0bb3bfd491a3eea1ac5a7399649f,Original,src/veteran_access_bridge/services/latency_timing.py
+src/veteran_access_bridge/services/orchestrate_runtime.py,b8e99e6af9fabc001ab519bae8c0e2fc5f1e8eed,Original,src/veteran_access_bridge/services/orchestrate_runtime.py
+src/veteran_access_bridge/services/outcomes.py,f198752e5e4ca60537971040d424b4b92fadfe80,Original,src/veteran_access_bridge/services/outcomes.py
+src/veteran_access_bridge/services/patient_last_four.py,667b819c2dfefe729f368fee2397690f094f9341,Original,src/veteran_access_bridge/services/patient_last_four.py
+src/veteran_access_bridge/services/pg_booking_readback.py,b4cdbbae6c7f790d59d7c15a5470891b14a19a5d,Original,src/veteran_access_bridge/services/pg_booking_readback.py
+src/veteran_access_bridge/services/pg_governed_eps_commit.py,8f1f115cd941d02ba76c3be52ce45a795c091a8f,Original,src/veteran_access_bridge/services/pg_governed_eps_commit.py
+src/veteran_access_bridge/services/pg_governed_va_commit.py,d3cf5103fdea531af5bdb86013774cc3ac185951,Original,src/veteran_access_bridge/services/pg_governed_va_commit.py
+src/veteran_access_bridge/services/pg_provider_reconciliation.py,cd6697dfb594319efdd2662041e7e0798f7511bd,Original,src/veteran_access_bridge/services/pg_provider_reconciliation.py
+src/veteran_access_bridge/services/pg_signed_decisions.py,cdbb12934e3923a991ee4d8247d97a56a4a35b53,Original,src/veteran_access_bridge/services/pg_signed_decisions.py
+src/veteran_access_bridge/services/preference_ranking.py,72915a772339e2f2af391633b70670b8ab8b92d8,Original,src/veteran_access_bridge/services/preference_ranking.py
+src/veteran_access_bridge/services/private_va_booking_grant_issuer.py,3b617bd3b8684722f2cf550d5d23ca5eacb49528,Original,src/veteran_access_bridge/services/private_va_booking_grant_issuer.py
+src/veteran_access_bridge/services/protected_host_keys.py,ee4ef5d6ccf2264cba5b38e7c77ea8e6b027da76,Original,src/veteran_access_bridge/services/protected_host_keys.py
+src/veteran_access_bridge/services/sandbox_callers.py,f36b8a897805018dbdbeca8019c07fffba617dfa,Original,src/veteran_access_bridge/services/sandbox_callers.py
+src/veteran_access_bridge/services/scheduler_assertions.py,66be03a33e99e94ab1c27b2f783d004f9b9efbdd,Original,src/veteran_access_bridge/services/scheduler_assertions.py
+src/veteran_access_bridge/services/scheduling_encounter.py,f8d4cd806baca2ef065c50572404f76eddd0f2a2,Original,src/veteran_access_bridge/services/scheduling_encounter.py
+src/veteran_access_bridge/services/search.py,b00181fafa4c4954887119cd8d398e47ea118d9d,Original,src/veteran_access_bridge/services/search.py
+src/veteran_access_bridge/services/selection.py,e6e51111ffb96f4b138c46091fa6c8772738dae9,Original,src/veteran_access_bridge/services/selection.py
+src/veteran_access_bridge/services/signed_scheduling_lifecycle.py,145ebdf6b72e55232012887d11aa63be2e51a074,Original,src/veteran_access_bridge/services/signed_scheduling_lifecycle.py
+src/veteran_access_bridge/services/slot_matching.py,bf47a5a317ed782a8876139f1bf56493edb57869,Original,src/veteran_access_bridge/services/slot_matching.py
+src/veteran_access_bridge/services/supabase_scheduling_gateway.py,a13b3bbbcae7859d58f73889a351556829d8b198,Original,src/veteran_access_bridge/services/supabase_scheduling_gateway.py
+src/veteran_access_bridge/services/trusted_primary_care.py,c71f3d67402e07ede52beeaf02cd77a1fc9c941b,Original,src/veteran_access_bridge/services/trusted_primary_care.py
+src/veteran_access_bridge/services/verification.py,963276d1705e2f70d392af70510f5573e40adef6,Original,src/veteran_access_bridge/services/verification.py
+src/veteran_access_bridge/services/voice_sessions.py,68dba3d35b732e91b52fa1dfaed2e0791ef65edf,Original,src/veteran_access_bridge/services/voice_sessions.py
+src/veteran_access_bridge/services/voice_tts.py,9e17ba69ab91a1af32fd120501c06f8f9b2bb6ca,Original,src/veteran_access_bridge/services/voice_tts.py
+src/veteran_access_bridge/voice/__init__.py,e1fdc352f0a69dc7308ca8b6c4c1cc4ad7ce8cef,Original,src/veteran_access_bridge/voice/__init__.py
+src/veteran_access_bridge/voice/appointment_language.py,e3584cfbd4bc4f939b1b094ecca5a110b3a48c51,Original,src/veteran_access_bridge/voice/appointment_language.py
+src/veteran_access_bridge/voice/dispatch_name.py,695643537b1c834740d053b3579bdcb7ce8d7dae,Original,src/veteran_access_bridge/voice/dispatch_name.py
+src/veteran_access_bridge/voice/identity_intake.py,0d3df3f15a31576ea308c1849b72566e0958e4f3,Original,src/veteran_access_bridge/voice/identity_intake.py
+src/veteran_access_bridge/voice/livekit_worker.py,a4dcdb39e39c769a1fe4792a568a7657a8bb8438,Original,src/veteran_access_bridge/voice/livekit_worker.py
+src/veteran_access_bridge/voice/observer_readiness.py,eee72675d740db283ce9475a2c216eb067da54b1,Original,src/veteran_access_bridge/voice/observer_readiness.py
+src/veteran_access_bridge/voice/participant_selection.py,962d64809600c15d9b7d9bf1e4d6e6cf323a41fc,Original,src/veteran_access_bridge/voice/participant_selection.py
+src/veteran_access_bridge/voice/private_speech_agent.py,caae4c4ff28676cb7c92a4bc61aef374a89a4676,Original,src/veteran_access_bridge/voice/private_speech_agent.py
+src/veteran_access_bridge/voice/response_policy.py,f696253e8c5c406d469fae25c1d1f044bd581733,Original,src/veteran_access_bridge/voice/response_policy.py
+src/veteran_access_bridge/voice/spoken_identity.py,1d34e0ea1d412d702e7e46290821efceec991b9a,Original,src/veteran_access_bridge/voice/spoken_identity.py
+src/veteran_access_bridge/voice/spoken_last_four.py,3a9ef2a02785c90ca4081b571dc949c8764d417e,Original,src/veteran_access_bridge/voice/spoken_last_four.py
+src/veteran_access_bridge/voice/timing.py,565d1f310d9ca609ad3558e40adb59ab160d318f,Original,src/veteran_access_bridge/voice/timing.py
+src/veteran_access_bridge/voice/worker_assertion.py,9bc1aa4b56d0916576029c1f6fad4ff759c020e1,Original,src/veteran_access_bridge/voice/worker_assertion.py
+supabase/migrations/20261113014558_vab_011_sprint6_decision_order.sql,633631824b067f18d559cfc084ab6c08b53e6608,Original,supabase/migrations/20261113014558_vab_011_sprint6_decision_order.sql
+supabase/migrations/20261113014748_vab_012_sprint6_private_writer_nologin.sql,4ab870f4f198a34048b86af408d39f9bfee4a1fd,Original,supabase/migrations/20261113014748_vab_012_sprint6_private_writer_nologin.sql
+supabase/migrations/20261113014935_vab_013_sprint6_private_login_scaffold.sql,e3234d44d80ac4cc4ee111dd7f4a809e324340bf,Original,supabase/migrations/20261113014935_vab_013_sprint6_private_login_scaffold.sql
+supabase/migrations/20261113015252_vab_014_sprint6_restricted_row_lock_grants.sql,76db038518455e4be9587bdd4b547c2cfcb0e301,Original,supabase/migrations/20261113015252_vab_014_sprint6_restricted_row_lock_grants.sql
+supabase/migrations/20261113022113_vab_015_sprint6_isolated_test_schema.sql,20592d5258e5cb81702592933faa7ff43a0cebd6,Original,supabase/migrations/20261113022113_vab_015_sprint6_isolated_test_schema.sql
+supabase/migrations/20261113024242_vab_016_sprint_a_test_roles_rls.sql,b17bd63b6920edd0ba618597163910e30fc6a382,Original,supabase/migrations/20261113024242_vab_016_sprint_a_test_roles_rls.sql
+tests/test_access_standard.py,c810981e951cd6ac17cecab2e308a68b2c45852c,Original,tests/test_access_standard.py
+tests/test_after_call.py,113aa561607dfd447a98d4a3d89b06929eba30c2,Original,tests/test_after_call.py
+tests/test_answer_candidate_preparation.py,fa07439fc5069a2b7bb545e3d179f02dc42615e5,Original,tests/test_answer_candidate_preparation.py
+tests/test_appointment_language.py,048fdaa35ffd23cd8dc88b1af80be9e6af38d0bf,Original,tests/test_appointment_language.py
+tests/test_approved_sandbox_identity_mapping.py,310535df4eaf921c34ac3c995b598a9e2dfb22e4,Original,tests/test_approved_sandbox_identity_mapping.py
+tests/test_asgi_app.py,54670e8b9cef854cd52354c791679dc66c17effd,Original,tests/test_asgi_app.py
+tests/test_avery_autonomy_contract.py,3c3b4d6b5593cf96281125ba99b93c95a5f5bf41,Original,tests/test_avery_autonomy_contract.py
+tests/test_booking_crm.py,570b01f11d0491cd29b1e9b5df94b9758cb02e69,Original,tests/test_booking_crm.py
+tests/test_browser_primary_care.py,519239d3a92df30dcab981c8b73939de38b9cdfe,Original,tests/test_browser_primary_care.py
+tests/test_calendar_projection.py,6670df687fc7139dca2fdf1033834dbeb0aa3d8f,Original,tests/test_calendar_projection.py
+tests/test_call_patient_lookup.py,a4e32cf4ac5c2a48d13690765611869d4fa861fa,Original,tests/test_call_patient_lookup.py
+tests/test_call_slot_verification.py,67b90c1e816649bb8a2d038f5651414b98db5b32,Original,tests/test_call_slot_verification.py
+tests/test_caller_activity_events.py,023203c8dc6c8d2ce787207e885bf4b0e8059728,Original,tests/test_caller_activity_events.py
+tests/test_canonical_ui_routing.py,c8203baa651d538b95aee11cd465e68961384f12,Original,tests/test_canonical_ui_routing.py
+tests/test_cardiology_workflow.py,c46443b68095e025d937096f433ebc4806cca8a1,Original,tests/test_cardiology_workflow.py
+tests/test_codex_fixes.py,6fc19e3a2a84b58551f85db95cc8b571b516911d,Original,tests/test_codex_fixes.py
+tests/test_correlation.py,53d85e97047b987c69da3e2b7ec0451dfada9870,Original,tests/test_correlation.py
+tests/test_crm.py,72161c1c754d1366fba9995dada37ce30bc17290,Original,tests/test_crm.py
+tests/test_crm_receipt.py,6fcc196b9083dc873009643f32cb7657cc412df0,Original,tests/test_crm_receipt.py
+tests/test_demo_facility_context.py,72e8c214a54e32d0d518b1f83d52d3d8b493318a,Original,tests/test_demo_facility_context.py
+tests/test_embed_auth.py,4258ef0dc5d7131191464ac73ff60e3f9d20c092,Original,tests/test_embed_auth.py
+tests/test_eval_dataset.py,9de70e1ffe716bde2536b4c8521e45cf91cb695e,Original,tests/test_eval_dataset.py
+tests/test_facility_metadata_cache.py,56846ead02d9b89dec37f1ef3e18940444e859cc,Original,tests/test_facility_metadata_cache.py
+tests/test_identity_intake.py,0c8ae496ba9dfe6abd68eaa3106917e71f87d938,Original,tests/test_identity_intake.py
+tests/test_interaction_events.py,c12fd419ddd5bfdf2ba6a8fb03f329cb9208586e,Original,tests/test_interaction_events.py
+tests/test_knowledge_query_normalization.py,c210f25a098ec935b83fb060a0c8a76bfd306046,Original,tests/test_knowledge_query_normalization.py
+tests/test_latency_stages.py,141b193d1246a5bff7be933b01a1a9a6ad38b81e,Original,tests/test_latency_stages.py
+tests/test_latency_trace.py,98add96dd619274e7033a982a2309bd36cde4540,Original,tests/test_latency_trace.py
+tests/test_live_interactions.py,62f7cf01a84df0212010542c8faa87cd26075bde,Original,tests/test_live_interactions.py
+tests/test_livekit_participant_selection.py,cf75bb629067e5a284bc2b41ddb75e184ba163ae,Original,tests/test_livekit_participant_selection.py
+tests/test_m2_acceptance.py,5f0d4cfe5504ac61ead134f6d171525d40abbe71,Original,tests/test_m2_acceptance.py
+tests/test_m2_booking.py,e34dbc696b3b95690ff0656c57086215e8420606,Original,tests/test_m2_booking.py
+tests/test_m2_confirmation.py,4a25a8ef5477dfd1f19b480cae5773ae823e8c49,Original,tests/test_m2_confirmation.py
+tests/test_m2_event_store.py,bb29499d95f7080ac6c6c5ac8baaa7bdb9bda1c4,Original,tests/test_m2_event_store.py
+tests/test_m2_handoff.py,9ec6fc0d766166a6d91f64a305b6c2018520b501,Original,tests/test_m2_handoff.py
+tests/test_m2_lifecycle_state.py,28b9ddc364651cfbfd863f3cf8c5d02266a6503d,Original,tests/test_m2_lifecycle_state.py
+tests/test_m2_models.py,2d6f5b220d5ec6f2ca260f0f81c584ac490e9640,Original,tests/test_m2_models.py
+tests/test_m2_outcomes.py,0989d31f968a71088998790cd296ab77ad39c23a,Original,tests/test_m2_outcomes.py
+tests/test_m2_selection.py,be540be4c4acb6d3f3b61cde77535d896f7a05a5,Original,tests/test_m2_selection.py
+tests/test_m2_verification.py,98f005dea5f119d3a06247b73185f097e27e4f60,Original,tests/test_m2_verification.py
+tests/test_m3_m6_demo.py,1ddd134c58cb86875c07de190c203e5b3ea048d2,Original,tests/test_m3_m6_demo.py
+tests/test_m64_evaluation_assets.py,16b58d9aeb5a2b2723bda6f1fe93cf26c82f292b,Original,tests/test_m64_evaluation_assets.py
+tests/test_m64_identity_verification.py,3ea52d7847b42eb745e9aeb7e57c8976a8c4f7ef,Original,tests/test_m64_identity_verification.py
+tests/test_m6_2_clinic_classification.py,42f400e861f694fff7595b9017d09cc2f3fe0f5e,Original,tests/test_m6_2_clinic_classification.py
+tests/test_m6_2_internal_slot_bridge.py,04df4c516132923d48e62def1eca8e5be246eb53,Original,tests/test_m6_2_internal_slot_bridge.py
+tests/test_m6_2_models.py,558ddac9c48554cb039d90d1402adecf097fb7c4,Original,tests/test_m6_2_models.py
+tests/test_m6_2_primary_care_scenarios.py,bb11fcb230b89818bdeed216b7141d35df4c866a,Original,tests/test_m6_2_primary_care_scenarios.py
+tests/test_m6_2_slot_matching.py,fa83925096e3b0f4a6e64513c6f25eef535a818a,Original,tests/test_m6_2_slot_matching.py
+tests/test_m6_3a_scheduling_encounter.py,42778441ad48e0df5ee4f401dd298f7e47ab6d3c,Original,tests/test_m6_3a_scheduling_encounter.py
+tests/test_m6_3b_preference_ranking.py,3c28396718bb3320e68693ebef1ef0b6cb6d2ac5,Original,tests/test_m6_3b_preference_ranking.py
+tests/test_m6_3c_lifecycle_projection.py,2e62974a8458d30c4a4c37c0d8c5417fc4792093,Original,tests/test_m6_3c_lifecycle_projection.py
+tests/test_mcp_access_standard.py,da9c065671d3aa982df8b805cea47210a590d8aa,Original,tests/test_mcp_access_standard.py
+tests/test_mcp_health.py,20398d60c3538784359b6d0f47fc89c84b84fce6,Original,tests/test_mcp_health.py
+tests/test_mcp_remote_integration.py,b2bb1787cf7d601c0c1c835d43d31cf77a1dd997,Original,tests/test_mcp_remote_integration.py
+tests/test_mcp_scheduling_encounter.py,9f0dcb01233fc4ea93c129944a546cec68dc41b2,Original,tests/test_mcp_scheduling_encounter.py
+tests/test_mcp_scope_adversarial.py,723bc1e564fd699d2625148d4a24946bb6f39fa2,Original,tests/test_mcp_scope_adversarial.py
+tests/test_mcp_search_tool.py,b3fa1cf0c63dc693f8400930d326e286f48fd624,Original,tests/test_mcp_search_tool.py
+tests/test_mcp_session_scope.py,fd230662a14891d76a6a1eb1d8ed77137c3b11df,Original,tests/test_mcp_session_scope.py
+tests/test_mcp_transport_guard.py,d7bcf7574b83dd2610b817b2b903ffc434f88897,Original,tests/test_mcp_transport_guard.py
+tests/test_mcp_workflow_tool.py,609a5cfa0cb399704b24481f57af8f83a5a2b553,Original,tests/test_mcp_workflow_tool.py
+tests/test_msa_monitor_gateway.py,3da5b202ead87ec4f82c5a80fc46e3a61d2b4851,Original,tests/test_msa_monitor_gateway.py
+tests/test_msa_observer_dispatch_readiness.py,db72ce992aa666aa76a38f2f79f3986ca45def1f,Original,tests/test_msa_observer_dispatch_readiness.py
+tests/test_observability.py,a8e345028559de192d1f47b8b4cccaf28b4716a5,Original,tests/test_observability.py
+tests/test_options_workflow_candidate.py,ed380bce51e7803ecf378318d0dade4fcf351051,Original,tests/test_options_workflow_candidate.py
+tests/test_orchestrate_runtime.py,0720c715ca4a54ded030bca3c2dbee5fcc0fd266,Original,tests/test_orchestrate_runtime.py
+tests/test_patient_last_four.py,ddaa0d79cd73aa9aac1b95d379695c59c67f92e5,Original,tests/test_patient_last_four.py
+tests/test_pg_booking_commit_invariants.py,e694479c78f7537034dac1d0ffcc5458e955a9f4,Original,tests/test_pg_booking_commit_invariants.py
+tests/test_pg_booking_preflight.py,46b0952145fe13d0913a66f8ef81450678364642,Original,tests/test_pg_booking_preflight.py
+tests/test_pg_booking_readback_contract.py,2e68c1ca2123cf0bc1a74f7930d8ce7e5a6aef50,Original,tests/test_pg_booking_readback_contract.py
+tests/test_pg_eps_recovery_atomic.py,3b0bdbf5160cf2d68dfd6698707b9de4388f36d0,Original,tests/test_pg_eps_recovery_atomic.py
+tests/test_pg_evidence_journal.py,0e9bb72c14d4da9dc8832bf33b8c868c3f47721d,Original,tests/test_pg_evidence_journal.py
+tests/test_pg_governed_eps_commit.py,410a1c632bfe58258539a6262ef628b6c24abda1,Original,tests/test_pg_governed_eps_commit.py
+tests/test_pg_governed_va_commit.py,2123ba7c1cc3e6228ae31c3919dc05b1cb25578c,Original,tests/test_pg_governed_va_commit.py
+tests/test_pg_provider_reconciliation.py,e695be8c44d744e5e317393ba2e50b35748f1ae1,Original,tests/test_pg_provider_reconciliation.py
+tests/test_pg_scheduling_database_boundary.py,51373b1dd35e3bd6afb94d67c9608ebb9bd7408e,Original,tests/test_pg_scheduling_database_boundary.py
+tests/test_pg_scheduling_options.py,1cd3c0dba60766444884d797a359348b502dad12,Original,tests/test_pg_scheduling_options.py
+tests/test_pg_signed_decision_reversal.py,20bb614b88e7d63e200c82e1fda426e97cd5a1a2,Original,tests/test_pg_signed_decision_reversal.py
+tests/test_pg_signed_decisions.py,9f4b412ef6f38ea7367b5a4b4adcc16ea0451033,Original,tests/test_pg_signed_decisions.py
+tests/test_primary_care_demo_a.py,a1d23ac02e8967b2f77d2c99a25edd0599a75124,Original,tests/test_primary_care_demo_a.py
+tests/test_primary_care_demo_b.py,124386ae7481256f577a8c59dfd10a4aae164978,Original,tests/test_primary_care_demo_b.py
+tests/test_primary_care_field_contract.py,827673429b209d7cd40290865633208b72450c65,Original,tests/test_primary_care_field_contract.py
+tests/test_private_primary_care_booking.py,c73fd62e8b163706411973ac2ef61d081a250eb5,Original,tests/test_private_primary_care_booking.py
+tests/test_private_speech_agent.py,c1292bee54929d4b7e93838cc96675fd54256951,Original,tests/test_private_speech_agent.py
+tests/test_private_va_booking_grant_issuer.py,3752291e86a406590aa7601418cdae5e8fb94287,Original,tests/test_private_va_booking_grant_issuer.py
+tests/test_protected_host_keys.py,0c651404a2c64e69008afc3d0a61895d93779f23,Original,tests/test_protected_host_keys.py
+tests/test_runtime_settings.py,11d11d2fc135d418b8749b1c8d8309de37b81522,Original,tests/test_runtime_settings.py
+tests/test_runtime_smoke.py,9cb4bf3975ee1675314db9beb1abaf0b2d3c4f93,Original,tests/test_runtime_smoke.py
+tests/test_sandbox_callers.py,fc51c4fdcaceb563640de8525582d6e08013fbf3,Original,tests/test_sandbox_callers.py
+tests/test_scheduler_assertions.py,fa08289ec69d5a56ac8bee70749db176ef75ffcf,Original,tests/test_scheduler_assertions.py
+tests/test_scheduling_evidence_migration_contract.py,998e94bcfbf3262c2d89df114b7fa89391e2d9b9,Original,tests/test_scheduling_evidence_migration_contract.py
+tests/test_search_availability.py,9f5de3453656f8d6e23d2ce84ae111263ca5958d,Original,tests/test_search_availability.py
+tests/test_secure_demo_chat.py,91265d77ad1cf65c92f8b67e62a09a5b496f14f1,Original,tests/test_secure_demo_chat.py
+tests/test_signed_scheduling_lifecycle_coordinator.py,c1ead103226d00960647e9b7ac320eee1d33fe0d,Original,tests/test_signed_scheduling_lifecycle_coordinator.py
+tests/test_source_boundaries.py,fedbad9d5c39947de87c1e147725e1445555ee53,Original,tests/test_source_boundaries.py
+tests/test_spoken_identity.py,14bed5fd2d726fb4f9629172fb119f2511d369ee,Original,tests/test_spoken_identity.py
+tests/test_spoken_last_four.py,d3b2bd2866071a0d49204463ec07e56b53428291,Original,tests/test_spoken_last_four.py
+tests/test_sprint6_pg_preflight.py,28ea2d427953e76199716a948690f65244574ba0,Original,tests/test_sprint6_pg_preflight.py
+tests/test_sprint_a_supabase_gateway.py,aa4ee94db64c79beebf89428a28f368f958b33ac,Original,tests/test_sprint_a_supabase_gateway.py
+tests/test_sprint_a_supabase_isolation.py,be2b96d9c313ecf0e5914cb424ce55ef1623f4fe,Original,tests/test_sprint_a_supabase_isolation.py
+tests/test_sprint_a_supabase_live.py,67c3c3ae10a487e2994486e3f6c64ac3c383953d,Original,tests/test_sprint_a_supabase_live.py
+tests/test_sprint_b_community_care_tool.py,c448213b7e486702a12b0fb4bf716a992737f935,Original,tests/test_sprint_b_community_care_tool.py
+tests/test_sprint_b_durable_mcp_routing.py,19c229d36c62c62dae92d0924a3a855b7ca72423,Original,tests/test_sprint_b_durable_mcp_routing.py
+tests/test_supabase_scheduling_connection.py,590f10184c7629aac713af22c196411aef596a19,Original,tests/test_supabase_scheduling_connection.py
+tests/test_supabase_test_schema_contract.py,cb139d056bcd6817cf9696312abdc9a354c5fb1d,Original,tests/test_supabase_test_schema_contract.py
+tests/test_synthetic_ids.py,96e3d6e86d2b12ae0219668740c05f371ffa7c63,Original,tests/test_synthetic_ids.py
+tests/test_synthetic_veteran_auth_acceptance.py,64bec41a4ee9e8c34c71a4c289d0153b795834ee,Original,tests/test_synthetic_veteran_auth_acceptance.py
+tests/test_synthetic_veteran_consent.py,53847317786720f61aa74a5c940971b26807ed60,Original,tests/test_synthetic_veteran_consent.py
+tests/test_synthetic_veteran_session.py,8fa98fca6ea2fa8fb382c61846c8239f9f94e932,Original,tests/test_synthetic_veteran_session.py
+tests/test_synthetic_voice_patient_catalog.py,c4854661ad0c4b33bb32a5f0d12311d7a96677b7,Original,tests/test_synthetic_voice_patient_catalog.py
+tests/test_time_validity.py,afdbf0a789ac99d36781333732491817198a1668,Original,tests/test_time_validity.py
+tests/test_trusted_primary_care.py,6ff8fc07bf4c9bd15162efe5f61182f958733dc7,Original,tests/test_trusted_primary_care.py
+tests/test_trusted_voice_booking.py,4e2885c3dc0e2992248779c359392c86b57af93d,Original,tests/test_trusted_voice_booking.py
+tests/test_trusted_voice_worker.py,42d0fa8f41949cf12e165fd288ebc2ed77014670,Original,tests/test_trusted_voice_worker.py
+tests/test_va_ccg.py,251f413c5ec221eef0b957013e68e988831fd58a,Original,tests/test_va_ccg.py
+tests/test_va_facilities.py,73dd278d6940bb051400665936f72590fe5fc35e,Original,tests/test_va_facilities.py
+tests/test_va_fhir_readers.py,fd005af14eaf9718b80c031da5febd314fe206f0,Original,tests/test_va_fhir_readers.py
+tests/test_va_sandbox_readonly_contracts.py,7959a85976b13314a5d377bc2bed0b4a697d4e73,Original,tests/test_va_sandbox_readonly_contracts.py
+tests/test_voice_booking_projection.py,e34cd89e4eafc50e7594a395adb51912558c27a9,Original,tests/test_voice_booking_projection.py
+tests/test_voice_context_guard.py,dbc0307e935cd87b155c5da65f2c9910c820dc0f,Original,tests/test_voice_context_guard.py
+tests/test_voice_dispatch_name.py,c74612aface1fdf3c0780eb3daf0ea8c0ba5685e,Original,tests/test_voice_dispatch_name.py
+tests/test_voice_options_projection.py,2dfd51a6f48bdfbb78795f6c6c31ec74e869cf88,Original,tests/test_voice_options_projection.py
+tests/test_voice_pipeline_contract.py,f6c5ecf8b0162dcfa2672a8b13116187820ed0b2,Original,tests/test_voice_pipeline_contract.py
+tests/test_voice_response_policy.py,b72dc04ee081c1f3724012c8bbd4f09916ea1588,Original,tests/test_voice_response_policy.py
+tests/test_voice_timing_logging.py,ef4e38c002b8d65532ed89b2136c783cb12645f2,Original,tests/test_voice_timing_logging.py
+tests/test_voice_tts.py,3af027f82e7d6d615e8f8814c9e4d2cabdcf2886,Original,tests/test_voice_tts.py
+tests/test_workflow_controls.py,73b9955ea581c9273468e4e8700f135ac1ccde55,Original,tests/test_workflow_controls.py
+uv.lock,400f2250aa11390cf6033926060c225496ffdd5c,Original,uv.lock

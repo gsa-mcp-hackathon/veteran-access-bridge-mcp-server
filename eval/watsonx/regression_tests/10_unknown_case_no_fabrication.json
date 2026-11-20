@@ -1,0 +1,31 @@
+{
+  "agent": "veteran_access_agent",
+  "goals": {
+    "get_scheduling_encounter": [
+      "summarize"
+    ]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "get_scheduling_encounter",
+      "tool_name": "get_scheduling_encounter",
+      "args": {
+        "case_id": "DEMO-CARD-DOES-NOT-EXIST"
+      }
+    },
+    {
+      "type": "text",
+      "name": "summarize",
+      "response": "The synthetic case cannot be found, so no scheduling facts, options, authorization state, or booking status should be invented.",
+      "keywords": [
+        "cannot",
+        "found",
+        "not",
+        "invent"
+      ]
+    }
+  ],
+  "story": "Retrieve the current scheduling encounter for synthetic case DEMO-CARD-DOES-NOT-EXIST. If it cannot be found, explain what is missing and do not invent scheduling facts.",
+  "starting_sentence": "Retrieve this synthetic case without fabricating any missing facts."
+}

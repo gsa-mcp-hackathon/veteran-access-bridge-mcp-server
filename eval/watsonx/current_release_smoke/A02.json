@@ -1,0 +1,32 @@
+{
+  "agent": "veteran_access_agent_m64",
+  "goals": {
+    "verify_synthetic_identity": [
+      "summarize"
+    ]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "verify_synthetic_identity",
+      "tool_name": "verify_synthetic_identity",
+      "args": {
+        "case_id": "DEMO-PC-VOICE-INTAKE-001",
+        "full_name": "Luis923 Mayer370",
+        "birth_date": "July 3, 1969"
+      }
+    },
+    {
+      "type": "text",
+      "name": "summarize",
+      "response": "Your synthetic Primary Care identity is verified. I will not retrieve scheduling details because you asked for identity verification only.",
+      "keywords": [
+        "verified",
+        "synthetic",
+        "identity"
+      ]
+    }
+  ],
+  "story": "Verify the provided synthetic Primary Care caller. A verified=true result is a successful synthetic identity match; patient_match_enabled=false is not an identity prohibition. Do not fetch scheduling data because the caller requested identity-only verification.",
+  "starting_sentence": "I am Luis923 Mayer370, born July 3, 1969. My Primary Care voice intake is DEMO-PC-VOICE-INTAKE-001. Please verify my synthetic identity only; do not retrieve appointment details."
+}

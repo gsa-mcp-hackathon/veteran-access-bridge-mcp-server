@@ -1,0 +1,37 @@
+{
+  "status": "baseline_passed_workflow_pilot_failed_not_promoted",
+  "project": "ce-550000w6t0",
+  "region": "ca-tor",
+  "branch": "experiment/avery-latency-20261117",
+  "proposed_resources": {
+    "backend": "vab-latency-eval-api",
+    "worker": "vab-latency-eval-worker",
+    "frontend": "vab-latency-eval-ui",
+    "ibm_agent": "vab_latency_eval_agent",
+    "ibm_toolkit": "vab-latency-eval-mcp",
+    "worker_dispatch": "vab-avery-latency-eval"
+  },
+  "required_backend_settings": {
+    "VAB_VOICE_AGENT_NAME": "vab-avery-latency-eval",
+    "VAB_EVAL_READ_ONLY": "true"
+  },
+  "required_worker_settings": {
+    "VAB_VOICE_AGENT_NAME": "vab-avery-latency-eval",
+    "VAB_ENABLE_LATENCY_PROBE": "true"
+  },
+  "frontend_build_arguments": {
+    "VITE_ENABLE_LATENCY_PROBE": "true"
+  },
+  "invariants": [
+    "Do not update existing applications, agents, toolkits, secrets or latest image tags",
+    "Use separate worker assertion and MCP authentication credentials",
+    "Set backend and worker endpoints only to the new test resources",
+    "Do not register a test worker under vab-avery",
+    "Use one backend instance for process-local scoped capabilities",
+    "Keep identity, participant binding, consent, scope and TLS checks enabled",
+    "Do not invoke appointment booking during the comparison",
+    "Record any test case or CRM writes separately from appointment creation",
+    "Remove only explicitly inventoried test resources after evaluation"
+  ],
+  "publishing_requires_explicit_approval": true
+}

@@ -1,0 +1,44 @@
+{
+  "agent": "veteran_access_agent_m64",
+  "goals": {
+    "verify_synthetic_identity": [
+      "get_scheduling_encounter"
+    ],
+    "get_scheduling_encounter": [
+      "summarize"
+    ]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "verify_synthetic_identity",
+      "tool_name": "verify_synthetic_identity",
+      "args": {
+        "case_id": "DEMO-CARD-5000335-001",
+        "full_name": "Mr. Mariano761 Ruelas156",
+        "birth_date": "November 20, 1907"
+      }
+    },
+    {
+      "type": "tool_call",
+      "name": "get_scheduling_encounter",
+      "tool_name": "get_scheduling_encounter",
+      "args": {
+        "case_id": "DEMO-CARD-5000335-001"
+      }
+    },
+    {
+      "type": "text",
+      "name": "summarize",
+      "response": "VISTA-SLOT-CARD-5000335-002 is STALE and excluded from eligible options. Avery must not present it as bookable or let Veteran preference create eligibility.",
+      "keywords": [
+        "STALE",
+        "excluded",
+        "not",
+        "eligible"
+      ]
+    }
+  ],
+  "story": "After identity verification, determine whether the stale VistA Cardiology slot may be presented as eligible.",
+  "starting_sentence": "I am Mr. Mariano761 Ruelas156, DOB November 20, 1907. For DEMO-CARD-5000335-001, can VISTA-SLOT-CARD-5000335-002 be presented as an eligible appointment option?"
+}

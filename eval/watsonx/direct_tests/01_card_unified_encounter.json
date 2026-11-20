@@ -1,0 +1,32 @@
+{
+  "agent": "veteran_access_agent",
+  "goals": {
+    "get_scheduling_encounter": [
+      "summarize"
+    ]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "get_scheduling_encounter",
+      "tool_name": "get_scheduling_encounter",
+      "args": {
+        "case_id": "DEMO-CARD-5000335-001"
+      }
+    },
+    {
+      "type": "text",
+      "name": "summarize",
+      "response": "The synthetic Cardiology Scheduling Encounter shows eligible internal options, Veteran preference ranking, the VA access-standard comparator, and the governed next action. The access standard is exceeded, Community Care is only recommended for eligibility review, authorization is not granted, EPS has not run, and no booking has been created.",
+      "keywords": [
+        "synthetic",
+        "Community Care",
+        "authorization",
+        "EPS",
+        "booking"
+      ]
+    }
+  ],
+  "story": "For synthetic case DEMO-CARD-5000335-001, show the current scheduling encounter, eligible internal options, preference ranking, applicable access-standard result, and governed next action.",
+  "starting_sentence": "Show me the current Cardiology scheduling encounter and what happens next."
+}
