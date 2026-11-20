@@ -9,7 +9,7 @@ docker build -f deploy/ibm/Dockerfile -t vab-mcp:review .
 export VAB_MCP_API_KEY="$(uv run --no-sync python -c 'import secrets; print(secrets.token_urlsafe(32))')"
 docker run -d --rm --name vab-mcp-review -p 127.0.0.1:8080:8080 \
   -e VAB_MCP_TRANSPORT=streamable-http -e VAB_MCP_API_KEY vab-mcp:review
-curl --fail --retry 10 --retry-connrefused --retry-delay 1 http://127.0.0.1:8080/health
+curl --fail --retry 10 --retry-all-errors --retry-delay 1 http://127.0.0.1:8080/health
 uv run --no-sync python scripts/read_scheduling_encounter.py --local-http
 ```
 

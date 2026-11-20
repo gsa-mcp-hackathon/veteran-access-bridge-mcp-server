@@ -35,6 +35,6 @@ jobs:
           export VAB_MCP_API_KEY="$(python -c 'import secrets; print(secrets.token_urlsafe(32))')"
           docker run -d --rm --name vab-mcp-review -p 127.0.0.1:8080:8080 -e VAB_MCP_TRANSPORT=streamable-http -e VAB_MCP_API_KEY vab-mcp:review
           trap 'docker stop vab-mcp-review' EXIT
-          curl --fail --retry 20 --retry-connrefused --retry-delay 1 http://127.0.0.1:8080/health
+          curl --fail --retry 20 --retry-all-errors --retry-delay 1 http://127.0.0.1:8080/health
           python scripts/read_scheduling_encounter.py --local-http > "$RUNNER_TEMP/http.json"
           diff "$RUNNER_TEMP/encounter.json" "$RUNNER_TEMP/http.json"
