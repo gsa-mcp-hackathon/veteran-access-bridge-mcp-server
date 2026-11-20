@@ -5,7 +5,7 @@
 ## Recorded demonstration
 
 <video controls playsinline preload="metadata" width="1280" height="720" style="width:100%;height:auto" poster="../assets/avery-demo-poster.jpg" aria-label="Avery Primary Care scheduling demonstration">
-  <source src="../assets/avery-demo.mp4" type="video/mp4">
+  <source src="https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/assets/avery-demo.mp4" type="video/mp4">
 </video>
 
 [Open the full recording (MP4, 3 min 36 sec)](assets/avery-demo.mp4). Follow the caller’s request, Avery’s replies and the MCP tool activity in the conversation panel. All caller details in this recording are synthetic.
