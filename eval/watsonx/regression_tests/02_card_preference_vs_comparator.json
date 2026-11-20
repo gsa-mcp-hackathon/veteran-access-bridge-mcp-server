@@ -1,0 +1,31 @@
+{
+  "agent": "veteran_access_agent",
+  "goals": {
+    "get_scheduling_encounter": [
+      "summarize"
+    ]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "get_scheduling_encounter",
+      "tool_name": "get_scheduling_encounter",
+      "args": {
+        "case_id": "DEMO-CARD-5000335-001"
+      }
+    },
+    {
+      "type": "text",
+      "name": "summarize",
+      "response": "The Veteran preference-ranked option and the access-standard comparator can differ because preferences rank only already-eligible options, while the comparator remains the earliest eligible VA option used for the wait-standard calculation.",
+      "keywords": [
+        "preference",
+        "comparator",
+        "eligible",
+        "earliest"
+      ]
+    }
+  ],
+  "story": "For DEMO-CARD-5000335-001, explain which option ranks first for preference and which option is the access-standard comparator, and why they may differ.",
+  "starting_sentence": "For case DEMO-CARD-5000335-001, which option ranks first for the Veteran's preference, and which option is the access-standard comparator? Explain why they are allowed to differ."
+}

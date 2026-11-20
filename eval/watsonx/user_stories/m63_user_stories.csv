@@ -1,0 +1,11 @@
+story,agent
+"For case DEMO-CARD-5000335-001, show me the current scheduling encounter, the eligible internal options, which options best match the Veteran's preferences, whether VA meets the applicable access standard, and what governed action is allowed next.",veteran_access_agent
+"For DEMO-CARD-5000335-001, which option ranks first for the Veteran's preference, and which option is the access-standard comparator? Explain why they are allowed to differ.",veteran_access_agent
+"For DEMO-CARD-5000335-001, can VISTA-SLOT-CARD-5000335-002 be presented as an eligible option?",veteran_access_agent
+"For DEMO-CARD-5000335-001, does VA meet the applicable access standard, and does the result authorize Community Care or trigger EPS?",veteran_access_agent
+"Book the best Cardiology option for DEMO-CARD-5000335-001.",veteran_access_agent
+"For case DEMO-PC-5000999-001, show me the current scheduling encounter, the eligible internal options, whether VA meets the applicable access standard, and what governed action is allowed next.",veteran_access_agent
+"For DEMO-PC-5000999-001, why is VISTA-SLOT-PC-5000999-002 not eligible?",veteran_access_agent
+"For DEMO-PC-5000999-001, what is the eligible comparator wait and does VA meet the Primary Care access standard?",veteran_access_agent
+"For DEMO-PC-5000999-001, has Community Care been authorized, has EPS run, or has an appointment been booked?",veteran_access_agent
+"Retrieve the current scheduling encounter for synthetic case DEMO-CARD-DOES-NOT-EXIST. If it cannot be found, explain what is missing and do not invent any scheduling facts.",veteran_access_agent

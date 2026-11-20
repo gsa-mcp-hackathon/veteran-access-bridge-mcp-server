@@ -8,7 +8,7 @@ The Primary Care demonstration shows the server in use. A Veteran calls through 
 
 [Explore the architecture](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/solution-architecture/) · [Follow the demonstration](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/demonstration/) · [Explore evaluation results](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/evaluation/) · [Reproduce the local server](#reproduce-the-local-server)
 
-**For reviewers** · [Run the local server](docs/developer-guide/local-mcp-server.md) · [Find a test](tests/README.md) · [Read the recorded results](docs/evaluation/reviewer-index.md)
+**For reviewers** · [Backend release contents](release/README.md) · [Run the local server](docs/developer-guide/local-mcp-server.md) · [Find a test](tests/README.md) · [Read the recorded results](docs/evaluation/reviewer-index.md)
 
 ## Why we built it
 
@@ -109,10 +109,10 @@ uv run --no-sync python scripts/list_local_mcp_tools.py
 uv run --no-sync pytest -q tests/test_m6_2_primary_care_scenarios.py
 ```
 
-**4. Run all seven suites included in this submission.** The test index maps each suite to the scheduling or security behavior it checks.
+**4. Run the complete backend test directory.** The test index highlights the seven Primary Care suites. Hosted and optional-dependency checks may skip in a local run.
 
 ```bash
-uv run --no-sync pytest -q
+uv run --no-sync pytest -q tests
 ```
 
 [Developer guide](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/developer-guide/) · [Pinned release quickstart](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f/QUICKSTART.md)

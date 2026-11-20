@@ -1,0 +1,44 @@
+{
+  "agent": "veteran_access_agent_m64",
+  "goals": {
+    "verify_synthetic_identity": [
+      "get_scheduling_encounter"
+    ],
+    "get_scheduling_encounter": [
+      "summarize"
+    ]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "verify_synthetic_identity",
+      "tool_name": "verify_synthetic_identity",
+      "args": {
+        "case_id": "DEMO-CARD-5000335-001",
+        "full_name": "Mr. Mariano761 Ruelas156",
+        "birth_date": "November 20, 1907"
+      }
+    },
+    {
+      "type": "tool_call",
+      "name": "get_scheduling_encounter",
+      "tool_name": "get_scheduling_encounter",
+      "args": {
+        "case_id": "DEMO-CARD-5000335-001"
+      }
+    },
+    {
+      "type": "text",
+      "name": "summarize",
+      "response": "Preference rank #1 is the Nov 10 9:00 AM VistA option, while the access-standard comparator is the earlier Nov 5 Federal EHR option. The preference ranking and PID-based access comparator use different rules and must not be conflated.",
+      "keywords": [
+        "preference",
+        "comparator",
+        "Nov 10",
+        "Nov 5"
+      ]
+    }
+  ],
+  "story": "After identity verification, explain why the Veteran's first preference-ranked Cardiology option differs from the access-standard comparator.",
+  "starting_sentence": "I am Mr. Mariano761 Ruelas156, born November 20, 1907. For DEMO-CARD-5000335-001, which option ranks first for my preference and which option is the access-standard comparator? Explain why they differ."
+}

@@ -1,0 +1,81 @@
+{
+  "agent": "veteran_access_agent_m64",
+  "goals": {
+    "verify_synthetic_identity": [
+      "get_scheduling_encounter"
+    ],
+    "get_scheduling_encounter": [
+      "get_case_lifecycle_state"
+    ],
+    "get_case_lifecycle_state": [
+      "get_scheduling_handoff"
+    ],
+    "get_scheduling_handoff": [
+      "validate_option_selection"
+    ],
+    "validate_option_selection": [
+      "summarize"
+    ]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "verify_synthetic_identity",
+      "tool_name": "verify_synthetic_identity",
+      "args": {
+        "case_id": "DEMO-CARD-5000335-001",
+        "full_name": "Mr. Mariano761 Ruelas156",
+        "birth_date": "November 20, 1907"
+      }
+    },
+    {
+      "type": "tool_call",
+      "name": "get_scheduling_encounter",
+      "tool_name": "get_scheduling_encounter",
+      "args": {
+        "case_id": "DEMO-CARD-5000335-001"
+      }
+    },
+    {
+      "type": "tool_call",
+      "name": "get_case_lifecycle_state",
+      "tool_name": "get_case_lifecycle_state",
+      "args": {
+        "case_id": "DEMO-CARD-5000335-001",
+        "include_history": false
+      }
+    },
+    {
+      "type": "tool_call",
+      "name": "get_scheduling_handoff",
+      "tool_name": "get_scheduling_handoff",
+      "args": {
+        "handoff_id": "handoff-00052bbfe1fb30f1"
+      }
+    },
+    {
+      "type": "tool_call",
+      "name": "validate_option_selection",
+      "tool_name": "validate_option_selection",
+      "args": {
+        "case_id": "DEMO-CARD-5000335-001",
+        "handoff_id": "handoff-00052bbfe1fb30f1",
+        "option_id": "OPT-VISTA-SLOT-CARD-5000335-001"
+      }
+    },
+    {
+      "type": "text",
+      "name": "summarize",
+      "response": "The Veteran has stated a choice for the Nov 10 9:00 AM option and the read-only validation says it is valid. Avery does not claim the choice was persisted, does not record a Scheduler selection, and identifies Scheduler/MSA recording as the next governed action.",
+      "keywords": [
+        "valid",
+        "Veteran",
+        "Scheduler",
+        "not",
+        "recorded"
+      ]
+    }
+  ],
+  "story": "After identity verification, validate the Veteran's chosen VistA Cardiology option without persisting or impersonating a Scheduler selection.",
+  "starting_sentence": "I am Mr. Mariano761 Ruelas156, born November 20, 1907. For DEMO-CARD-5000335-001, I choose the November 10 at 9:00 AM Cardiology option at VA Eastern Colorado. Validate it and tell me what happens next. Do not make a Scheduler decision for me."
+}

@@ -1,0 +1,32 @@
+{
+  "agent": "veteran_access_agent",
+  "goals": {
+    "get_scheduling_encounter": [
+      "summarize"
+    ]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "get_scheduling_encounter",
+      "tool_name": "get_scheduling_encounter",
+      "args": {
+        "case_id": "DEMO-PC-5000999-001"
+      }
+    },
+    {
+      "type": "text",
+      "name": "summarize",
+      "response": "Community Care has not been authorized, EPS has not been invoked, and no appointment has been booked for the synthetic Primary Care case.",
+      "keywords": [
+        "not",
+        "authorized",
+        "EPS",
+        "not",
+        "booked"
+      ]
+    }
+  ],
+  "story": "For DEMO-PC-5000999-001, determine whether Community Care has been authorized, EPS has run, or an appointment has been booked.",
+  "starting_sentence": "For case DEMO-PC-5000999-001, has Community Care been authorized, has EPS run, or has an appointment been booked?"
+}

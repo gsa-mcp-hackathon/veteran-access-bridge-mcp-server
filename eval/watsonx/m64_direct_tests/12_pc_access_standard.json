@@ -1,0 +1,44 @@
+{
+  "agent": "veteran_access_agent_m64",
+  "goals": {
+    "verify_synthetic_identity": [
+      "assess_access_standard"
+    ],
+    "assess_access_standard": [
+      "summarize"
+    ]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "verify_synthetic_identity",
+      "tool_name": "verify_synthetic_identity",
+      "args": {
+        "case_id": "DEMO-PC-5000999-001",
+        "full_name": "Synthetic Primary Care Veteran",
+        "birth_date": "January 1, 1980"
+      }
+    },
+    {
+      "type": "tool_call",
+      "name": "assess_access_standard",
+      "tool_name": "assess_access_standard",
+      "args": {
+        "case_id": "DEMO-PC-5000999-001"
+      }
+    },
+    {
+      "type": "text",
+      "name": "summarize",
+      "response": "The Primary Care access-standard comparator wait is 14 days against a 20-day standard, so the standard is not exceeded and Community Care review is not recommended solely on wait time.",
+      "keywords": [
+        "14",
+        "20",
+        "not",
+        "exceeded"
+      ]
+    }
+  ],
+  "story": "After identity verification, assess the established Primary Care access standard.",
+  "starting_sentence": "My name is Synthetic Primary Care Veteran and my DOB is January 1, 1980. For DEMO-PC-5000999-001, what is the comparator wait and does VA meet the Primary Care access standard?"
+}

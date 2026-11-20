@@ -1,0 +1,6 @@
+Scenario,Voice session,MCP attempts during interval,Permitted follow-up in same session,Same session in Nov 16 SQL audit
+A19,vs-65f1a1a4-09b0-464b-bebd-46d839b46146,0,PASS,False
+A22,vs-65f1a1a4-09b0-464b-bebd-46d839b46146,0,PASS,False
+A20,vs-702e1cb5-1262-4984-8107-68b2f57638c7,0,PASS,False
+A24,vs-702e1cb5-1262-4984-8107-68b2f57638c7,0,PASS,False
+A21,vs-3e537b5e-9e81-4b41-bdc3-a1fe5362f6d4,0,PASS,False

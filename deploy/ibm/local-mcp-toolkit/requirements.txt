@@ -1,0 +1,4 @@
+# Keep runtime dependencies aligned with pyproject.toml.
+fastmcp>=2.14.7,<3
+pydantic>=2,<3
+pydantic-settings>=2,<3

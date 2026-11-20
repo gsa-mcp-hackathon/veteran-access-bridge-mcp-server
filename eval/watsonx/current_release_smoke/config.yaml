@@ -1,0 +1,19 @@
+# IBM-only initial smoke run. Uses the existing active tenant credentials.
+# No external-provider credentials, agent imports, or deployment changes.
+test_paths:
+  - eval/watsonx/current_release_smoke/A01.json
+  - eval/watsonx/current_release_smoke/A02.json
+  - eval/watsonx/current_release_smoke/A03.json
+  - eval/watsonx/current_release_smoke/A11.json
+  - eval/watsonx/current_release_smoke/A19.json
+  - eval/watsonx/current_release_smoke/A22.json
+output_dir: eval/results/ibm-current-smoke
+auth_config:
+  url: https://api.ca-tor.watson-orchestrate.cloud.ibm.com/instances/194b6edd-bf14-4b92-b44a-751d836e022e
+  tenant_name: veteran-access-dev
+provider_config:
+  provider: gateway
+  vendor: ibm
+n_runs: 1
+max_user_turns: 4
+enable_verbose_logging: false

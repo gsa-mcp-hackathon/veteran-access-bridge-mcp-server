@@ -1,0 +1,174 @@
+version: 1
+suite: veteran-access-bridge-mvp
+scenarios:
+  - id: valid-cardiology-consult
+    prompt: "I need to schedule my cardiology referral."
+    expected_tools: [determine_workflow_state, search_availability]
+    expected_state: READY_TO_SEARCH
+
+  - id: missing-consult
+    condition: "specialty requested without valid ClinicalConsult"
+    expected_state: CLINICAL_REVIEW_REQUIRED
+
+  - id: blocked-consult
+    condition: "valid cardiology consult with blockers"
+    expected_state: CONSULT_PENDING
+
+  - id: community-slot-without-authorization
+    condition: "Community Care slot exists and authorization_id is absent"
+    expected_readiness: AVAILABLE_NOT_AUTHORIZED
+
+  - id: community-authorized-not-verified
+    condition: "Community Care slot has authorization but no fresh verification"
+    expected_readiness: AUTHORIZED_NOT_VERIFIED
+
+  - id: stale-slot
+    condition: "slot is expired or explicitly stale"
+    expected_readiness: STALE
+
+  - id: partial-source-failure
+    condition: "one source adapter fails"
+    expected: "other source results remain available and failed source remains explicit"
+
+  - id: all-source-failure
+    condition: "all source adapters fail"
+    expected_option_count: 0
+    expected: "all source failures remain explicit"
+
+  - id: provenance-completeness
+    condition: "any AccessOption is returned"
+    required_fields: [source_system, source_record_id, retrieved_at, synthetic, environment, freshness]
+
+  - id: search-does-not-handoff
+    condition: "search_availability completes"
+    expected: "SearchAvailabilityResult only; SchedulingHandoff is not constructed"
+
+# ── M2 Lifecycle Scenarios ──────────────────────────────────────────────────
+# Added M2-10. Each scenario corresponds to an acceptance test in
+# tests/test_m2_acceptance.py. Covered by commit fc2bf59 (M2-9) and onward.
+
+  - id: m2-full-va-lifecycle
+    milestone: M2
+    description: "Valid cardiology consult traverses entire simulation end-to-end"
+    coverage: test_s01_full_va_lifecycle
+    path: >
+      REQUEST_RECEIVED → READY_TO_SEARCH → VA_OPTIONS_AVAILABLE → READY_FOR_HANDOFF
+      → HUMAN_REVIEW → OPTION_SELECTED → VERIFIED_BOOKABLE
+      → PENDING_VETERAN_CONFIRMATION → PENDING_SCHEDULER_APPROVAL
+      → BOOKED_SIMULATED → COMPLETED
+    expected_terminal_state: COMPLETED
+    expected_tools:
+      - prepare_scheduling_handoff
+      - validate_option_selection
+      - record_option_selection
+      - prepare_veteran_confirmation_request
+      - record_veteran_confirmation
+      - validate_booking_preconditions
+      - record_lifecycle_event
+      - get_case_lifecycle_state
+
+  - id: m2-missing-lifecycle-blocks-commit
+    milestone: M2
+    description: "Missing lifecycle history blocks simulated commit"
+    coverage: test_s02_no_lifecycle_history_blocks_commit
+    condition: "case has no CaseEventStore history"
+    expected: "simulated_commit raises ValueError with lifecycle error"
+
+  - id: m2-community-missing-hsrm-fails
+    milestone: M2
+    description: "Community Care option without HSRM authorization cannot commit"
+    coverage: test_s03_community_missing_hsrm_fails
+    condition: "Community Care source_system, hsrm_record=None"
+    expected_passed: false
+    expected: "BookingPreconditionResult.passed=False, HSRM failure reason present"
+
+  - id: m2-stale-eps-slot-fails
+    milestone: M2
+    description: "Stale/unavailable EPS slot rejects precondition check"
+    coverage: test_s04_stale_eps_slot_fails
+    condition: "EPSSlotRecord.available=False"
+    expected_passed: false
+    expected: "BookingPreconditionResult.passed=False, EPS failure reason present"
+
+  - id: m2-double-booking-rejected
+    milestone: M2
+    description: "Two attempts to take one slot yield at most one successful commit"
+    coverage: test_s05_double_booking_rejected
+    condition: "same slot_id attempted twice with different idempotency keys"
+    expected: "first commit succeeds; second attempt raises ValueError or InvalidTransitionError"
+
+  - id: m2-veteran-cannot-commit
+    milestone: M2
+    description: "Veteran actor cannot call simulated_commit"
+    coverage: test_s06_veteran_cannot_commit
+    condition: "actor_role=VETERAN in simulated_commit"
+    expected: "ValueError with SCHEDULER requirement message"
+
+  - id: m2-veteran-cannot-drive-scheduler-outcomes
+    milestone: M2
+    description: "Veteran actor cannot drive FOLLOW_UP_INITIATED via record_lifecycle_event"
+    coverage: test_s06b_veteran_cannot_record_outcome_follow_up
+    condition: "FOLLOW_UP_INITIATED with actor_role=VETERAN via MCP tool"
+    expected: "ValueError with role not permitted message"
+
+  - id: m2-cancellation-preserves-history
+    milestone: M2
+    description: "Cancellation appends to history without modifying prior events"
+    coverage: test_s07_cancellation_preserves_history
+    expected_terminal_state: CANCELLED
+    expected: "event history length increases by 1; all prior events intact and contiguous"
+
+  - id: m2-rescheduling-preserves-history
+    milestone: M2
+    description: "Rescheduling appends to history and transitions to READY_TO_SEARCH"
+    coverage: test_s07b_rescheduling_preserves_history
+    expected_state: READY_TO_SEARCH
+    expected: "event history is contiguous; each event.to_state == next event.from_state"
+
+  - id: m2-completion-vs-no-show
+    milestone: M2
+    description: "COMPLETED and NO_SHOW are distinct terminal/recoverable outcomes"
+    coverage: test_s08_completion_vs_no_show_distinct
+    expected: >
+      COMPLETED is terminal (no further transitions allowed);
+      NO_SHOW transitions to HUMAN_REVIEW via FOLLOW_UP_INITIATED
+
+  - id: m2-wrong-state-prevents-commit
+    milestone: M2
+    description: "Lifecycle guard prevents commit when case is not at PENDING_SCHEDULER_APPROVAL"
+    coverage: test_s09_wrong_state_prevents_commit
+    condition: "case is in HUMAN_REVIEW; simulated_commit called without full approval chain"
+    expected: "ValueError with PENDING_SCHEDULER_APPROVAL message"
+
+  - id: m2-booking-record-provenance
+    milestone: M2
+    description: "BookingRecord contains all required provenance fields"
+    coverage: test_s10_booking_record_has_provenance
+    required_fields:
+      - booking_id
+      - case_id
+      - option_id
+      - slot_id
+      - source_system
+      - patient_id
+      - consult_id
+      - booked_at
+      - booked_by_role
+      - booked_by_id
+      - synthetic
+
+  - id: m2-hsrm-eps-checked-independently
+    milestone: M2
+    description: "HSRM authorization and EPS slot availability are revalidated independently"
+    coverage: test_s11_hsrm_and_eps_checked_independently
+    expected: >
+      Bad EPS + good HSRM → only EPS failures present;
+      Bad HSRM + good EPS → only HSRM failures present;
+      hsrm_checked=True and eps_checked=True in both cases
+
+  - id: m2-eps-follow-up-fails-closed
+    milestone: M2
+    description: "EPS follow-up booking attempts fail closed"
+    coverage: test_s12_eps_follow_up_fails_closed
+    condition: "appointment_intent=FOLLOW_UP with Community Care source"
+    expected: "BookingPreconditionResult.passed=False, FOLLOW_UP failure reason present"

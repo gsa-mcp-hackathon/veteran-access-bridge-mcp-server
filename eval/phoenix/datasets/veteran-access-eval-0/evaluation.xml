@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<evaluation>
+  <qa_pair>
+    <question>For synthetic case DEMO-CARD-5000335-001, determine whether the case is allowed to proceed to scheduling availability search. What workflow state does the server return?</question>
+    <answer>READY_TO_SEARCH</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>For DEMO-CARD-5000335-001, first check the workflow state and then search availability. How many source systems return a source result?</question>
+    <answer>3</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>For DEMO-CARD-5000335-001, after confirming the workflow can proceed, which three source systems are represented in the availability search?</question>
+    <answer>VISTA_ISS, FEDERAL_EHR_FHIR, COMMUNITY_CARE_EPS</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>For DEMO-CARD-5000335-001, after the workflow gate passes, how many total access options are returned across all three synthetic sources?</question>
+    <answer>8</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>For DEMO-CARD-5000335-001, after confirming READY_TO_SEARCH, how many VistA/ISS access options are returned?</question>
+    <answer>3</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>For DEMO-CARD-5000335-001, after confirming READY_TO_SEARCH, how many Federal EHR/FHIR access options are returned?</question>
+    <answer>2</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>For DEMO-CARD-5000335-001, after confirming READY_TO_SEARCH, how many Community Care/EPS access options are returned?</question>
+    <answer>3</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>For DEMO-CARD-5000335-001, inspect the Community Care options. How many are AVAILABLE_NOT_AUTHORIZED and how many are AUTHORIZED_NOT_VERIFIED?</question>
+    <answer>2 AVAILABLE_NOT_AUTHORIZED and 1 AUTHORIZED_NOT_VERIFIED</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>For DEMO-CARD-5000335-001, is any Community Care option VERIFIED_BOOKABLE?</question>
+    <answer>No</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>For DEMO-CARD-5000335-001, does search_availability construct a SchedulingHandoff?</question>
+    <answer>No; creates_scheduling_handoff is false.</answer>
+  </qa_pair>
+</evaluation>

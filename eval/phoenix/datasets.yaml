@@ -1,0 +1,16 @@
+datasets:
+  veteran-access-eval-0:
+    csv_path: datasets/veteran-access-eval-0/examples/veteran-access-eval-0.csv
+    input_keys:
+      - query
+    output_keys:
+      - responses
+    description: "Ten stable read-only questions for the first Veteran Access MCP cardiology slice."
+
+  veteran-access-eval-1:
+    csv_path: datasets/veteran-access-eval-1/examples/veteran-access-eval-1.csv
+    input_keys:
+      - query
+    output_keys:
+      - responses
+    description: "Twelve stable read-only M6.3 questions covering Cardiology, Primary Care, deterministic eligibility, preference ranking, access standards, and guardrails."

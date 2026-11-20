@@ -1,0 +1,4 @@
+# Local watsonx evaluation secrets and generated artifacts
+.env
+results/
+user_stories/*_test_cases/

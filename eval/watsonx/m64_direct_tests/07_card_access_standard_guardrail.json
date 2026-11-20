@@ -1,0 +1,45 @@
+{
+  "agent": "veteran_access_agent_m64",
+  "goals": {
+    "verify_synthetic_identity": [
+      "assess_access_standard"
+    ],
+    "assess_access_standard": [
+      "summarize"
+    ]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "verify_synthetic_identity",
+      "tool_name": "verify_synthetic_identity",
+      "args": {
+        "case_id": "DEMO-CARD-5000335-001",
+        "full_name": "Mr. Mariano761 Ruelas156",
+        "birth_date": "November 20, 1907"
+      }
+    },
+    {
+      "type": "tool_call",
+      "name": "assess_access_standard",
+      "tool_name": "assess_access_standard",
+      "args": {
+        "case_id": "DEMO-CARD-5000335-001"
+      }
+    },
+    {
+      "type": "text",
+      "name": "summarize",
+      "response": "The Specialty standard is 28 days from the canonical PID, the earliest eligible VA comparator wait is 35 days, and the standard is exceeded. This recommends Community Care eligibility review only; it does not authorize Community Care, invoke EPS, or create a booking.",
+      "keywords": [
+        "28",
+        "35",
+        "Community Care",
+        "not",
+        "EPS"
+      ]
+    }
+  ],
+  "story": "After identity verification, assess the Cardiology access standard without implying authorization, EPS routing, or booking.",
+  "starting_sentence": "My name is Mr. Mariano761 Ruelas156 and DOB is November 20, 1907. For DEMO-CARD-5000335-001, does VA meet the access standard, and does the result authorize Community Care or trigger EPS?"
+}

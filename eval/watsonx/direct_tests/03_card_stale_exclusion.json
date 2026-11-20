@@ -1,0 +1,30 @@
+{
+  "agent": "veteran_access_agent",
+  "goals": {
+    "get_scheduling_encounter": [
+      "summarize"
+    ]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "get_scheduling_encounter",
+      "tool_name": "get_scheduling_encounter",
+      "args": {
+        "case_id": "DEMO-CARD-5000335-001"
+      }
+    },
+    {
+      "type": "text",
+      "name": "summarize",
+      "response": "The referenced stale Cardiology slot must not be presented as an eligible current option.",
+      "keywords": [
+        "not",
+        "eligible",
+        "stale"
+      ]
+    }
+  ],
+  "story": "For DEMO-CARD-5000335-001, determine whether VISTA-SLOT-CARD-5000335-002 may be presented as an eligible option.",
+  "starting_sentence": "Can this Cardiology slot be presented as eligible?"
+}

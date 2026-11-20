@@ -1,0 +1,30 @@
+{
+  "agent": "veteran_access_agent",
+  "goals": {
+    "assess_access_standard": [
+      "summarize"
+    ]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "assess_access_standard",
+      "tool_name": "assess_access_standard",
+      "args": {
+        "case_id": "DEMO-PC-5000999-001"
+      }
+    },
+    {
+      "type": "text",
+      "name": "summarize",
+      "response": "The eligible Primary Care comparator wait is 14 days, which is within the 20-day Primary Care access standard, so the wait standard is not exceeded.",
+      "keywords": [
+        "14",
+        "20",
+        "not exceeded"
+      ]
+    }
+  ],
+  "story": "For DEMO-PC-5000999-001, report the eligible comparator wait and whether VA meets the Primary Care access standard.",
+  "starting_sentence": "For case DEMO-PC-5000999-001, what is the eligible comparator wait, and does VA meet the Primary Care access standard?"
+}
