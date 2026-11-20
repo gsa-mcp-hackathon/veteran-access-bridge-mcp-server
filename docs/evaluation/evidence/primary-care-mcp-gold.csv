@@ -1,0 +1,17 @@
+﻿ID,Applicability,Gold question,Fixture case,MCP tool,Expected,Observed,Result
+1,Reusable medical scheduling,Is this patient new or established for this Primary Care visit?,DEMO-PC-5000999-001,get_scheduling_encounter,"[""ESTABLISHED""]","[""ESTABLISHED""]",PASS
+2,Reusable medical scheduling,What kind of appointment did the patient request?,DEMO-PC-5000999-001,get_scheduling_encounter,"[""PRIMARY_CARE"", ""FOLLOW_UP""]","[""PRIMARY_CARE"", ""FOLLOW_UP""]",PASS
+3,Reusable medical scheduling,What visit format and duration does this request require?,DEMO-PC-5000999-001,get_scheduling_encounter,"[""IN_PERSON"", 30]","[""IN_PERSON"", 30]",PASS
+4,Reusable medical scheduling,Which date did the patient indicate for measuring the wait?,DEMO-PC-5000999-001,get_scheduling_encounter,"[""2026-11-01""]","[""2026-11-01""]",PASS
+5,Reusable medical scheduling,How many slots were considered and how many fit the request?,DEMO-PC-5000999-001,get_scheduling_encounter,"[3, 2]","[3, 2]",PASS
+6,Reusable medical scheduling,Why is slot VISTA-SLOT-PC-5000999-002 excluded?,DEMO-PC-5000999-001,get_scheduling_encounter,"[false, [""APPOINTMENT_INTENT_MISMATCH"", ""PATIENT_CLASSIFICATION_MISMATCH"", ""TEMPLATE_MISMATCH""]]","[false, [""APPOINTMENT_INTENT_MISMATCH"", ""PATIENT_CLASSIFICATION_MISMATCH"", ""TEMPLATE_MISMATCH""]]",PASS
+7,Reusable medical scheduling,"Which eligible option is the earliest comparator, and how many days away is it?",DEMO-PC-5000999-001,get_scheduling_encounter,"[""OPT-VISTA-SLOT-PC-5000999-001"", 14]","[""OPT-VISTA-SLOT-PC-5000999-001"", 14]",PASS
+8,Reusable medical scheduling,Can a preference alone make an otherwise ineligible slot eligible?,DEMO-PC-5000999-001,get_scheduling_encounter,[false],[false],PASS
+9,Reusable medical scheduling,Did reviewing these options create an appointment?,DEMO-PC-5000999-001,get_scheduling_encounter,"[true, false]","[true, false]",PASS
+10,VA policy in this fixture,Does the earliest eligible wait exceed this fixture’s VA Primary Care standard?,DEMO-PC-5000999-001,get_scheduling_encounter,"[14, 20, false]","[14, 20, false]",PASS
+11,VA policy in this fixture,"Was Community Care review recommended, was authorization granted, or was external scheduling invoked?",DEMO-PC-5000999-001,get_scheduling_encounter,"[false, ""NOT_EVALUATED"", false, false]","[false, ""NOT_EVALUATED"", false, false]",PASS
+12,VAB fixture or tool contract,What happens if the requested Primary Care case does not exist?,DEMO-PC-DOES-NOT-EXIST,get_scheduling_encounter,"""UNKNOWN_CASE""","""UNKNOWN_CASE""",PASS
+13,VAB fixture or tool contract,Does a matching name and date of birth pass the local two-field fixture check?,DEMO-PC-5000999-001,verify_synthetic_identity,[true],[true],PASS
+14,VAB fixture or tool contract,Does a mismatched birth date pass that same local fixture check?,DEMO-PC-5000999-001,verify_synthetic_identity,[false],[false],PASS
+15,VAB fixture or tool contract,How does the consult-based availability tool handle a direct Primary Care request without a specialty referral?,DEMO-PC-5000999-001,search_availability,"""ROUTE_TO_ENCOUNTER""","""ROUTE_TO_ENCOUNTER""",PASS
+16,VAB fixture or tool contract,How does the consult-based workflow tool handle this direct Primary Care request?,DEMO-PC-5000999-001,determine_workflow_state,"""ROUTE_TO_ENCOUNTER""","""ROUTE_TO_ENCOUNTER""",PASS

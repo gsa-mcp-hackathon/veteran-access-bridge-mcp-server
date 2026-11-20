@@ -1,0 +1,131 @@
+{
+  "_fixture_meta": {
+    "synthetic": true,
+    "case_id": "DEMO-PC-5000999-001",
+    "generated_for": "patient_id:5000999 specialty:PRIMARY_CARE",
+    "source_system": "VISTA_ISS",
+    "description": "Deterministic VistA/ISS-style established Primary Care slot fixtures for approved synthetic and sandbox-backed demo cases."
+  },
+  "slots": [
+    {
+      "slot_id": "VISTA-SLOT-PC-5000999-001",
+      "patient_id": "5000999",
+      "specialty": "PRIMARY_CARE",
+      "facility_id": "PC-VA-001",
+      "facility_name": "Synthetic Primary Care Clinic",
+      "provider": "Dr. Synthetic PCP A",
+      "slot_start": "2026-11-15T15:00:00Z",
+      "slot_end": "2026-11-15T15:30:00Z",
+      "availability_status": "AVAILABLE",
+      "wait_days": 14,
+      "drive_minutes": 12,
+      "synthetic": true,
+      "environment": "local-demo",
+      "source_system": "VISTA_ISS",
+      "freshness": "fixture-deterministic",
+      "clinic_id": "PC-CLINIC-1",
+      "stop_code": "323",
+      "stop_code_group": "PRIMARY_CARE",
+      "resource_id": "VISTA-PCP-A",
+      "resource_type": "PHYSICIAN",
+      "template_type": "ESTABLISHED",
+      "modality": "IN_PERSON",
+      "eligible_patient_classifications": [
+        "ESTABLISHED"
+      ],
+      "eligible_appointment_intents": [
+        "FOLLOW_UP"
+      ]
+    },
+    {
+      "slot_id": "VISTA-SLOT-PC-5000999-002",
+      "patient_id": "5000999",
+      "specialty": "PRIMARY_CARE",
+      "facility_id": "PC-VA-001",
+      "facility_name": "Synthetic Primary Care Clinic",
+      "provider": "Dr. Synthetic PCP B",
+      "slot_start": "2026-11-08T09:00:00Z",
+      "slot_end": "2026-11-08T10:00:00Z",
+      "availability_status": "AVAILABLE",
+      "wait_days": 7,
+      "drive_minutes": 12,
+      "synthetic": true,
+      "environment": "local-demo",
+      "source_system": "VISTA_ISS",
+      "freshness": "fixture-deterministic",
+      "clinic_id": "PC-CLINIC-1",
+      "stop_code": "323",
+      "stop_code_group": "PRIMARY_CARE",
+      "resource_id": "VISTA-PCP-B",
+      "resource_type": "PHYSICIAN",
+      "template_type": "NEW_PATIENT",
+      "modality": "IN_PERSON",
+      "eligible_patient_classifications": [
+        "NEW"
+      ],
+      "eligible_appointment_intents": [
+        "INITIAL_CONSULT"
+      ]
+    },
+    {
+      "slot_id": "VISTA-SLOT-PC-5000335-001",
+      "patient_id": "5000335",
+      "specialty": "PRIMARY_CARE",
+      "facility_id": "PC-VA-001",
+      "facility_name": "Synthetic Primary Care Clinic",
+      "provider": "Dr. Synthetic PCP A",
+      "slot_start": "2026-11-15T15:00:00Z",
+      "slot_end": "2026-11-15T15:30:00Z",
+      "availability_status": "AVAILABLE",
+      "wait_days": 14,
+      "drive_minutes": 12,
+      "synthetic": true,
+      "environment": "local-demo",
+      "source_system": "VISTA_ISS",
+      "freshness": "fixture-deterministic",
+      "clinic_id": "PC-CLINIC-1",
+      "stop_code": "323",
+      "stop_code_group": "PRIMARY_CARE",
+      "resource_id": "VISTA-PCP-A",
+      "resource_type": "PHYSICIAN",
+      "template_type": "ESTABLISHED",
+      "modality": "IN_PERSON",
+      "eligible_patient_classifications": [
+        "ESTABLISHED"
+      ],
+      "eligible_appointment_intents": [
+        "FOLLOW_UP"
+      ]
+    },
+    {
+      "slot_id": "VISTA-SLOT-PC-5000335-002",
+      "patient_id": "5000335",
+      "specialty": "PRIMARY_CARE",
+      "facility_id": "PC-VA-001",
+      "facility_name": "Synthetic Primary Care Clinic",
+      "provider": "Dr. Synthetic PCP B",
+      "slot_start": "2026-11-08T09:00:00Z",
+      "slot_end": "2026-11-08T10:00:00Z",
+      "availability_status": "AVAILABLE",
+      "wait_days": 7,
+      "drive_minutes": 12,
+      "synthetic": true,
+      "environment": "local-demo",
+      "source_system": "VISTA_ISS",
+      "freshness": "fixture-deterministic",
+      "clinic_id": "PC-CLINIC-1",
+      "stop_code": "323",
+      "stop_code_group": "PRIMARY_CARE",
+      "resource_id": "VISTA-PCP-B",
+      "resource_type": "PHYSICIAN",
+      "template_type": "NEW_PATIENT",
+      "modality": "IN_PERSON",
+      "eligible_patient_classifications": [
+        "NEW"
+      ],
+      "eligible_appointment_intents": [
+        "INITIAL_CONSULT"
+      ]
+    }
+  ]
+}

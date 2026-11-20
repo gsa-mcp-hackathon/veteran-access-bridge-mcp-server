@@ -1,0 +1,46 @@
+{
+  "EPS-SLOT-CC-001": {
+    "slot_id": "EPS-SLOT-CC-001",
+    "option_id": "OPT-CC-001",
+    "provider_id": "PROV-CC-001",
+    "provider_name": "Dr. Community Cardiology",
+    "appointment_start": "2026-11-10T09:00:00Z",
+    "appointment_end": "2026-11-10T09:45:00Z",
+    "available": true,
+    "initial_consult_eligible": true,
+    "provenance_ref": "EPS-PROV-SLOT-001"
+  },
+  "EPS-SLOT-CC-STALE": {
+    "slot_id": "EPS-SLOT-CC-STALE",
+    "option_id": "OPT-CC-001",
+    "provider_id": "PROV-CC-001",
+    "provider_name": "Dr. Community Cardiology",
+    "appointment_start": "2026-11-11T10:00:00Z",
+    "appointment_end": "2026-11-11T10:45:00Z",
+    "available": false,
+    "initial_consult_eligible": true,
+    "provenance_ref": "EPS-PROV-SLOT-002"
+  },
+  "EPS-SLOT-CC-FOLLOWUP": {
+    "slot_id": "EPS-SLOT-CC-FOLLOWUP",
+    "option_id": "OPT-CC-001",
+    "provider_id": "PROV-CC-001",
+    "provider_name": "Dr. Community Cardiology",
+    "appointment_start": "2026-11-12T14:00:00Z",
+    "appointment_end": "2026-11-12T14:30:00Z",
+    "available": true,
+    "initial_consult_eligible": false,
+    "provenance_ref": "EPS-PROV-SLOT-003"
+  },
+  "CC-EPS-SLOT-CARD-5000335-002": {
+    "slot_id": "CC-EPS-SLOT-CARD-5000335-002",
+    "option_id": "OPT-CC-EPS-SLOT-CARD-5000335-002",
+    "provider_id": "NPI-1234567890",
+    "provider_name": "Dr. Synthetic Community Cardiologist D",
+    "appointment_start": "2026-11-07T10:00:00Z",
+    "appointment_end": "2026-11-07T10:45:00Z",
+    "available": true,
+    "initial_consult_eligible": true,
+    "provenance_ref": "EPS-PROV-DEMO-EPS-002"
+  }
+}

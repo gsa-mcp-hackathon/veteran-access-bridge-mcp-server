@@ -1,5 +1,7 @@
 # Evaluation & Results
 
+[Review the Primary Care evidence and download both result tables](reviewer-index.md).
+
 Separate checks, each with its **original date and denominator**. These results are **not combined into one pass rate**, and all data is synthetic.
 
 <div class="ev2-cards">

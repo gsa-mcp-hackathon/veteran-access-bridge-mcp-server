@@ -8,6 +8,8 @@ The Primary Care demonstration shows the server in use. A Veteran calls through 
 
 [Explore the architecture](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/solution-architecture/) · [Follow the demonstration](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/demonstration/) · [Explore evaluation results](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/evaluation/) · [Reproduce the local server](#reproduce-the-local-server)
 
+**For reviewers** · [Run the local server](docs/developer-guide/local-mcp-server.md) · [Find a test](tests/README.md) · [Read the recorded results](docs/evaluation/reviewer-index.md)
+
 ## Why we built it
 
 We chose routine Primary Care scheduling to explore how a Veteran could make a request in their own words and how a reviewer could verify what happened afterward. When someone says, “Monday works for me,” the system still has to establish which Monday, at which facility, whether the visit fits the slot, and whether the caller has authorized the booking.
@@ -89,9 +91,9 @@ The commands below use the pinned backend release verified from a fresh clone. Y
 **1. Install the verified release.**
 
 ```bash
-git clone https://github.com/wbgreen0405/veteran-access-bridge.git
-cd veteran-access-bridge
-git checkout --detach ea0880f0cb216d5cc78601fdc85c40d37394e085
+git clone https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server.git
+cd veteran-access-bridge-mcp-server
+git rev-parse HEAD
 uv sync --locked --group dev
 ```
 
@@ -107,7 +109,7 @@ uv run --no-sync python scripts/list_local_mcp_tools.py
 uv run --no-sync pytest -q tests/test_m6_2_primary_care_scenarios.py
 ```
 
-**4. Run the wider suite.** Some checks require optional voice packages or an explicitly configured test database. Read skips separately from passes.
+**4. Run all seven suites included in this submission.** The test index maps each suite to the scheduling or security behavior it checks.
 
 ```bash
 uv run --no-sync pytest -q

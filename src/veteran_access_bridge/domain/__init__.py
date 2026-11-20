@@ -1,0 +1,220 @@
+"""Canonical domain models and deterministic workflow rules."""
+
+from .models import (
+    # M1 models (unchanged)
+    AccessOption,
+    ClinicalConsult,
+    OptionReadiness,
+    PatientContext,
+    SchedulingHandoff,
+    SearchAvailabilityResult,
+    SourceProvenance,
+    SourceSearchResult,
+    SourceSearchStatus,
+    WorkflowState,
+    # M6.2 scheduling request/slot contracts
+    CareCategory,
+    PatientClinicClassification,
+    PatientClinicRelationship,
+    RequestSource,
+    ResourceType,
+    SchedulingRequest,
+    SchedulingSlot,
+    SlotAvailability,
+    SlotEligibilityReason,
+    SlotEligibilityResult,
+    SlotTemplateType,
+    # M2 lifecycle models
+    ALLOWED_LIFECYCLE_TRANSITIONS,
+    ActorRole,
+    BookingRecord,
+    CaseEvent,
+    CaseEventType,
+    CaseLifecycleRecord,
+    CaseLifecycleState,
+    SlotReservationEntry,
+    # M2-4 option-selection models
+    OptionSelectionRecord,
+    OptionSelectionValidation,
+    # M2-5 verification models
+    VerificationOutcome,
+    VerificationResult,
+    # M2-6 veteran confirmation models
+    ConfirmationRequest,
+    VeteranConfirmationRecord,
+    VeteranResponse,
+    # M2-7 booking gate models
+    AppointmentIntent,
+    BookingPreconditionResult,
+    EPSSlotRecord,
+    HSRMAuthorizationRecord,
+    HSRMAuthorizationStatus,
+    SlotReservation,
+)
+from .correlation import (
+    CorrelationConflictError,
+    CorrelationRegistry,
+    InteractionChannel,
+    InteractionCorrelation,
+)
+from .guardrails import (
+    GuardrailAssessment,
+    GuardrailRule,
+    GuardrailSeverity,
+    GuardrailTrigger,
+    HandoffRequirement,
+    HumanControlMode,
+    evaluate_guardrails,
+    guardrail_matrix,
+    guardrail_rule,
+)
+from .interaction_events import (
+    CONVERSATION_EVENT_TYPES,
+    DETERMINISTIC_EVENT_TYPES,
+    GOVERNED_EVENT_TYPES,
+    InteractionEvent,
+    InteractionEventSource,
+    InteractionEventType,
+    event_to_dict,
+)
+from .primary_care_fields import (
+    CONVERSATION_WRITABLE_FIELDS,
+    DETERMINISTIC_FIELDS,
+    GOVERNED_SOURCE_FIELDS,
+    MSA_CORRECTABLE_FIELDS,
+    MSA_OWNED_FIELDS,
+    VETERAN_ACTION_FIELDS,
+    FieldSource,
+    PrimaryCareFieldName,
+    PrimaryCareFieldValue,
+    allowed_sources,
+    field_ownership_summary,
+)
+from .workflow import determine_workflow_state
+from .avery_script import (
+    AVERY_OPENING_GREETING,
+    AVERY_PRIMARY_CARE_VERIFICATION_PROMPT,
+    build_agent_opening_instruction,
+    format_missing_verification_prompt,
+)
+
+__all__ = [
+    # M1
+    "AccessOption",
+    "ClinicalConsult",
+    "OptionReadiness",
+    "PatientContext",
+    "SchedulingHandoff",
+    "SearchAvailabilityResult",
+    "SourceProvenance",
+    "SourceSearchResult",
+    "SourceSearchStatus",
+    "WorkflowState",
+    "determine_workflow_state",
+    # M6.2
+    "CareCategory",
+    "PatientClinicClassification",
+    "PatientClinicRelationship",
+    "RequestSource",
+    "ResourceType",
+    "SchedulingRequest",
+    "SchedulingSlot",
+    "SlotAvailability",
+    "SlotEligibilityReason",
+    "SlotEligibilityResult",
+    "SlotTemplateType",
+    # M2
+    "ALLOWED_LIFECYCLE_TRANSITIONS",
+    "ActorRole",
+    "BookingRecord",
+    "CaseEvent",
+    "CaseEventType",
+    "CaseLifecycleRecord",
+    "CaseLifecycleState",
+    "SlotReservationEntry",
+    # M2-4
+    "OptionSelectionRecord",
+    "OptionSelectionValidation",
+    # M2-5
+    "VerificationOutcome",
+    "VerificationResult",
+    # M2-6
+    "ConfirmationRequest",
+    "VeteranConfirmationRecord",
+    "VeteranResponse",
+    # M2-7
+    "AppointmentIntent",
+    "BookingPreconditionResult",
+    "EPSSlotRecord",
+    "HSRMAuthorizationRecord",
+    "HSRMAuthorizationStatus",
+    "SlotReservation",
+    # Primary Care live field contract
+    "CONVERSATION_WRITABLE_FIELDS",
+    "DETERMINISTIC_FIELDS",
+    "GOVERNED_SOURCE_FIELDS",
+    "MSA_CORRECTABLE_FIELDS",
+    "MSA_OWNED_FIELDS",
+    "VETERAN_ACTION_FIELDS",
+    "FieldSource",
+    "PrimaryCareFieldName",
+    "PrimaryCareFieldValue",
+    "allowed_sources",
+    "field_ownership_summary",
+    # MSA live interaction events
+    "CONVERSATION_EVENT_TYPES",
+    "DETERMINISTIC_EVENT_TYPES",
+    "GOVERNED_EVENT_TYPES",
+    "InteractionEvent",
+    "InteractionEventSource",
+    "InteractionEventType",
+    "event_to_dict",
+    "GuardrailAssessment",
+    "GuardrailRule",
+    "GuardrailSeverity",
+    "GuardrailTrigger",
+    "HandoffRequirement",
+    "HumanControlMode",
+    "evaluate_guardrails",
+    "guardrail_matrix",
+    "guardrail_rule",
+    "CorrelationConflictError",
+    "CorrelationRegistry",
+    "InteractionChannel",
+    "InteractionCorrelation",
+    "AVERY_OPENING_GREETING",
+    "AVERY_PRIMARY_CARE_VERIFICATION_PROMPT",
+    "build_agent_opening_instruction",
+    "format_missing_verification_prompt",
+]
+
+
+from .voice_session import (
+    ApplyVoiceEventRequest,
+    CreateVoiceSessionRequest,
+    HandoffPriority,
+    VoiceEvent,
+    VoiceEventType,
+    VoiceHandoff,
+    VoiceParticipant,
+    VoiceParticipantRole,
+    VoiceParticipantState,
+    VoiceSession,
+    VoiceSessionState,
+)
+
+__all__.extend(
+    [
+        "ApplyVoiceEventRequest",
+        "CreateVoiceSessionRequest",
+        "HandoffPriority",
+        "VoiceEvent",
+        "VoiceEventType",
+        "VoiceHandoff",
+        "VoiceParticipant",
+        "VoiceParticipantRole",
+        "VoiceParticipantState",
+        "VoiceSession",
+        "VoiceSessionState",
+    ]
+)

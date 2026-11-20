@@ -1,0 +1,61 @@
+{
+  "case_id": "DEMO-PC-5000999-001",
+  "classification": "synthetic",
+  "patient_context": {
+    "patient_id": "5000999",
+    "display_name": "Synthetic Primary Care Veteran",
+    "birth_date": "1980-01-01",
+    "gender": "female",
+    "address": {
+      "city": "Denver",
+      "state": "CO",
+      "postal_code": "80200"
+    },
+    "active_conditions": [],
+    "provenance": [
+      {
+        "source_system": "SYNTHETIC_PATIENT_CONTEXT",
+        "source_record_id": "Patient/5000999",
+        "environment": "synthetic-demo",
+        "synthetic": true,
+        "freshness": "fixture-deterministic"
+      }
+    ]
+  },
+  "scheduling_request": {
+    "request_id": "REQ-PC-5000999-001",
+    "request_source": "VETERAN_REQUEST",
+    "care_category": "PRIMARY_CARE",
+    "patient_indicated_date": "2026-11-01",
+    "service": "PRIMARY_CARE",
+    "stop_code": "323",
+    "stop_code_group": "PRIMARY_CARE",
+    "appointment_intent": "FOLLOW_UP",
+    "required_duration_minutes": 30,
+    "required_resource_types": [
+      "PHYSICIAN"
+    ],
+    "required_template_types": [
+      "ESTABLISHED"
+    ],
+    "required_modality": "IN_PERSON",
+    "preferred_days_of_week": [
+      "MONDAY",
+      "TUESDAY"
+    ],
+    "preferred_time_of_day": [
+      "MORNING"
+    ],
+    "source": "SYNTHETIC_DEMO_FIXTURE",
+    "synthetic": true
+  },
+  "clinic_relationship": {
+    "patient_id": "5000999",
+    "facility_id": "PC-VA-001",
+    "stop_code": "323",
+    "stop_code_group": "PRIMARY_CARE",
+    "last_completed_visit": "2025-07-01T15:00:00+00:00",
+    "as_of": "2026-10-16T00:00:00+00:00",
+    "synthetic": true
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "_fixture_meta": {
+    "synthetic": true,
+    "case_id": "DEMO-CARD-5000335-001",
+    "generated_for": "patient_id:5000335 specialty:Cardiology",
+    "source_system": "VISTA_ISS",
+    "description": "Deterministic VistA/ISS-style cardiology slot fixtures for the Mariano demo case."
+  },
+  "slots": [
+    {
+      "slot_id": "VISTA-SLOT-CARD-5000335-001",
+      "patient_id": "5000335",
+      "specialty": "Cardiology",
+      "facility_id": "549",
+      "facility_name": "VA Eastern Colorado Health Care System",
+      "provider": "Dr. Synthetic Cardiologist A",
+      "slot_start": "2026-11-10T09:00:00Z",
+      "slot_end": "2026-11-10T09:30:00Z",
+      "availability_status": "AVAILABLE",
+      "wait_days": 25,
+      "drive_minutes": 18,
+      "synthetic": true,
+      "environment": "local-demo",
+      "source_system": "VISTA_ISS",
+      "freshness": "fixture-deterministic",
+      "clinic_id": "CARD-VA-549",
+      "stop_code": "303",
+      "stop_code_group": "CARDIOLOGY",
+      "resource_id": "VISTA-PROV-CARD-A",
+      "resource_type": "PHYSICIAN",
+      "template_type": "CONSULT",
+      "modality": "IN_PERSON",
+      "eligible_patient_classifications": [
+        "NEW"
+      ],
+      "eligible_appointment_intents": [
+        "INITIAL_CONSULT"
+      ]
+    },
+    {
+      "slot_id": "VISTA-SLOT-CARD-5000335-002",
+      "patient_id": "5000335",
+      "specialty": "Cardiology",
+      "facility_id": "549",
+      "facility_name": "VA Eastern Colorado Health Care System",
+      "provider": "Dr. Synthetic Cardiologist A",
+      "slot_start": "2026-10-01T10:00:00Z",
+      "slot_end": "2026-10-01T10:30:00Z",
+      "availability_status": "STALE",
+      "wait_days": 5,
+      "drive_minutes": 18,
+      "synthetic": true,
+      "environment": "local-demo",
+      "source_system": "VISTA_ISS",
+      "freshness": "fixture-stale",
+      "clinic_id": "CARD-VA-549",
+      "stop_code": "303",
+      "stop_code_group": "CARDIOLOGY",
+      "resource_id": "VISTA-PROV-CARD-A",
+      "resource_type": "PHYSICIAN",
+      "template_type": "CONSULT",
+      "modality": "IN_PERSON",
+      "eligible_patient_classifications": [
+        "NEW"
+      ],
+      "eligible_appointment_intents": [
+        "INITIAL_CONSULT"
+      ]
+    },
+    {
+      "slot_id": "VISTA-SLOT-CARD-5000335-003",
+      "patient_id": "5000335",
+      "specialty": "Cardiology",
+      "facility_id": "549",
+      "facility_name": "VA Eastern Colorado Health Care System",
+      "provider": "Dr. Synthetic Cardiologist B",
+      "slot_start": "2026-11-17T14:00:00Z",
+      "slot_end": "2026-11-17T14:30:00Z",
+      "availability_status": "AVAILABLE",
+      "wait_days": 32,
+      "drive_minutes": 18,
+      "synthetic": true,
+      "environment": "local-demo",
+      "source_system": "VISTA_ISS",
+      "freshness": "fixture-deterministic",
+      "clinic_id": "CARD-VA-549",
+      "stop_code": "303",
+      "stop_code_group": "CARDIOLOGY",
+      "resource_id": "VISTA-PROV-CARD-B",
+      "resource_type": "PHYSICIAN",
+      "template_type": "CONSULT",
+      "modality": "IN_PERSON",
+      "eligible_patient_classifications": [
+        "NEW"
+      ],
+      "eligible_appointment_intents": [
+        "INITIAL_CONSULT"
+      ]
+    }
+  ]
+}

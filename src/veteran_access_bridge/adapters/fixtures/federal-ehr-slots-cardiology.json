@@ -1,0 +1,71 @@
+{
+  "_fixture_meta": {
+    "synthetic": true,
+    "case_id": "DEMO-CARD-5000335-001",
+    "generated_for": "patient_id:5000335 specialty:Cardiology",
+    "source_system": "FEDERAL_EHR_FHIR",
+    "description": "Deterministic Federal EHR/FHIR-style cardiology slot fixtures for the Mariano demo case."
+  },
+  "slots": [
+    {
+      "slot_id": "FEHR-SLOT-CARD-5000335-001",
+      "patient_id": "5000335",
+      "specialty": "Cardiology",
+      "facility_id": "FEHR-CO-001",
+      "facility_name": "Federal EHR Colorado Cardiology Clinic",
+      "provider": "Dr. Synthetic Cardiologist C",
+      "slot_start": "2026-11-05T13:00:00Z",
+      "slot_end": "2026-11-05T13:30:00Z",
+      "availability_status": "AVAILABLE",
+      "wait_days": 20,
+      "drive_minutes": 22,
+      "synthetic": true,
+      "environment": "local-demo",
+      "source_system": "FEDERAL_EHR_FHIR",
+      "freshness": "fixture-deterministic",
+      "clinic_id": "CARD-FEHR-CO-001",
+      "stop_code": "303",
+      "stop_code_group": "CARDIOLOGY",
+      "resource_id": "FEHR-PROV-CARD-C",
+      "resource_type": "PHYSICIAN",
+      "template_type": "CONSULT",
+      "modality": "IN_PERSON",
+      "eligible_patient_classifications": [
+        "NEW"
+      ],
+      "eligible_appointment_intents": [
+        "INITIAL_CONSULT"
+      ]
+    },
+    {
+      "slot_id": "FEHR-SLOT-CARD-5000335-002",
+      "patient_id": "5000335",
+      "specialty": "Cardiology",
+      "facility_id": "FEHR-CO-001",
+      "facility_name": "Federal EHR Colorado Cardiology Clinic",
+      "provider": "Dr. Synthetic Cardiologist C",
+      "slot_start": "2026-11-12T09:30:00Z",
+      "slot_end": "2026-11-12T10:00:00Z",
+      "availability_status": "AVAILABLE",
+      "wait_days": 27,
+      "drive_minutes": 22,
+      "synthetic": true,
+      "environment": "local-demo",
+      "source_system": "FEDERAL_EHR_FHIR",
+      "freshness": "fixture-deterministic",
+      "clinic_id": "CARD-FEHR-CO-001",
+      "stop_code": "303",
+      "stop_code_group": "CARDIOLOGY",
+      "resource_id": "FEHR-PROV-CARD-C",
+      "resource_type": "PHYSICIAN",
+      "template_type": "CONSULT",
+      "modality": "IN_PERSON",
+      "eligible_patient_classifications": [
+        "NEW"
+      ],
+      "eligible_appointment_intents": [
+        "INITIAL_CONSULT"
+      ]
+    }
+  ]
+}

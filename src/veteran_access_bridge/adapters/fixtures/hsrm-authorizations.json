@@ -1,0 +1,62 @@
+{
+  "HSRM-AUTH-CC-001": {
+    "authorization_id": "HSRM-AUTH-CC-001",
+    "referral_id": "HSRM-REF-CC-001",
+    "case_id": "DEMO-CARD-5000335-001",
+    "option_id": "OPT-CC-001",
+    "authorized_service": "CARDIOLOGY",
+    "authorized_provider_id": "PROV-CC-001",
+    "status": "ACTIVE",
+    "effective_date": "2026-10-01T00:00:00Z",
+    "expiration_date": "2027-04-01T00:00:00Z",
+    "provenance_ref": "HSRM-PROV-CC-001"
+  },
+  "HSRM-AUTH-CC-EXPIRED": {
+    "authorization_id": "HSRM-AUTH-CC-EXPIRED",
+    "referral_id": "HSRM-REF-CC-002",
+    "case_id": "DEMO-CARD-5000335-001",
+    "option_id": "OPT-CC-EXPIRED",
+    "authorized_service": "CARDIOLOGY",
+    "authorized_provider_id": null,
+    "status": "EXPIRED",
+    "effective_date": "2025-01-01T00:00:00Z",
+    "expiration_date": "2025-07-01T00:00:00Z",
+    "provenance_ref": "HSRM-PROV-CC-002"
+  },
+  "HSRM-AUTH-CC-SCOPE-MISMATCH": {
+    "authorization_id": "HSRM-AUTH-CC-SCOPE-MISMATCH",
+    "referral_id": "HSRM-REF-CC-003",
+    "case_id": "DEMO-CARD-5000335-001",
+    "option_id": "OPT-CC-SCOPE",
+    "authorized_service": "DERMATOLOGY",
+    "authorized_provider_id": null,
+    "status": "ACTIVE",
+    "effective_date": "2026-10-01T00:00:00Z",
+    "expiration_date": "2027-04-01T00:00:00Z",
+    "provenance_ref": "HSRM-PROV-CC-003"
+  },
+  "HSRM-AUTH-CC-PROVIDER-MISMATCH": {
+    "authorization_id": "HSRM-AUTH-CC-PROVIDER-MISMATCH",
+    "referral_id": "HSRM-REF-CC-004",
+    "case_id": "DEMO-CARD-5000335-001",
+    "option_id": "OPT-CC-PROV-MISMATCH",
+    "authorized_service": "CARDIOLOGY",
+    "authorized_provider_id": "PROV-CC-OTHER",
+    "status": "ACTIVE",
+    "effective_date": "2026-10-01T00:00:00Z",
+    "expiration_date": "2027-04-01T00:00:00Z",
+    "provenance_ref": "HSRM-PROV-CC-004"
+  },
+  "HSRM-AUTH-DEMO-EPS-002": {
+    "authorization_id": "HSRM-AUTH-DEMO-EPS-002",
+    "referral_id": "HSRM-REF-DEMO-EPS-002",
+    "case_id": "DEMO-CARD-5000335-001",
+    "option_id": "OPT-CC-EPS-SLOT-CARD-5000335-002",
+    "authorized_service": "CARDIOLOGY",
+    "authorized_provider_id": "NPI-1234567890",
+    "status": "ACTIVE",
+    "effective_date": "2026-10-01T00:00:00Z",
+    "expiration_date": "2027-04-01T00:00:00Z",
+    "provenance_ref": "HSRM-PROV-DEMO-EPS-002"
+  }
+}

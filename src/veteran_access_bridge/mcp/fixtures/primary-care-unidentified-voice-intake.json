@@ -1,0 +1,56 @@
+{
+  "case_id": "DEMO-PC-VOICE-INTAKE-001",
+  "classification": "synthetic-unidentified-inbound",
+  "patient_context": {
+    "patient_id": "UNIDENTIFIED",
+    "display_name": "Unidentified incoming caller",
+    "birth_date": "1900-01-01",
+    "gender": "unknown",
+    "address": {
+      "city": "Unknown",
+      "state": "WV",
+      "postal_code": "00000"
+    },
+    "active_conditions": [],
+    "provenance": [
+      {
+        "source_system": "SYNTHETIC_CALL_INTAKE",
+        "source_record_id": "UnidentifiedCaller/none",
+        "environment": "local-demo",
+        "synthetic": true,
+        "freshness": "fixture-deterministic"
+      }
+    ]
+  },
+  "scheduling_request": {
+    "request_id": "REQ-PC-VOICE-INTAKE-001",
+    "request_source": "VETERAN_REQUEST",
+    "care_category": "PRIMARY_CARE",
+    "patient_indicated_date": "2026-11-09",
+    "service": "PRIMARY_CARE",
+    "stop_code": "323",
+    "stop_code_group": "PRIMARY_CARE",
+    "appointment_intent": "FOLLOW_UP",
+    "required_duration_minutes": 30,
+    "required_resource_types": [
+      "PHYSICIAN"
+    ],
+    "required_template_types": [],
+    "required_modality": null,
+    "preferred_days_of_week": [],
+    "preferred_time_of_day": [],
+    "source": "SYNTHETIC_VOICE_INTAKE",
+    "synthetic": true,
+    "facility_id": "PC-VA-001",
+    "facility_name": "Synthetic VA Medical Center"
+  },
+  "clinic_relationship": {
+    "patient_id": "UNIDENTIFIED",
+    "facility_id": "PC-VA-001",
+    "stop_code": "323",
+    "stop_code_group": "PRIMARY_CARE",
+    "last_completed_visit": null,
+    "as_of": "2026-11-09T00:00:00+00:00",
+    "synthetic": true
+  }
+}

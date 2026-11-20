@@ -1,0 +1,71 @@
+{
+  "_fixture_meta": {
+    "synthetic": true,
+    "case_id": "DEMO-CARD-5000335-001",
+    "generated_for": "patient_id:5000335 specialty:Cardiology",
+    "source_system": "COMMUNITY_CARE_EPS",
+    "description": "Deterministic Community Care/EPS-style cardiology slot fixtures for the Mariano demo case. Slots with null authorization_id must be represented as AVAILABLE_NOT_AUTHORIZED, never VERIFIED_BOOKABLE."
+  },
+  "slots": [
+    {
+      "slot_id": "CC-EPS-SLOT-CARD-5000335-001",
+      "patient_id": "5000335",
+      "specialty": "Cardiology",
+      "facility_id": "NPI-1234567890",
+      "facility_name": "Synthetic Community Cardiology Group",
+      "provider": "Dr. Synthetic Community Cardiologist D",
+      "slot_start": "2026-11-03T08:00:00Z",
+      "slot_end": "2026-11-03T08:45:00Z",
+      "availability_status": "AVAILABLE",
+      "authorization_id": null,
+      "referral_id": null,
+      "wait_days": 18,
+      "drive_minutes": 35,
+      "synthetic": true,
+      "environment": "local-demo",
+      "source_system": "COMMUNITY_CARE_EPS",
+      "freshness": "fixture-deterministic",
+      "note": "No authorization present — must map to AVAILABLE_NOT_AUTHORIZED."
+    },
+    {
+      "slot_id": "CC-EPS-SLOT-CARD-5000335-002",
+      "patient_id": "5000335",
+      "specialty": "Cardiology",
+      "facility_id": "NPI-1234567890",
+      "facility_name": "Synthetic Community Cardiology Group",
+      "provider": "Dr. Synthetic Community Cardiologist D",
+      "slot_start": "2026-11-07T10:00:00Z",
+      "slot_end": "2026-11-07T10:45:00Z",
+      "availability_status": "AVAILABLE",
+      "authorization_id": "AUTH-CC-5000335-001",
+      "referral_id": "REF-CC-5000335-001",
+      "wait_days": 22,
+      "drive_minutes": 35,
+      "synthetic": true,
+      "environment": "local-demo",
+      "source_system": "COMMUNITY_CARE_EPS",
+      "freshness": "fixture-deterministic",
+      "note": "Authorization present — maps to AUTHORIZED_NOT_VERIFIED pending slot verification."
+    },
+    {
+      "slot_id": "CC-EPS-SLOT-CARD-5000335-003",
+      "patient_id": "5000335",
+      "specialty": "Cardiology",
+      "facility_id": "NPI-9876543210",
+      "facility_name": "Synthetic Community Heart Clinic",
+      "provider": "Dr. Synthetic Community Cardiologist E",
+      "slot_start": "2026-11-14T14:00:00Z",
+      "slot_end": "2026-11-14T14:45:00Z",
+      "availability_status": "AVAILABLE",
+      "authorization_id": null,
+      "referral_id": null,
+      "wait_days": 29,
+      "drive_minutes": 42,
+      "synthetic": true,
+      "environment": "local-demo",
+      "source_system": "COMMUNITY_CARE_EPS",
+      "freshness": "fixture-deterministic",
+      "note": "Second slot without authorization — also AVAILABLE_NOT_AUTHORIZED."
+    }
+  ]
+}

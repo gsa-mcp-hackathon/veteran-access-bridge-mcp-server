@@ -1,41 +1,29 @@
-# Local MCP server
+# Run the local MCP server
 
-**Requirements:** Python 3.12, Git, `uv`, Windows PowerShell 7 (examples), a clean checkout. The pinned November 18 documentation review used Python 3.12.9.
+Install Git, Python 3.12 and uv. From a new terminal, clone the submission repository and install the locked dependencies.
 
-```powershell
-# Backend source (historical evidence pin; private repository access required)
-git clone https://github.com/wbgreen0405/veteran-access-bridge.git
-cd veteran-access-bridge
-git checkout --detach 5b6cd072f23b4d4edce2e19c4f75faa774c87988
-uv venv --python 3.12
-uv pip install --python .venv/Scripts/python.exe -e '.[dev]'
-.\.venv\Scripts\Activate.ps1
-python --version
+```bash
+git clone https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server.git
+cd veteran-access-bridge-mcp-server
+git rev-parse HEAD
+uv sync --locked --group dev
 ```
 
-!!! warning "Lockfile finding"
-    This reviewed candidate did **not** pass `uv sync --locked --group dev --python 3.12` because its `uv.lock` required updating. The editable install shown above passed in the documented environment; it does **not** establish lock reproducibility. Review `Reproducibility.md` in the repository before final judging.
+### Discover tools
 
-```powershell
-# Run server-side checks in local/synthetic fixture configuration
-python -m pytest -q
-python eval/probe_mcp_contracts.py --output-dir eval/results/reviewer-contracts-new
-python eval/probe_mcp_adversarial.py --output-dir eval/results/reviewer-arguments-new
-
-# MCP stdio mode: starts a process waiting for an MCP client
-veteran-access-mcp
+```bash
+uv run --no-sync python scripts/list_local_mcp_tools.py
 ```
 
-In another terminal (Node.js/npm required), the *source-derived Inspector command* is:
+The script starts a server, connects over standard input/output and lists the advertised tools. Expect 21 in the default local configuration.
 
-```powershell
-npx @modelcontextprotocol/inspector veteran-access-mcp
+### Check scheduling and booking controls
+
+```bash
+uv run --no-sync pytest -q tests/test_m6_2_primary_care_scenarios.py
+uv run --no-sync pytest -q tests
 ```
 
-The Inspector GUI command was **not run** during the documentation review; follow the locally printed address/token. Avoid storing sensitive tokens in Git. The default **21-tool** in-process discovery and two fixture reads *were* verified separately.
+These commands use local fixtures and need no cloud credentials. Save the commit printed above with the pass, fail and skip counts. For a guided comparison, open the [recorded Primary Care evidence](../evaluation/reviewer-index.md).
 
-**Safe test inputs:** `DEMO-CARD-5000335-001` (35/28 synthetic specialty comparator), `DEMO-PC-5000999-001` (14/20 primary comparator), `UNKNOWN-CASE` (must deny). Do not reuse consumed booking cases.
-
----
-
-**Developer Guide:** [Overview](index.md) · [VHA Lighthouse sandbox →](vha-sandbox.md)
+[Developer guide](index.md) · [VHA sandbox setup](vha-sandbox.md)

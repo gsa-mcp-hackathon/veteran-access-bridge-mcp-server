@@ -1,0 +1,18 @@
+name: Reproduce local MCP checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv python install 3.12
+      - run: uv sync --locked --group dev
+      - run: uv run --no-sync python scripts/list_local_mcp_tools.py
+      - run: uv run --no-sync pytest -q tests

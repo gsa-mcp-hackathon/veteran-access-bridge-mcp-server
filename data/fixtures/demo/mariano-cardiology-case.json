@@ -1,0 +1,52 @@
+{
+  "case_id": "DEMO-CARD-5000335-001",
+  "classification": "sandbox-plus-synthetic",
+  "patient_context": {
+    "patient_id": "5000335",
+    "display_name": "Mr. Mariano761 Ruelas156",
+    "birth_date": "1907-11-20",
+    "gender": "male",
+    "address": {
+      "city": "Colorado Springs",
+      "state": "CO",
+      "postal_code": "80809"
+    },
+    "active_conditions": [
+      "Atrial Fibrillation"
+    ],
+    "provenance": [
+      {
+        "source_system": "VA_PATIENT_HEALTH_FHIR",
+        "source_record_id": "Patient/5000335",
+        "environment": "sandbox",
+        "synthetic": true,
+        "freshness": "sandbox-source"
+      },
+      {
+        "source_system": "VA_PATIENT_HEALTH_FHIR",
+        "source_record_id": "Condition/4-RJYFow9F8DuVMlqm",
+        "environment": "sandbox",
+        "synthetic": true,
+        "freshness": "sandbox-source"
+      }
+    ]
+  },
+  "clinical_consult": {
+    "consult_id": "CONSULT-CARD-5000335-001",
+    "patient_id": "5000335",
+    "specialty": "Cardiology",
+    "status": "ACTIVE",
+    "valid": true,
+    "reason": "Synthetic cardiology consult created for the governed scheduling demonstration.",
+    "blockers": [],
+    "source": "SYNTHETIC_DEMO_FIXTURE",
+    "synthetic": true
+  },
+  "expected_workflow_state": "READY_TO_SEARCH",
+  "guardrails": [
+    "FHIR condition evidence does not create the consult.",
+    "The consult is explicitly synthetic and deterministic.",
+    "No booking or Community Care authorization is implied.",
+    "Human scheduler review remains required before any simulated commit."
+  ]
+}
