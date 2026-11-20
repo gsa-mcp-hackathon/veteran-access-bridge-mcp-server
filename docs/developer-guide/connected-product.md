@@ -10,10 +10,10 @@ export VAB_MCP_API_KEY="$(uv run --no-sync python -c 'import secrets; print(secr
 docker run -d --rm --name vab-mcp-review -p 127.0.0.1:8080:8080 \
   -e VAB_MCP_TRANSPORT=streamable-http -e VAB_MCP_API_KEY vab-mcp:review
 curl --fail --retry 10 --retry-all-errors --retry-delay 1 http://127.0.0.1:8080/health
-uv run --no-sync python scripts/read_scheduling_encounter.py --local-http
+uv run --no-sync python scripts/read_scheduling_encounter.py --local-http --list-tools
 ```
 
-The health response shows the process is reachable. The encounter response verifies authentication, MCP initialization and tool execution. For another MCP client, choose **Streamable HTTP**, enter `http://127.0.0.1:8080/mcp/` and set the Authorization header to `Bearer` followed by a space and your generated key. When finished, run `docker stop vab-mcp-review` and `unset VAB_MCP_API_KEY`.
+The health response shows the process is reachable. The inventory verifies authenticated MCP discovery. Try the same command without `--list-tools` to request the encounter. With only the container bearer key, expect **Trusted MCP session scope required** and a nonzero exit. A case ID and server credential alone cannot authorize remote access to a patient. Use the local fixture walkthrough for a successful read, or the connected application to establish an authorized session. For another MCP client, choose **Streamable HTTP**, enter `http://127.0.0.1:8080/mcp/` and set the Authorization header to `Bearer` followed by a space and your generated key. When finished, run `docker stop vab-mcp-review` and `unset VAB_MCP_API_KEY`.
 
 ## Reproduce the connected voice product
 
