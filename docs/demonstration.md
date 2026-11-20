@@ -4,7 +4,11 @@
 
 ## Recorded demonstration
 
-<div class="video-pending"><strong>Demonstration recording</strong><p>A final public video URL has not been supplied. This section intentionally does not imply that a recording is hosted or that a new call was run.</p><p>See the independently verified historical call below while final recording and visual acceptance are completed.</p></div>
+<video controls playsinline preload="metadata" width="1280" height="720" style="width:100%;height:auto" poster="../assets/avery-demo-poster.jpg" aria-label="Avery Primary Care scheduling demonstration">
+  <source src="../assets/avery-demo.mp4" type="video/mp4">
+</video>
+
+[Open the full recording (MP4, 3 min 36 sec)](assets/avery-demo.mp4). Follow the caller’s request, Avery’s replies and the MCP tool activity in the conversation panel. All caller details in this recording are synthetic.
 
 ## A verified scheduling journey · November 16, 2026
 
