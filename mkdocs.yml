@@ -68,6 +68,7 @@ extra_css:
   - stylesheets/security-architecture.css
   - stylesheets/homepage.css
   - stylesheets/mcp-tool-explorer.css
+  - stylesheets/demonstration.css
 extra_javascript:
   - assets/evaluation-report.js
   - assets/header-menu.js
