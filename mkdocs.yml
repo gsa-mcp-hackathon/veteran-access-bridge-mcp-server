@@ -14,7 +14,7 @@ theme:
   font: false
   features:
     - navigation.top
-    - navigation.sections
+    - navigation.footer
     - navigation.indexes
     - content.code.copy
 markdown_extensions:
@@ -36,30 +36,33 @@ nav:
   - Demonstration: demonstration.md
   - Developer Guide:
       - developer-guide/index.md
-      - Getting started:
-          - VS Code (recommended): developer-guide/vs-code.md
-          - GitHub Codespaces (optional): developer-guide/codespaces.md
-      - Run the MCP server:
-          - Explore tools and interpret a scheduling result: developer-guide/local-mcp-server.md
-          - HTTP transport and connected setup overview: developer-guide/connected-product.md
-      - Build the Avery voice experience:
-          - Prepare Supabase: developer-guide/supabase.md
-          - Configure VA reads: developer-guide/vha-sandbox.md
-          - Set up IBM Cloud and Code Engine: developer-guide/avery-ibm-start.md
-          - Connect Avery and the MCP toolkit: developer-guide/avery-agent.md
-          - Set up the LiveKit room: developer-guide/livekit.md
-          - Connect Deepgram and start the worker: developer-guide/deepgram.md
-          - Run the browser app and complete a call: developer-guide/browser-call.md
-      - Understand the architecture:
-          - Engineering decisions: developer-guide/engineering-decisions.md
-          - Configuration and secrets: developer-guide/configuration-and-secrets.md
-      - Help and reference:
+      - Getting Started:
+          - Prerequisites & Requirements: developer-guide/prerequisites.md
+          - VS Code Setup (Recommended): developer-guide/vs-code.md
+          - GitHub Codespaces (Optional): developer-guide/codespaces.md
+      - Run the MCP Server:
+          - Install & Run: developer-guide/local-mcp-server.md
+          - Connect to VA Sandbox: developer-guide/vha-sandbox.md
+      - Build the Full Avery Experience:
+          - Full Setup Overview: developer-guide/connected-product.md
+          - 1. Prepare Supabase: developer-guide/supabase.md
+          - 2. Configure IBM Cloud: developer-guide/avery-ibm-start.md
+          - 3. Set Up Avery in Orchestrate: developer-guide/avery-agent.md
+          - 4. Configure LiveKit: developer-guide/livekit.md
+          - 5. Configure Deepgram: developer-guide/deepgram.md
+          - 6. Connect the Frontend: developer-guide/browser-call.md
+          - 7. Run Your First Voice Call: developer-guide/first-voice-call.md
+      - Architecture & Decisions:
+          - Engineering Decisions: developer-guide/engineering-decisions.md
+          - Configuration & Secrets: developer-guide/configuration-and-secrets.md
+      - Troubleshooting & Reference:
           - Troubleshooting: developer-guide/troubleshooting.md
-          - Independent reproduction: developer-guide/clean-room-reproducibility.md
-          - Historical Orchestrate evaluation: developer-guide/ibm-orchestrate.md
-          - DeepEval: developer-guide/deepeval.md
-          - Phoenix: developer-guide/phoenix.md
-          - Release checklist: developer-guide/release-checklist.md
+          - Clean-room Reproduction: developer-guide/clean-room-reproducibility.md
+          - Evaluation:
+              - DeepEval: developer-guide/deepeval.md
+              - Phoenix: developer-guide/phoenix.md
+              - Historical Orchestrate Evaluation: developer-guide/ibm-orchestrate.md
+          - Release Checklist: developer-guide/release-checklist.md
 extra_css:
   - stylesheets/home.css
   - stylesheets/security-architecture.css

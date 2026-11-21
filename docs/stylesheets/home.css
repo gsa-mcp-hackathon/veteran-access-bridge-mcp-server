@@ -178,3 +178,14 @@ label.md-header__button[for="__drawer"]{display:none!important}
 .vab-toc-wrap .vab-panel{right:0}
 
 .md-content__inner:not(:has(.vab-hero)){margin-left:auto!important;margin-right:auto!important}
+
+/* Guide chapters use Material's section tree, including its mobile drawer. */
+.vab-guide .md-nav__link--active {font-weight:700;background:#e6f0f8;color:#003f72;border-radius:.2rem;}
+@media (min-width:76.25em) {
+  .vab-guide-expanded .md-sidebar--primary {display:block!important;}
+}
+@media (max-width:76.249em) {
+  .vab-guide .md-sidebar--primary {display:block!important;}
+  .vab-guide label.md-header__button[for="__drawer"] {display:inline-flex!important;}
+  .vab-guide .vab-guide-toggle {display:none;}
+}

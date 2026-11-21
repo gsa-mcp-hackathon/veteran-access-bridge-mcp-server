@@ -62,10 +62,33 @@
     var inner = document.querySelector(".md-header__inner");
     if (!inner || inner.querySelector(".vab-btn")) return;
 
-    var navPanel = panel("vab-nav-panel", collect(".md-sidebar--primary"));
-    var navBtn = button("vab-nav-btn", "Page navigation", NAV_SVG, navPanel);
-    inner.insertBefore(navBtn, inner.firstChild);
-    navBtn.after(navPanel);
+    if (location.pathname.split("/").includes("developer-guide")) {
+      // Use the theme's navigation tree so sections and the current page survive.
+      document.body.classList.add("vab-guide");
+      var sidebar = document.querySelector(".md-sidebar--primary");
+      sidebar.id = "vab-guide-sidebar";
+      var toggle = document.createElement("button");
+      toggle.type = "button";
+      toggle.className = "vab-btn vab-guide-toggle";
+      toggle.innerHTML = NAV_SVG;
+      toggle.setAttribute("aria-label", "Developer Guide navigation");
+      toggle.setAttribute("aria-controls", sidebar.id);
+      var expanded = !document.querySelector(".vab-start");
+      function showSidebar(show) {
+        document.body.classList.toggle("vab-guide-expanded", show);
+        toggle.setAttribute("aria-expanded", String(show));
+      }
+      showSidebar(expanded);
+      toggle.addEventListener("click", function () {
+        showSidebar(toggle.getAttribute("aria-expanded") !== "true");
+      });
+      inner.prepend(toggle);
+    } else {
+      var navPanel = panel("vab-nav-panel", collect(".md-sidebar--primary"));
+      var navBtn = button("vab-nav-btn", "Page navigation", NAV_SVG, navPanel);
+      inner.insertBefore(navBtn, inner.firstChild);
+      navBtn.after(navPanel);
+    }
 
     var tocItems = collect(".md-sidebar--secondary");
     if (tocItems.length) {
