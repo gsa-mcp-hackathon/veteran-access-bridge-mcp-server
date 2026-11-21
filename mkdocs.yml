@@ -36,6 +36,10 @@ nav:
   - Demonstration: demonstration.md
   - Developer Guide:
       - developer-guide/index.md
+      - Engineering Decisions: developer-guide/engineering-decisions.md
+      - Configuration & Secrets: developer-guide/configuration-and-secrets.md
+      - Troubleshooting: developer-guide/troubleshooting.md
+      - Clean-room Reproduction: developer-guide/clean-room-reproducibility.md
       - GitHub Codespaces walkthrough: developer-guide/codespaces.md
       - VS Code walkthrough: developer-guide/vs-code.md
       - Local MCP Server: developer-guide/local-mcp-server.md

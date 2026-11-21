@@ -1,5 +1,12 @@
 # Build your own Avery voice scheduling experience
 
+!!! info "Your editor is a choice, not a cloud dependency"
+    Develop from local VS Code (recommended) or GitHub Codespaces (optional). This chapter provisions external services for the full Avery experience; Codespaces is not required. See [Why we chose this architecture](engineering-decisions.md) and [Configuration and secrets](configuration-and-secrets.md).
+
+!!! warning "Keep IBM account credentials separate from runtime secrets"
+    IBM Cloud SSO, Orchestrate CLI activation, API credentials and Code Engine secrets serve different purposes. A successful login does not automatically configure the deployed application.
+
+
 Start here to run Avery in your own cloud environment. Once the full setup is complete, you can select **Call in Browser**, speak with Avery, choose a test appointment and inspect the booking receipt. After you hang up, you can check the CRM note and confirmation letter.
 
 **Your IBM setup is ready when** you can select your Code Engine project and list agents in your own watsonx Orchestrate workspace. Follow [Set up IBM from your terminal](#set-up-ibm-from-your-terminal) for copyable commands. If you prefer the console, start with [your existing account](#i-already-have-ibm-cloud) or [a new account](#im-starting-from-scratch).

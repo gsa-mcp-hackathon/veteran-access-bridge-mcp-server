@@ -1,5 +1,9 @@
 # Run the MCP server in GitHub Codespaces
 
+!!! info "Codespaces is optional"
+    You do not need Codespaces to build or run Veteran Access Bridge. If you already use VS Code on your computer, follow the [recommended local walkthrough](vs-code.md). The MCP commands and synthetic data are the same.
+
+
 Start with a sample Primary Care scheduling request. Then connect the same server to the **VA Facilities sandbox API** and ask for the Topeka facility. You can finish the first checkpoint with a GitHub account that has Codespaces access. For the second, **you supply your own VA Facilities sandbox key**. Both checkpoints run independently of IBM, LiveKit, Deepgram and Supabase.
 
 ## Checkpoint 1 · Which appointments fit the request?

@@ -1,5 +1,12 @@
 # Supabase
 
+??? info "Why Supabase instead of only JSON fixtures?"
+    Local JSON fixtures work well for the introductory MCP tutorial. The connected Avery experience also needs durable synthetic cases, scheduling decisions, CRM activity and receipts. Supabase PostgreSQL provides relational test persistence without pretending to be VA CDW or a VA scheduling system. See [ADR-002](engineering-decisions.md#adr-002-supabase-postgresql-for-synthetic-operational-data).
+
+!!! warning "Synthetic data only — safeguard existing databases"
+    Never put real Veteran records in the demonstration database. Review the migration scope, role privileges and backup before changing an existing hosted test database.
+
+
 **Why Supabase?** The project lacked production VA Corporate Data Warehouse (CDW) and appointment-writer access. Supabase PostgreSQL supplied a controllable **synthetic operational analog** for patient/case context, appointment slots, scheduling requests, CRM interactions and persisted receipts. It is **not** an actual replica or a direct connection to VA CDW.
 
 **Separate concerns:**
@@ -41,3 +48,11 @@ Store per-chunk document IDs, version, source and embedding-model identifier. En
 ---
 
 **Developer Guide:** [Overview](index.md) · [← VHA Lighthouse sandbox](vha-sandbox.md) · [IBM watsonx Orchestrate →](ibm-orchestrate.md)
+
+!!! success "Supabase validation checkpoint"
+    Before testing a connected write, confirm the correct test database, expected schema, restricted role and a known synthetic case through the backend connection. Connectivity alone does not prove fixture readiness.
+
+??? tip "If the connection works but the case is missing"
+    Check the selected project and schema, applied migrations, loaded synthetic fixtures and role permissions. Do not weaken authorization checks to make a missing case appear.
+
+See [Configuration and secrets](configuration-and-secrets.md) and [Troubleshooting](troubleshooting.md) for environment-specific checks.

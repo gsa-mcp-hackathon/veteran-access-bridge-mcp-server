@@ -14,6 +14,7 @@ hide:
 </header>
 
 <h2 class="start-question">What do you want to do?</h2>
+<p class="start-guidance"><strong>VS Code is recommended; GitHub Codespaces is optional.</strong> Both environments use the same MCP server and synthetic test data. Choose your goal first, then use whichever approved development environment works for you. <a href="engineering-decisions/#adr-005-vs-code-first-codespaces-optional">Why this approach?</a></p>
 
 <div class="start-paths">
 <section class="start-card">
@@ -21,13 +22,13 @@ hide:
 <p>Use the included test data to run the server and send a scheduling request end-to-end. No IBM account required.</p></div></header>
 <div class="start-body"><h4>Choose where to run it:</h4>
 <div class="start-choices">
-<details name="mcp-start"><summary><img class="guide-symbol" src="../assets/guide/github.png" alt=""><span>In my browser with GitHub Codespaces</span></summary>
-<div><strong>Start in GitHub</strong><ol><li>Sign in to GitHub and open the <a href="https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server">submission repository</a>.</li><li>Select <b>Code → Codespaces → Create codespace on main</b>. GitHub opens a development environment in your browser.</li><li>When setup finishes, open <b>Terminal → New Terminal</b>. The terminal is where you enter the commands in the guide.</li></ol><a href="codespaces/">Follow the Codespaces walkthrough →</a></div></details>
-<details name="mcp-start"><summary><img class="guide-symbol" src="../assets/guide/vscode.png" alt=""><span>On my computer with VS Code</span></summary>
+<details name="mcp-start"><summary><img class="guide-symbol" src="../assets/guide/vscode.png" alt=""><span>VS Code on my computer (recommended)</span></summary>
 <div><strong>Start on your computer</strong><ol><li>Install <a href="https://code.visualstudio.com/download">VS Code</a>, <a href="https://git-scm.com/downloads">Git</a>, <a href="https://www.python.org/downloads/">Python 3.12</a> and <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>, the project's package manager.</li><li>Open VS Code, choose <b>Terminal → New Terminal</b> and copy the repository to your computer:</li></ol>
 <pre><code>git clone https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server.git</code></pre>
-<p>Choose <b>File → Open Folder</b>, select <b>veteran-access-bridge-mcp-server</b>, then open a new terminal in that folder.</p><a href="vs-code/">Follow the VS Code walkthrough →</a></div></details>
-</div></div><footer><img class="guide-symbol" src="../assets/guide/quick.png" alt=""><b>Quick start</b><span>·</span>Run with the included sample data.</footer></section>
+<p>Choose <b>File → Open Folder</b>, select <b>veteran-access-bridge-mcp-server</b>, then open a new terminal in that folder.</p><a href="vs-code/">Start with the recommended VS Code walkthrough →</a></div></details>
+<details name="mcp-start"><summary><img class="guide-symbol" src="../assets/guide/github.png" alt=""><span>GitHub Codespaces (optional)</span></summary>
+<div><strong>Start in GitHub</strong><ol><li>Sign in to GitHub and open the <a href="https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server">submission repository</a>.</li><li>Select <b>Code → Codespaces → Create codespace on main</b>. GitHub opens a development environment in your browser.</li><li>When setup finishes, open <b>Terminal → New Terminal</b>. The terminal is where you enter the commands in the guide.</li></ol><a href="codespaces/">Follow the Codespaces walkthrough →</a></div></details>
+</div></div><footer><img class="guide-symbol" src="../assets/guide/quick.png" alt=""><b>Quick start</b><span>·</span>VS Code recommended; Codespaces optional.</footer></section>
 
 <section class="start-card start-voice">
 <header><img class="guide-symbol" src="../assets/guide/waveform.png" alt=""><div><h3>I want to build the full Avery voice scheduling experience.</h3>
@@ -44,5 +45,5 @@ hide:
 
 <nav class="start-resources" aria-label="Developer resources">
 <div><img class="guide-symbol" src="../assets/guide/layers.png" alt=""><strong>What’s included</strong><a href="../mcp-implementation/">MCP server</a><a href="local-mcp-server/">Test data</a><a href="connected-product/">Deployment guides</a><a href="deepeval/">Evaluation (DeepEval)</a><a href="phoenix/">Tracing (Phoenix)</a></div>
-<div><img class="guide-symbol" src="../assets/guide/book.png" alt=""><strong>Other resources:</strong><a href="../solution-architecture/">Architecture →</a><a href="../mcp-implementation/#representative-mcp-contracts">API Reference →</a></div>
+<div><img class="guide-symbol" src="../assets/guide/book.png" alt=""><strong>Other resources:</strong><a href="engineering-decisions/">Why these technologies?</a><a href="configuration-and-secrets/">Configuration and secrets</a><a href="troubleshooting/">Troubleshooting</a><a href="clean-room-reproducibility/">Reproduce &amp; verify</a><a href="../solution-architecture/">Architecture →</a><a href="../mcp-implementation/#representative-mcp-contracts">API Reference →</a></div>
 </nav></div>
