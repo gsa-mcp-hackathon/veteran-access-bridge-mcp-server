@@ -83,3 +83,11 @@ body:has(.vab-start) .md-header__button.md-logo img {content:url("../assets/guid
  .start-voice > header {padding-block:2%;}
  .start-voice .start-body {padding-block:1.55%;}
 }
+
+/* Environment guidance: visible but secondary to the two goal choices. */
+.vab-start .start-guidance {
+  width:min(90%, 1100px); margin:0 auto 1.1em; padding:.7em 1em;
+  border-left:4px solid #287caa; background:#eff7fd; border-radius:8px;
+  font-size:.82em; color:#193b54; line-height:1.48;
+}
+.vab-start .start-guidance a {color:#095990; font-weight:700;}

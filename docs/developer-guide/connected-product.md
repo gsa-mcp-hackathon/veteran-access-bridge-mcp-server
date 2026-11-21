@@ -1,5 +1,12 @@
 # Run over HTTP and connect services
 
+!!! info "VS Code or Codespaces: same deployed architecture"
+    VS Code is the recommended development environment; Codespaces is optional. Neither dictates whether IBM, Supabase, LiveKit or Deepgram is used. For secret placement, see [Configuration and secrets](configuration-and-secrets.md).
+
+!!! warning "HTTP health is not patient or booking authorization"
+    A healthy endpoint and valid MCP bearer credential establish service connectivity—not verified identity, trusted case scope, consent, slot freshness or authority to create a synthetic booking.
+
+
 ## Try the remote transport on your own computer
 
 Complete the [local setup](local-mcp-server.md) first. With Docker running, use Bash in the repository root. These commands build the submitted code and bind the service to your computer. The bearer key exists in your terminal and container for this run.
@@ -39,3 +46,5 @@ The repository's [.env.example](https://github.com/gsa-mcp-hackathon/veteran-acc
 | Voice connects but booking is refused | Inspect the worker identity, case binding and consent checks. A successful audio session alone provides no booking authority. |
 
 [Review the evaluation evidence](../evaluation/reviewer-index.md) · [Developer guide](index.md)
+
+For documented failure symptoms, see [Troubleshooting and validation checkpoints](troubleshooting.md). For technology rationale, see [Engineering decisions](engineering-decisions.md).

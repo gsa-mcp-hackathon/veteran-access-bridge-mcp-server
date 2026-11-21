@@ -1,5 +1,12 @@
 # Run the MCP server on your computer with VS Code
 
+!!! info "Recommended local development path"
+    VS Code is the default walkthrough for developers who already use an approved local editor. GitHub Codespaces is optional. Both methods run the same synthetic MCP tools and test fixtures.
+
+!!! warning "Workplace-managed computer?"
+    Confirm your organization's policies before installing Git, Python, uv, Docker, or cloud CLIs; cloning code or adding external API credentials. The basic local synthetic test does not require IBM, Supabase, LiveKit or Deepgram.
+
+
 Use this guide if you chose **On my computer with VS Code**. First, you’ll ask the server which sample appointments fit a Primary Care follow-up. Then you’ll use your own VA Facilities sandbox key to look up a facility in Topeka. You can finish the first checkpoint before requesting a key. Neither checkpoint requires IBM, LiveKit, Deepgram or Supabase.
 
 ## Checkpoint 1 · Send a scheduling request

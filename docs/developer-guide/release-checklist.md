@@ -1,3 +1,6 @@
+!!! info "Fresh-install evidence is distinct from historical release evidence"
+    Use the [clean-room reproduction protocol](clean-room-reproducibility.md) before calling the full Avery cloud experience reproducible. The restricted-environment audit could not perform the cloud acceptance gates.
+
 # Release & evidence checklist
 
 - [ ] Record source SHA, Python version, environment and installed package versions.
