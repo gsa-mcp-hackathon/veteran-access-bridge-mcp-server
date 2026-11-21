@@ -26,7 +26,7 @@ hide:
 <details name="mcp-start"><summary><img class="guide-symbol" src="../assets/guide/vscode.png" alt=""><span>On my computer with VS Code</span></summary>
 <div><strong>Start on your computer</strong><ol><li>Install <a href="https://code.visualstudio.com/download">VS Code</a>, <a href="https://git-scm.com/downloads">Git</a>, <a href="https://www.python.org/downloads/">Python 3.12</a> and <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>, the project's package manager.</li><li>Open VS Code, choose <b>Terminal → New Terminal</b> and copy the repository to your computer:</li></ol>
 <pre><code>git clone https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server.git</code></pre>
-<p>Choose <b>File → Open Folder</b>, select <b>veteran-access-bridge-mcp-server</b>, then open a new terminal in that folder.</p><a href="local-mcp-server/#install-and-discover">Install the server and send your first request →</a></div></details>
+<p>Choose <b>File → Open Folder</b>, select <b>veteran-access-bridge-mcp-server</b>, then open a new terminal in that folder.</p><a href="vs-code/">Follow the VS Code walkthrough →</a></div></details>
 </div></div><footer><img class="guide-symbol" src="../assets/guide/quick.png" alt=""><b>Quick start</b><span>·</span>Run with the included sample data.</footer></section>
 
 <section class="start-card start-voice">

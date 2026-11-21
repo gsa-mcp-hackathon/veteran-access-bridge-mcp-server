@@ -37,6 +37,7 @@ nav:
   - Developer Guide:
       - developer-guide/index.md
       - GitHub Codespaces walkthrough: developer-guide/codespaces.md
+      - VS Code walkthrough: developer-guide/vs-code.md
       - Local MCP Server: developer-guide/local-mcp-server.md
       - HTTP and connected services: developer-guide/connected-product.md
       - VHA Sandbox: developer-guide/vha-sandbox.md
