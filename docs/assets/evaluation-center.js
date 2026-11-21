@@ -1,6 +1,25 @@
 (async function () {
   const explorer = document.querySelector(".ec-explorer");
   if (!explorer) return;
+  const header = document.querySelector(".md-header__inner");
+  if (header) {
+    const navigation = document.createElement("nav");
+    navigation.className = "ec-topnav";
+    navigation.setAttribute("aria-label", "Main sections");
+    for (const [name, path] of [
+      ["Solution & Architecture", "../solution-architecture/"], ["MCP Implementation", "../mcp-implementation/"],
+      ["Security & Governance", "../security-governance/"], ["Evaluation & Results", "./"],
+      ["Demonstration", "../demonstration/"], ["Developer Guide", "../developer-guide/"],
+      ["GitHub", "https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server"]
+    ]) {
+      const link = document.createElement("a");
+      link.href = path;
+      link.textContent = name;
+      if (path === "./") link.setAttribute("aria-current", "page");
+      navigation.append(link);
+    }
+    header.append(navigation);
+  }
   const select = explorer.querySelector("select");
   const source = document.getElementById("ec-source");
 
@@ -51,6 +70,16 @@
       const r = records.find(row => row.ID === select.value);
       document.getElementById("ec-expected").textContent = describe(r.ID, r.Expected);
       document.getElementById("ec-observed").textContent = describe(r.ID, r.Observed);
+      const verdict = document.getElementById("ec-verdict");
+      verdict.textContent = r.Result === "PASS" ? "Matched" : r.Result;
+      verdict.dataset.matched = String(r.Result === "PASS");
+      document.getElementById("ec-values").textContent = "Expected: " + r.Expected + " · Observed: " + r.Observed;
+      if (r.ID === "6") {
+        for (const [id, cell] of [["ec-expected", r.Expected], ["ec-observed", r.Observed]]) {
+          const [eligible, reasons] = JSON.parse(cell);
+          document.getElementById(id).textContent = (eligible ? "Eligible" : "Ineligible") + " with " + reasons.length + " mismatch reasons.";
+        }
+      }
       source.textContent = (r.Result === "PASS" ? "Matched" : r.Result) + " · Row " + r.ID + " · " + r["Fixture case"] + " · " + r["MCP tool"];
     }
     show();
