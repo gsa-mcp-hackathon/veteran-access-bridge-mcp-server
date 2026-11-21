@@ -3,7 +3,15 @@
   if (!explorer) return;
   const tabs = Array.from(explorer.querySelectorAll('[role="tab"]'));
   const dashboard = explorer.closest(".ec");
-  function activateTab(tab) {
+  const tabHashes = {
+    "tab-gold": "#gold-questions",
+    "tab-backend": "#mcp-backend",
+    "tab-voice": "#agent-voice",
+    "tab-security": "#security-evaluation",
+    "tab-results": "#all-results"
+  };
+  const hashToTab = new Map(tabs.map(t => [tabHashes[t.id], t]));
+  function activateTab(tab, updateUrl = false) {
     for (const item of tabs) {
       const active = item === tab;
       item.setAttribute("aria-selected", String(active));
@@ -11,15 +19,24 @@
       document.getElementById(item.getAttribute("aria-controls")).hidden = !active;
     }
     dashboard.classList.toggle("ec-expanded", tab.id !== "tab-gold");
+    if (updateUrl && location.hash !== tabHashes[tab.id]) {
+      history.replaceState(null, "", tabHashes[tab.id]);
+    }
   }
+  function activateFromHash() {
+    const target = hashToTab.get(location.hash);
+    if (target) activateTab(target);
+  }
+  window.addEventListener("hashchange", activateFromHash);
+  activateFromHash();
   for (const [index, tab] of tabs.entries()) {
-    tab.addEventListener("click", () => activateTab(tab));
+    tab.addEventListener("click", () => activateTab(tab, true));
     tab.addEventListener("keydown", event => {
       const positions = {ArrowLeft: index - 1, ArrowRight: index + 1, Home: 0, End: tabs.length - 1};
       if (!(event.key in positions)) return;
       event.preventDefault();
       const next = tabs[(positions[event.key] + tabs.length) % tabs.length];
-      activateTab(next);
+      activateTab(next, true);
       next.focus();
     });
   }
@@ -29,6 +46,12 @@
 
   const select = explorer.querySelector("select");
   const source = document.getElementById("ec-source");
+  const questionCount = document.createElement("span");
+  questionCount.id = "ec-question-count";
+  questionCount.className = "ec-question-count";
+  questionCount.setAttribute("aria-live", "polite");
+  select.closest(".ec-choice").after(questionCount);
+
 
   // The matrix stores JSON arrays inside CSV cells, including escaped quotes and commas.
   function parseCSV(text) {
@@ -75,6 +98,7 @@
     select.value = records.some(r => r.ID === "6") ? "6" : records[0].ID;
     function show() {
       const r = records.find(row => row.ID === select.value);
+      questionCount.textContent = "Question " + (records.indexOf(r) + 1) + " of " + records.length;
       document.getElementById("ec-expected").textContent = describe(r.ID, r.Expected);
       document.getElementById("ec-observed").textContent = describe(r.ID, r.Observed);
       const verdict = document.getElementById("ec-verdict");
@@ -95,5 +119,6 @@
   } catch {
     select.replaceChildren(new Option("Question matrix unavailable"));
     source.textContent = "Open the CSV below to inspect the original records.";
+    questionCount.textContent = "Recorded questions remain available in the evidence CSV.";
   }
 })();
