@@ -1,57 +1,30 @@
-# Evaluation & Results
+---
+title: Evaluation Command Center
+hide:
+  - toc
+---
 
-[Review the Primary Care evidence and download both result tables](reviewer-index.md).
+<link rel="stylesheet" href="../stylesheets/evaluation-center.css">
 
-Separate checks, each with its **original date and denominator**. These results are **not combined into one pass rate**, and all data is synthetic.
-
-<div class="ev2-cards">
-<a class="ev2-card" href="method-gold/"><strong>16 / 16</strong><span>Gold answers matched</span><small>Nov 19 · Primary Care fixture</small></a>
-<a class="ev2-card" href="method-gold/#phoenix-grouped-control-checks"><strong>135 / 135</strong><span>Local control checks passed</span><small>Nov 19 · six suites</small></a>
-<a class="ev2-card" href="validation-agent/#mcp-server-validation"><strong>1,380</strong><span>Backend tests passed</span><small>Nov 16 · Linux run, 19 skipped</small></a>
-<a class="ev2-card ev2-gap" href="validation-agent/#what-remains-open"><strong>5</strong><span>Open evidence areas</span><small>Security, reliability, delivery</small></a>
-</div>
-
-## How we evaluate
-
-<div class="ev2-flow">
-<div><b>1 · Design</b><span>Gold questions, synthetic fixtures, tool contracts, refusal cases</span></div>
-<i>→</i>
-<div><b>2 · Execute</b><span>FastMCP fixtures, IBM watsonx Orchestrate, DeepEval, voice trials</span></div>
-<i>→</i>
-<div><b>3 · Compare</b><span>Expected vs. observed, with failures and evidence limits kept</span></div>
-</div>
-
-## Results at a glance
-
-| Area | Date | Scope | Result | Details |
-|---|---|---|---|---|
-| Gold questions | Nov 19 | Local Primary Care fixture | <span class="ev2-badge ok">16/16 matched</span> | [Method & gold](method-gold.md) |
-| Control checks | Nov 19 | Six deterministic local suites | <span class="ev2-badge ok">135/135 passed</span> | [Method & gold](method-gold.md#phoenix-grouped-control-checks) |
-| MCP contracts and regression | Nov 15–16 | Tool schemas, scope, backend tests | <span class="ev2-badge ok">passed</span> <span class="ev2-badge warn">1 Windows-only failure (Nov 18)</span> | [Validation](validation-agent.md#mcp-server-validation) |
-| IBM and DeepEval | Oct–Nov | Bounded agent and voice runs | <span class="ev2-badge ok">recorded</span> <span class="ev2-badge warn">metadata gaps</span> | [Agent evidence](validation-agent.md#ibm-watsonx-orchestrate-and-deepeval) |
-| End-to-end booking | Nov 16 | One synthetic voice trial at a pinned revision | <span class="ev2-badge ok">BOOKED_SIMULATED</span> | [End-to-end](validation-agent.md#end-to-end-voice-trial) |
-| Security and adversarial | Nov 15–19 | Probes, voice sample, reconciliation | <span class="ev2-badge warn">bounded; gaps open</span> | [Security](security-adversarial.md) |
-
-## Timeline
-
-<div class="ev2-timeline">
-<div><small>OCT 2026</small><b>Baseline</b><span>10-question gold set, M6.3 runs</span></div>
-<div><small>NOV 15–16</small><b>Server validation</b><span>Contracts, probes, regression</span></div>
-<div><small>NOV 16</small><b>Voice trial</b><span>Synthetic booking receipt</span></div>
-<div><small>NOV 19</small><b>Judge review</b><span>16 gold answers, 135 checks</span></div>
-</div>
-
-??? note "Reproduce a read-only check"
-
-    Use the [Developer Guide](../developer-guide/index.md) for the local server, MCP Inspector, IBM CLI, DeepEval and optional Phoenix setup.
-
-    ```json
-    {"name":"get_scheduling_encounter","arguments":{"case_id":"DEMO-PC-5000999-001"}}
-    ```
-
-    This fixture returns structured scheduling evidence and does **not** book an appointment. The `BOOKED_SIMULATED` receipt belongs to the separate, dated voice trial.
-
-!!! info "Scope"
-    A registered tool is not proof that every operation was exercised. No unverified Phoenix score is shown. Links to evidence repositories may require reviewer access.
-
-**Next:** [Method & gold questions](method-gold.md) · [Demonstration](../demonstration.md)
+<div class="ec" id="overview">
+<nav class="ec-rail" aria-label="Evaluation sections"><strong>Evaluation &amp; Results</strong><a href="#overview" aria-current="page">Overview Dashboard</a><a href="#gold-questions">Gold Question Explorer</a><a href="validation-agent/#mcp-server-validation">MCP & Backend Evaluation</a><a href="validation-agent/#ibm-watsonx-orchestrate-and-deepeval">Agent & Voice Evaluation</a><a href="security-adversarial/">Security & Adversarial Testing</a><a href="reviewer-index/">Evidence Library</a></nav>
+<div class="ec-main">
+<header class="ec-hero"><small>EVALUATION &amp; RESULTS</small><h1>Evaluation Command Center</h1><p>From a scheduling question to a verified appointment: explore what the MCP server returned and what Avery did during a call.</p><div>October–November 2026 &nbsp; · &nbsp; Synthetic data &nbsp; · &nbsp; <a href="#boundaries">Evaluation scope</a></div></header>
+<section class="ec-metrics" aria-label="Recorded outcomes">
+<a href="#gold-questions"><b>16 / 16</b><strong>Gold answers matched</strong><small>Nov 19 · Primary Care</small></a><a href="method-gold/#phoenix-grouped-control-checks"><b>135 / 135</b><strong>Local control checks passed</strong><small>Nov 19 · Six suites</small></a><a href="validation-agent/#mcp-server-validation"><b>1,380</b><strong>Backend tests passed</strong><small>Nov 16 · Linux · 19 skipped</small></a><a href="validation-agent/#end-to-end-voice-trial"><b>1</b><strong>Synthetic booking verified</strong><small>Nov 16 · Pinned voice trial</small></a></section>
+<div class="ec-grid"><div class="ec-work"><div class="ec-pair"><section class="ec-box"><h2>Evaluation coverage</h2>
+<a class="ec-bar" href="#gold-questions">Gold question accuracy<b>16 / 16</b><i aria-hidden="true"></i></a><a class="ec-bar" href="method-gold/#phoenix-grouped-control-checks">Deterministic controls<b>135 / 135</b><i aria-hidden="true"></i></a><a class="ec-bar" href="validation-agent/#mcp-server-validation">MCP contract probes<b>108 / 108</b><i aria-hidden="true"></i></a><a class="ec-bar" href="security-adversarial/">Hostile argument probes<b>76 / 76</b><i aria-hidden="true"></i></a></section>
+<section class="ec-box"><h2>What was evaluated</h2><ul><li>Tool outputs against fixture facts</li><li>Tool contracts and access controls</li><li>IBM agent behavior and voice turns</li><li>Booking receipt and CRM persistence</li></ul><a href="reviewer-index/">Inspect the evidence →</a></section></div>
+<section class="ec-box ec-explorer" id="gold-questions" data-source="evidence/primary-care-mcp-gold.csv"><nav aria-label="Related results"><a href="#gold-questions" aria-current="location">Gold questions</a><a href="validation-agent/#mcp-server-validation">MCP &amp; backend</a><a href="validation-agent/#end-to-end-voice-trial">Agent &amp; voice</a><a href="security-adversarial/">Security</a></nav>
+<h2>Gold Question Explorer</h2><p>Select a question to compare the expected fields with the MCP tool’s recorded output.</p>
+<label for="ec-select">Recorded question</label><select id="ec-select" disabled><option>Loading the gold matrix…</option></select>
+<div id="ec-record" aria-live="polite"><div class="ec-answers"><div><strong>Expected answer</strong><p id="ec-expected"></p></div><div><strong>Observed result</strong><p id="ec-observed"></p></div></div><p id="ec-source"></p></div>
+<a href="evidence/primary-care-mcp-gold.csv">Download all 16 questions (CSV)</a> · <a href="method-gold/">How scoring works</a></section></div>
+<section class="ec-box ec-journey"><h2>Evaluation journey</h2><ol>
+<li><small>October 2026</small><h3>Define the gold questions</h3><p>The first 10 questions established the fixture and expected answers. This was a design milestone.</p></li>
+<li><small>November 15–16</small><h3>Check the server contracts</h3><p>Regression tests checked the backend. Separate probes exercised tool inputs and rejection behavior on the 25-tool configuration.</p></li>
+<li><small>November 16</small><h3>Follow a booking to the database</h3><p>Five IBM-selected tool types appeared in one trial. Database reads verified one simulated appointment and one host-written CRM note.</p><a href="validation-agent/#end-to-end-voice-trial">View the booking evidence →</a></li>
+<li><small>November 19</small><h3>Compare each recorded answer</h3><p>The Primary Care matrix covers 16 questions. Six local suites contributed 135 control checks.</p></li></ol></section></div>
+<aside class="ec-boundary" id="boundaries"><h2>Open evaluation boundaries</h2><p>Each figure has its own date, configuration and denominator. The November 18 Windows run recorded one failure. IBM and DeepEval reports cover historical agent configurations. Hosted concurrency, extended adversarial coverage, later-revision acceptance, final delivery evidence and independent reproduction remain open.</p><a href="validation-agent/#what-remains-open">Inspect open gaps</a> · <a href="security-adversarial/">Security reconciliation</a> · <a href="../developer-guide/clean-room-reproducibility/">Reproduction status</a></aside>
+</div></div>
+<script src="../assets/evaluation-center.js" defer></script>

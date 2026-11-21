@@ -29,9 +29,9 @@ nav:
   - Security & Governance: security-governance.md
   - Evaluation & Results:
       - evaluation/index.md
-      - Review the evidence: evaluation/reviewer-index.md
-      - Method & Gold Questions: evaluation/method-gold.md
-      - Validation & Agent Evidence: evaluation/validation-agent.md
+      - Evidence Library: evaluation/reviewer-index.md
+      - Gold Questions & Method: evaluation/method-gold.md
+      - MCP, Backend & Agent Evidence: evaluation/validation-agent.md
       - Security & Adversarial: evaluation/security-adversarial.md
   - Demonstration: demonstration.md
   - Developer Guide:
