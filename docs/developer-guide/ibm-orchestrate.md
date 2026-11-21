@@ -1,4 +1,6 @@
-# IBM watsonx Orchestrate
+# IBM watsonx Orchestrate evaluation reference
+
+For a new installation, follow [Connect Avery to your MCP server](avery-agent.md). This page covers the historical evaluation runners.
 
 **Important:** Hosted evaluation commands require authorized IBM credentials and a known environment. Historical M6.3/M6.4 configurations are not equivalent to the later consolidated 29-tool server and 21-tool Avery attachment configuration.
 

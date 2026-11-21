@@ -168,7 +168,7 @@ orchestrate toolkits list
 
 **Check:** enter the key when prompted. Both list commands should return successfully. A new workspace may have no custom agents or toolkits yet. If the token expires, repeat the activation command. If activation succeeds but listing is forbidden, have the instance owner check your access to that specific workspace.
 
-At this point you have verified both IBM connections. Continue to [prepare the Supabase test database](supabase.md) for scheduling records. Voice calls become available after you also connect the agent, backend, speech services and browser app.
+Both IBM connections are ready. If you started with IBM, complete [the test database](supabase.md) and [VA access](vha-sandbox.md) before attempting the connected call.
 
 ## Record your IBM setup
 
@@ -192,4 +192,4 @@ Keep the following in your own setup notes. You will use these labels again when
 | **Connect LiveKit, Deepgram and the browser app** | A browser caller and the voice worker join the same session, and speech works in both directions. |
 | **Complete a test appointment** | Verify identity, choose a time, confirm, and inspect the persisted receipt. End the call and check the CRM note and letter. |
 
-**Continue with [Prepare the Supabase test database](supabase.md).** For the complete set of service connections, see [the connected-product guide](connected-product.md#reproduce-the-connected-voice-product).
+**Continue with [Connect Avery and the MCP toolkit](avery-agent.md).**

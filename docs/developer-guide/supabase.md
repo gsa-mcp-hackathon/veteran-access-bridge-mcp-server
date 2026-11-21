@@ -1,58 +1,71 @@
-# Supabase
+# Prepare the Supabase scheduling database
 
-??? info "Why Supabase instead of only JSON fixtures?"
-    Local JSON fixtures work well for the introductory MCP tutorial. The connected Avery experience also needs durable synthetic cases, scheduling decisions, CRM activity and receipts. Supabase PostgreSQL provides relational test persistence without pretending to be VA CDW or a VA scheduling system. See [ADR-002](engineering-decisions.md#adr-002-supabase-postgresql-for-synthetic-operational-data).
+For the local MCP tutorial, use the bundled records. For the connected Avery call, create a dedicated Supabase project for synthetic cases, slots and CRM records. Run these commands in **Bash**, at the backend repository root, with the PostgreSQL client (`psql`) installed.
 
-!!! warning "Synthetic data only — safeguard existing databases"
-    Never put real Veteran records in the demonstration database. Review the migration scope, role privileges and backup before changing an existing hosted test database.
+??? info "Why Supabase?"
+    The voice call and after-call work need the same durable appointment and receipt. Supabase hosts the demonstration’s PostgreSQL tables. VA facility and patient information have separate access paths. [Engineering decision](engineering-decisions.md#adr-002-supabase-postgresql-for-synthetic-operational-data)
 
+!!! important "Read this before provisioning for a full voice call"
+    The submitted backend checks the Supabase project reference against a project fixed in its database boundary. A new project can reproduce the SQL schema; setting a new connection URI alone cannot authorize the application to use it. An independent hosted deployment needs a reviewed adaptation of that boundary and its tests. Keep the project, schema, restricted-role and TLS checks in place. [Connection checks in the submission](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/src/veteran_access_bridge/adapters/supabase_scheduling_connection.py)
 
-**Why Supabase?** The project lacked production VA Corporate Data Warehouse (CDW) and appointment-writer access. Supabase PostgreSQL supplied a controllable **synthetic operational analog** for patient/case context, appointment slots, scheduling requests, CRM interactions and persisted receipts. It is **not** an actual replica or a direct connection to VA CDW.
+### 1. Connect to a fresh test database
 
-**Separate concerns:**
+Create an empty project in your Supabase account. Open **Connect** and copy the PostgreSQL connection details for your administrative role. Choose the direct connection if your network supports it or the session pooler for IPv4 connectivity. Set the displayed host, port and database user below. Supply the database password when prompted by PostgreSQL or use a private PostgreSQL password file. [Supabase connection instructions](https://supabase.com/docs/guides/database/connecting-to-postgres)
 
-- **Relational layer:** PostgreSQL tables, keys, integrity constraints and transactional state for synthetic appointments and CRM.
-- **Security:** restricted database roles, enforced Row-Level Security (RLS) where applicable, scoped service credentials, idempotency/audit behavior.
-- **Knowledge/RAG:** optional `pgvector` extension plus document/chunk/embedding storage and source/provenance metadata; retrieval must be validated and cannot issue scheduling authority.
-
-### PostgreSQL / Supabase CLI inspection
-
-```powershell
-# Install Supabase CLI using supported method from official docs (e.g. npm via npx)
-npx supabase --version
-# Optional local development only, requires Docker
-npx supabase start
-npx supabase status
-
-# Read-only SQL verification against an AUTHORIZED synthetic database
-# Requires locally installed psql and an approved connection URI from your secret store
-$env:SYNTHETIC_DATABASE_URL = '<private synthetic connection URI>'
-psql "$env:SYNTHETIC_DATABASE_URL" -c "select current_database(), current_user;"
-psql "$env:SYNTHETIC_DATABASE_URL" -c "select table_schema, table_name from information_schema.tables where table_schema='public' order by table_name;"
-psql "$env:SYNTHETIC_DATABASE_URL" -c "select extname from pg_extension where extname='vector';"
+```bash
+read -rp "Database host: " PGHOST
+read -rp "Database port: " PGPORT
+read -rp "Database user: " PGUSER
+export PGHOST PGPORT PGUSER PGDATABASE=postgres PGSSLMODE=require
+psql -X -c "select current_database(), current_user, to_regnamespace('vab_test');"
 ```
 
-The project’s actual SQL migrations and permissions should be applied from the **reviewed database migration directory** (`db/` in the backend) rather than invented `CREATE TABLE` statements. **Do not** run destructive migrations against hosted/demo data without approval, backup and review. `supabase start` is an illustrative *new local instance*, not proof that the hosted project can be reconstructed from a generic command.
+**Check:** confirm the project host and user. The last column should be empty. If the schema exists, select a fresh project for the rehearsal.
 
-### Safe RAG design / inspection
+### 2. Apply the scheduling and CRM migrations
 
-```sql
--- Read-only checks after the project's reviewed knowledge schema is installed
-SELECT extname FROM pg_extension WHERE extname = 'vector';
-SELECT table_name FROM information_schema.tables
-WHERE table_schema = 'public' AND (table_name ILIKE '%kb%' OR table_name ILIKE '%chunk%' OR table_name ILIKE '%embed%');
+Copy this whole block. It runs in a subshell and stops at the first SQL error. This is the hosted-schema order used by the [repository database check](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/.github/workflows/database-schema.yml). The migrations assume the standard Supabase roles exist.
+
+```bash
+(
+  set -e
+  for file in db/schema/00{1,3}_*.sql; do
+    psql -X -v ON_ERROR_STOP=1 -f "$file"
+  done
+  for file in supabase/migrations/*.sql; do
+    psql -X --single-transaction -v ON_ERROR_STOP=1 -f "$file"
+  done
+  psql -X -v ON_ERROR_STOP=1 -f db/schema/005_crm_test_candidate.sql
+)
 ```
 
-Store per-chunk document IDs, version, source and embedding-model identifier. Ensure source access checks at retrieval time; never allow retrieved document instructions to grant identity, consent or authority. The diagram's `kb_documents`, `kb_chunks` and `kb_sources` are **architectural labels** and are not certified deployed schemas. Verify the real Supabase schema before claiming operational RAG. [Supabase CLI](https://supabase.com/docs/guides/local-development/cli/getting-started) · [pgvector](https://supabase.com/docs/guides/database/extensions/pgvector).
+**Check:** run `psql -X -c '\dt vab_test.*'`. Look for `appointment_request`, `slot`, `appointment`, `crm_interaction`, `crm_follow_up` and `crm_event`. If a migration reports an existing role or table, identify the last successful file before attempting a retry. Some migrations intentionally refuse a second application.
 
----
+### 3. Connect the backend and check fixture readiness
 
-**Developer Guide:** [Overview](index.md) · [← VHA Lighthouse sandbox](vha-sandbox.md) · [IBM watsonx Orchestrate →](ibm-orchestrate.md)
+Migration 016 creates restricted role scaffolding with login disabled. Have the database owner provision the runtime login for this test environment under the intended restricted grants. Store its private connection URI on the backend as `VAB_SUPABASE_TEST_DATABASE_URL`. The administrative connection used above is for migration only.
 
-!!! success "Supabase validation checkpoint"
-    Before testing a connected write, confirm the correct test database, expected schema, restricted role and a known synthetic case through the backend connection. Connectivity alone does not prove fixture readiness.
+Use the restricted connection and the runtime’s permitted role to check whether the required rows are visible. In a private terminal with the backend connection value already loaded, run:
 
-??? tip "If the connection works but the case is missing"
-    Check the selected project and schema, applied migrations, loaded synthetic fixtures and role permissions. Do not weaken authorization checks to make a missing case appear.
+```bash
+psql -X -v ON_ERROR_STOP=1 "$VAB_SUPABASE_TEST_DATABASE_URL" \
+  -c 'SET ROLE vab_test_scheduling_writer' \
+  -c 'SELECT count(*) AS linked_cases FROM vab_test.scheduling_case_link' \
+  -c 'SELECT count(*) AS slots FROM vab_test.slot'
+```
 
-See [Configuration and secrets](configuration-and-secrets.md) and [Troubleshooting](troubleshooting.md) for environment-specific checks.
+**Before the first call:** an empty schema needs an authorized synthetic patient, linked request and matching inventory for the chosen facility. The submitted schema migrations do not seed the hosted demo population. The bundled local JSON example is a separate data source. If you have only a fresh clone and empty tables, pause the booking walkthrough here until your test data owner supplies a prepared fixture. A nonzero row count alone does not prove a specific case can be booked.
+
+**If the login works but the query fails:** check membership in the restricted role and its grants. For a zero count, check the project, fixture load and row visibility. [Configuration and secrets](configuration-and-secrets.md)
+
+### 4. Prepare a rehearsal identity in an authorized test environment
+
+The repository includes a fixture helper for Judy Morrison. It creates a synthetic patient, open Primary Care request and case link. It does not populate slots or create an appointment. Use it only after the test environment has the approved project binding, the restricted runtime connection and permission for fixture writes. In that environment, run the preview first:
+
+```bash
+uv run --no-sync python scripts/prepare_simple_voice_patient.py
+```
+
+**Check:** look for `"applied": false` and `"appointment_count_unchanged": true`. The preview exercises the writes inside a rolled-back transaction. To retain that fixture in your disposable database, repeat with `--apply`. A booking rehearsal additionally requires eligible slot bindings for the case. If the helper reports “Approved Supabase project required,” revisit the project boundary above.
+
+Continue with [VA sandbox reads](vha-sandbox.md), then [IBM Cloud setup](avery-ibm-start.md).
