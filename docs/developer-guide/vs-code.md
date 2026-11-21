@@ -8,7 +8,7 @@ Use this guide if you chose **On my computer with VS Code**. First, you’ll ask
 
 1. Install [Visual Studio Code](https://code.visualstudio.com/download), [Git](https://git-scm.com/downloads) and [uv](https://docs.astral.sh/uv/getting-started/installation/) for your operating system. Open or restart VS Code after installation. The setup command below lets uv obtain Python 3.12 if needed.
 2. In VS Code, press **Ctrl+Shift+P** on Windows/Linux or **Command+Shift+P** on macOS. Type **Git: Clone**, select that command, and paste this repository URL:
-   
+
    `https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server.git`
 3. Choose a parent folder where you keep projects, then select **Open** when the clone completes. If you already cloned this submission, use **File → Open Folder** and select **veteran-access-bridge-mcp-server**.
 4. Select **Terminal → New Terminal**. Commands below go in this panel at the bottom of VS Code. The first checkpoint uses identical commands on Windows, macOS and Linux.
