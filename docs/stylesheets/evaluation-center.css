@@ -40,3 +40,38 @@ body:has(.ec) .md-search,body:has(.ec) .md-header__source,body:has(.ec) .vab-toc
 .ec .ec-box ul{margin-left:0}
 .ec .ec-box ul li{margin-left:0}
 @media(min-width:1051px){.ec-rail strong{padding-left:38px}.ec-rail{background-color:#f3f7fc}}
+.ec-explorer [role="tablist"]{justify-content:flex-start}
+.ec-explorer [role="tab"]{flex:1 1 auto;padding:10px 8px;color:#102945;background:transparent;font:600 14px/1.3 "Segoe UI",Arial,sans-serif;cursor:pointer;border-bottom:2px solid transparent}
+.ec-explorer [role="tab"][aria-selected="true"]{color:white;background:#103d6c;border-radius:7px 7px 0 0;border-color:#032544}
+.ec-explorer [role="tab"]:focus-visible{outline:3px solid #4faee3;outline-offset:-3px}
+.ec [role="tabpanel"][hidden]{display:none}
+.ec-explorer [role="tab"]::before{display:inline-block;content:"";width:18px;height:18px;margin-right:7px;vertical-align:middle;background:center/contain no-repeat}
+#tab-gold::before{background-image:url("../assets/evaluation-ui/list.png")}#tab-backend::before{background-image:url("../assets/evaluation-ui/code.png")}#tab-voice::before{background-image:url("../assets/evaluation-ui/voice.png")}#tab-security::before{background-image:url("../assets/evaluation-ui/shield.png")}#tab-results::before{background-image:url("../assets/evaluation-ui/chart.png")}
+.ec-explorer [role="tab"][aria-selected="true"]::before{filter:grayscale(1) invert(1);mix-blend-mode:screen}
+.ec-pills,.ec-columns,.ec-results{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:12px;margin:12px 0}.ec-pills>div{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:9px 12px 9px 39px;border:1px solid #bcdfc6;border-radius:7px;background:#f1f9f3 url("../assets/evaluation-ui/recorded.png") 10px center/21px no-repeat}.ec-pills span{font-size:13px}.ec-mini{border:1px solid #cfdae9;border-radius:8px;padding:12px;background:#fafcff}.ec .ec-mini h3{font-size:16px}.ec-mini li,.ec-mini p{font-size:14px}.ec .ec-mini ul{margin-top:8px}.ec-note{background:#ecf4fd;border:1px solid #c4d8ef;border-radius:6px;padding:8px}.ec-report{font-size:13px}.ec-steps{display:flex;flex-wrap:wrap;gap:6px;padding:0;list-style:none}.ec .ec-steps li{background:#e7f5eb;border:1px solid #c2dfca;border-radius:5px;padding:6px;margin:0}.ec-results{grid-template-columns:minmax(0,3fr) minmax(0,1fr)}.ec-scroll{overflow:auto}.ec .ec-scroll table{margin:0;width:100%;font-size:13px}.ec-expanded .ec-journey li p,.ec-expanded .ec-journey li a{display:none}.ec-expanded .ec-journey li{display:flex;gap:12px;align-items:center;margin-bottom:9px}.ec-expanded .ec-journey li h3{flex:1}.ec-expanded .ec-journey li small{min-width:78px;text-align:center}
+@media(min-width:721px){.ec-expanded .ec-work{display:contents}.ec-expanded .ec-pair{grid-area:1/1}.ec-expanded .ec-journey{grid-area:1/2}.ec-expanded .ec-explorer{grid-area:2/1/3/-1}.ec-expanded .ec-explorer [role="tab"]{flex:0 1 180px}}
+@media(max-width:720px){.ec-pills,.ec-columns,.ec-results{grid-auto-flow:row;grid-template-columns:1fr}.ec-pills{grid-template-columns:repeat(2,minmax(0,1fr))}.ec-explorer [role="tab"]{padding:7px;font-size:13px}}
+/* The wider reference uses a compact summary above the full-width result panel. */
+.md-typeset .ec :is(h2,h3){margin-block:0}
+.ec .ec-journey ol li{margin-inline:0}
+.ec-expanded .ec-journey ol{margin-block:10px 0}
+.ec-expanded .ec-journey ol li{margin-block:0 6px}
+.ec-expanded .ec-journey ol li h3{margin-block:0!important}
+.ec-pills>div:has(span:empty){display:none}
+#panel-security .ec-pills>div:last-child{background-color:#fff6e4;background-image:url("../assets/evaluation-ui/warning.png");border-color:#edcd92}
+#panel-backend .ec-pills>div:nth-child(2){background-color:#eef5ff;background-image:url("../assets/evaluation-ui/booking.png");border-color:#c4daef}
+.ec .ec-scroll td:nth-child(4){font-weight:700;color:#175d3a}
+@media(min-width:1550px){
+.md-content__inner:has(.ec){max-width:1700px!important}
+.ec{grid-template-columns:15% minmax(0,1fr)}
+.ec-hero{min-height:135px;padding-block:14px}
+.ec-metrics{margin:6px 0 15px}
+.ec-metrics a{min-height:88px;padding-block:8px}
+.ec .ec-box{padding:12px 16px}
+.ec-explorer nav{margin:-12px -16px 10px}
+.ec-expanded .ec-grid{gap:14px}
+.ec-expanded .ec-bar{margin-top:7px}
+.ec .ec-mini ul li{margin-block:4px}
+.ec .ec-journey li small{white-space:nowrap}
+.ec-expanded .ec-journey li small{flex:none}
+}

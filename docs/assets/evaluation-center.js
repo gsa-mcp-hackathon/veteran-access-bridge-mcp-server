@@ -20,6 +20,32 @@
     }
     header.append(navigation);
   }
+  const tabs = Array.from(explorer.querySelectorAll('[role="tab"]'));
+  const dashboard = explorer.closest(".ec");
+  function activateTab(tab) {
+    for (const item of tabs) {
+      const active = item === tab;
+      item.setAttribute("aria-selected", String(active));
+      item.tabIndex = active ? 0 : -1;
+      document.getElementById(item.getAttribute("aria-controls")).hidden = !active;
+    }
+    dashboard.classList.toggle("ec-expanded", tab.id !== "tab-gold");
+  }
+  for (const [index, tab] of tabs.entries()) {
+    tab.addEventListener("click", () => activateTab(tab));
+    tab.addEventListener("keydown", event => {
+      const positions = {ArrowLeft: index - 1, ArrowRight: index + 1, Home: 0, End: tabs.length - 1};
+      if (!(event.key in positions)) return;
+      event.preventDefault();
+      const next = tabs[(positions[event.key] + tabs.length) % tabs.length];
+      activateTab(next);
+      next.focus();
+    });
+  }
+  for (const link of dashboard.querySelectorAll('a[href="#gold-questions"], a[href="#overview"]')) {
+    link.addEventListener("click", () => activateTab(tabs[0]));
+  }
+
   const select = explorer.querySelector("select");
   const source = document.getElementById("ec-source");
 
