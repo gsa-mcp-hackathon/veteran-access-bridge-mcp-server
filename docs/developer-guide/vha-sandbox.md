@@ -30,4 +30,4 @@ Invoke-WebRequest -Uri $env:VHA_SANDBOX_TEST_URL -Headers @{ Authorization="Bear
 
 ---
 
-**Developer Guide:** [Overview](index.md) · [← Local MCP server](local-mcp-server.md) · [Supabase →](supabase.md)
+[Previous: Prepare Supabase](supabase.md) · [Next: Set up IBM Cloud and Code Engine](avery-ibm-start.md)

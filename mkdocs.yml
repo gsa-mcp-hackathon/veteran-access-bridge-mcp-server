@@ -36,21 +36,30 @@ nav:
   - Demonstration: demonstration.md
   - Developer Guide:
       - developer-guide/index.md
-      - Engineering Decisions: developer-guide/engineering-decisions.md
-      - Configuration & Secrets: developer-guide/configuration-and-secrets.md
-      - Troubleshooting: developer-guide/troubleshooting.md
-      - Clean-room Reproduction: developer-guide/clean-room-reproducibility.md
-      - GitHub Codespaces walkthrough: developer-guide/codespaces.md
-      - VS Code walkthrough: developer-guide/vs-code.md
-      - Local MCP Server: developer-guide/local-mcp-server.md
-      - HTTP and connected services: developer-guide/connected-product.md
-      - VHA Sandbox: developer-guide/vha-sandbox.md
-      - Supabase: developer-guide/supabase.md
-      - Build Avery · IBM setup: developer-guide/avery-ibm-start.md
-      - IBM Orchestrate: developer-guide/ibm-orchestrate.md
-      - DeepEval: developer-guide/deepeval.md
-      - Phoenix: developer-guide/phoenix.md
-      - Release Checklist: developer-guide/release-checklist.md
+      - Getting started:
+          - VS Code (recommended): developer-guide/vs-code.md
+          - GitHub Codespaces (optional): developer-guide/codespaces.md
+      - Run the MCP server:
+          - Explore tools and interpret a scheduling result: developer-guide/local-mcp-server.md
+          - HTTP transport and connected setup overview: developer-guide/connected-product.md
+      - Build the Avery voice experience:
+          - Prepare Supabase: developer-guide/supabase.md
+          - Configure VA reads: developer-guide/vha-sandbox.md
+          - Set up IBM Cloud and Code Engine: developer-guide/avery-ibm-start.md
+          - Connect Avery and the MCP toolkit: developer-guide/avery-agent.md
+          - Set up the LiveKit room: developer-guide/livekit.md
+          - Connect Deepgram and start the worker: developer-guide/deepgram.md
+          - Run the browser app and complete a call: developer-guide/browser-call.md
+      - Understand the architecture:
+          - Engineering decisions: developer-guide/engineering-decisions.md
+          - Configuration and secrets: developer-guide/configuration-and-secrets.md
+      - Help and reference:
+          - Troubleshooting: developer-guide/troubleshooting.md
+          - Independent reproduction: developer-guide/clean-room-reproducibility.md
+          - Historical Orchestrate evaluation: developer-guide/ibm-orchestrate.md
+          - DeepEval: developer-guide/deepeval.md
+          - Phoenix: developer-guide/phoenix.md
+          - Release checklist: developer-guide/release-checklist.md
 extra_css:
   - stylesheets/home.css
   - stylesheets/security-architecture.css
