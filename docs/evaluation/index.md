@@ -7,7 +7,6 @@ hide:
 <link rel="stylesheet" href="../stylesheets/evaluation-center.css">
 
 <div class="ec" id="overview">
-<nav class="ec-rail" aria-label="Evaluation sections"><strong>Evaluation &amp; Results</strong><a href="#overview" aria-current="page">Overview Dashboard</a><a href="#gold-questions">Gold Question Explorer</a><a href="validation-agent/#mcp-server-validation">MCP & Backend Evaluation</a><a href="validation-agent/#ibm-watsonx-orchestrate-and-deepeval">Agent & Voice Evaluation</a><a href="security-adversarial/">Security & Adversarial Testing</a><a href="reviewer-index/">Evidence Library</a></nav>
 <div class="ec-main">
 <header class="ec-hero"><small>EVALUATION &amp; RESULTS</small><h1>Evaluation Command Center</h1><p>Recorded results, evidence, and analysis for the Veteran Access Bridge MCP server and Avery voice experience.</p><div>October–November 2026 &nbsp; · &nbsp; Synthetic environment (no production VA data) &nbsp; · &nbsp; <a href="#boundaries">Evaluation scope &amp; boundaries</a></div></header>
 <section class="ec-metrics" aria-label="Recorded outcomes">
