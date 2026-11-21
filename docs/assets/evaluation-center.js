@@ -1,25 +1,6 @@
 (async function () {
   const explorer = document.querySelector(".ec-explorer");
   if (!explorer) return;
-  const header = document.querySelector(".md-header__inner");
-  if (header) {
-    const navigation = document.createElement("nav");
-    navigation.className = "ec-topnav";
-    navigation.setAttribute("aria-label", "Main sections");
-    for (const [name, path] of [
-      ["Solution & Architecture", "../solution-architecture/"], ["MCP Implementation", "../mcp-implementation/"],
-      ["Security & Governance", "../security-governance/"], ["Evaluation & Results", "./"],
-      ["Demonstration", "../demonstration/"], ["Developer Guide", "../developer-guide/"],
-      ["GitHub", "https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server"]
-    ]) {
-      const link = document.createElement("a");
-      link.href = path;
-      link.textContent = name;
-      if (path === "./") link.setAttribute("aria-current", "page");
-      navigation.append(link);
-    }
-    header.append(navigation);
-  }
   const tabs = Array.from(explorer.querySelectorAll('[role="tab"]'));
   const dashboard = explorer.closest(".ec");
   function activateTab(tab) {
