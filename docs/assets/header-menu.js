@@ -36,6 +36,38 @@
     return p;
   }
 
+  function menuList(source) {
+    var list = document.createElement("ul");
+    for (var item of source.children) {
+      var section = item.querySelector(":scope > nav:not(.md-nav--secondary) > ul");
+      var original = item.querySelector(":scope > a.md-nav__link, :scope > .md-nav__container > a");
+      var row = document.createElement("li");
+      var contents = row;
+      if (section) {
+        var details = document.createElement("details");
+        var summary = document.createElement("summary");
+        summary.textContent = section.parentElement.querySelector(".md-nav__title").textContent.trim();
+        details.open = item.classList.contains("md-nav__item--active");
+        details.appendChild(summary);
+        row.appendChild(details);
+        contents = details;
+      }
+      if (original) {
+        var link = document.createElement("a");
+        link.href = original.href;
+        link.textContent = section ? "Overview" : original.textContent.trim();
+        if (original.href.split("#")[0] === location.href.split(/[?#]/)[0] || original.classList.contains("md-nav__link--active")) {
+          link.className = "is-active";
+          link.setAttribute("aria-current", "page");
+        }
+        contents.appendChild(link);
+      }
+      if (section) contents.appendChild(menuList(section));
+      list.appendChild(row);
+    }
+    return list;
+  }
+
   function closeAll() {
     document.querySelectorAll(".vab-panel").forEach(function (p) { p.hidden = true; });
     document.querySelectorAll(".vab-btn").forEach(function (b) { b.setAttribute("aria-expanded", "false"); });
@@ -47,6 +79,7 @@
     b.className = "vab-btn " + cls;
     b.setAttribute("aria-label", label);
     b.setAttribute("aria-expanded", "false");
+    b.setAttribute("aria-controls", panelEl.id);
     b.innerHTML = html;
     b.addEventListener("click", function (e) {
       e.stopPropagation();
@@ -62,33 +95,17 @@
     var inner = document.querySelector(".md-header__inner");
     if (!inner || inner.querySelector(".vab-btn")) return;
 
-    if (location.pathname.split("/").includes("developer-guide")) {
-      // Use the theme's navigation tree so sections and the current page survive.
-      document.body.classList.add("vab-guide");
-      var sidebar = document.querySelector(".md-sidebar--primary");
-      sidebar.id = "vab-guide-sidebar";
-      var toggle = document.createElement("button");
-      toggle.type = "button";
-      toggle.className = "vab-btn vab-guide-toggle";
-      toggle.innerHTML = NAV_SVG;
-      toggle.setAttribute("aria-label", "Developer Guide navigation");
-      toggle.setAttribute("aria-controls", sidebar.id);
-      var expanded = !document.querySelector(".vab-start");
-      function showSidebar(show) {
-        document.body.classList.toggle("vab-guide-expanded", show);
-        toggle.setAttribute("aria-expanded", String(show));
-      }
-      showSidebar(expanded);
-      toggle.addEventListener("click", function () {
-        showSidebar(toggle.getAttribute("aria-expanded") !== "true");
-      });
-      inner.prepend(toggle);
-    } else {
-      var navPanel = panel("vab-nav-panel", collect(".md-sidebar--primary"));
-      var navBtn = button("vab-nav-btn", "Page navigation", NAV_SVG, navPanel);
-      inner.insertBefore(navBtn, inner.firstChild);
-      navBtn.after(navPanel);
-    }
+    var tree = document.querySelector(".md-sidebar--primary .md-nav--primary > ul");
+    if (!tree) return;
+    var navPanel = document.createElement("nav");
+    navPanel.id = "vab-nav-panel";
+    navPanel.className = "vab-panel";
+    navPanel.hidden = true;
+    navPanel.setAttribute("aria-label", "Site navigation");
+    navPanel.appendChild(menuList(tree));
+    var navBtn = button("vab-nav-btn", "Site navigation", NAV_SVG, navPanel);
+    inner.prepend(navBtn);
+    navBtn.after(navPanel);
 
     var tocItems = collect(".md-sidebar--secondary");
     if (tocItems.length) {
@@ -105,7 +122,10 @@
   document.addEventListener("click", function (e) {
     if (!e.target.closest(".vab-panel") || e.target.closest(".vab-panel a")) closeAll();
   });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeAll(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") {
+    var trigger = document.querySelector('.vab-btn[aria-expanded="true"]');
+    if (trigger) { closeAll(); trigger.focus(); }
+  } });
 
   if (window.document$) window.document$.subscribe(init);
   else document.addEventListener("DOMContentLoaded", init);
