@@ -1,7 +1,6 @@
 # Engineering decisions: why the project uses these services
 
-[System architecture](../solution-architecture.md) · [Security and authorization](../security-governance.md)
-
+[System architecture](../solution-architecture.md) | [Security and authorization](../security-governance.md)
 
 This section explains **why** Veteran Access Bridge uses its current technologies. It documents project requirements and tradeoffs rather than claiming that every alternative was formally benchmarked. For implementation commands, follow the linked setup guides.
 
