@@ -67,3 +67,7 @@
 .ec .ec-journey li small{white-space:nowrap}
 .ec-expanded .ec-journey li small{flex:none}
 }
+
+/* Shareable evaluation tabs and accessible gold matrix position. */
+.ec-share-note{font-size:13px;margin:0 0 .65rem;color:#334d66}
+.ec-question-count{display:block;margin:.45rem 0 0;color:#345572;font-size:13px;font-weight:650}
