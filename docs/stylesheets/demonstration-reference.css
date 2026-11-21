@@ -1,0 +1,107 @@
+/* Demonstration follows the approved composition: wide video with six chapters, 
+   tool flow strip, three compact evidence cards. No sidebar, existing site header. */
+.md-main:has(.vab-demo-reference) .md-sidebar--primary{display:none!important}
+.md-main:has(.vab-demo-reference) .md-content{max-width:none;min-width:0;width:100%}
+.md-main:has(.vab-demo-reference) .md-main__inner{max-width:none;display:block}
+.md-content__inner:has(.vab-demo-reference){max-width:1600px!important;width:100%;padding:0 24px 28px!important;margin:0 auto!important}
+.md-typeset .vab-demo-reference{font:14px/1.42 "Segoe UI",Arial,sans-serif;color:#142a43}
+.md-typeset .vab-demo-reference *{box-sizing:border-box}
+.md-typeset .vab-demo-reference h1,.md-typeset .vab-demo-reference h2{margin:0;line-height:1.2;font-family:inherit;color:#122844;letter-spacing:-.03em}
+.md-typeset .vab-demo-reference a{color:#0d63a1}
+.md-typeset .vab-demo-reference :is(summary,a):focus-visible{outline:3px solid #1a8cc6;outline-offset:2px}
+.vab-demo-hero{display:flex;align-items:end;justify-content:space-between;gap:22px;padding:20px 0 16px}
+.vab-demo-eyebrow{font-size:12px;font-weight:800;color:#0c427d;letter-spacing:.045em;border-left:4px solid #e5a31e;padding-left:9px}
+.md-typeset .vab-demo-reference h1{font-size:clamp(29px,3.2vw,44px);margin:9px 0 5px}
+.vab-demo-hero p{color:#4c637b;font-size:16px;margin:0}
+.vab-demo-meta{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;padding-bottom:2px}
+.vab-demo-meta span{border-radius:9px;padding:10px 12px;background:#eaf6f5;color:#1c5459;white-space:nowrap;font-size:12px;font-weight:650}
+.vab-demo-stage{display:grid;grid-template-columns:minmax(0,1.52fr) minmax(350px,1fr);gap:18px;align-items:stretch}
+.vab-demo-video-card{border-radius:10px;overflow:hidden;background:#061e32;border:1px solid #143c5d;box-shadow:0 5px 15px #122f4d26;min-width:0;display:flex;flex-direction:column;justify-content:center}
+.vab-demo-video-card video{display:block;width:100%;aspect-ratio:16/9;height:auto;max-height:575px;object-fit:contain;background:#06223a}
+.vab-demo-video-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#d1e6f2;font-size:11px;padding:8px 12px}
+.vab-demo-video-foot a{color:#d9f1ff!important}
+.vab-demo-chapter-card{border:1px solid #d1dfe9;background:#fbfcfe;border-radius:10px;padding:13px;min-width:0}
+.vab-demo-card-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:0 0 10px}
+.md-typeset .vab-demo-reference h2{font-size:19px;font-weight:750}
+.vab-demo-card-heading span{font-size:11px;color:#678093}
+.vab-demo-chapters{display:flex;flex-direction:column;gap:6px}
+.md-typeset .vab-demo-chapters details{margin:0;background:#fff;border:1px solid #dce5ee;border-radius:8px;box-shadow:none}
+.md-typeset .vab-demo-chapters details:first-child{border-left:4px solid #e5a31e;background:#edf5ff}
+.md-typeset .vab-demo-chapters summary{display:flex;align-items:center;gap:12px;min-height:49px;padding:7px 10px;cursor:pointer;list-style:none;background:none}
+.md-typeset .vab-demo-chapters summary:before,.md-typeset .vab-demo-chapters summary:after{display:none}
+.vab-demo-chapters summary::-webkit-details-marker{display:none}
+.vab-demo-number{display:grid;place-items:center;min-width:40px;height:28px;border-radius:8px;background:#e5ebf0;color:#233b58;font-size:12px;font-weight:800}
+.vab-demo-chapters details:first-child .vab-demo-number{background:#124477;color:white}
+.vab-demo-chapters summary strong{display:block;font-size:13px;color:#172d45}
+.vab-demo-chapters summary small{display:block;font-size:11px;color:#547088;line-height:1.35}
+.vab-demo-chapters details>p{padding:0 12px 10px 62px;font-size:12px;color:#3e5a71;margin:0}
+.vab-demo-chapter-disclaimer{font-size:10px;color:#607589;margin:9px 2px 0}
+.vab-demo-tool-card{display:grid;grid-template-columns:240px minmax(0,1fr);gap:16px;border:1px solid #d2e0ea;border-radius:10px;padding:15px;margin-top:18px;background:#fff}
+.vab-demo-tool-intro{border-right:1px solid #dce6ee;padding-right:14px}
+.vab-demo-tool-intro p{font-size:12px;color:#4c6378;margin:12px 0 0}
+.vab-demo-tool-content{min-width:0}
+.vab-demo-tool-tags{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:13px}
+.vab-demo-tool-tags span{display:inline-block;border-radius:22px;padding:5px 12px;background:#e9f3fd;color:#20577f;font-size:11px;font-weight:750}
+.vab-demo-tool-tags span:nth-child(2){background:#f0e9ff;color:#6c45a5}.vab-demo-tool-tags span:nth-child(3){background:#e5f6ef;color:#217456}.vab-demo-tool-tags span:nth-child(4){background:#f9f0d9;color:#84611c}
+.vab-demo-flow-label{font-size:11px;font-weight:750;margin-bottom:6px}
+.vab-demo-toolflow{display:flex;align-items:center;gap:9px;min-width:0}
+.vab-demo-toolflow>div{flex:1 1 0;display:flex;align-items:center;gap:9px;min-width:0}
+.vab-demo-toolflow b{display:grid;place-items:center;border-radius:50%;min-width:27px;height:27px;color:white;background:#237eb8;font-size:12px}
+.vab-demo-toolflow>div>span{display:block;min-width:0;flex:1;background:#eaf5ff;border:1px solid #b8daf2;padding:9px 11px;border-radius:7px}
+.vab-demo-toolflow code{display:block;background:none!important;padding:0!important;color:#183952!important;font-size:11px!important;overflow-wrap:anywhere;font-weight:700}
+.vab-demo-toolflow small{font-size:10px;color:#466c83}
+.vab-demo-toolflow i{font-style:normal;font-size:20px;color:#5da9dc}
+.vab-demo-bottom{display:grid;grid-template-columns:1.3fr 1.18fr 1fr;gap:18px;margin-top:14px}
+.vab-demo-bottom-card{padding:15px 17px;background:#fafdff;border:1px solid #d5e1eb;border-radius:10px;min-width:0}
+.md-typeset .vab-demo-bottom-card h2{font-size:17px}
+.vab-demo-outcome{background:#f3fbf6;border-color:#c9e7d6}
+.vab-demo-outcome-grid{display:grid;grid-template-columns:.65fr .8fr 1.5fr;margin-top:17px}
+.vab-demo-outcome-grid>div{padding:0 9px;border-right:1px solid #c7d9d3;min-width:0}
+.vab-demo-outcome-grid>div:first-child{padding-left:0}
+.vab-demo-outcome-grid>div:last-child{border:0}
+.vab-demo-outcome-grid strong{display:block;font-size:23px;line-height:1.2;color:#0b5e38;overflow-wrap:anywhere}
+.vab-demo-outcome-grid strong.vab-demo-receipt{font-size:12px;color:#184d38;margin:7px 0}
+.vab-demo-outcome-grid small{display:block;font-size:10px;line-height:1.45;color:#456458;margin-top:5px}
+.vab-demo-boundaries{background:#ecf5ff;border-color:#d2e4f5}
+.vab-demo-boundaries p{font-size:12px;line-height:1.4;color:#35536d;margin:10px 0}
+.vab-demo-checks{display:flex;gap:7px;flex-wrap:wrap}
+.vab-demo-checks span{font-size:10px;font-weight:700;color:#0a7849}
+.vab-demo-evidence a{display:block;border-bottom:1px solid #dde6ee;padding:8px 0;text-decoration:underline;font-size:12px;font-weight:700}
+.vab-demo-banner{background:#fff7e8;border:1px solid #ecc879;color:#5e471e;border-radius:8px;font-size:12px;padding:11px 14px;margin:12px 0 0}
+.vab-demo-followup{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:20px 0}
+.vab-demo-followup details{flex:1 1 260px;border:1px solid #d5e2ec;border-radius:7px;padding:7px 10px;background:#fff}
+.vab-demo-followup summary{cursor:pointer;font-weight:700}
+.vab-demo-followup details p{font-size:12px}
+.vab-demo-followup pre{overflow-x:auto}
+.vab-demo-followup>a{font-size:12px;font-weight:700}
+@media(max-width:1150px){.vab-demo-stage{grid-template-columns:minmax(0,1.3fr) minmax(300px,1fr)}.vab-demo-hero{align-items:start;flex-direction:column}.vab-demo-meta{justify-content:flex-start}.vab-demo-bottom{gap:10px}.vab-demo-tool-card{grid-template-columns:190px minmax(0,1fr)}}
+@media(max-width:900px){.vab-demo-stage{grid-template-columns:1fr}.vab-demo-chapter-card{max-width:none}.vab-demo-bottom{grid-template-columns:1fr 1fr}.vab-demo-evidence{grid-column:1/-1}.vab-demo-tool-card{grid-template-columns:1fr}.vab-demo-tool-intro{border-right:0;border-bottom:1px solid #dce6ee;padding:0 0 10px}}
+@media(max-width:650px){.md-content__inner:has(.vab-demo-reference){padding:0 12px 22px!important}.vab-demo-stage{gap:12px}.vab-demo-meta span{padding:7px 8px}.vab-demo-toolflow{align-items:stretch;flex-direction:column}.vab-demo-toolflow>div{width:100%}.vab-demo-toolflow i{align-self:center;transform:rotate(90deg)}.vab-demo-bottom{grid-template-columns:1fr}.vab-demo-evidence{grid-column:auto}.vab-demo-outcome-grid{grid-template-columns:1fr 1fr 1.4fr}}
+
+
+/* Full-width override for the MkDocs/Zensical layout grid.
+   Unlike the general 55rem article rule, this page is a demo workspace. */
+body:has(.vab-demo-reference) .md-main__inner.md-grid{
+  width:100%!important;
+  max-width:none!important;
+  margin-inline:0!important;
+  display:block!important;
+}
+body:has(.vab-demo-reference) .md-content{
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:0!important;
+  flex:1 1 100%!important;
+}
+body:has(.vab-demo-reference) .md-content__inner,
+body:has(.vab-demo-reference) .md-content__inner:not(:has(.vab-hero)){
+  width:min(100%,1640px)!important;
+  max-width:1640px!important;
+  margin-inline:auto!important;
+  padding:0 clamp(14px,2vw,32px) 32px!important;
+}
+body:has(.vab-demo-reference) .md-sidebar--primary,
+body:has(.vab-demo-reference) .md-sidebar--secondary{
+  display:none!important;
+}
