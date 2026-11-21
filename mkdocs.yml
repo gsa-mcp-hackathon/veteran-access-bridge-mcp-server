@@ -67,8 +67,10 @@ extra_css:
   - stylesheets/home.css
   - stylesheets/security-architecture.css
   - stylesheets/homepage.css
+  - stylesheets/mcp-tool-explorer.css
 extra_javascript:
   - assets/evaluation-report.js
   - assets/header-menu.js
   - assets/security-architecture.js
+  - assets/mcp-tool-explorer.js
 copyright: 'Veteran Access Bridge · Independent synthetic technical demonstration · Not a VA-operated scheduling service'
