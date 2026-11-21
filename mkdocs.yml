@@ -42,6 +42,7 @@ nav:
       - HTTP and connected services: developer-guide/connected-product.md
       - VHA Sandbox: developer-guide/vha-sandbox.md
       - Supabase: developer-guide/supabase.md
+      - Build Avery · IBM setup: developer-guide/avery-ibm-start.md
       - IBM Orchestrate: developer-guide/ibm-orchestrate.md
       - DeepEval: developer-guide/deepeval.md
       - Phoenix: developer-guide/phoenix.md
