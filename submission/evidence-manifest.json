@@ -28,7 +28,7 @@
       "result": "48/48",
       "date": "2026-11-23",
       "commit": "a5bcf8277001d381adb4aa81d3916225d15528fb",
-      "url": "https://github.com/wbgreen0405/veteran-access-bridge/actions/runs/45101968969",
+      "url": "https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/ci/ci-run-45101968969.md",
       "scope": "focused local/CI checks"
     },
     {
@@ -56,7 +56,47 @@
       "date": "2026-11-23",
       "source": "docs/evaluation/evidence/m64-per-tool-evidence.json",
       "meaning": "Historical local coverage 25/29 and tool-family counts from reviewed 29-tool inventory; no new tests or numerical LLM grades"
+    },
+    {
+      "id": "ci-released-code",
+      "result": "1,630 passed, 20 skipped",
+      "path": "submission/engineering-records/ci/ci-run-44569265273.md",
+      "date": "2026-11-19",
+      "type": "ci",
+      "scope": "Released backend ea0880f; GitHub Actions on Linux"
+    },
+    {
+      "id": "contract-probes-29",
+      "result": "126/126 passed",
+      "path": "eval/probe_mcp_contracts.py",
+      "date": "2026-11-21",
+      "type": "local-probe",
+      "scope": "All 29 registered tools; local in-process; U.S. Central date"
+    },
+    {
+      "id": "hostile-argument-probes-29",
+      "result": "86/86 rejected",
+      "path": "eval/probe_mcp_adversarial.py",
+      "date": "2026-11-21",
+      "type": "local-probe",
+      "scope": "19 read-only tools x 4 hostile inputs + 10 write tools x forged authority; U.S. Central date"
+    },
+    {
+      "id": "final-demo-call",
+      "result": "1 synthetic appointment verified by readback; confirmation 51976dfb-30da-5f04-a628-e9ca1ec31fd9",
+      "path": "docs/assets/avery-demo.mp4",
+      "date": "final demonstration recording",
+      "type": "recorded-call",
+      "scope": "IBM selected book_call_appointment; trusted services committed after identity, consent, slot and policy checks; same call as presentation slides 10-11"
+    },
+    {
+      "id": "llm-judges",
+      "result": "IBM Evaluate judge gpt-oss-120b; DeepEval judge gpt-4.1-mini (threshold 0.80)",
+      "path": "docs/evaluation/validation-agent.md",
+      "date": "2026-10-28 / 2026-11-15",
+      "type": "evaluator-metadata",
+      "scope": "Agent model Anthropic Claude Sonnet 4.6; judges differ from the agent model"
     }
   ],
-  "publication": "Public sanitized summaries. Private raw runtime evidence intentionally excluded. Final PowerPoint and final evaluation DOCX/PDF are not yet included in this repository; original private engineering links may require separate access review."
+  "publication": "Public sanitized summaries. Engineering records are copied into submission/engineering-records/ and the companion frontend into frontend/, so no evidence link points to a private repository. Final presentation, evaluation report and links sheet are in submission/deliverables/; the demo video is docs/assets/avery-demo.mp4."
 }

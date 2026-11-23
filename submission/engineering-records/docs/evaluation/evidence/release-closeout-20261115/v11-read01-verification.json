@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "verified_case_id": "DEMO-PC-P114-001",
+  "identity_calls": 1,
+  "verified_agent_reads": 2,
+  "followup_read_verified": true,
+  "voice_session_id": "vs-943cc4c7-bdf2-4770-99b1-9eda5774752f",
+  "interaction_id": "int-c3045109a63049ac",
+  "read_call_ids": [
+    "tooluse_6lJlsx8J2zrz2qPBz1Zv39",
+    "tooluse_0mIZ6rjx7cC9qowVTIktSz"
+  ],
+  "scope": "IBM-selected, server-authorized synthetic reads only",
+  "elapsed_seconds": 178.88,
+  "end_response": {
+    "ok": true,
+    "synthetic": true
+  },
+  "evidence_sha256": "793adeaea951bf3ea2b6b2eb298073c23ddf4702e617d0016211b782480a72f4"
+}

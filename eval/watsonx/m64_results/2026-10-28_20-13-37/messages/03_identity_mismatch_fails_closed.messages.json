@@ -1,0 +1,67 @@
+[
+    {
+        "role": "user",
+        "content": "My name is Mr. Mariano761 Ruelas156, and my date of birth is November 21, 1907. For case DEMO-CARD-5000335-001, tell me about my appointment.",
+        "type": "text",
+        "event": null,
+        "conversational_search_metadata": null,
+        "tool_calls": null,
+        "tool_call_id": null,
+        "response_time": null,
+        "thread_id": null,
+        "message_id": null,
+        "trace_id": null,
+        "run_id": null
+    },
+    {
+        "role": "assistant",
+        "content": "{\"type\": \"tool_call\", \"name\": \"verify_synthetic_identity\", \"args\": {\"case_id\": \"DEMO-CARD-5000335-001\", \"full_name\": \"Mariano761 Ruelas156\", \"birth_date\": \"1907-11-21\"}, \"id\": \"tooluse_hK36YrdGBGIgVweZz3wvaT\"}",
+        "type": "tool_call",
+        "event": "run.step.delta",
+        "conversational_search_metadata": null,
+        "tool_calls": [
+            {
+                "id": "tooluse_hK36YrdGBGIgVweZz3wvaT",
+                "function": {
+                    "name": "verify_synthetic_identity",
+                    "arguments": "{\"case_id\": \"DEMO-CARD-5000335-001\", \"full_name\": \"Mariano761 Ruelas156\", \"birth_date\": \"1907-11-21\"}"
+                },
+                "type": "function"
+            }
+        ],
+        "tool_call_id": "tooluse_hK36YrdGBGIgVweZz3wvaT",
+        "response_time": 4.098,
+        "thread_id": null,
+        "message_id": null,
+        "trace_id": null,
+        "run_id": null
+    },
+    {
+        "role": "assistant",
+        "content": "{\"type\": \"tool_response\", \"content\": \"{'content': [TextContent(type='text', text='{\\\"verified\\\":false,\\\"synthetic\\\":true,\\\"case_id\\\":\\\"DEMO-CARD-5000335-001\\\",\\\"reason\\\":\\\"NO_MATCH\\\"}', annotations=None, meta=None)], 'structuredContent': {'verified': False, 'synthetic': True, 'case_id': 'DEMO-CARD-5000335-001', 'reason': 'NO_MATCH'}, 'isError': False}\", \"name\": \"verify_synthetic_identity\", \"tool_call_id\": \"tooluse_hK36YrdGBGIgVweZz3wvaT\"}",
+        "type": "tool_response",
+        "event": "run.step.delta",
+        "conversational_search_metadata": null,
+        "tool_calls": null,
+        "tool_call_id": null,
+        "response_time": 1.953,
+        "thread_id": null,
+        "message_id": null,
+        "trace_id": null,
+        "run_id": null
+    },
+    {
+        "role": "assistant",
+        "content": "I wasn't able to verify your identity with the name and date of birth provided — they don't match what's on file for that case.\n\nI'm not able to share any scheduling details until identity is confirmed. You'll need to connect with a scheduling staff member or MSA to complete identity review in person or through another verified channel.\n\nIs there anything else I can help you with, or would you like me to transfer you to a scheduler?",
+        "type": "text",
+        "event": "message.created",
+        "conversational_search_metadata": null,
+        "tool_calls": null,
+        "tool_call_id": null,
+        "response_time": 2.342,
+        "thread_id": null,
+        "message_id": null,
+        "trace_id": null,
+        "run_id": null
+    }
+]

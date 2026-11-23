@@ -1,0 +1,636 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-display: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-destructive-light: var(--vads-error-lighter);
+  --color-avery: var(--avery);
+  --color-ai: var(--ai);
+  --color-verified: var(--verified);
+  --color-attention: var(--attention);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-header: var(--header);
+  --color-header-foreground: var(--header-foreground);
+  --color-canvas: var(--canvas);
+  --color-canvas-raised: var(--canvas-raised);
+  --color-canvas-text: var(--canvas-text);
+  --color-canvas-muted: var(--canvas-muted);
+  --color-canvas-highlight: var(--canvas-highlight);
+  --color-overlay: var(--overlay);
+  --color-sandbox: var(--vads-warning-lighter);
+  --color-sandbox-foreground: var(--vads-text);
+}
+
+:root {
+  --vads-primary: #005ea2;
+  --vads-primary-dark: #1a4480;
+  --vads-primary-darker: #162e51;
+  --vads-primary-lighter: #d9e8f6;
+  --vads-primary-alt: #00bde3;
+  --vads-primary-alt-darkest: #07648d;
+  --vads-text: #1b1b1b;
+  --vads-base-dark: #565c65;
+  --vads-base-medium: #71767a;
+  --vads-base-lighter: #dfe1e2;
+  --vads-base-lightest: #f0f0f0;
+  --vads-info-darker: #2e6276;
+  --vads-info-lighter: #e7f6f8;
+  --vads-success-darker: #216e1f;
+  --vads-success-lighter: #ecf3ec;
+  --vads-warning-darker: #936f38;
+  --vads-warning-lighter: #faf3d1;
+  --vads-error-dark: #b21d38;
+  --vads-error-lighter: #f4e3db;
+  --radius: 0.5rem;
+  --background: #f6f8fc;
+  --voice-caller: #00bde3;
+  --voice-agent: #7c5cd6;
+  --bubble-avery: #f1eafd;
+  --bubble-veteran: #e4f3ff;
+  --surface: oklch(1 0 0);
+  --surface-2: var(--vads-base-lightest);
+  --foreground: var(--vads-text);
+  --card: var(--surface);
+  --card-foreground: var(--foreground);
+  --popover: var(--surface);
+  --popover-foreground: var(--foreground);
+  --primary: var(--vads-primary);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: var(--vads-base-lightest);
+  --secondary-foreground: var(--vads-text);
+  --muted: var(--vads-base-lightest);
+  --muted-foreground: var(--vads-base-dark);
+  --accent: var(--vads-primary-lighter);
+  --accent-foreground: var(--vads-primary-darker);
+  --destructive: var(--vads-error-dark);
+  --destructive-foreground: oklch(1 0 0);
+  --avery: var(--vads-primary-dark);
+  --ai: var(--vads-primary-alt-darkest);
+  --verified: var(--vads-success-darker);
+  --attention: var(--vads-warning-darker);
+  --border: var(--vads-base-lighter);
+  --input: var(--vads-base-medium);
+  --ring: var(--vads-primary);
+  --header: var(--vads-primary-darker);
+  --header-foreground: oklch(0.98 0.003 250);
+  --canvas: oklch(0.22 0.029 255);
+  --canvas-raised: oklch(0.285 0.033 255);
+  --canvas-text: oklch(0.97 0.005 250);
+  --canvas-muted: oklch(0.8 0.018 250);
+  --canvas-highlight: var(--vads-primary-alt);
+  --overlay: oklch(0.15 0.02 255 / 65%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    margin: 0;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+}
+
+@utility panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+@keyframes aura-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes aura-breathe {
+  0%,
+  100% {
+    transform: scale(0.94);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+}
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@utility animate-fade-up {
+  animation: fade-up 0.35s ease-out both;
+}
+@utility animate-aura-spin {
+  animation: aura-spin 6s linear infinite;
+}
+@utility animate-aura-breathe {
+  animation: aura-breathe 2.4s ease-in-out infinite;
+}
+
+.operations-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+.encounter-console {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+.agent-aura {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border: 3px solid var(--canvas-highlight);
+  border-radius: 50%;
+  color: var(--canvas-text);
+  background: var(--canvas-raised);
+  animation: aura-breathe 3s ease-in-out infinite;
+}
+.agent-aura-off {
+  animation: none;
+  opacity: 0.5;
+}
+.encounter-transcript {
+  min-height: 500px;
+}
+@media (min-width: 1100px) {
+  .encounter-console {
+    grid-template-columns: minmax(0, 40fr) minmax(0, 35fr) minmax(0, 25fr);
+    gap: 1rem;
+  }
+  .encounter-console.copilot-closed {
+    grid-template-columns: minmax(0, 53fr) minmax(0, 47fr);
+  }
+  .encounter-console[data-concept="B"] {
+    grid-template-columns: minmax(0, 46fr) minmax(0, 29fr) minmax(0, 25fr);
+  }
+  .encounter-console[data-concept="C"] {
+    grid-template-columns: minmax(0, 35fr) minmax(0, 40fr) minmax(0, 25fr);
+  }
+  .encounter-console.copilot-closed[data-concept] {
+    grid-template-columns: minmax(0, 53fr) minmax(0, 47fr);
+  }
+  .encounter-transcript {
+    height: max(650px, calc(100vh - 400px));
+  }
+}
+@media (min-width: 700px) and (max-width: 1099px) {
+  .encounter-console {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .encounter-console > aside {
+    grid-column: 1 / -1;
+  }
+}
+.operations-queue,
+.operations-context {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .operations-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 370px);
+  }
+  .operations-context {
+    display: flex;
+  }
+  .operations-grid.context-hidden {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (min-width: 1440px) {
+  .operations-grid {
+    grid-template-columns: 250px minmax(0, 1fr) minmax(350px, 390px);
+  }
+  .operations-queue {
+    display: flex;
+  }
+  .operations-grid.context-hidden {
+    grid-template-columns: 250px minmax(0, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Approved current-encounter console */
+.transcript-light {
+  --canvas: var(--surface);
+  --canvas-raised: var(--vads-base-lighter);
+  --canvas-text: var(--vads-text);
+  --canvas-muted: var(--vads-base-dark);
+  --canvas-highlight: var(--vads-primary);
+}
+.transcript-light > * {
+  border-color: var(--border);
+}
+.avatar-caller {
+  background: #e0f7fc;
+  color: #07648d;
+  border: 1px solid var(--voice-caller);
+}
+.avatar-agent {
+  background: var(--bubble-avery);
+  color: #4b2fa3;
+  border: 1px solid var(--voice-agent);
+}
+.msg-bubble {
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.875rem;
+  color: #1b1b1b;
+}
+.msg-veteran {
+  background: var(--bubble-veteran);
+}
+.msg-avery {
+  background: var(--bubble-avery);
+}
+.msg-bubble p,
+.msg-bubble span {
+  color: inherit;
+}
+.msg-bubble .text-canvas-muted {
+  color: #565c65;
+}
+.caller-figure {
+  color: var(--voice-caller);
+}
+.console-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgb(22 46 81 / 0.06);
+}
+@media (min-width: 1100px) {
+  .encounter-console .console-col {
+    height: calc(100vh - 75px - 2rem);
+    min-height: 640px;
+  }
+  .encounter-transcript {
+    flex: 1;
+    min-height: 0;
+    height: auto;
+  }
+  .encounter-console.command-center {
+    grid-template-columns: minmax(0, 34fr) minmax(0, 35fr) minmax(0, 31fr);
+  }
+}
+@media (min-width: 700px) and (max-width: 1099px) {
+  .encounter-console.command-center > .console-col:first-child {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 1099px) {
+  .encounter-console.command-center .encounter-transcript {
+    max-height: 640px;
+    min-height: 360px;
+  }
+}
+.console-reopen {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 20;
+  background: var(--surface);
+}
+.copilot-rail {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+@media (min-width: 1100px) {
+  .copilot-rail {
+    height: calc(100vh - 75px - 2rem);
+    min-height: 640px;
+    position: sticky;
+    top: 1rem;
+  }
+}
+
+/* MSA evidence-led workflow: animate only the backend-observed active stage. */
+@keyframes msa-stage-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(0 94 162 / 0.18);
+  }
+  50% {
+    box-shadow: 0 0 0 9px rgb(0 94 162 / 0.05);
+  }
+}
+.msa-stage-pulse {
+  animation: msa-stage-glow 1.8s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .msa-stage-pulse {
+    animation: none;
+  }
+}
+
+/*
+ * Screen A full-viewport layout. On large/tall workstations the outer canvas
+ * stays put while lengthy transcript, scheduling and follow-up content scroll
+ * inside their existing panels. Smaller screens retain normal page scrolling.
+ */
+.msa-workspace-main,
+.msa-workspace-top,
+.msa-workspace-activity,
+.msa-workspace-after-call {
+  min-width: 0;
+}
+@media (min-width: 1440px) {
+  .msa-workspace-top {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.35fr) minmax(0, 1.08fr);
+  }
+  .msa-workspace-top > div:last-child {
+    grid-column: auto;
+  }
+}
+@media (min-width: 1440px) and (min-height: 900px) {
+  .msa-workspace {
+    height: 100dvh;
+    overflow: hidden;
+  }
+  .msa-workspace-main {
+    min-height: 0;
+    overflow: hidden;
+    gap: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .msa-workspace-top {
+    flex: 1 1 0;
+    min-height: 0;
+    overflow: hidden;
+    gap: 14px;
+  }
+  .msa-workspace-top > * {
+    min-height: 0;
+    min-width: 0;
+  }
+  .msa-workspace-voice,
+  .msa-workspace-conversation {
+    min-height: 0;
+    height: 100%;
+  }
+  .msa-workspace-voice,
+  .msa-workspace-scheduling {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .msa-workspace-conversation .msa-conversation-scroll {
+    min-height: 0;
+    overscroll-behavior: contain;
+  }
+  .msa-workspace-activity {
+    flex: 0 0 auto;
+  }
+  .msa-workspace-activity-panel {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .msa-workspace-activity-panel .overflow-x-auto {
+    padding-bottom: 0;
+  }
+  .msa-workspace-after-call {
+    flex: 0 1 220px;
+    min-height: 155px;
+    overflow: hidden;
+  }
+  .msa-workspace-after-panel {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .msa-workspace-disclaimer {
+    flex: 0 0 auto;
+    line-height: 1.25;
+  }
+}
+
+/* App workspace: compact reference-aligned composition, not a web landing page. */
+@media (min-width: 1280px) {
+  .msa-workspace-top {
+    grid-template-columns: minmax(0, 0.91fr) minmax(0, 1.12fr) minmax(0, 1.23fr);
+  }
+  .msa-workspace-top > div:last-child {
+    grid-column: auto;
+  }
+  .msa-workspace-voice,
+  .msa-workspace-conversation {
+    min-height: 0;
+  }
+  .msa-workspace-scheduling {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+@media (min-width: 1280px) and (min-height: 800px) {
+  .msa-workspace {
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .msa-workspace-main {
+    display: grid;
+    grid-template-rows: minmax(0, 1.47fr) minmax(0, 0.7fr) minmax(0, 1fr) auto;
+    min-height: 0;
+    flex: 1 1 auto;
+    gap: 10px;
+    padding: 10px 14px 8px;
+    overflow: hidden;
+  }
+  .msa-workspace-top {
+    display: grid;
+    min-height: 0;
+    overflow: hidden;
+    gap: 12px;
+  }
+  .msa-workspace-top > * {
+    min-height: 0;
+    min-width: 0;
+  }
+  .msa-workspace-voice,
+  .msa-workspace-conversation {
+    height: 100%;
+    min-height: 0;
+  }
+  .msa-workspace-voice {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .msa-workspace-conversation .msa-conversation-scroll {
+    min-height: 0;
+    overflow-y: auto;
+  }
+  .msa-workspace-activity,
+  .msa-workspace-after-call {
+    min-height: 0;
+    overflow: hidden;
+  }
+  .msa-workspace-activity-panel,
+  .msa-workspace-after-panel {
+    height: 100%;
+  }
+  .msa-workspace-activity-panel {
+    overflow-y: auto;
+    padding: 10px 14px;
+  }
+  .msa-workspace-activity-panel .overflow-x-auto {
+    padding-bottom: 0;
+  }
+  .msa-workspace-after-panel {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 10px 14px;
+  }
+  .msa-workspace-disclaimer {
+    font-size: 10px;
+    line-height: 1.2;
+  }
+}
+/* Keep safety notices and connection controls available at every viewport size.
+ * Compact layouts scroll within the voice card instead of hiding information. */
+@media (min-width: 1280px) and (max-height: 799px) {
+  .msa-workspace {
+    overflow: visible;
+  }
+  .msa-workspace-main {
+    overflow: visible;
+  }
+  .msa-workspace-activity,
+  .msa-workspace-after-call {
+    overflow: visible;
+  }
+}
+/* Let keyboard users access the panel scroll regions and keep text readable. */
+.msa-workspace-top > *,
+.msa-workspace-after-call,
+.msa-workspace-activity {
+  min-width: 0;
+}
+
+/* Bound the call panels independently of transcript length. Wrap Up remains
+   in normal page flow, and each call panel retains its own scrollbar. */
+.msa-workspace-main {
+  display: flex;
+  min-height: 0;
+  overflow: visible;
+}
+.msa-workspace-top {
+  flex: 0 0 auto;
+  min-height: 0;
+  overflow: visible;
+}
+.msa-workspace-conversation {
+  height: clamp(440px, 72dvh, 800px);
+  min-height: 0;
+  overflow: hidden;
+}
+.msa-workspace-conversation .msa-conversation-scroll {
+  flex: 1 1 0;
+  min-height: 0;
+  max-height: none;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.msa-workspace-after-call {
+  flex: 0 0 auto;
+  min-height: 0;
+  overflow: visible;
+}
+@media (min-width: 1280px) {
+  .msa-workspace-top {
+    grid-template-columns: minmax(230px, 0.86fr) minmax(390px, 1.75fr) minmax(260px, 1.08fr);
+  }
+}
+@media (min-width: 1280px) and (min-height: 800px) {
+  .msa-workspace {
+    height: auto;
+    overflow: visible;
+  }
+  .msa-workspace-main {
+    display: flex;
+    overflow: visible;
+  }
+  .msa-workspace-top {
+    display: grid;
+    min-height: 0;
+    overflow: visible;
+  }
+  .msa-workspace-after-call {
+    min-height: 0;
+    overflow: visible;
+  }
+}
+@media (max-width: 1023px) {
+  .msa-workspace-conversation {
+    height: clamp(440px, 72dvh, 640px);
+  }
+}
+@media (min-width: 1024px) {
+  .msa-workspace-top > * {
+    height: clamp(440px, 72dvh, 800px);
+    min-height: 0;
+    overflow: hidden;
+  }
+  .msa-workspace-voice,
+  .msa-workspace-conversation,
+  .msa-workspace-scheduling {
+    height: 100%;
+    min-height: 0;
+  }
+  .msa-workspace-voice,
+  .msa-workspace-scheduling {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}

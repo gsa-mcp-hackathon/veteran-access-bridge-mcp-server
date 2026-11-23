@@ -1,0 +1,1 @@
+{"status":"PASS","boundary":"actual Node HTTP runtime; test credentials; no backend calls","checks":["page redirect","landing page","API denial","wrong code","cross-origin denial","secure session cookie","authenticated UI","logout replay denial"]}

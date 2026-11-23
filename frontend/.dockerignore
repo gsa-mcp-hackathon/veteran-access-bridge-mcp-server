@@ -1,0 +1,20 @@
+# Keep ALL secrets and local runtime artifacts outside the container build.
+.git
+.github
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+node_modules
+.output
+dist
+.vite
+.local
+coverage
+test-results
+playwright-report
+*.tsbuildinfo
+.DS_Store

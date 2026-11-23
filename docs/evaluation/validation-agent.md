@@ -29,7 +29,7 @@ The sample fixture is read-only, and an unknown case returns a denial instead of
 {"name":"get_scheduling_encounter","arguments":{"case_id":"DEMO-PC-5000999-001"}}
 ```
 
-**Evidence:** [Nov 16 tool-wide report](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/docs/evaluation/server-wide-evaluation-20261116.md) · [Per-tool coverage](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/docs/evaluation/server-wide-tool-coverage-20261116.md) · [Contract probe source](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/eval/probe_mcp_contracts.py) · [Argument probe source](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/eval/probe_mcp_adversarial.py)
+**Evidence:** [Nov 16 tool-wide report](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/server-wide-evaluation-20261116.md) · [Per-tool coverage](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/server-wide-tool-coverage-20261116.md) · [Contract probe source](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/eval/probe_mcp_contracts.py) · [Argument probe source](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/eval/probe_mcp_adversarial.py)
 
 ## IBM watsonx Orchestrate and DeepEval
 
@@ -43,7 +43,7 @@ Assesses agent behavior, MCP tool selection and spoken interaction using histori
 | Nov 18 spoken identity check | <span class="ev2-badge ok">PASS</span> identity only | No appointment requested; not a booking rerun |
 
 !!! note "Evaluator metadata"
-    The reviewer summary does not establish a single reusable DeepEval judge-model ID, temperature, rubric, prompt or threshold for every run. Do not insert a guessed model name. An invalid earlier zero-score adapter run is not evidence that Avery failed every task.
+    The Nov 15 DeepEval run (0.95) used DeepEval 4.3.4, `MultiTurnMCPUseMetric`, threshold 0.80 and judge model OpenAI `gpt-4.1-mini`, as recorded in its evidence file. IBM watsonx Orchestrate Evaluate used OpenAI `gpt-oss-120b` as its evaluation model, as recorded in the saved IBM run configuration. Avery runs on Anthropic Claude Sonnet 4.6, so no model graded itself. Agent temperature was not recorded. An invalid earlier zero-score adapter run is not evidence that Avery failed every task.
 
 ??? example "IBM CLI commands (historical runners)"
 
@@ -62,7 +62,7 @@ Assesses agent behavior, MCP tool selection and spoken interaction using histori
 
     These scripts target historical agent and toolkit names and do not evaluate the newer consolidated Avery configuration.
 
-**Evidence:** [IBM CLI setup](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/docs/operations/avery-m64-codespace-ibm-cli-relogin-deploy.md) · [Historical release evaluation](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/docs/evaluation/release-closeout-20261115.md) · [Evaluation assets](https://github.com/wbgreen0405/veteran-access-bridge/tree/5b6cd072f23b4d4edce2e19c4f75faa774c87988/eval)
+**Evidence:** [IBM CLI setup](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/operations/avery-m64-codespace-ibm-cli-relogin-deploy.md) · [Historical release evaluation](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/release-closeout-20261115.md) · [Evaluation assets](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/tree/main/eval)
 
 ## End-to-end voice trial
 
@@ -78,7 +78,7 @@ Assesses agent behavior, MCP tool selection and spoken interaction using histori
 
 In the reviewed November 18 enabled configuration, **29 tools** were registered, **21** attached to Avery and **8** left server-only. These are inventory observations, not deployment-wide behavioral acceptance. The historical November 16 **108/108** contract probes belong to an earlier **25-tool** configuration.
 
-The catalog-integrity fix at [PR #215](https://github.com/wbgreen0405/veteran-access-bridge/pull/215) passed **48/48 focused checks** locally and in CI at commit `a5bcf827`. This validates the local verifier, **not** IBM pre-dispatch enforcement. [Per-tool scorecard](per-tool.md) · [Security outcomes](security-adversarial.md).
+The catalog-integrity fix at [PR #215](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/pr-215.md) passed **48/48 focused checks** locally and in CI at commit `a5bcf827`. This validates the local verifier, **not** IBM pre-dispatch enforcement. [Per-tool scorecard](per-tool.md) · [Security outcomes](security-adversarial.md).
 
 ## November 21–22 review and disposition
 
@@ -92,9 +92,20 @@ This section separates **completed evaluation activity** from **still-open deplo
 | S03/A21 · caller isolation | Read-only fixture qualification and local session-scope checks | Two distinct approved synthetic callers, verified overlapping sessions, cross-case denial and correlated database snapshots |
 | Primary Care acceptance | Nov 22 synthetic fixture preparation and fail-closed scope review | Fresh approved fixture and independently verified IBM/MCP acceptance; not a new completed booking |
 
-The source reviewed here documents the **November 22** checkpoint. A distinct November 21 completion result has not been reconciled into this public ledger and should not be counted without its original run artifact.
+**Completed measurements, November 19–22 (U.S. Central time).** The engineering records label some November 21 evening runs with their UTC date (November 22).
 
-**Sources:** [Sanitized closeout](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/docs/m64-judge-evaluation-package-20261123/submission/05-security/evidence/m64-security-closeout-summary.md) · [PR #215 focused CI](https://github.com/wbgreen0405/veteran-access-bridge/actions/runs/45101968969).
+| Date | Result | Scope |
+|---|---|---|
+| Nov 19 | 1,630 passed, 20 skipped | GitHub Actions CI on released code `ea0880f` |
+| Nov 21 | 126/126 contract checks | All 29 registered tools, local in-process ([script](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/eval/probe_mcp_contracts.py)) |
+| Nov 21 | 86/86 hostile-argument checks | All 29 tools: 19 read-only tools × 4 hostile inputs, plus 10 write tools × forged authority ([script](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/eval/probe_mcp_adversarial.py)) |
+| Nov 21 | 21 of 29 tools attached to Avery | Configuration from the IBM agent export; not an agent run |
+| Nov 22 | 27 passed, 0 failed, 0 skipped | Targeted local security remediation |
+| Nov 22 | 48/48 catalog-verifier checks | Local and GitHub CI, PR #215 (open) |
+
+These are separate checkpoints and are not combined into one rate.
+
+**Sources:** [Sanitized closeout](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/05-security/evidence/m64-security-closeout-summary.md) · [PR #215 focused CI](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/ci/ci-run-45101968969.md).
 
 ## What remains open
 
@@ -107,6 +118,6 @@ The source reviewed here documents the **November 22** checkpoint. A distinct No
     | Delivery | Final recorded browser presentation; visual check of receipt and letter flow |
     | Reproduction | Pinned final release and locked dependency freshness |
 
-**Evidence:** [Accepted booking proof](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/docs/evaluation/agent-led-voice-20261116.json) · [Accepted call report](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/docs/operations/avery-agent-led-scheduling-20261116.md) · [Nov 19 reviewer record](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f0cb216d5cc78601fdc85c40d37394e085/docs/evaluation/judge-review/README.md)
+**Evidence:** [Accepted booking proof](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/agent-led-voice-20261116.json) · [Accepted call report](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/operations/avery-agent-led-scheduling-20261116.md) · [Nov 19 reviewer record](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/judge-review/README.md)
 
 **Next:** [Security & adversarial](security-adversarial.md)

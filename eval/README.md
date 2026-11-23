@@ -8,4 +8,4 @@
 | Which caller scenarios were proposed? | [Scenario matrix](../release/evidence/Primary-Care-Caller-Scenarios.csv). Read the Status column before attributing a result. |
 | Which tools and evaluators were used historically? | [IBM assets](watsonx/README.md), [DeepEval](deepeval/README.md) and [Phoenix](phoenix/README.md). Their setup and results are specific to the release and environment named in each record. |
 
-[Judge-facing evaluation and results](../docs/evaluation/index.md) · [Pinned development evaluation archive](https://github.com/wbgreen0405/veteran-access-bridge/tree/ea0880f/eval)
+[Judge-facing evaluation and results](../docs/evaluation/index.md) · [Pinned development evaluation archive](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/tree/main/eval)

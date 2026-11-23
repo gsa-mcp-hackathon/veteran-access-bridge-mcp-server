@@ -16,7 +16,7 @@ Start with one question in the gold matrix. Read across the row from the caller'
 - [Interactive 29-tool evaluation](per-tool.md)
 - [Copied historical 25-tool source CSV](evidence/m64-per-tool-evidence.json) and [original CSV](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/04-evaluation/evidence/historical-25-tool-coverage-20261116.csv)
 - [M6.4 four-scenario sanitized closeout](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/05-security/evidence/m64-security-closeout-summary.md)
-- [48/48 focused local verifier checks — CI](https://github.com/wbgreen0405/veteran-access-bridge/actions/runs/45101968969)
+- [48/48 focused local verifier checks — CI](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/ci/ci-run-45101968969.md)
 - [Evidence manifest](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/evidence-manifest.json)
 
 Record the submission commit with any new run. The gold matrix, automated control checks and live call each answer a different question and retain their own denominator.
@@ -30,6 +30,6 @@ After [installing the local server](../developer-guide/local-mcp-server.md), run
 | Artifact | What it establishes |
 |---|---|
 | [End-to-end voice trial](validation-agent.md#end-to-end-voice-trial) | The pinned November 16 trial connects selected tools to a persisted synthetic appointment and CRM note. |
-| [November 18 identity trace](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f/docs/evaluation/browser-identity-mcp-20261118.json) | An Orchestrate-selected verification call in a later identity-only check. |
+| [November 18 identity trace](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/browser-identity-mcp-20261118.json) | An Orchestrate-selected verification call in a later identity-only check. |
 | [Recorded demonstration](../demonstration.md) | The browser experience, spoken turns and visible scheduling flow. |
 | [Gold test construction and worked example](method-gold.md#gold-question-design) | How to read the question, reference answer and observed fields for a reproducible fixture. |

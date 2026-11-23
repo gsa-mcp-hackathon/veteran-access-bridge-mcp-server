@@ -1,0 +1,23 @@
+{
+    "orchestrate_agent_routing_accuracy": 1,
+    "total_steps": 52,
+    "llm_steps": 26,
+    "average_agent_response_time": 4.066,
+    "total_tool_calls": 6,
+    "expected_tool_calls": 4,
+    "correct_tool_calls": 3,
+    "missed_tool_calls": 0,
+    "relevant_tool_calls": 4,
+    "tool_calls_with_incorrect_parameter": 1,
+    "tool_call_recall": 0.75,
+    "tool_call_precision": 0.5,
+    "tool_match_success": false,
+    "tool_parameter_f1": 0.875,
+    "keyword_match": true,
+    "semantic_match": true,
+    "text_match": 1,
+    "is_success": false,
+    "run_idx": 1,
+    "dataset_name": "04_card_lifecycle_handoff_boundary",
+    "text_match_comment": "Matched 1/1 text goals"
+}

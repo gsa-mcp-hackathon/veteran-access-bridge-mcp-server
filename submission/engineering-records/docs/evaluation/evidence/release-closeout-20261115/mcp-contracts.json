@@ -1,0 +1,1155 @@
+{
+  "timestamp": "2026-11-15T18:10:43.662797+00:00",
+  "tool_count": 21,
+  "cases": [
+    {
+      "tool": "verify_synthetic_identity",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "verify_synthetic_identity",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.212
+    },
+    {
+      "tool": "verify_synthetic_identity",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": {
+          "unexpected": true
+        },
+        "full_name": "EVAL-UNKNOWN",
+        "birth_date": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 0.875
+    },
+    {
+      "tool": "verify_synthetic_identity",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": "EVAL-UNKNOWN",
+        "full_name": "EVAL-UNKNOWN",
+        "birth_date": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": false,
+      "response": {
+        "verified": false,
+        "synthetic": true,
+        "case_id": "EVAL-UNKNOWN",
+        "reason": "UNKNOWN_SYNTHETIC_CASE"
+      },
+      "elapsed_ms": 3.735
+    },
+    {
+      "tool": "determine_workflow_state",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "determine_workflow_state",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 0.703
+    },
+    {
+      "tool": "determine_workflow_state",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": {
+          "unexpected": true
+        }
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 0.641
+    },
+    {
+      "tool": "determine_workflow_state",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 79.041
+    },
+    {
+      "tool": "search_availability",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "search_availability",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 0.804
+    },
+    {
+      "tool": "search_availability",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": {
+          "unexpected": true
+        }
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 0.637
+    },
+    {
+      "tool": "search_availability",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 32.343
+    },
+    {
+      "tool": "assess_access_standard",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "assess_access_standard",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.307
+    },
+    {
+      "tool": "assess_access_standard",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": {
+          "unexpected": true
+        }
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.386
+    },
+    {
+      "tool": "assess_access_standard",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 67.564
+    },
+    {
+      "tool": "check_community_care_eligibility",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "check_community_care_eligibility",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.269
+    },
+    {
+      "tool": "check_community_care_eligibility",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": {
+          "unexpected": true
+        }
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.24
+    },
+    {
+      "tool": "check_community_care_eligibility",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 68.109
+    },
+    {
+      "tool": "get_case_lifecycle_state",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "get_case_lifecycle_state",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.64
+    },
+    {
+      "tool": "get_case_lifecycle_state",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": {
+          "unexpected": true
+        }
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.373
+    },
+    {
+      "tool": "get_case_lifecycle_state",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": false,
+      "response": {
+        "found": false,
+        "case_id": "EVAL-UNKNOWN",
+        "error": "No lifecycle history found for case_id 'EVAL-UNKNOWN'.",
+        "synthetic": true
+      },
+      "elapsed_ms": 3.733
+    },
+    {
+      "tool": "get_scheduling_encounter",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "get_scheduling_encounter",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.118
+    },
+    {
+      "tool": "get_scheduling_encounter",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": {
+          "unexpected": true
+        }
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.053
+    },
+    {
+      "tool": "get_scheduling_encounter",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 37.717
+    },
+    {
+      "tool": "prepare_scheduling_handoff",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "prepare_scheduling_handoff",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 0.853
+    },
+    {
+      "tool": "prepare_scheduling_handoff",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": {
+          "unexpected": true
+        }
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 0.75
+    },
+    {
+      "tool": "prepare_scheduling_handoff",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 44.856
+    },
+    {
+      "tool": "prepare_scheduling_handoff",
+      "category": "durable_public_write_denied",
+      "scope": "local_durable_mode_no_connection",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_scheduling_handoff",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "get_scheduling_handoff",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.573
+    },
+    {
+      "tool": "get_scheduling_handoff",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "handoff_id": {
+          "unexpected": true
+        }
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.562
+    },
+    {
+      "tool": "get_scheduling_handoff",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "handoff_id": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": false,
+      "response": {
+        "found": false,
+        "handoff_id": "EVAL-UNKNOWN",
+        "error": "No handoff found for handoff_id 'EVAL-UNKNOWN'.",
+        "synthetic": true
+      },
+      "elapsed_ms": 4.886
+    },
+    {
+      "tool": "validate_option_selection",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "validate_option_selection",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.288
+    },
+    {
+      "tool": "validate_option_selection",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": {
+          "unexpected": true
+        },
+        "handoff_id": "EVAL-UNKNOWN",
+        "option_id": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.342
+    },
+    {
+      "tool": "validate_option_selection",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": "EVAL-UNKNOWN",
+        "handoff_id": "EVAL-UNKNOWN",
+        "option_id": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": false,
+      "response": {
+        "valid": false,
+        "option": null,
+        "requires_verification": false,
+        "reason": "Case 'EVAL-UNKNOWN' has no lifecycle history. A persisted lifecycle record at HUMAN_REVIEW is required.",
+        "synthetic": true,
+        "case_id": "EVAL-UNKNOWN",
+        "handoff_id": "EVAL-UNKNOWN",
+        "option_id": "EVAL-UNKNOWN"
+      },
+      "elapsed_ms": 3.893
+    },
+    {
+      "tool": "record_option_selection",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "record_option_selection",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.317
+    },
+    {
+      "tool": "record_option_selection",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": {
+          "unexpected": true
+        },
+        "handoff_id": "EVAL-UNKNOWN",
+        "option_id": "EVAL-UNKNOWN",
+        "actor_id": "EVAL-UNKNOWN",
+        "idempotency_key": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.185
+    },
+    {
+      "tool": "record_option_selection",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": "EVAL-UNKNOWN",
+        "handoff_id": "EVAL-UNKNOWN",
+        "option_id": "EVAL-UNKNOWN",
+        "actor_id": "EVAL-UNKNOWN",
+        "idempotency_key": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 52.948
+    },
+    {
+      "tool": "record_option_selection",
+      "category": "durable_public_write_denied",
+      "scope": "local_durable_mode_no_connection",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "prepare_veteran_confirmation_request",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "prepare_veteran_confirmation_request",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 0.805
+    },
+    {
+      "tool": "prepare_veteran_confirmation_request",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": {
+          "unexpected": true
+        },
+        "option_id": "EVAL-UNKNOWN",
+        "selection_id": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 0.691
+    },
+    {
+      "tool": "prepare_veteran_confirmation_request",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": "EVAL-UNKNOWN",
+        "option_id": "EVAL-UNKNOWN",
+        "selection_id": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 24.875
+    },
+    {
+      "tool": "prepare_veteran_confirmation_request",
+      "category": "durable_public_write_denied",
+      "scope": "local_durable_mode_no_connection",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "record_veteran_confirmation",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "record_veteran_confirmation",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 0.969
+    },
+    {
+      "tool": "record_veteran_confirmation",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": {
+          "unexpected": true
+        },
+        "confirmation_request_id": "EVAL-UNKNOWN",
+        "option_id": "EVAL-UNKNOWN",
+        "response": "CONFIRMED",
+        "actor_id": "EVAL-UNKNOWN",
+        "idempotency_key": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 0.853
+    },
+    {
+      "tool": "record_veteran_confirmation",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": "EVAL-UNKNOWN",
+        "confirmation_request_id": "EVAL-UNKNOWN",
+        "option_id": "EVAL-UNKNOWN",
+        "response": "CONFIRMED",
+        "actor_id": "EVAL-UNKNOWN",
+        "idempotency_key": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 32.504
+    },
+    {
+      "tool": "record_veteran_confirmation",
+      "category": "durable_public_write_denied",
+      "scope": "local_durable_mode_no_connection",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "validate_booking_preconditions",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "validate_booking_preconditions",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 0.803
+    },
+    {
+      "tool": "validate_booking_preconditions",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": {
+          "unexpected": true
+        },
+        "option_id": "EVAL-UNKNOWN",
+        "slot_id": "EVAL-UNKNOWN",
+        "source_system": "EVAL-UNKNOWN",
+        "intended_service": "EVAL-UNKNOWN",
+        "appointment_intent": "INITIAL_CONSULT",
+        "actor_id": "EVAL-UNKNOWN",
+        "idempotency_key": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 0.678
+    },
+    {
+      "tool": "validate_booking_preconditions",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": "EVAL-UNKNOWN",
+        "option_id": "EVAL-UNKNOWN",
+        "slot_id": "EVAL-UNKNOWN",
+        "source_system": "EVAL-UNKNOWN",
+        "intended_service": "EVAL-UNKNOWN",
+        "appointment_intent": "INITIAL_CONSULT",
+        "actor_id": "EVAL-UNKNOWN",
+        "idempotency_key": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": false,
+      "response": {
+        "passed": false,
+        "case_id": "EVAL-UNKNOWN",
+        "option_id": "EVAL-UNKNOWN",
+        "hsrm_checked": true,
+        "eps_checked": true,
+        "failures": [
+          "Case 'EVAL-UNKNOWN' has no lifecycle history.",
+          "No Veteran confirmation found for case 'EVAL-UNKNOWN'. Veteran must explicitly confirm before booking.",
+          "No option selection found for case 'EVAL-UNKNOWN'.",
+          "No HSRM authorization found for option 'EVAL-UNKNOWN'. Community Care booking requires an active authorization/referral.",
+          "No EPS slot found for slot_id 'EVAL-UNKNOWN'. Community Care booking requires an available EPS slot."
+        ],
+        "synthetic": true,
+        "creates_booking": false
+      },
+      "elapsed_ms": 2.341
+    },
+    {
+      "tool": "record_lifecycle_event",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "record_lifecycle_event",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 0.688
+    },
+    {
+      "tool": "record_lifecycle_event",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": {
+          "unexpected": true
+        },
+        "event_type": "APPOINTMENT_COMPLETED",
+        "actor_role": "SCHEDULER",
+        "actor_id": "EVAL-UNKNOWN",
+        "idempotency_key": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 0.629
+    },
+    {
+      "tool": "record_lifecycle_event",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": "EVAL-UNKNOWN",
+        "event_type": "APPOINTMENT_COMPLETED",
+        "actor_role": "SCHEDULER",
+        "actor_id": "EVAL-UNKNOWN",
+        "idempotency_key": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 29.687
+    },
+    {
+      "tool": "record_lifecycle_event",
+      "category": "durable_public_write_denied",
+      "scope": "local_durable_mode_no_connection",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_va_sandbox_health_facility",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "get_va_sandbox_health_facility",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.266
+    },
+    {
+      "tool": "get_va_sandbox_health_facility",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "facility_id": {
+          "unexpected": true
+        }
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.124
+    },
+    {
+      "tool": "get_va_sandbox_health_facility",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "facility_id": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": false,
+      "response": {
+        "tool": "get_va_sandbox_health_facility",
+        "lookup": "EVAL-UNKNOWN",
+        "status": "UNAVAILABLE",
+        "source": "none_configured",
+        "source_verified": false,
+        "synthetic": true,
+        "read_only": true,
+        "authoritative_va_result": false,
+        "community_care_eligibility_status": "UNVERIFIED",
+        "authorization_granted": false,
+        "booking_created": false,
+        "message": "No verified VA sandbox source adapter is configured; no clinical or scheduling facts inferred."
+      },
+      "elapsed_ms": 3.713
+    },
+    {
+      "tool": "search_va_sandbox_health_facilities",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "search_va_sandbox_health_facilities",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.014
+    },
+    {
+      "tool": "search_va_sandbox_health_facilities",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "query": {
+          "unexpected": true
+        }
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.055
+    },
+    {
+      "tool": "search_va_sandbox_health_facilities",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "query": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": false,
+      "response": {
+        "tool": "search_va_sandbox_health_facilities",
+        "lookup": "EVAL-UNKNOWN",
+        "status": "UNAVAILABLE",
+        "source": "none_configured",
+        "source_verified": false,
+        "synthetic": true,
+        "read_only": true,
+        "authoritative_va_result": false,
+        "community_care_eligibility_status": "UNVERIFIED",
+        "authorization_granted": false,
+        "booking_created": false,
+        "message": "No verified VA sandbox source adapter is configured; no clinical or scheduling facts inferred."
+      },
+      "elapsed_ms": 3.927
+    },
+    {
+      "tool": "get_va_sandbox_health_facility_service",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "get_va_sandbox_health_facility_service",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.207
+    },
+    {
+      "tool": "get_va_sandbox_health_facility_service",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "facility_service_id": {
+          "unexpected": true
+        }
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.097
+    },
+    {
+      "tool": "get_va_sandbox_health_facility_service",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "facility_service_id": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": false,
+      "response": {
+        "tool": "get_va_sandbox_health_facility_service",
+        "lookup": "EVAL-UNKNOWN",
+        "status": "UNAVAILABLE",
+        "source": "none_configured",
+        "source_verified": false,
+        "synthetic": true,
+        "read_only": true,
+        "authoritative_va_result": false,
+        "community_care_eligibility_status": "UNVERIFIED",
+        "authorization_granted": false,
+        "booking_created": false,
+        "message": "No verified VA sandbox source adapter is configured; no clinical or scheduling facts inferred."
+      },
+      "elapsed_ms": 3.401
+    },
+    {
+      "tool": "get_va_community_care_case_summary",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "get_va_community_care_case_summary",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.07
+    },
+    {
+      "tool": "get_va_community_care_case_summary",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": {
+          "unexpected": true
+        }
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.04
+    },
+    {
+      "tool": "get_va_community_care_case_summary",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": false,
+      "response": {
+        "tool": "get_va_community_care_case_summary",
+        "lookup": "EVAL-UNKNOWN",
+        "status": "UNAVAILABLE",
+        "source": "none_configured",
+        "source_verified": false,
+        "synthetic": true,
+        "read_only": true,
+        "authoritative_va_result": false,
+        "community_care_eligibility_status": "UNVERIFIED",
+        "authorization_granted": false,
+        "booking_created": false,
+        "message": "No verified VA sandbox source adapter is configured; no clinical or scheduling facts inferred."
+      },
+      "elapsed_ms": 3.278
+    },
+    {
+      "tool": "get_va_patient_health_sandbox_summary",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "get_va_patient_health_sandbox_summary",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.002
+    },
+    {
+      "tool": "get_va_patient_health_sandbox_summary",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": {
+          "unexpected": true
+        }
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.004
+    },
+    {
+      "tool": "get_va_patient_health_sandbox_summary",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": false,
+      "response": {
+        "tool": "get_va_patient_health_sandbox_summary",
+        "lookup": "EVAL-UNKNOWN",
+        "status": "UNAVAILABLE",
+        "source": "none_configured",
+        "source_verified": false,
+        "synthetic": true,
+        "read_only": true,
+        "authoritative_va_result": false,
+        "community_care_eligibility_status": "UNVERIFIED",
+        "authorization_granted": false,
+        "booking_created": false,
+        "message": "No verified VA sandbox source adapter is configured; no clinical or scheduling facts inferred."
+      },
+      "elapsed_ms": 3.31
+    },
+    {
+      "tool": "get_va_clinical_health_case_summary",
+      "category": "metadata",
+      "passed": true,
+      "scope": "local_registry"
+    },
+    {
+      "tool": "get_va_clinical_health_case_summary",
+      "category": "missing_required",
+      "scope": "local_fixture_mode",
+      "input": {},
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.08
+    },
+    {
+      "tool": "get_va_clinical_health_case_summary",
+      "category": "wrong_type",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": {
+          "unexpected": true
+        }
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": true,
+      "response": null,
+      "elapsed_ms": 1.044
+    },
+    {
+      "tool": "get_va_clinical_health_case_summary",
+      "category": "unknown_reference",
+      "scope": "local_fixture_mode",
+      "input": {
+        "case_id": "EVAL-UNKNOWN"
+      },
+      "passed": true,
+      "state_unchanged": true,
+      "is_error": false,
+      "response": {
+        "tool": "get_va_clinical_health_case_summary",
+        "lookup": "EVAL-UNKNOWN",
+        "status": "UNAVAILABLE",
+        "source": "none_configured",
+        "source_verified": false,
+        "synthetic": true,
+        "read_only": true,
+        "authoritative_va_result": false,
+        "community_care_eligibility_status": "UNVERIFIED",
+        "authorization_granted": false,
+        "booking_created": false,
+        "message": "No verified VA sandbox source adapter is configured; no clinical or scheduling facts inferred."
+      },
+      "elapsed_ms": 3.047
+    }
+  ]
+}

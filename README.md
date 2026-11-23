@@ -51,13 +51,13 @@ Tool counts depend on what is enabled. The default local release advertised **21
 
 ## Follow the recorded call
 
-The **3-minute, 35-second** recording follows one Primary Care request through after-call work.
+The **3-minute, 39-second** recording (the same call shown on presentation slides 10–11) follows one Primary Care request through after-call work.
 
 | Time | What to look for |
 |---|---|
-| **2:30 — Patient-health read** | The activity panel names the patient-health MCP tool and attributes its selection to the IBM agent. |
-| **3:02 — Verified booking** | The confirmed appointment card shows the selected Topeka visit in Central time. The scheduling panel reports a successful independent readback. |
-| **3:31 — After-call work** | Wrap Up turns green. The reviewer can see the saved CRM note and generated confirmation letter. |
+| **2:00 — Patient-health read** | The activity panel names the patient-health MCP tool and attributes its selection to the IBM agent. |
+| **3:12 — Verified booking** | The confirmed appointment card shows the selected Topeka visit in Central time. The scheduling panel reports a successful independent readback. |
+| **3:36 — After-call work** | Wrap Up turns green. The reviewer can see the saved CRM note and generated confirmation letter. |
 
 [Demonstration walkthrough](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/demonstration/)
 
@@ -74,15 +74,15 @@ We asked three questions: **Did the server return the right information? Did the
 | Can an IBM-selected verification be traced to the backend? | **One linked verification receipt** | A separate hosted voice test distinguished the first host-invoked encounter lookup from IBM’s selection of the identity tool. |
 | Did booking and wrap-up persist? | **One verified test appointment, a saved CRM note, and a generated letter** | A dated hosted acceptance run checked the resulting records. The final demo shows its own confirmation and wrap-up. |
 
-[Gold questions and scored answers](https://github.com/wbgreen0405/veteran-access-bridge/tree/ea0880f/docs/evaluation/judge-review) · [DeepEval method and scoring notes](https://github.com/wbgreen0405/veteran-access-bridge/tree/ea0880f/eval/deepeval) · [Verification trace](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f/docs/evaluation/browser-identity-mcp-20261118.json) · [Booking and wrap-up evidence](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f/docs/operations/voice-call-polish-booking-20261117.json)
+[Gold questions and scored answers](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/tree/main/submission/engineering-records/docs/evaluation/judge-review) · [DeepEval method and scoring notes](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/tree/main/eval/deepeval) · [Verification trace](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/browser-identity-mcp-20261118.json) · [Booking and wrap-up evidence](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/operations/voice-call-polish-booking-20261117.json)
 
 ## Security and adversarial evaluation
 
 | What we tested | Observed result | Evidence boundary |
 |---|---|---|
-| **Unsafe inputs sent directly to MCP tools** | **76 of 76 argument checks passed** across 25 tools in the November 16 CRM-enabled configuration. The tested requests were rejected or produced safe negative results. Local fixture stores remained unchanged. | This was a local server test. It exercised neither a hosted database nor an agent responding to malicious instructions. [Server evaluation](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f/docs/evaluation/server-wide-evaluation-20261116.md) |
-| **Unauthorized caller requests** | Across **five restricted requests in three voice sessions**, the traces showed **zero MCP attempts during those requests**. All three sessions subsequently completed a permitted follow-up. | The traces establish what Avery invoked. The retained database audit covered different sessions, so database effects for these five requests remain unverified. [Voice evidence and reconciliation](https://github.com/wbgreen0405/veteran-access-bridge/tree/ea0880f/docs/evaluation/judge-review) |
-| **Indirect prompt injection through tool results** | **Six cases prepared; execution pending.** | These cases cover untrusted instructions embedded in returned content. A result requires actual tool outputs and agent traces. No pass rate is reported. [Prepared cases](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f/eval/deepeval/server_wide_injection_cases.json) |
+| **Unsafe inputs sent directly to MCP tools** | **76 of 76 argument checks passed** across 25 tools in the November 16 CRM-enabled configuration. The tested requests were rejected or produced safe negative results. Local fixture stores remained unchanged. | This was a local server test. It exercised neither a hosted database nor an agent responding to malicious instructions. [Server evaluation](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/server-wide-evaluation-20261116.md) |
+| **Unauthorized caller requests** | Across **five restricted requests in three voice sessions**, the traces showed **zero MCP attempts during those requests**. All three sessions subsequently completed a permitted follow-up. | The traces establish what Avery invoked. The retained database audit covered different sessions, so database effects for these five requests remain unverified. [Voice evidence and reconciliation](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/tree/main/submission/engineering-records/docs/evaluation/judge-review) |
+| **Indirect prompt injection through tool results** | **Six cases prepared; execution pending.** | These cases cover untrusted instructions embedded in returned content. A result requires actual tool outputs and agent traces. No pass rate is reported. [Prepared cases](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/eval/deepeval/server_wide_injection_cases.json) |
 
 [Security and governance walkthrough](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/security-governance/)
 
@@ -117,14 +117,14 @@ uv run --no-sync pytest -q tests/test_m6_2_primary_care_scenarios.py
 uv run --no-sync pytest -q tests
 ```
 
-[Developer guide](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/developer-guide/) · [Pinned release quickstart](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f/QUICKSTART.md)
+[Developer guide](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/developer-guide/) · [Pinned release quickstart](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/QUICKSTART.md)
 
 ## Release references
 
 | Reference | Version | What it identifies |
 |---|---|---|
-| Reproducible backend | [`ea0880f`](https://github.com/wbgreen0405/veteran-access-bridge/tree/ea0880f) | Server source, corrected dependency lockfile, discovery script, and evaluation instructions. |
-| Deployed IBM backend | [`293fc8c`](https://github.com/wbgreen0405/veteran-access-bridge/commit/293fc8c), revision `00062` | IBM reported this revision serving 100% of backend traffic on November 19, 2026. Its application code matches the reproducible release. |
-| Companion browser frontend | [`166dd1a`](https://github.com/wbgreen0405/veteran-appointment-bridge/tree/166dd1ae5e5ccd5a87b1b19408fc9b1e8c5aaf47) | Source and build instructions for the browser call center. |
+| Reproducible backend | [`ea0880f`](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server) | Server source, corrected dependency lockfile, discovery script, and evaluation instructions. |
+| Deployed IBM backend | `293fc8c`, revision `00062` | IBM reported this revision serving 100% of backend traffic on November 19, 2026. Its application code matches the reproducible release. |
+| Companion browser frontend | [`166dd1a`](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/tree/main/frontend) | Source and build instructions for the browser call center. |
 
 Veteran Access Bridge is an independent hackathon prototype. It uses test patient records, demonstration appointment inventory, and a project-managed test database.

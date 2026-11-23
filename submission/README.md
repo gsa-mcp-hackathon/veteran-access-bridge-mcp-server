@@ -1,6 +1,6 @@
 # For Judges — Veteran Access Bridge
 
-**Start here.** Curated GSA MCP & SI Agent Hackathon materials. The **Python FastMCP server** is the primary deliverable; Avery is the synthetic voice demonstration client.
+**Start here.** Curated materials for the GSA MCP Server and SI Agent Government Hackathon. The **Python FastMCP server** is the primary deliverable; Avery is the synthetic voice demonstration client.
 
 | Section | Judge's question |
 |---|---|
@@ -26,15 +26,14 @@ The [evidence manifest](evidence-manifest.json) identifies the source, date and 
 |---|---|---|
 | Source code and local tests | Repository `src/`, `eval/` and `tests/` | Included |
 | MkDocs documentation | `docs/` and published [GitHub Pages](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/) | Published documentation |
-| Recorded demo | [Public video file](../docs/assets/avery-demo.mp4) | Included |
+| Recorded demo (MP4, 3:39) | [Public video file](../docs/assets/avery-demo.mp4); same call as presentation slides 10–11 | Included |
 | Tool-level matrix | [29-tool index](04-evaluation/evidence/m64-per-tool-evidence.json) and [25-tool historical CSV](04-evaluation/evidence/historical-25-tool-coverage-20261116.csv) | Included with limitations |
 | Security closeout | [Sanitized summary](05-security/evidence/m64-security-closeout-summary.md) | Included; 4 deployed PARTIAL |
-| Final presentation (PowerPoint) | Separately maintained presentation | **Not yet copied into this repo** |
-| Final evaluation document (DOCX/PDF) | Separately maintained report | **Not yet copied into this repo** |
+| Final presentation (PowerPoint, 20 slides) | [deliverables/Veteran-Access-Bridge-Presentation.pptx](deliverables/Veteran-Access-Bridge-Presentation.pptx) | Included |
+| Final evaluation report (Word) | [deliverables/Veteran-Access-Bridge-Evaluation-Report.docx](deliverables/Veteran-Access-Bridge-Evaluation-Report.docx) | Included |
+| Submission links sheet (PDF) | [deliverables/Veteran-Access-Bridge-Submission-Links.pdf](deliverables/Veteran-Access-Bridge-Submission-Links.pdf) | Included |
 
-The last two artifacts need version reconciliation, privacy review and deliberate inclusion. Their absence must not be presented as a finished judge package.
-
-**Current reviewed configuration:** 29 registered tools, 21 attached to Avery, 8 excluded from the agent. The November 16 tool contract matrix covered an earlier 25-tool inventory. Local catalog-integrity remediation passed **48/48 focused checks**, not 48 deployed adversarial scenarios. S03/A21, S13/A23, S14 and S15 remain **PARTIAL** for deployed security acceptance.
+**Current reviewed configuration:** 29 registered tools, 21 attached to Avery, 8 excluded from the agent. The November 16 tool contract matrix covered an earlier 25-tool inventory; on November 21 the contract probes (**126/126**) and hostile-argument probes (**86/86**) covered all 29 tools. Local catalog-integrity remediation passed **48/48 focused checks** (November 22), not 48 deployed adversarial scenarios. S03/A21, S13/A23, S14 and S15 remain **PARTIAL** for deployed security acceptance.
 
 **Publication boundary:** This public package includes sanitized summaries and local test matrices; no unredacted private IBM traces, patient details, passwords, tokens or identity factors. Historical and current evidence must not be pooled into one success rate.
 
@@ -44,10 +43,10 @@ The last two artifacts need version reconciliation, privacy review and deliberat
 - [x] Static public demonstration recording and reproducible local MCP instructions
 - [x] Historical 25-tool contract and adversarial-argument evidence copied with provenance
 - [x] Inline 29-tool inventory/test scorecard with accurate historical-versus-current labels
-- [x] November 22–23 remediation findings, including four PARTIAL deployed security outcomes
-- [ ] Final presentation PowerPoint reviewed, version-pinned and added to the public judge package
-- [ ] Final evaluation DOCX/PDF reviewed, version-pinned and added to the public judge package
-- [ ] Independent judges’ ability to open private engineering provenance links checked, or public alternatives provided
+- [x] November 21–22 evaluation and remediation findings, including four PARTIAL deployed security outcomes
+- [x] Final presentation PowerPoint added to the public judge package (`deliverables/`)
+- [x] Final evaluation report added to the public judge package (`deliverables/`)
+- [x] Private engineering links replaced with public copies ([engineering records](engineering-records/README.md), [frontend snapshot](../frontend/SNAPSHOT.md))
 - [ ] Separate full deployed M6.4 per-tool IBM evaluation, p95 and repeatability scores (not established by the published historical matrix)
 
 **Release rule:** Do not mark the submission artifact package complete or claim production security signoff while these items remain outstanding. The published site is the easy-to-read front door; the versioned files here are the evidence record.

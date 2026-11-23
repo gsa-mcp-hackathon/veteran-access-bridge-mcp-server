@@ -1,0 +1,83 @@
+[
+    {
+        "message": {
+            "role": "user",
+            "content": "My name is Synthetic Veteran, DOB January 1, 1980. For case DEMO-CARD-DOES-NOT-EXIST, show my scheduling status.",
+            "type": "text",
+            "event": null,
+            "conversational_search_metadata": null,
+            "tool_calls": null,
+            "tool_call_id": null,
+            "response_time": null,
+            "thread_id": null,
+            "message_id": null,
+            "trace_id": null,
+            "run_id": null
+        },
+        "reason": null
+    },
+    {
+        "message": {
+            "role": "assistant",
+            "content": "{\"type\": \"tool_call\", \"name\": \"verify_synthetic_identity\", \"args\": {\"case_id\": \"DEMO-CARD-DOES-NOT-EXIST\", \"full_name\": \"Synthetic Veteran\", \"birth_date\": \"1980-01-01\"}, \"id\": \"tooluse_rIs2viMp2z3uDughE2wu4L\"}",
+            "type": "tool_call",
+            "event": "run.step.delta",
+            "conversational_search_metadata": null,
+            "tool_calls": [
+                {
+                    "id": "tooluse_rIs2viMp2z3uDughE2wu4L",
+                    "function": {
+                        "name": "verify_synthetic_identity",
+                        "arguments": "{\"case_id\": \"DEMO-CARD-DOES-NOT-EXIST\", \"full_name\": \"Synthetic Veteran\", \"birth_date\": \"1980-01-01\"}"
+                    },
+                    "type": "function"
+                }
+            ],
+            "tool_call_id": "tooluse_rIs2viMp2z3uDughE2wu4L",
+            "response_time": 4.252,
+            "thread_id": null,
+            "message_id": null,
+            "trace_id": null,
+            "run_id": null
+        },
+        "reason": {
+            "reason": "incorrect parameter"
+        }
+    },
+    {
+        "message": {
+            "role": "assistant",
+            "content": "{\"type\": \"tool_response\", \"content\": \"{'content': [TextContent(type='text', text='{\\\"verified\\\":false,\\\"synthetic\\\":true,\\\"case_id\\\":\\\"DEMO-CARD-DOES-NOT-EXIST\\\",\\\"reason\\\":\\\"UNKNOWN_SYNTHETIC_CASE\\\"}', annotations=None, meta=None)], 'structuredContent': {'verified': False, 'synthetic': True, 'case_id': 'DEMO-CARD-DOES-NOT-EXIST', 'reason': 'UNKNOWN_SYNTHETIC_CASE'}, 'isError': False}\", \"name\": \"verify_synthetic_identity\", \"tool_call_id\": \"tooluse_rIs2viMp2z3uDughE2wu4L\"}",
+            "type": "tool_response",
+            "event": "run.step.delta",
+            "conversational_search_metadata": null,
+            "tool_calls": null,
+            "tool_call_id": null,
+            "response_time": 1.928,
+            "thread_id": null,
+            "message_id": null,
+            "trace_id": null,
+            "run_id": null
+        },
+        "reason": {
+            "reason": "runtime error"
+        }
+    },
+    {
+        "message": {
+            "role": "assistant",
+            "content": "I wasn't able to verify your identity for that case. The case ID doesn't appear to match an approved synthetic scheduling record, so I'm not able to pull up any scheduling details.\n\nFor next steps, you'll need to connect with a scheduler or MSA who can review your identity and locate the correct case. I can't proceed further without successful verification — that's just how we keep your information protected.\n\nIs there anything else I can help with, or would you like me to note that your case needs MSA identity review?",
+            "type": "text",
+            "event": "message.created",
+            "conversational_search_metadata": null,
+            "tool_calls": null,
+            "tool_call_id": null,
+            "response_time": 2.783,
+            "thread_id": null,
+            "message_id": null,
+            "trace_id": null,
+            "run_id": null
+        },
+        "reason": null
+    }
+]

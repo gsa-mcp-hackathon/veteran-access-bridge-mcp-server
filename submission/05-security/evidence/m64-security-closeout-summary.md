@@ -9,6 +9,6 @@
 
 No unauthorized deployed execution, disclosure or credential forwarding was established by these findings.
 
-**Provenance:** [PR #215](https://github.com/wbgreen0405/veteran-access-bridge/pull/215) · [48-test GitHub Actions CI](https://github.com/wbgreen0405/veteran-access-bridge/actions/runs/45101968969) · [Pinned integration handoff](https://github.com/wbgreen0405/veteran-access-bridge/blob/a5bcf8277001d381adb4aa81d3916225d15528fb/docs/evaluation/m64-integration-acceptance.md).
+**Provenance:** [PR #215](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/pr-215.md) · [48-test GitHub Actions CI](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/ci/ci-run-45101968969.md) · [Pinned integration handoff](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/m64-integration-acceptance.md).
 
 This file is a sanitized summary, **not** an unredacted IBM or Supabase artifact.

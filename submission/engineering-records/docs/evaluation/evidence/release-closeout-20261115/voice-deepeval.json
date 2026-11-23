@@ -1,0 +1,17 @@
+[
+  {
+    "case": "V11_READ",
+    "runtime_version": "backend-00028-1e4b26c-agent-v11-d815e1e",
+    "trace_sha256": "3671c40713433cfbc071c882274db4464eae575ff0d0b5756a7bdb7522fe027b",
+    "registry_sha256": "5595b9703a65c3aae5947b0bab7ea3294e302f49eea6b0a09bdd22e70f1168a6",
+    "turns": 10,
+    "observed_mcp_calls": 3,
+    "scope": "Recorded draft conversation; not live booking acceptance",
+    "status": "SCORED",
+    "scope_values_redacted": true,
+    "score": 0.0,
+    "reason": "The metric failed with a final score of 0.0 due to the absence of any successful interactions or valid reasons indicating correct task completion or appropriate tool and resource usage, reflecting a complete lack of effective performance by the application.",
+    "judge_model": "gpt-4.1-mini",
+    "evaluation_cost_usd": "0.00020200000000000003"
+  }
+]

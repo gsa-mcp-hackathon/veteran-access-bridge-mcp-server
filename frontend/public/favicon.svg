@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Veteran Access Bridge scheduling">
+<rect width="64" height="64" rx="13" fill="#162e51"/>
+<path d="M10 16h31v10H10z" fill="#005ea2"/>
+<path d="M13 13v6m25-6v6" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+<rect x="10" y="17" width="34" height="34" rx="5" fill="#fff"/>
+<path d="M10 24h34" stroke="#005ea2" stroke-width="4"/>
+<g fill="#005ea2"><rect x="16" y="30" width="7" height="7" rx="1"/><rect x="28" y="30" width="7" height="7" rx="1"/><rect x="16" y="41" width="7" height="5" rx="1"/></g>
+<circle cx="45" cy="45" r="16" fill="#216e1f" stroke="#162e51" stroke-width="3"/>
+<path d="m37 45 5 5 11-12" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

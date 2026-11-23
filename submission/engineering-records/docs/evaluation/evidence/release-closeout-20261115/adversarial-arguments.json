@@ -1,0 +1,324 @@
+{
+  "scope": "in-process argument probes; no agent; no database connection",
+  "limitations": "Does not test SQL execution, outbound adapters, or model injection resistance",
+  "cases": [
+    {
+      "tool": "verify_synthetic_identity",
+      "variant": "role_instruction",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "verify_synthetic_identity",
+      "variant": "sql_like_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "verify_synthetic_identity",
+      "variant": "file_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "verify_synthetic_identity",
+      "variant": "url_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "determine_workflow_state",
+      "variant": "role_instruction",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "determine_workflow_state",
+      "variant": "sql_like_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "determine_workflow_state",
+      "variant": "file_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "determine_workflow_state",
+      "variant": "url_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "search_availability",
+      "variant": "role_instruction",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "search_availability",
+      "variant": "sql_like_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "search_availability",
+      "variant": "file_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "search_availability",
+      "variant": "url_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "assess_access_standard",
+      "variant": "role_instruction",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "assess_access_standard",
+      "variant": "sql_like_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "assess_access_standard",
+      "variant": "file_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "assess_access_standard",
+      "variant": "url_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "check_community_care_eligibility",
+      "variant": "role_instruction",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "check_community_care_eligibility",
+      "variant": "sql_like_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "check_community_care_eligibility",
+      "variant": "file_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "check_community_care_eligibility",
+      "variant": "url_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_case_lifecycle_state",
+      "variant": "role_instruction",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_case_lifecycle_state",
+      "variant": "sql_like_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_case_lifecycle_state",
+      "variant": "file_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_case_lifecycle_state",
+      "variant": "url_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_scheduling_encounter",
+      "variant": "role_instruction",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_scheduling_encounter",
+      "variant": "sql_like_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_scheduling_encounter",
+      "variant": "file_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_scheduling_encounter",
+      "variant": "url_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "validate_option_selection",
+      "variant": "role_instruction",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "validate_option_selection",
+      "variant": "sql_like_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "validate_option_selection",
+      "variant": "file_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "validate_option_selection",
+      "variant": "url_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "validate_booking_preconditions",
+      "variant": "role_instruction",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "validate_booking_preconditions",
+      "variant": "sql_like_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "validate_booking_preconditions",
+      "variant": "file_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "validate_booking_preconditions",
+      "variant": "url_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_va_community_care_case_summary",
+      "variant": "role_instruction",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_va_community_care_case_summary",
+      "variant": "sql_like_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_va_community_care_case_summary",
+      "variant": "file_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_va_community_care_case_summary",
+      "variant": "url_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_va_patient_health_sandbox_summary",
+      "variant": "role_instruction",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_va_patient_health_sandbox_summary",
+      "variant": "sql_like_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_va_patient_health_sandbox_summary",
+      "variant": "file_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_va_patient_health_sandbox_summary",
+      "variant": "url_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_va_clinical_health_case_summary",
+      "variant": "role_instruction",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_va_clinical_health_case_summary",
+      "variant": "sql_like_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_va_clinical_health_case_summary",
+      "variant": "file_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "get_va_clinical_health_case_summary",
+      "variant": "url_reference",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "prepare_scheduling_handoff",
+      "variant": "forged_authority_fields",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "record_option_selection",
+      "variant": "forged_authority_fields",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "prepare_veteran_confirmation_request",
+      "variant": "forged_authority_fields",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "record_veteran_confirmation",
+      "variant": "forged_authority_fields",
+      "passed": true,
+      "state_unchanged": true
+    },
+    {
+      "tool": "record_lifecycle_event",
+      "variant": "forged_authority_fields",
+      "passed": true,
+      "state_unchanged": true
+    }
+  ]
+}

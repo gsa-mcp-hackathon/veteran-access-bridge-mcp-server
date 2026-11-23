@@ -1,0 +1,23 @@
+{
+    "orchestrate_agent_routing_accuracy": 1,
+    "total_steps": 12,
+    "llm_steps": 6,
+    "average_agent_response_time": 2.867,
+    "total_tool_calls": 5,
+    "expected_tool_calls": 5,
+    "correct_tool_calls": 3,
+    "missed_tool_calls": 0,
+    "relevant_tool_calls": 5,
+    "tool_calls_with_incorrect_parameter": 2,
+    "tool_call_recall": 0.6,
+    "tool_call_precision": 0.6,
+    "tool_match_success": false,
+    "tool_parameter_f1": 0.8333,
+    "keyword_match": false,
+    "semantic_match": true,
+    "text_match": 0,
+    "is_success": false,
+    "run_idx": 1,
+    "dataset_name": "08_card_veteran_choice_validation",
+    "text_match_comment": "Matched 0/1 text goals"
+}

@@ -8,8 +8,8 @@ The demo used the IBM agent `veteran_access_agent_m64`. Avery handled the conver
 | --- | --- |
 | How was Avery instructed to handle a scheduling call? | [Revision 13 scheduling and CRM instructions](../deploy/ibm/orchestrate/avery-agent-scheduling-v13.md) |
 | Which rules guided speech, tool use, handoffs and after-call work? | [Eight IBM guidelines](../deploy/ibm/orchestrate/avery-guidelines-v1.json) |
-| How many tools were available to Avery? | The November 18 deployment record reports **21 attached MCP tools and eight guidelines** after the experimental workflow was detached. The canary server advertised **29 tools** with its optional features enabled. [Release inventory and deployment acceptance](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f/docs/evaluation/guidelines-and-tool-inventory-20261118.md) |
-| Which tool did Avery actually invoke? | The November 18 browser verification trace records a watsonx Orchestrate call to `verify_synthetic_identity`, alongside host events and one linked identity receipt. [Recorded browser verification](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f/docs/evaluation/browser-identity-mcp-20261118.json) |
+| How many tools were available to Avery? | The November 18 deployment record reports **21 attached MCP tools and eight guidelines** after the experimental workflow was detached. The canary server advertised **29 tools** with its optional features enabled. [Release inventory and deployment acceptance](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/guidelines-and-tool-inventory-20261118.md) |
+| Which tool did Avery actually invoke? | The November 18 browser verification trace records a watsonx Orchestrate call to `verify_synthetic_identity`, alongside host events and one linked identity receipt. [Recorded browser verification](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/browser-identity-mcp-20261118.json) |
 
 ## Understand the source history
 

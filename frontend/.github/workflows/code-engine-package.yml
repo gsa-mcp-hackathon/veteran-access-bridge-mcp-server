@@ -1,0 +1,107 @@
+name: IBM Code Engine package verification
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - Dockerfile
+      - .dockerignore
+      - vite.config.ts
+      - package.json
+      - bun.lock
+      - src/lib/bounded-json.ts
+      - src/lib/reviewer-access.ts
+      - src/server.ts
+      - scripts/smoke-reviewer-access.mjs
+      - src/routes/api/**
+      - .github/workflows/code-engine-package.yml
+      - docs/deployment/ibm-code-engine-callcenter.md
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  node-server:
+    name: Build standalone Node server and smoke-check API
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - name: Build server with Code Engine target
+        env:
+          VAB_DEPLOY_TARGET: code-engine
+          NITRO_PRESET: node-server
+        run: |
+          bun run build
+          test -s .output/server/index.mjs
+          test -d .output/public
+      - name: Smoke-check the actual Node HTTP runtime
+        run: |
+          PORT=8080 HOST=127.0.0.1 node .output/server/index.mjs > /tmp/vab-callcenter-test.log 2>&1 &
+          PID=$!
+          trap 'kill "$PID" 2>/dev/null || true' EXIT
+          ready=0
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8080/ > /tmp/vab-callcenter-index.html; then
+              ready=1
+              break
+            fi
+            sleep 1
+          done
+          if [ "$ready" != 1 ]; then
+            cat /tmp/vab-callcenter-test.log
+            exit 1
+          fi
+          # Without server secrets, fail closed; never allow a synthetic call.
+          status=$(curl -s -o /tmp/vab-callcenter-response.json -w '%{http_code}' \
+            -X POST http://127.0.0.1:8080/api/demo-call \
+            -H 'Content-Type: application/json' \
+            --data '{"action":"status"}')
+          test "$status" = 403 || { echo "Expected 403, got $status"; cat /tmp/vab-callcenter-response.json; exit 1; }
+      - name: Build and run deployment Docker image
+        run: |
+          docker build --pull -t vab-avery-callcenter:ci .
+          # Test-only credentials and a non-resolving upstream: no real service is contacted.
+          CID=$(docker run -d --rm -p 127.0.0.1:18080:8080 \
+            -e VAB_MSA_LIVE_MONITOR_ENABLED=true \
+            -e VAB_API_BASE_URL=https://backend.example.invalid \
+            -e VAB_MSA_MONITOR_SERVICE_KEY=kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk \
+            -e VAB_MSA_OPERATOR_ACCESS_CODE=cccccccccccccccccccccccccccccccc \
+            vab-avery-callcenter:ci)
+          trap 'docker stop "$CID" >/dev/null 2>&1 || true' EXIT
+          ready=0
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:18080/ >/dev/null; then ready=1; break; fi
+            sleep 1
+          done
+          if [ "$ready" != 1 ]; then docker logs "$CID"; exit 1; fi
+          status=$(curl -s -o /dev/null -w '%{http_code}' \
+            -X POST http://127.0.0.1:18080/api/demo-call \
+            -H 'Content-Type: application/json' \
+            --data '{"action":"status"}')
+          test "$status" = 403
+          python -c 'import json; print(json.dumps({"action":"start","extra":"x"*16384}))' > /tmp/vab-oversize.json
+          for endpoint in demo-call msa-monitor; do
+            status=$(curl -s -o /tmp/vab-limit-response.json -w '%{http_code}' \
+              -X POST "http://127.0.0.1:18080/api/$endpoint" \
+              -H 'Content-Type: application/json' \
+              -H 'Authorization: Bearer cccccccccccccccccccccccccccccccc' \
+              --data-binary @/tmp/vab-oversize.json)
+            test "$status" = 413 || { echo "Expected 413, got $status"; exit 1; }
+          done
+          docker stop "$CID" >/dev/null
+          CID=$(docker run -d --rm -p 127.0.0.1:18080:8080 \
+            -e VAB_REVIEWER_LOGIN_ENABLED=true \
+            -e VAB_REVIEWER_ACCESS_CODE=test-only-reviewer-code-0000000000000000 \
+            -e VAB_PUBLIC_GUEST_ORIGIN=https://review.example.test \
+            vab-avery-callcenter:ci)
+          ready=0
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:18080/login >/dev/null; then ready=1; break; fi
+            sleep 1
+          done
+          test "$ready" = 1
+          node scripts/smoke-reviewer-access.mjs http://127.0.0.1:18080

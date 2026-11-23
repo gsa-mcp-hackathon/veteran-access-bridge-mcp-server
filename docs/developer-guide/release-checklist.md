@@ -11,7 +11,7 @@
 - [ ] Keep sandbox and Supabase credentials in approved secret storage—never in GitHub Pages or Markdown.
 - [ ] Do not reuse consumed historical booking cases, claim production VA writes, or treat a generated sentence as a booking receipt.
 
-[Reproducibility source guide](https://github.com/wbgreen0405/veteran-access-bridge/wiki/Reproducibility) · [IBM CLI runbook](https://github.com/wbgreen0405/veteran-access-bridge/wiki/IBM-watsonx-Orchestrate-CLI-Setup-and-Verification) · [Evaluation Results](../evaluation/index.md)
+[Reproducibility source guide](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/developer-guide/clean-room-reproducibility/) · [IBM CLI runbook](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/developer-guide/ibm-orchestrate/) · [Evaluation Results](../evaluation/index.md)
 
 ---
 

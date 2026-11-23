@@ -1,0 +1,62 @@
+{
+  "case_id": "VAB-DEMO-20261113-CASE-047",
+  "outcome": "PASS",
+  "backend_image_commit": "6aeee09198abbcc1d5348637b2d08357099747de",
+  "canary_revision": "00037",
+  "frontend_image_commit": "3e0f03153c2683ab8189343d159e785f548197c8",
+  "frontend_revision": "00022",
+  "agent_selected_tools_verified": [
+    "book_call_appointment",
+    "get_va_patient_health_sandbox_summary",
+    "search_call_appointments",
+    "search_call_knowledge",
+    "select_call_appointment"
+  ],
+  "verified_options_count": 2,
+  "patient_time_zone": "America/Chicago",
+  "spoken_booking_time": "Thursday, November 26, 2026 at 9 AM CST",
+  "independent_database_check": {
+    "case_appointments": 1,
+    "total_appointments_before": 37,
+    "total_appointments_after": 38,
+    "crm_notes": 1,
+    "crm_origin": "host"
+  },
+  "receipt": {
+    "verified": true,
+    "identity_verified": true,
+    "state": "BOOKED_SIMULATED",
+    "booking_case_id": "VAB-DEMO-20261113-CASE-047",
+    "voice_session_id": "vs-ba383f1d-2359-45b5-8f5c-0c87a825eab3",
+    "begins_at": "2026-11-26T15:00:00+00:00",
+    "ends_at": "2026-11-26T15:30:00+00:00",
+    "patient_time_zone": "America/Chicago",
+    "appointment_id": "1e62d1d8-84d3-58c5-9e01-00005101ed1f",
+    "crm_note_status": "SAVED",
+    "crm_note_id": "707605a8-0cf8-4db6-b38d-26e8b3a2a710",
+    "crm_note_origin": "trusted_booking_host"
+  },
+  "first_audio_latency_seconds": [
+    4.879,
+    1.5,
+    2.192,
+    1.167,
+    10.269,
+    11.216,
+    13.72,
+    10.087,
+    3.508
+  ],
+  "latency_median_seconds": 4.879,
+  "latency_max_seconds": 13.72,
+  "elapsed_seconds_including_test_pacing": 298.86,
+  "test_audio_condition": "All caller TTS quiet runs capped at 120ms; speech frames retained",
+  "limitations": [
+    "VA sandbox patient read; no VA production booking",
+    "Appointment inventory and writes in vab_test",
+    "No provider or PACT assignment supplied",
+    "KB content is draft/unreviewed",
+    "Controlled generated speech; not an arbitrary human-speech benchmark",
+    "Browser initial page and component rendering tested separately from the RTC acceptance client"
+  ]
+}
