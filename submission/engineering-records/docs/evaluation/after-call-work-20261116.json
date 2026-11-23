@@ -1,0 +1,126 @@
+{
+  "status": "PASS_FOCUSED_BOOKING_AND_WRAPUP",
+  "synthetic": true,
+  "date_local": "2026-11-16",
+  "deployments": [
+    {
+      "app": "veteran-access-bridge-m64-canary",
+      "image": "ghcr.io/wbgreen0405/veteran-access-bridge:sha-b2be4c3d7f02b5a6a3e16f8c9e470952a8002366",
+      "revision": "veteran-access-bridge-m64-canary-00043",
+      "traffic": [
+        {
+          "revisionName": "veteran-access-bridge-m64-canary-00043",
+          "latestRevision": true,
+          "percent": 100
+        }
+      ]
+    },
+    {
+      "app": "vab-avery-callcenter",
+      "image": "ghcr.io/wbgreen0405/veteran-appointment-bridge:avery-callcenter-dcdc7ba3061f12e62d6608c54c8aab70aa168f1d",
+      "revision": "vab-avery-callcenter-00023",
+      "traffic": [
+        {
+          "revisionName": "vab-avery-callcenter-00023",
+          "latestRevision": true,
+          "percent": 100
+        }
+      ]
+    }
+  ],
+  "case_id": "VAB-DEMO-20261113-CASE-048",
+  "voice_session_id": "vs-3733615d-ba65-42c5-bbee-4dad8b77b840",
+  "interaction_id": "int-083f545ebd404028",
+  "elapsed_seconds": 262.16,
+  "caller_audio_condition": "All caller TTS quiet runs capped at 120ms; speech frames retained",
+  "agent_selected_tools_verified": [
+    "book_call_appointment",
+    "get_va_patient_health_sandbox_summary",
+    "search_call_appointments",
+    "select_call_appointment"
+  ],
+  "booking_receipt": {
+    "verified": true,
+    "identity_verified": true,
+    "state": "BOOKED_SIMULATED",
+    "booking_case_id": "VAB-DEMO-20261113-CASE-048",
+    "voice_session_id": "vs-3733615d-ba65-42c5-bbee-4dad8b77b840",
+    "begins_at": "2026-11-27T15:00:00+00:00",
+    "ends_at": "2026-11-27T15:30:00+00:00",
+    "patient_time_zone": "America/Chicago",
+    "appointment_id": "806ead43-f3d9-59e3-9f89-cb28964eaf1b",
+    "crm_note_status": "SAVED",
+    "crm_note_id": "fc9d98bd-3593-4fc5-a128-5a569c02dc3f",
+    "crm_note_origin": "trusted_booking_host"
+  },
+  "after_call": {
+    "status": "COMPLETE",
+    "persisted": true,
+    "summary": "After-call scheduling summary. Call ended: CALLER_ENDED. Identity verified; Primary Care appointment 806ead43-f3d9-59e3-9f89-cb28964eaf1b independently confirmed for Friday, November 27, 2026 at 09:00 AM CST (America/Chicago). Confirmation letter generated, not sent. Review CRM history for other requests or follow-up.",
+    "record_id": "e043d0d2-07db-475a-b7f3-62483f0f252d",
+    "letter": {
+      "text": "VETERAN ACCESS BRIDGE\nAPPOINTMENT CONFIRMATION\nDemonstration record \u2014 not a live VA appointment\n\nAppointment reference: 806ead43-f3d9-59e3-9f89-cb28964eaf1b\nService: Primary Care\nDate and time: Friday, November 27, 2026 at 09:00 AM CST\nPatient time zone: America/Chicago\nScheduled end: 09:30 AM CST\n\nProvider, clinic location and arrival instructions were not supplied in the verified booking receipt. Contact the scheduling team for details.\n\nGenerated after the call from an independently verified booking. This letter has not been mailed, emailed or texted.\n",
+      "filename": "appointment-confirmation.txt",
+      "delivery_status": "NOT_SENT"
+    }
+  },
+  "repeat_end_same_receipt": true,
+  "database": {
+    "total_appointments": 39,
+    "patient_appointments": 3,
+    "case_appointments": 1,
+    "case_crm_notes": 3,
+    "voice_session_id": "vs-3733615d-ba65-42c5-bbee-4dad8b77b840",
+    "identity_outcomes": [
+      "VERIFIED"
+    ],
+    "after_call_count": 1,
+    "after_call_receipts": [
+      {
+        "letter": {
+          "text": "VETERAN ACCESS BRIDGE\nAPPOINTMENT CONFIRMATION\nDemonstration record \u2014 not a live VA appointment\n\nAppointment reference: 806ead43-f3d9-59e3-9f89-cb28964eaf1b\nService: Primary Care\nDate and time: Friday, November 27, 2026 at 09:00 AM CST\nPatient time zone: America/Chicago\nScheduled end: 09:30 AM CST\n\nProvider, clinic location and arrival instructions were not supplied in the verified booking receipt. Contact the scheduling team for details.\n\nGenerated after the call from an independently verified booking. This letter has not been mailed, emailed or texted.\n",
+          "filename": "appointment-confirmation.txt",
+          "content_type": "text/plain",
+          "delivery_status": "NOT_SENT"
+        },
+        "reason": "CALLER_ENDED",
+        "status": "COMPLETE",
+        "summary": "After-call scheduling summary. Call ended: CALLER_ENDED. Identity verified; Primary Care appointment 806ead43-f3d9-59e3-9f89-cb28964eaf1b independently confirmed for Friday, November 27, 2026 at 09:00 AM CST (America/Chicago). Confirmation letter generated, not sent. Review CRM history for other requests or follow-up.",
+        "trigger": "call_ended",
+        "replayed": false,
+        "persisted": true,
+        "record_id": "e043d0d2-07db-475a-b7f3-62483f0f252d",
+        "invoked_by": "host",
+        "disposition": "INFORMATION_PROVIDED",
+        "booking_created": false,
+        "voice_session_id": "vs-3733615d-ba65-42c5-bbee-4dad8b77b840",
+        "follow_up_task_created": false
+      }
+    ]
+  },
+  "latency": {
+    "sample_count": 9,
+    "median_seconds": 4.224,
+    "maximum_seconds": 13.832
+  },
+  "retained_trials": [
+    {
+      "trial": 1,
+      "outcome": "Missing approved VA case mapping; no booking; unresolved CRM wrap-up saved",
+      "voice_session_id": "vs-c1c02ef4-8347-46d7-ba9f-f450ba2a25f7"
+    },
+    {
+      "trial": 2,
+      "outcome": "Patient, KB, search and selection succeeded; repeated confirmation; harness exceeded session limit; end returned 401; no booking or wrap-up",
+      "voice_session_id": "vs-f7b7309a-aa20-4b73-a7a6-a4ee00603cdd",
+      "elapsed_seconds": 387.71
+    }
+  ],
+  "limitations": [
+    "Host-triggered CRM wrap-up, not IBM-selected MCP write",
+    "Letter generated, not sent",
+    "No durable tab-close/process-loss reconciliation",
+    "Successful trial omitted KB question and used explicit booking confirmation; does not close short-confirmation reliability issue",
+    "Deployed page inspected; successful after-call component not visually observed in that separate browser tab"
+  ]
+}

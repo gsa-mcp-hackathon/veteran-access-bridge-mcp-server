@@ -1,6 +1,6 @@
 # For Judges — Veteran Access Bridge
 
-**Start here.** Curated GSA MCP & SI Agent Hackathon materials. The **Python FastMCP server** is the primary deliverable; Avery is the synthetic voice demonstration client.
+**Start here.** Curated materials for the GSA MCP Server and SI Agent Government Hackathon. The **Python FastMCP server** is the primary deliverable; Avery is the synthetic voice demonstration client.
 
 | Section | Judge's question |
 |---|---|
@@ -46,7 +46,7 @@ The [evidence manifest](evidence-manifest.json) identifies the source, date and 
 - [x] November 21–22 evaluation and remediation findings, including four PARTIAL deployed security outcomes
 - [x] Final presentation PowerPoint added to the public judge package (`deliverables/`)
 - [x] Final evaluation report added to the public judge package (`deliverables/`)
-- [ ] Independent judges’ ability to open private engineering provenance links checked, or public alternatives provided
+- [x] Private engineering links replaced with public copies ([engineering records](engineering-records/README.md), [frontend snapshot](../frontend/SNAPSHOT.md))
 - [ ] Separate full deployed M6.4 per-tool IBM evaluation, p95 and repeatability scores (not established by the published historical matrix)
 
 **Release rule:** Do not mark the submission artifact package complete or claim production security signoff while these items remain outstanding. The published site is the easy-to-read front door; the versioned files here are the evidence record.

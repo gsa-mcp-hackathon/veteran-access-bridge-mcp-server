@@ -1,0 +1,83 @@
+auth_config:
+  tenant_name: veteran-access-dev
+  token: <REDACTED: expired IBM IAM token>
+  url: <REDACTED: IBM Orchestrate instance URL>
+collection_name: default-collection
+custom_metrics_config: null
+data_annotation_run: false
+enable_fuzzy_matching: false
+enable_manual_user_input: false
+enable_recursive_search: false
+enable_verbose_logging: true
+error_keywords: []
+evaluation_config:
+  provider_config:
+    embedding_model_id: sentence-transformers/all-minilm-l6-v2
+    model_id: watsonx/openai/gpt-oss-120b
+    provider: gateway
+    provider_params: {}
+    referenceless_eval: false
+    vendor: ibm
+evaluation_model: watsonx/openai/gpt-oss-120b
+extractors_config:
+  paths: null
+is_adk: true
+is_strict: true
+langfuse_enabled: false
+llm_user_config:
+  enable_structured_output: false
+  model_id: meta-llama/llama-3-3-70b-instruct
+  personas: []
+  prompt_config: /workspaces/veteran-access-bridge/.venv/lib/python3.12/site-packages/agentops/prompt/llama_user_prompt.jinja2
+  provider_config: null
+  user_response_style: []
+  version: v1
+max_user_turns: 20
+metrics:
+- JourneySuccessMetric
+- ToolCalling
+- OrchestrateAgentRoutingAccuracy
+- StepMetrics
+- AgentResponseTime
+- KnowledgeBaseAnswerRelevancy
+- DocumentRetrievalQuality
+- KnowledgeBaseFaithfulness
+- RetrievalConfidence
+- ToolParameterF1
+n_runs: 1
+num_workers: 2
+operator_configs:
+  AttackSuccessMetric: {}
+  JourneyCompletion: {}
+  JourneySuccessMetric: {}
+  TextMatchMetric: {}
+output_dir: ./eval/watsonx/m64_results/2026-10-28_20-13-37
+provider_config:
+  embedding_model_id: sentence-transformers/all-minilm-l6-v2
+  model_id: watsonx/openai/gpt-oss-120b
+  provider: gateway
+  provider_params: {}
+  referenceless_eval: false
+  vendor: ibm
+similarity_threshold: 0.8
+skip_available_results: false
+skip_legacy_evaluation: true
+tags: []
+test_paths:
+- ./eval/watsonx/m64_direct_tests/01_identity_required_before_disclosure.json
+- ./eval/watsonx/m64_direct_tests/02_identity_spoken_dob_success.json
+- ./eval/watsonx/m64_direct_tests/03_identity_mismatch_fails_closed.json
+- ./eval/watsonx/m64_direct_tests/04_card_lifecycle_handoff_boundary.json
+- ./eval/watsonx/m64_direct_tests/05_card_preference_vs_comparator.json
+- ./eval/watsonx/m64_direct_tests/06_card_stale_slot_exclusion.json
+- ./eval/watsonx/m64_direct_tests/07_card_access_standard_guardrail.json
+- ./eval/watsonx/m64_direct_tests/08_card_veteran_choice_validation.json
+- ./eval/watsonx/m64_direct_tests/09_card_book_it_guardrail.json
+- ./eval/watsonx/m64_direct_tests/10_card_community_care_conflict.json
+- ./eval/watsonx/m64_direct_tests/11_pc_unified_encounter.json
+- ./eval/watsonx/m64_direct_tests/12_pc_access_standard.json
+- ./eval/watsonx/m64_direct_tests/13_unknown_case_identity_fails_closed.json
+text_match_config:
+  keyword_template_path: null
+  semantic_template_path: null
+wxo_lite_version: 2.19.1

@@ -1,0 +1,15 @@
+{
+  "frontend_source": "803460ae73ff2d6deb256d3a2f16233a015a4c00",
+  "lock_sha256": "59edb8abe28f5c41fd6e5f8a6d708c2aa25967806fab0c2168343ca40619b929",
+  "audit_tool": "Bun 1.4.4",
+  "scope": "candidate source and local Node build; not deployed image",
+  "tests": {
+    "frontend_passed": 150,
+    "new_body_tests": 12,
+    "reviewer_tests": 6
+  },
+  "audit_remaining_package_groups": [
+    "minimatch"
+  ],
+  "observed_runtime_preset": "node-server"
+}

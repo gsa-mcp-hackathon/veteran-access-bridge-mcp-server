@@ -1,0 +1,23 @@
+{
+  "scenario": "Browser voice verification with generated speech",
+  "date": "2026-11-18",
+  "voice_session_id": "vs-b8433f7a-186d-46e6-8c3b-aef57d96d43e",
+  "backend_image_commit": "7b8d5368f48673062eafec84ec8da9dfcee3a6fb",
+  "agent": "veteran_access_agent_m64",
+  "attached_tools": 21,
+  "verification_tool": "verify_synthetic_identity",
+  "observed_events_in_order": [
+    ["application", "mcp_tool_called", "get_scheduling_encounter", "started"],
+    ["application", "mcp_tool_result", "get_scheduling_encounter", "succeeded"],
+    ["application", "mcp_tool_called", "verify_synthetic_identity", "started"],
+    ["watsonx_orchestrate", "mcp_tool_called", "verify_synthetic_identity", null],
+    ["application", "mcp_tool_result", "verify_synthetic_identity", "succeeded"]
+  ],
+  "one_linked_identity_receipt": true,
+  "masked_identity_caption_seen": true,
+  "personal_thanks_heard": true,
+  "verified_facility_prompt_heard": true,
+  "end_completed": true,
+  "booking_requested": false,
+  "scope": "Live caller-facing activity feed and voice captions. The card layout is covered by frontend tests."
+}

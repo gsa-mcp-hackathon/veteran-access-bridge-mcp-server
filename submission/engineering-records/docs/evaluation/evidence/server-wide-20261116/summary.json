@@ -1,0 +1,19 @@
+{
+  "source_commit": "bae3e9593ff60db19a986b52e2e61e4a67e06cea",
+  "tools": 25,
+  "contracts": "PASS 108/108",
+  "arguments": "PASS 76/76",
+  "schema_and_scope": "PASS 261/261",
+  "windows_regression": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "1",
+    "skipped": "17",
+    "tests": "1400",
+    "time": "22.913",
+    "timestamp": "2026-11-16T10:44:24.127487-06:00",
+    "hostname": "explainableai"
+  },
+  "warning": "Overlapping checks, not independent journeys. No combined pass rate.",
+  "runner_sha256": "e0332cbbe958c67c8774b3a76751ea14b01d1087df866c017c62a48aeb427784"
+}

@@ -26,7 +26,7 @@ Synthetic identities and cases only. Security certification is **not** claimed.
 
 ## M6.4 targeted security closeout · November 22–23
 
-The corrected local catalog verifier and its regressions passed **48/48 focused checks** at [PR #215 CI](https://github.com/wbgreen0405/veteran-access-bridge/actions/runs/45101968969). These are local/CI checks, **not** 48 deployed attack cases.
+The corrected local catalog verifier and its regressions passed **48/48 focused checks** at [PR #215 CI](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/ci/ci-run-45101968969.md). These are local/CI checks, **not** 48 deployed attack cases.
 
 | Scenario | Strongest bounded evidence | Deployed verdict |
 |---|---|---|
@@ -54,10 +54,10 @@ Prompts and tool results are not identity assertions. A logged refusal is eviden
 
 ## Original artifacts
 
-- [November 19 judge review and reconciliation](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f0cb216d5cc78601fdc85c40d37394e085/docs/evaluation/judge-review/README.md)
-- [Individual local security checks](https://github.com/wbgreen0405/veteran-access-bridge/blob/ea0880f0cb216d5cc78601fdc85c40d37394e085/docs/evaluation/judge-review/control-results.csv)
-- [Historical voice security evidence](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/docs/evaluation/release-closeout-20261115.md)
-- [Security follow-up](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/docs/evaluation/security-followup-20261115.md)
-- [Adversarial MCP scope tests](https://github.com/wbgreen0405/veteran-access-bridge/blob/5b6cd072f23b4d4edce2e19c4f75faa774c87988/tests/test_mcp_scope_adversarial.py)
+- [November 19 judge review and reconciliation](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/judge-review/README.md)
+- [Individual local security checks](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/judge-review/control-results.csv)
+- [Historical voice security evidence](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/release-closeout-20261115.md)
+- [Security follow-up](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/security-followup-20261115.md)
+- [Adversarial MCP scope tests](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/tests/test_mcp_scope_adversarial.py)
 
 **See also:** [Security & Governance](../security-governance.md) · [Validation & agent evidence](validation-agent.md)

@@ -1,0 +1,21 @@
+{
+  "tool_count": 21,
+  "registry_sha256": "5595b9703a65c3aae5947b0bab7ea3294e302f49eea6b0a09bdd22e70f1168a6",
+  "denials": [
+    {
+      "variant": "missing",
+      "status": 401,
+      "passed": true
+    },
+    {
+      "variant": "wrong_bearer",
+      "status": 401,
+      "passed": true
+    },
+    {
+      "variant": "wrong_scheme",
+      "status": 401,
+      "passed": true
+    }
+  ]
+}

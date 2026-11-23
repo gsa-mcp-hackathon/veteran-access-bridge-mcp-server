@@ -1,0 +1,32 @@
+[
+  {
+    "scenario": "A25",
+    "trace_sha256": "983d9be3461adee0ea937a1594c5aafb89243aaab80cfc5bd7d815868d534122",
+    "observed_tool_calls": [],
+    "mcp_calls": 0,
+    "assistant_answers": 4,
+    "no_mcp_call_assertion": "PASS",
+    "server_denial": "NOT_EXERCISED",
+    "scope": "No-scope negative control only; not authorized journey acceptance"
+  },
+  {
+    "scenario": "A26",
+    "trace_sha256": "0049c9b7a95b7cae47fced5ec944ecae338600646a800a5c25b429da68d0236b",
+    "observed_tool_calls": [],
+    "mcp_calls": 0,
+    "assistant_answers": 4,
+    "no_mcp_call_assertion": "PASS",
+    "server_denial": "NOT_EXERCISED",
+    "scope": "No-scope negative control only; not authorized journey acceptance"
+  },
+  {
+    "scenario": "A27",
+    "trace_sha256": "d0ebff1ff332492421f1ac86d9c5ec72f4c72e441ddf58c6ff161fec032e4a5f",
+    "observed_tool_calls": [],
+    "mcp_calls": 0,
+    "assistant_answers": 4,
+    "no_mcp_call_assertion": "PASS",
+    "server_denial": "NOT_EXERCISED",
+    "scope": "No-scope negative control only; not authorized journey acceptance"
+  }
+]

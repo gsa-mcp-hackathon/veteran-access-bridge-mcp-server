@@ -1,0 +1,10 @@
+[
+  {
+    "roster": 3,
+    "would_need_patient_creation": 1,
+    "ambiguous": 0,
+    "already_booked": 2,
+    "active": 0,
+    "existing_unused_inactive": 0
+  }
+]

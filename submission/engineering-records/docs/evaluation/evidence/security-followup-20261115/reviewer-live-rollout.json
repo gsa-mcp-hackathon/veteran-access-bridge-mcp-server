@@ -1,0 +1,29 @@
+{
+  "verified_at_utc": "2026-11-15T19:40:04.587476+00:00",
+  "application": "vab-avery-callcenter",
+  "project": "ce-550000w6t0",
+  "region": "ca-tor",
+  "revision": "vab-avery-callcenter-00019",
+  "image": "ghcr.io/wbgreen0405/veteran-appointment-bridge@sha256:9bd7ed3ca09d5bae5111554c85736786566475591173739fc64dcb69682c725c",
+  "source": "f5ae0717c54fe79703f951e5abe0d26fc5e30530",
+  "publication_run": 43751203560,
+  "reviewer_login_enabled": true,
+  "checks": {
+    "anonymous_root_redirect": true,
+    "login_page": true,
+    "anonymous_api_denied": true,
+    "valid_login": true,
+    "secure_cookie": true,
+    "authenticated_session": true,
+    "authenticated_app": true,
+    "logout": true,
+    "logout_replay_denied": true
+  },
+  "backend_spec_unchanged": true,
+  "worker_spec_unchanged": true,
+  "booking_attempted": false,
+  "limitations": [
+    "No browser voice rehearsal in this rollout",
+    "Hosting approval and final submission instructions remain pending"
+  ]
+}
