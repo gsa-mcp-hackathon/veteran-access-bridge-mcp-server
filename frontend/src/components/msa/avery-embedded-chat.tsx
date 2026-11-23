@@ -3,7 +3,7 @@ import { AudioLines, RotateCw, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 /**
- * Real watsonx Orchestrate M6.4 Live embed. No second AI agent, no floating
+ * Real watsonx Orchestrate M6.4 Live embed. No second SI agent, no floating
  * launcher, no custom audio capture and no browser-side IBM signing key.
  * Native voice is started using IBM's own voice control inside this panel.
  */
