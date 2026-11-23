@@ -51,13 +51,13 @@ Tool counts depend on what is enabled. The default local release advertised **21
 
 ## Follow the recorded call
 
-The **3-minute, 35-second** recording follows one Primary Care request through after-call work.
+The **3-minute, 39-second** recording (the same call shown on presentation slides 10–11) follows one Primary Care request through after-call work.
 
 | Time | What to look for |
 |---|---|
-| **2:30 — Patient-health read** | The activity panel names the patient-health MCP tool and attributes its selection to the IBM agent. |
-| **3:02 — Verified booking** | The confirmed appointment card shows the selected Topeka visit in Central time. The scheduling panel reports a successful independent readback. |
-| **3:31 — After-call work** | Wrap Up turns green. The reviewer can see the saved CRM note and generated confirmation letter. |
+| **2:00 — Patient-health read** | The activity panel names the patient-health MCP tool and attributes its selection to the IBM agent. |
+| **3:12 — Verified booking** | The confirmed appointment card shows the selected Topeka visit in Central time. The scheduling panel reports a successful independent readback. |
+| **3:36 — After-call work** | Wrap Up turns green. The reviewer can see the saved CRM note and generated confirmation letter. |
 
 [Demonstration walkthrough](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/demonstration/)
 
