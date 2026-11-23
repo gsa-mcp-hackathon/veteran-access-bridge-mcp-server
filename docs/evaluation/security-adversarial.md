@@ -26,7 +26,7 @@ Synthetic identities and cases only. Security certification is **not** claimed.
 
 ## M6.4 targeted security closeout · November 22–23
 
-The corrected local catalog verifier and its regressions passed **48/48 focused checks** at [PR #215 CI](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/ci/ci-run-45101968969.md). These are local/CI checks, **not** 48 deployed attack cases.
+The corrected local catalog verifier and its regressions passed **48/48 focused checks** at [PR #215 CI](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/ci/ci-run-45101968969.md). These are local/CI checks, **not** 48 deployed attack cases.
 
 | Scenario | Strongest bounded evidence | Deployed verdict |
 |---|---|---|
@@ -35,7 +35,7 @@ The corrected local catalog verifier and its regressions passed **48/48 focused 
 | **S15** · endpoint redirection | Local endpoint binding drift rejected | **PARTIAL** · Managed IBM outbound destination/credential telemetry missing |
 | **S03/A21** · concurrent callers | Corrected fixture qualification found zero eligible unused synthetic cases | **PARTIAL** · Two overlapping independently verified callers not tested |
 
-Missing managed telemetry is not evidence of confirmed unauthorized execution, disclosure or credential transfer. [Sanitized full closeout](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/05-security/evidence/m64-security-closeout-summary.md).
+Missing managed telemetry is not evidence of confirmed unauthorized execution, disclosure or credential transfer. [Sanitized full closeout](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/05-security/evidence/m64-security-closeout-summary.md).
 
 ## Prompt injection vs. enforced boundary
 
@@ -54,10 +54,10 @@ Prompts and tool results are not identity assertions. A logged refusal is eviden
 
 ## Original artifacts
 
-- [November 19 judge review and reconciliation](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/judge-review/README.md)
-- [Individual local security checks](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/judge-review/control-results.csv)
-- [Historical voice security evidence](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/release-closeout-20261115.md)
-- [Security follow-up](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/security-followup-20261115.md)
+- [November 19 judge review and reconciliation](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/evaluation/judge-review/README.md)
+- [Individual local security checks](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/evaluation/judge-review/control-results.csv)
+- [Historical voice security evidence](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/evaluation/release-closeout-20261115.md)
+- [Security follow-up](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/evaluation/security-followup-20261115.md)
 - [Adversarial MCP scope tests](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/tests/test_mcp_scope_adversarial.py)
 
 **See also:** [Security & Governance](../security-governance.md) · [Validation & agent evidence](validation-agent.md)

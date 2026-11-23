@@ -54,11 +54,11 @@ Questions cover established/new classification, requested care, visit format and
 
 ## Source artifacts
 
-- [Gold questions and expected answers](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/judge-review/primary-care-gold-questions.csv)
-- [Expected vs. observed, 16 scored answers](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/judge-review/primary-care-mcp-gold.csv)
-- [Six control suites and totals](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/judge-review/primary-care-control-suites.csv)
-- [135 individual saved control checks](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/judge-review/control-results.csv)
-- [November 19 judge-review explanation](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/judge-review/README.md)
-- [Submission evidence ledger](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/submission/evidence-ledger.md) · [Historical evaluation](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/submission/evaluation.md) · [M6.4 evaluation assets](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/tree/main/eval/watsonx)
+- [Gold questions and expected answers](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/evaluation/judge-review/primary-care-gold-questions.csv)
+- [Expected vs. observed, 16 scored answers](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/evaluation/judge-review/primary-care-mcp-gold.csv)
+- [Six control suites and totals](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/evaluation/judge-review/primary-care-control-suites.csv)
+- [135 individual saved control checks](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/evaluation/judge-review/control-results.csv)
+- [November 19 judge-review explanation](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/evaluation/judge-review/README.md)
+- [Submission evidence ledger](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/submission/evidence-ledger.md) · [Historical evaluation](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/submission/evaluation.md) · [M6.4 evaluation assets](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/tree/main/eval/watsonx)
 
 **Next:** [Validation & agent evidence](validation-agent.md)
