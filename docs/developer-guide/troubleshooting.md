@@ -31,7 +31,7 @@ For each test, record: checkout commit, environment (VS Code/Codespaces/hosted),
 
 ## Operational evidence to consult
 
-- [Original project recovery runbook](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/operations/avery-m64-codespace-ibm-cli-relogin-deploy.md) — dated, environment-specific troubleshooting history; **not** a fresh-install script.
+- [Original project recovery runbook](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/operations/avery-m64-codespace-ibm-cli-relogin-deploy.md) — dated, environment-specific troubleshooting history; **not** a fresh-install script.
 - [Evaluation evidence](../evaluation/reviewer-index.md) — measured scenarios and limitations.
 - [Remote services](connected-product.md) — authenticated MCP and connected architecture.
 

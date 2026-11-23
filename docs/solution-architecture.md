@@ -41,6 +41,6 @@ Veteran Access Bridge connects **Avery**, an SI voice agent using IBM watsonx Or
 
 A November 16 controlled RTC call selected five IBM MCP tool types and reached one independently verified **synthetic appointment**, one **host-written CRM note**, and a `BOOKED_SIMULATED` receipt. This proof belongs to the recorded revision, not to an assumed later build.
 
-[Historical booking acceptance](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/operations/avery-agent-led-scheduling-20261116.md) · [Machine-readable evidence](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/agent-led-voice-20261116.json) · [MCP Implementation](mcp-implementation.md)
+[Historical booking acceptance](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/operations/avery-agent-led-scheduling-20261116.md) · [Machine-readable evidence](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/evaluation/agent-led-voice-20261116.json) · [MCP Implementation](mcp-implementation.md)
 
 <small>Synthetic technical demonstration only. Diagram shows a historical design, not proof of production VA data access or authorization.</small>

@@ -45,7 +45,7 @@ The searchable report below uses a **bundled local JSON file**; it makes no live
 - **DeepEval:** A corrected historical agent-read evaluation reported **0.95** across two tasks and three calls; an earlier 0.0 run had no evaluable tasks and was invalid for interpreting quality.
 - **Phoenix:** An observability workflow is documented in the Developer Guide. **We do not claim a verified Phoenix run** without actual project trace files.
 
-[IBM evaluation evidence](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/submission/evaluation.md) · [Nov 16 server evaluation](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/server-wide-evaluation-20261116.md) · [Nov 18 configuration inventory](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/guidelines-and-tool-inventory-20261118.md)
+[IBM evaluation evidence](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/submission/evaluation.md) · [Nov 16 server evaluation](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/evaluation/server-wide-evaluation-20261116.md) · [Nov 18 configuration inventory](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/evaluation/guidelines-and-tool-inventory-20261118.md)
 
 ## Remaining gaps
 

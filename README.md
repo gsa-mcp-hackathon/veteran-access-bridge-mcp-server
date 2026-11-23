@@ -8,7 +8,7 @@ The Primary Care demonstration shows the server in use. A Veteran calls through 
 
 [Explore the architecture](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/solution-architecture/) · [Follow the demonstration](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/demonstration/) · [Explore evaluation results](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/evaluation/) · [Reproduce the local server](#reproduce-the-local-server)
 
-**For judges** · [Submission package](submission/README.md) · [29-tool evaluation](docs/evaluation/per-tool.md) · [Evidence manifest](submission/evidence-manifest.json)
+**For judges** · [Submission package](for-judges/README.md) · [29-tool evaluation](docs/evaluation/per-tool.md) · [Evidence manifest](for-judges/evidence-manifest.json)
 
 **For reviewers** · [Backend release contents](release/README.md) · [Run the local server](docs/developer-guide/local-mcp-server.md) · [Find a test](tests/README.md) · [Read the recorded results](docs/evaluation/reviewer-index.md)
 
@@ -74,14 +74,14 @@ We asked three questions: **Did the server return the right information? Did the
 | Can an IBM-selected verification be traced to the backend? | **One linked verification receipt** | A separate hosted voice test distinguished the first host-invoked encounter lookup from IBM’s selection of the identity tool. |
 | Did booking and wrap-up persist? | **One verified test appointment, a saved CRM note, and a generated letter** | A dated hosted acceptance run checked the resulting records. The final demo shows its own confirmation and wrap-up. |
 
-[Gold questions and scored answers](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/tree/main/submission/engineering-records/docs/evaluation/judge-review) · [DeepEval method and scoring notes](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/tree/main/eval/deepeval) · [Verification trace](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/browser-identity-mcp-20261118.json) · [Booking and wrap-up evidence](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/operations/voice-call-polish-booking-20261117.json)
+[Gold questions and scored answers](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/tree/main/for-judges/engineering-records/docs/evaluation/judge-review) · [DeepEval method and scoring notes](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/tree/main/eval/deepeval) · [Verification trace](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/evaluation/browser-identity-mcp-20261118.json) · [Booking and wrap-up evidence](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/operations/voice-call-polish-booking-20261117.json)
 
 ## Security and adversarial evaluation
 
 | What we tested | Observed result | Evidence boundary |
 |---|---|---|
-| **Unsafe inputs sent directly to MCP tools** | **76 of 76 argument checks passed** across 25 tools in the November 16 CRM-enabled configuration. The tested requests were rejected or produced safe negative results. Local fixture stores remained unchanged. | This was a local server test. It exercised neither a hosted database nor an agent responding to malicious instructions. [Server evaluation](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/evaluation/server-wide-evaluation-20261116.md) |
-| **Unauthorized caller requests** | Across **five restricted requests in three voice sessions**, the traces showed **zero MCP attempts during those requests**. All three sessions subsequently completed a permitted follow-up. | The traces establish what Avery invoked. The retained database audit covered different sessions, so database effects for these five requests remain unverified. [Voice evidence and reconciliation](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/tree/main/submission/engineering-records/docs/evaluation/judge-review) |
+| **Unsafe inputs sent directly to MCP tools** | **76 of 76 argument checks passed** across 25 tools in the November 16 CRM-enabled configuration. The tested requests were rejected or produced safe negative results. Local fixture stores remained unchanged. | This was a local server test. It exercised neither a hosted database nor an agent responding to malicious instructions. [Server evaluation](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/evaluation/server-wide-evaluation-20261116.md) |
+| **Unauthorized caller requests** | Across **five restricted requests in three voice sessions**, the traces showed **zero MCP attempts during those requests**. All three sessions subsequently completed a permitted follow-up. | The traces establish what Avery invoked. The retained database audit covered different sessions, so database effects for these five requests remain unverified. [Voice evidence and reconciliation](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/tree/main/for-judges/engineering-records/docs/evaluation/judge-review) |
 | **Indirect prompt injection through tool results** | **Six cases prepared; execution pending.** | These cases cover untrusted instructions embedded in returned content. A result requires actual tool outputs and agent traces. No pass rate is reported. [Prepared cases](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/eval/deepeval/server_wide_injection_cases.json) |
 
 [Security and governance walkthrough](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/security-governance/)
@@ -117,7 +117,7 @@ uv run --no-sync pytest -q tests/test_m6_2_primary_care_scenarios.py
 uv run --no-sync pytest -q tests
 ```
 
-[Developer guide](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/developer-guide/) · [Pinned release quickstart](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/QUICKSTART.md)
+[Developer guide](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/developer-guide/) · [Pinned release quickstart](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/QUICKSTART.md)
 
 ## Release references
 

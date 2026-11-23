@@ -33,7 +33,7 @@ pwsh ./deploy/ibm/orchestrate/run-m63-regression.ps1 -EnvironmentName $Environme
 
 M6.4 historical runner uses **13 scenario JSON files**; that number does *not* imply 13/13 passed. M6.3 historical evaluation uses 10 direct cases and 6 focused regression cases. Inspect each newly written `summary_metrics.csv`, raw traces and run identity. The **November 2026** evidence is versioned and must not be merged across configurations.
 
-A general current IBM ADK pattern is `orchestrate evaluations evaluate --help` and the [IBM evaluation guide](https://developer.ibm.com/learningpaths/watsonx-orchestrate-agentops/agent-evaluation-workflows/). Consult that command's output for your installed ADK version **before** supplying flags. Do **not** rerun original `configure-m64.ps1` against the accepted later Avery deployment; it may replace its earlier candidate toolkit. [Project IBM CLI runbook](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/docs/operations/avery-m64-codespace-ibm-cli-relogin-deploy.md).
+A general current IBM ADK pattern is `orchestrate evaluations evaluate --help` and the [IBM evaluation guide](https://developer.ibm.com/learningpaths/watsonx-orchestrate-agentops/agent-evaluation-workflows/). Consult that command's output for your installed ADK version **before** supplying flags. Do **not** rerun original `configure-m64.ps1` against the accepted later Avery deployment; it may replace its earlier candidate toolkit. [Project IBM CLI runbook](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/docs/operations/avery-m64-codespace-ibm-cli-relogin-deploy.md).
 
 ---
 

@@ -132,8 +132,8 @@ frontend gateway, not manually completed through the visual Chrome interface.
 - Backend PR #205
 - Pinned acceptance report
 - Pinned transcript and database evidence
-- [Current backend image publication](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/ci/ci-run-43600257159.md)
-- [Worker image publication](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/ci/ci-run-43562472928.md)
+- [Current backend image publication](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/ci/ci-run-43600257159.md)
+- [Worker image publication](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/for-judges/engineering-records/ci/ci-run-43562472928.md)
 
 One real synthetic voice call passed, with independent readback and no duplicate booking. This is not production patient authentication, a real VistA/HSRM/EPS booking, broad trial reliability, or proof that all frontend surfaces use the trusted path.
 

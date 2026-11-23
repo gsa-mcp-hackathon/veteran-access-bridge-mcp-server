@@ -1,6 +1,6 @@
 (function(){
 function boot(){const root=document.getElementById('vab-eval-new');if(!root||root.dataset.ready)return;root.dataset.ready='1';
-const base='https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/tree/main/submission/engineering-records/docs/evaluation/judge-review';
+const base='https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/tree/main/for-judges/engineering-records/docs/evaluation/judge-review';
 const old='https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server';
 const pages=[
 {title:'Executive Summary',intro:'The project has demonstrated one synthetic booking and separately recorded MCP protocol, security, and regression results. Each finding below is tied to its own checkpoint.',metric:'1 verified',label:'Synthetic appointment persisted in a November 16 voice acceptance',cards:[['MCP correctness','108/108 contract probes and 76/76 hostile arguments','good'],['Policy and scope','261/261 overlapping schema/scope assertions','good'],['System outcome','One appointment and one trusted-host CRM note','good'],['Measurement boundary','No combined success rate and no production VA booking','warn']],href:old+'docs/evaluation/agent-led-voice-20261116.json',link:'Open booking evidence'},
