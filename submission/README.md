@@ -37,16 +37,20 @@ The [evidence manifest](evidence-manifest.json) identifies the source, date and 
 
 **Publication boundary:** This public package includes sanitized summaries and local test matrices; no unredacted private IBM traces, patient details, passwords, tokens or identity factors. Historical and current evidence must not be pooled into one success rate.
 
-## Evidence access and release checklist
+## What this package includes
 
-- [x] Six numbered judge sections, one index and traceable results manifest
-- [x] Static public demonstration recording and reproducible local MCP instructions
-- [x] Historical 25-tool contract and adversarial-argument evidence copied with provenance
-- [x] Inline 29-tool inventory/test scorecard with accurate historical-versus-current labels
-- [x] November 21–22 evaluation and remediation findings, including four PARTIAL deployed security outcomes
-- [x] Final presentation PowerPoint added to the public judge package (`deliverables/`)
-- [x] Final evaluation report added to the public judge package (`deliverables/`)
-- [x] Private engineering links replaced with public copies ([engineering records](engineering-records/README.md), [frontend snapshot](../frontend/SNAPSHOT.md))
-- [ ] Separate full deployed M6.4 per-tool IBM evaluation, p95 and repeatability scores (not established by the published historical matrix)
+- Six numbered judge sections, one index and a traceable results manifest
+- A public recording of the final demonstration call and reproducible local MCP instructions
+- Historical 25-tool contract and hostile-argument evidence, copied with provenance
+- An inline 29-tool inventory and test scorecard, with historical and current results labeled separately
+- November 21–22 evaluation and remediation findings, including four PARTIAL deployed security outcomes
+- The final presentation and evaluation report (`deliverables/`)
+- Public copies of the engineering records the documentation cites ([engineering records](engineering-records/README.md), [frontend snapshot](../frontend/SNAPSHOT.md))
 
-**Release rule:** Do not mark the submission artifact package complete or claim production security signoff while these items remain outstanding. The published site is the easy-to-read front door; the versioned files here are the evidence record.
+## Known limitations (not claimed)
+
+- A full deployed M6.4 per-tool IBM evaluation has not been run, so this package reports no per-tool IBM pass rate, latency p95 or repeatability (Pass³) score.
+- Four deployed security items (S03/A21, S13/A23, S14, S15) remain PARTIAL, and no production security signoff is claimed.
+- All data is synthetic; no production VA system or booking was used.
+
+The published site is the easy-to-read front door; the versioned files here are the evidence record.

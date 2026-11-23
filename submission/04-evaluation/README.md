@@ -9,11 +9,16 @@
 | Automated tests (CI) | 1,630 passed, 20 skipped | Nov 19, released code `ea0880f`, GitHub Actions |
 | MCP contracts, current registry | 126/126 | Nov 21, all 29 tools, local in-process ([script](../../eval/probe_mcp_contracts.py)) |
 | Hostile arguments, current registry | 86/86 | Nov 21, all 29 tools: 19 read-only × 4 inputs + 10 write tools × forged authority ([script](../../eval/probe_mcp_adversarial.py)) |
+| Catalog verifier | 48/48 | Nov 22, commit `a5bcf827`, local and GitHub CI ([PR #215 record](../engineering-records/pr-215.md)) |
+| Current M6.4 inventory | 29 registered / 21 attached | Configuration only; not a current per-tool pass rate |
+
+**Historical results (earlier 25-tool configuration, Nov 16).** Reported separately and never pooled with the current results above.
+
+| Evidence | Observed result | Exact boundary |
+|---|---|---|
 | MCP contracts | 108/108 | Nov 16, historical 25-tool configuration |
 | Hostile arguments | 76/76 | Nov 16, local probes |
 | Scope and schema | 261/261 | Nov 16, overlapping local assertions |
-| Catalog verifier | 48/48 | Nov 22, PR #215 commit `a5bcf827` (open PR), local and GitHub CI |
-| Current M6.4 inventory | 29 registered / 21 attached | Configuration only; not a current per-tool pass rate |
 
 **LLM judges:** IBM watsonx Orchestrate Evaluate used OpenAI `gpt-oss-120b`; DeepEval (0.95 on one conversation) used OpenAI `gpt-4.1-mini`, threshold 0.80. Avery runs on Anthropic Claude Sonnet 4.6, so no model graded itself. Dates are U.S. Central time.
 
