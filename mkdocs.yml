@@ -27,8 +27,10 @@ nav:
   - Solution & Architecture: solution-architecture.md
   - MCP Implementation: mcp-implementation.md
   - Security & Governance: security-governance.md
+  - For Judges: for-judges.md
   - Evaluation & Results:
       - evaluation/index.md
+      - Per-Tool Evaluation: evaluation/per-tool.md
       - Evidence Library: evaluation/reviewer-index.md
       - Gold Questions & Method: evaluation/method-gold.md
       - MCP, Backend & Agent Evidence: evaluation/validation-agent.md
@@ -64,6 +66,7 @@ nav:
               - Historical Orchestrate Evaluation: developer-guide/ibm-orchestrate.md
           - Release Checklist: developer-guide/release-checklist.md
 extra_css:
+  - stylesheets/per-tool-evaluation.css
   - stylesheets/home.css
   - stylesheets/security-architecture.css
   - stylesheets/homepage.css

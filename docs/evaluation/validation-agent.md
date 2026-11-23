@@ -74,6 +74,28 @@ Assesses agent behavior, MCP tool selection and spoken interaction using histori
 - Nov 19: **16/16** gold answers and **135/135** deterministic control checks.
 - Nov 19: voice and database reconciliation found gaps in before/after snapshots for earlier attack sessions.
 
+## Latest M6.4 configuration and focused regression tests
+
+In the reviewed November 18 enabled configuration, **29 tools** were registered, **21** attached to Avery and **8** left server-only. These are inventory observations, not deployment-wide behavioral acceptance. The historical November 16 **108/108** contract probes belong to an earlier **25-tool** configuration.
+
+The catalog-integrity fix at [PR #215](https://github.com/wbgreen0405/veteran-access-bridge/pull/215) passed **48/48 focused checks** locally and in CI at commit `a5bcf827`. This validates the local verifier, **not** IBM pre-dispatch enforcement. [Per-tool scorecard](per-tool.md) · [Security outcomes](security-adversarial.md).
+
+## November 21–22 review and disposition
+
+This section separates **completed evaluation activity** from **still-open deployed acceptance**. The reviewed November 22 remediation report recorded **27 passed, zero failed and zero skipped** for a targeted local suite. Subsequent focused local and GitHub Actions catalog-verifier regression evidence recorded **48/48 passing checks** at PR #215. These are different checkpoints, not 75 independent security scenarios or a full deployed assessment.
+
+| Area | Completed evidence | Still required for deployed PASS |
+|---|---|---|
+| S14 · tool-description integrity | Corrected independent reference and local verifier checks; focused CI regression | Human-approved release manifest plus correlated IBM pre-dispatch denial |
+| S13/A23 · injected CRM tool result | Two paired synthetic notes delivered to the local MCP client | Authorized write-isolated IBM paired replay, trace, answer and side-effect verification |
+| S15 · MCP destination | Local endpoint binding drift rejected | IBM-managed paired outbound destination and credential-forwarding decisions |
+| S03/A21 · caller isolation | Read-only fixture qualification and local session-scope checks | Two distinct approved synthetic callers, verified overlapping sessions, cross-case denial and correlated database snapshots |
+| Primary Care acceptance | Nov 22 synthetic fixture preparation and fail-closed scope review | Fresh approved fixture and independently verified IBM/MCP acceptance; not a new completed booking |
+
+The source reviewed here documents the **November 22** checkpoint. A distinct November 21 completion result has not been reconciled into this public ledger and should not be counted without its original run artifact.
+
+**Sources:** [Sanitized closeout](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/docs/m64-judge-evaluation-package-20261123/submission/05-security/evidence/m64-security-closeout-summary.md) · [PR #215 focused CI](https://github.com/wbgreen0405/veteran-access-bridge/actions/runs/45101968969).
+
 ## What remains open
 
 !!! danger "Open evidence areas"

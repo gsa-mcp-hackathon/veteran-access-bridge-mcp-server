@@ -10,6 +10,15 @@ Start with one question in the gold matrix. Read across the row from the caller'
 | **Hosted evidence** | [Validation and agent evidence](validation-agent.md) identifies the environment used for each result and the remaining gaps. |
 | **Security evidence** | [Security and adversarial evaluation](security-adversarial.md) describes the tested boundaries and outstanding work. |
 
+## Curated final judge package
+
+- [Start here — submission README](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/tree/main/submission)
+- [Interactive 29-tool evaluation](per-tool.md)
+- [Copied historical 25-tool source CSV](evidence/m64-per-tool-evidence.json) and [original CSV](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/04-evaluation/evidence/historical-25-tool-coverage-20261116.csv)
+- [M6.4 four-scenario sanitized closeout](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/05-security/evidence/m64-security-closeout-summary.md)
+- [48/48 focused local verifier checks — CI](https://github.com/wbgreen0405/veteran-access-bridge/actions/runs/45101968969)
+- [Evidence manifest](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/evidence-manifest.json)
+
 Record the submission commit with any new run. The gold matrix, automated control checks and live call each answer a different question and retain their own denominator.
 
 ### Rerun the 16 gold questions

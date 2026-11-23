@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "prepared": "2026-11-23",
+  "records": [
+    {
+      "id": "current-inventory",
+      "result": "29 registered, 21 attached, 8 server-only",
+      "path": "docs/mcp-implementation.md",
+      "date": "2026-11-18",
+      "type": "configuration"
+    },
+    {
+      "id": "historical-per-tool",
+      "path": "submission/04-evaluation/evidence/historical-25-tool-coverage-20261116.csv",
+      "date": "2026-11-16",
+      "type": "local",
+      "origin_repo": "wbgreen0405/veteran-access-bridge",
+      "origin_path": "docs/evaluation/evidence/server-wide-20261116/tool-coverage.csv",
+      "origin_blob_sha": "3e38ddfa0aeaf6ced68979008de719cc31516b86"
+    },
+    {
+      "id": "m64-per-tool-index",
+      "path": "submission/04-evaluation/evidence/m64-per-tool-evidence.json",
+      "type": "derived index, not a test run"
+    },
+    {
+      "id": "verifier-regression",
+      "result": "48/48",
+      "date": "2026-11-23",
+      "commit": "a5bcf8277001d381adb4aa81d3916225d15528fb",
+      "url": "https://github.com/wbgreen0405/veteran-access-bridge/actions/runs/45101968969",
+      "scope": "focused local/CI checks"
+    },
+    {
+      "id": "security-final",
+      "result": "four PARTIAL",
+      "date": "2026-11-22",
+      "path": "submission/05-security/evidence/m64-security-closeout-summary.md"
+    },
+    {
+      "id": "gold",
+      "result": "16/16",
+      "date": "2026-11-19",
+      "path": "docs/evaluation/evidence/primary-care-mcp-gold.csv"
+    },
+    {
+      "id": "controls",
+      "result": "135/135",
+      "date": "2026-11-19",
+      "path": "docs/evaluation/evidence/primary-care-control-suites.csv"
+    }
+  ],
+  "publication": "Public sanitized summaries. Private raw runtime evidence intentionally excluded."
+}

@@ -8,6 +8,7 @@
     "tab-backend": "#mcp-backend",
     "tab-voice": "#agent-voice",
     "tab-security": "#security-evaluation",
+    "tab-tools": "#per-tool-evaluation",
     "tab-results": "#all-results"
   };
   const hashToTab = new Map(tabs.map(t => [tabHashes[t.id], t]));

@@ -8,6 +8,8 @@ The Primary Care demonstration shows the server in use. A Veteran calls through 
 
 [Explore the architecture](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/solution-architecture/) · [Follow the demonstration](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/demonstration/) · [Explore evaluation results](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/evaluation/) · [Reproduce the local server](#reproduce-the-local-server)
 
+**For judges** · [Submission package](submission/README.md) · [29-tool evaluation](docs/evaluation/per-tool.md) · [Evidence manifest](submission/evidence-manifest.json)
+
 **For reviewers** · [Backend release contents](release/README.md) · [Run the local server](docs/developer-guide/local-mcp-server.md) · [Find a test](tests/README.md) · [Read the recorded results](docs/evaluation/reviewer-index.md)
 
 ## Why we built it

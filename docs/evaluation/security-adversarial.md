@@ -24,6 +24,19 @@ Synthetic identities and cases only. Security certification is **not** claimed.
 | Adversarial voice sample (Nov 15) | <span class="ev2-badge warn">sample</span> | Five restricted requests had zero observed MCP attempts; three permitted follow-ups succeeded | Small selected sample; no paired before/after SQL assertions for the five turns |
 | Voice and database reconciliation (Nov 19) | <span class="ev2-badge warn">gap</span> | Zero of three Nov 15 sessions matched the retained Nov 16 SQL audit | Different session windows cannot show that no protected record changed |
 
+## M6.4 targeted security closeout · November 22–23
+
+The corrected local catalog verifier and its regressions passed **48/48 focused checks** at [PR #215 CI](https://github.com/wbgreen0405/veteran-access-bridge/actions/runs/45101968969). These are local/CI checks, **not** 48 deployed attack cases.
+
+| Scenario | Strongest bounded evidence | Deployed verdict |
+|---|---|---|
+| **S14** · catalog description drift | Local verifier now rejects unauthorized descriptions, normalized metadata and scope classification drift | **PARTIAL** · IBM pre-dispatch enforcement and approved release manifest outstanding |
+| **S13/A23** · malicious CRM note | Paired synthetic results reached local MCP client | **PARTIAL** · No isolated IBM Avery paired execution |
+| **S15** · endpoint redirection | Local endpoint binding drift rejected | **PARTIAL** · Managed IBM outbound destination/credential telemetry missing |
+| **S03/A21** · concurrent callers | Corrected fixture qualification found zero eligible unused synthetic cases | **PARTIAL** · Two overlapping independently verified callers not tested |
+
+Missing managed telemetry is not evidence of confirmed unauthorized execution, disclosure or credential transfer. [Sanitized full closeout](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/05-security/evidence/m64-security-closeout-summary.md).
+
 ## Prompt injection vs. enforced boundary
 
 An attacker-controlled document or voice prompt may try to override instructions or access another caller's case. Our **backend** must still deny missing scope, invalid authority, wrong caller, unconfirmed booking, and unauthorized writes, regardless of what the model says or attempts.
