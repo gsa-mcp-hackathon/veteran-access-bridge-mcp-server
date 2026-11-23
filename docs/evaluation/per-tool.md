@@ -13,6 +13,16 @@ The full reviewed catalog contains **29 registered tools**; **21** were attached
     <div><small>Historical contract rows</small><strong>25</strong><span>Nov 16 local run</span></div>
     <div><small>Focused verifier CI</small><strong>48/48</strong><span>PR #215 · not tool success</span></div>
   </div>
+  <section class="pt-charts" aria-label="Tool inventory and test coverage scorecards">
+    <div class="pt-panel"><h3>Local tool-test coverage <small>Nov 16 historical matrix</small></h3>
+      <div id="pt-coverage-graphic" class="pt-chart" aria-live="polite"><p>Loading coverage…</p></div>
+      <p class="pt-chart-note">Tool rows with at least one recorded local contract result, not a current IBM execution score.</p>
+    </div>
+    <div class="pt-panel"><h3>Tool families <small>Reviewed M6.4 inventory</small></h3>
+      <div id="pt-family-graphic" class="pt-chart" aria-live="polite"><p>Loading families…</p></div>
+      <p class="pt-chart-note">Counts are tools registered by capability; bar lengths are proportional to 29 tools.</p>
+    </div>
+  </section>
   <div class="pt-columns">
     <section class="pt-panel"><h2>Per-tool results</h2><p>Search the exact inventory and select any tool to inspect its bounded evidence.</p>
       <div class="pt-filters"><label>Search<input id="pt-search" type="search" placeholder="Tool name"></label><label>Capability<select id="pt-category"><option value="">All</option></select></label><label>Avery<select id="pt-attached"><option value="">All</option><option value="yes">Attached</option><option value="no">Server-only</option></select></label></div>

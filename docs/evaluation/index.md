@@ -34,6 +34,16 @@ hide:
     <div><small>Historical local coverage</small><strong>25</strong><span>Nov 16 tool-level rows</span></div>
     <div><small>Additional tools</small><strong>4</strong><span>Not in Nov 16 matrix</span></div>
   </div>
+  <section class="pt-charts" aria-label="Tool inventory and test coverage scorecards">
+    <div class="pt-panel"><h3>Local tool-test coverage <small>Nov 16 historical matrix</small></h3>
+      <div id="pt-coverage-graphic" class="pt-chart" aria-live="polite"><p>Loading coverage…</p></div>
+      <p class="pt-chart-note">Tool rows with at least one recorded local contract result, not a current IBM execution score.</p>
+    </div>
+    <div class="pt-panel"><h3>Tool families <small>Reviewed M6.4 inventory</small></h3>
+      <div id="pt-family-graphic" class="pt-chart" aria-live="polite"><p>Loading families…</p></div>
+      <p class="pt-chart-note">Counts are tools registered by capability; bar lengths are proportional to 29 tools.</p>
+    </div>
+  </section>
   <section class="pt-panel" aria-label="Individual tool evaluations">
     <h3>Browse the individual test results</h3>
     <div class="pt-filters">

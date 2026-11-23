@@ -48,7 +48,15 @@
       "result": "135/135",
       "date": "2026-11-19",
       "path": "docs/evaluation/evidence/primary-care-control-suites.csv"
+    },
+    {
+      "id": "inline-evaluation-scorecards",
+      "type": "display derived from existing data",
+      "path": "docs/evaluation/index.md",
+      "date": "2026-11-23",
+      "source": "docs/evaluation/evidence/m64-per-tool-evidence.json",
+      "meaning": "Historical local coverage 25/29 and tool-family counts from reviewed 29-tool inventory; no new tests or numerical LLM grades"
     }
   ],
-  "publication": "Public sanitized summaries. Private raw runtime evidence intentionally excluded."
+  "publication": "Public sanitized summaries. Private raw runtime evidence intentionally excluded. Final PowerPoint and final evaluation DOCX/PDF are not yet included in this repository; original private engineering links may require separate access review."
 }

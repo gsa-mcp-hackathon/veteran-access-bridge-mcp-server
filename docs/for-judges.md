@@ -10,7 +10,7 @@
 | Current implementation | [MCP tools](mcp-implementation.md) |
 | Demonstration | [Watch Avery video](assets/avery-demo.mp4) · [Walkthrough](demonstration.md) |
 | Evaluation methods and results | [Evaluation Command Center](evaluation/index.md) |
-| Each tool | [Per-Tool Evaluation](evaluation/per-tool.md) |
+| Each tool | [Individual tool results on Evaluation page](evaluation/index.md#panel-tools) |
 | Security outcomes | [Security & Adversarial](evaluation/security-adversarial.md) |
 | How to run | [Developer Guide](developer-guide/index.md) |
 
