@@ -1,1 +1,46 @@
 .pt-dashboard{background:#181818;color:#eee;padding:20px;border-radius:14px;margin:16px 0}.pt-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.pt-summary>div{padding:14px;background:#262626;border-radius:9px}.pt-summary small,.pt-summary span{display:block;color:#bbb;font-size:12px}.pt-summary strong{display:block;font-size:27px;color:#fff}.pt-columns{display:grid;grid-template-columns:1.3fr 1fr;gap:12px;margin:12px 0}.pt-panel{border:1px solid #414141;padding:15px;border-radius:12px}.pt-panel h2,.pt-panel h3{color:#fff}.pt-panel p,.pt-panel li{color:#ccc}.pt-filters{display:flex;gap:7px;flex-wrap:wrap}.pt-filters label{font-size:12px}.pt-filters input,.pt-filters select{display:block;background:#303030;border:1px solid #666;color:#fff;padding:5px;max-width:160px}.pt-scroll{overflow:auto;max-height:490px}.pt-dashboard table{width:100%;border-collapse:collapse}.pt-dashboard td,.pt-dashboard th{padding:7px;border-bottom:1px solid #444;font-size:12px;color:#eee;text-align:left}.pt-name{background:transparent;border:0;cursor:pointer;font:inherit;color:#9dd1ff;text-align:left;overflow-wrap:anywhere}.pt-name:focus-visible{outline:2px solid #9dd1ff}.pt-score{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #444;padding:10px 0}.pt-score b{font-size:12px;color:#f0be61;text-align:right}.pt-panel #pt-detail p{font-size:12px}@media(max-width:850px){.pt-columns{grid-template-columns:1fr}.pt-summary{grid-template-columns:repeat(2,1fr)}}
+/* Evaluation scorecards: isolate from Material/MkDocs white table defaults. */
+.md-typeset .pt-dashboard { background:#131b29;color:#e9f0fb;border:1px solid #35455d;box-shadow:0 12px 34px rgba(0,0,0,.18);max-width:100%;overflow:hidden }
+.md-typeset .pt-dashboard .pt-summary>div {background:#213048;border:1px solid #344765}
+.md-typeset .pt-dashboard .pt-summary strong {color:#fff}
+.md-typeset .pt-dashboard .pt-summary small,.md-typeset .pt-dashboard .pt-summary span {color:#b9c8da}
+.md-typeset .pt-dashboard .pt-panel{background:#192538;border:1px solid #384c65;min-width:0}
+.md-typeset .pt-dashboard .pt-panel h2,.md-typeset .pt-dashboard .pt-panel h3 {color:#f4f8ff}
+.md-typeset .pt-dashboard .pt-panel p,.md-typeset .pt-dashboard p,.md-typeset .pt-dashboard li{color:#d2dfed}
+.md-typeset .pt-dashboard .pt-filters label {color:#e4edf8}
+.md-typeset .pt-dashboard .pt-filters input,.md-typeset .pt-dashboard .pt-filters select {background:#24354b;color:#f8fbff;border:1px solid #71829b;border-radius:6px;min-height:39px;max-width:210px}
+.md-typeset .pt-dashboard .pt-filters input::placeholder{color:#afbdcf}
+.md-typeset .pt-dashboard .pt-filters input:focus-visible,.md-typeset .pt-dashboard .pt-filters select:focus-visible{outline:2px solid #8bc4ff;outline-offset:2px}
+.md-typeset .pt-dashboard .pt-scroll{max-width:100%;overflow-x:auto;overflow-y:auto;background:#142136;border:1px solid #3c506a;border-radius:9px;margin-top:12px;max-height:460px}
+.md-typeset .pt-dashboard .pt-scroll table{display:table;width:100%;min-width:660px;max-width:none;table-layout:auto;border-collapse:collapse;background:#17263b;margin:0}
+.md-typeset .pt-dashboard .pt-scroll thead,.md-typeset .pt-dashboard .pt-scroll th{background:#2b3e58!important;color:#f9fbff!important;font-weight:700}
+.md-typeset .pt-dashboard .pt-scroll tbody tr{background:#17263b!important}
+.md-typeset .pt-dashboard .pt-scroll tbody tr:nth-child(even){background:#1e3049!important}
+.md-typeset .pt-dashboard .pt-scroll tbody tr:hover{background:#2b4361!important}
+.md-typeset .pt-dashboard .pt-scroll td,.md-typeset .pt-dashboard .pt-scroll th{background:transparent;color:#e6effb!important;border:0;border-bottom:1px solid #40546d;padding:12px 11px;font-size:.76rem;line-height:1.35;vertical-align:middle;white-space:normal;overflow-wrap:anywhere}
+.md-typeset .pt-dashboard .pt-scroll th{background:#2b3e58!important;white-space:nowrap}
+.md-typeset .pt-dashboard .pt-scroll td:first-child{min-width:180px}
+.md-typeset .pt-dashboard .pt-scroll .pt-name{display:inline-block;background:none;border:0;padding:0;color:#82cbff!important;text-decoration:underline;text-decoration-color:#5e8daa;text-underline-offset:3px;font-weight:600;text-align:left;cursor:pointer}
+.md-typeset .pt-dashboard .pt-scroll .pt-name:hover{color:#c8e9ff!important}
+.md-typeset .pt-dashboard .pt-scroll .pt-name:focus-visible{outline:2px solid #90ceff;outline-offset:3px}
+.md-typeset .pt-dashboard .pt-detail{background:#20324b;border:1px solid #425c7b;border-radius:9px;padding:16px;margin-top:12px;color:#e6effb}
+.md-typeset .pt-dashboard .pt-detail strong{color:#f8fbff}
+.md-typeset .pt-dashboard .pt-detail h3{color:#f8fbff}
+.pt-charts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+.pt-charts .pt-panel{min-width:0}
+.pt-charts h3 small{color:#aabdd3;font-size:.7rem;font-weight:400;display:block;margin-top:4px}
+.pt-cover-number{font-weight:700;font-size:1.6rem;color:#fff;line-height:1.4}
+.pt-chart-track{height:18px;border-radius:100px;background:#52617a;overflow:hidden;display:flex;margin:13px 0 9px}
+.pt-chart-segment{height:100%;display:block}
+.pt-chart-segment.is-covered{background:#60b8e6}
+.pt-chart-segment.is-extra{background:#e9b761}
+.pt-chart-legend{display:flex;gap:16px;flex-wrap:wrap;color:#e4ecf6;font-size:.73rem}
+.pt-chart-legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px}
+.pt-chart-note{font-size:.72rem;line-height:1.5}
+.pt-family-row{display:grid;grid-template-columns:128px minmax(75px,1fr) 32px;align-items:center;gap:9px;margin:9px 0;font-size:.74rem;color:#e5eefb}
+.pt-family-row .pt-family-name{overflow-wrap:anywhere}
+.pt-family-track{height:11px;border-radius:50px;background:#36475d;overflow:hidden}
+.pt-family-fill{height:100%;background:linear-gradient(90deg,#5caee1,#a0d6e6);border-radius:50px}
+.pt-family-count{text-align:right;font-weight:700}
+@media(max-width:1050px){.pt-charts{grid-template-columns:1fr}.pt-family-row{grid-template-columns:120px minmax(75px,1fr) 32px}}
+@media(max-width:650px){.md-typeset .pt-dashboard{padding:12px}.md-typeset .pt-dashboard .pt-scroll table{min-width:660px}.pt-family-row{grid-template-columns:110px minmax(65px,1fr) 26px;gap:5px}.pt-summary{gap:7px}}
