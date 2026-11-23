@@ -101,7 +101,7 @@ This section separates **completed evaluation activity** from **still-open deplo
 | Nov 21 | 86/86 hostile-argument checks | All 29 tools: 19 read-only tools × 4 hostile inputs, plus 10 write tools × forged authority ([script](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/eval/probe_mcp_adversarial.py)) |
 | Nov 21 | 21 of 29 tools attached to Avery | Configuration from the IBM agent export; not an agent run |
 | Nov 22 | 27 passed, 0 failed, 0 skipped | Targeted local security remediation |
-| Nov 22 | 48/48 catalog-verifier checks | Local and GitHub CI, PR #215 (open) |
+| Nov 22 | 48/48 catalog-verifier checks | Local and GitHub CI ([PR #215 record](https://github.com/gsa-mcp-hackathon/veteran-access-bridge-mcp-server/blob/main/submission/engineering-records/pr-215.md)) |
 
 These are separate checkpoints and are not combined into one rate.
 
