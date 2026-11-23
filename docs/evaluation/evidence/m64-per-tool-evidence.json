@@ -3,7 +3,7 @@
   "generated": "2026-11-23",
   "inventory": "M6.4 Nov 18 reviewed configuration",
   "historical_checks": "Nov 16 25-tool local evaluation",
-  "note": "Local PASS is limited to each recorded assertion. IBM current-release tool-use accuracy, p95, and Pass^3 are not established here.",
+  "note": "Agent execution evidence is historical workflow documentation or an explicitly missing matched run; it is not a current per-tool IBM M6.4 pass rate. Local contract PASS means only that historical check passed.",
   "tools": [
     {
       "tool": "verify_synthetic_identity",
@@ -14,7 +14,11 @@
         "hostile_arguments": "PASS 4/4",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Historical workflow evidence",
+        "note": "Historical Nov 16 identity-tool invocation described in the archived CRM voice acceptance; exact current M6.4 run not independently scored.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "determine_workflow_state",
@@ -25,7 +29,11 @@
         "hostile_arguments": "PASS 4/4",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "search_availability",
@@ -36,7 +44,11 @@
         "hostile_arguments": "PASS 4/4",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "assess_access_standard",
@@ -47,7 +59,11 @@
         "hostile_arguments": "PASS 4/4",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "check_community_care_eligibility",
@@ -58,7 +74,11 @@
         "hostile_arguments": "PASS 4/4",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "get_case_lifecycle_state",
@@ -69,7 +89,11 @@
         "hostile_arguments": "PASS 4/4",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "get_scheduling_encounter",
@@ -80,7 +104,11 @@
         "hostile_arguments": "PASS 4/4",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "prepare_scheduling_handoff",
@@ -91,7 +119,11 @@
         "hostile_arguments": "PASS 1/1",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "get_scheduling_handoff",
@@ -102,7 +134,11 @@
         "hostile_arguments": "PASS 4/4",
         "scope": "N/A handoff remote access denied separately"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "validate_option_selection",
@@ -113,7 +149,11 @@
         "hostile_arguments": "PASS 4/4",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "record_option_selection",
@@ -124,7 +164,11 @@
         "hostile_arguments": "PASS 1/1",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "prepare_veteran_confirmation_request",
@@ -135,7 +179,11 @@
         "hostile_arguments": "PASS 1/1",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "record_veteran_confirmation",
@@ -146,7 +194,11 @@
         "hostile_arguments": "PASS 1/1",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "validate_booking_preconditions",
@@ -157,7 +209,11 @@
         "hostile_arguments": "PASS 4/4",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "record_lifecycle_event",
@@ -168,7 +224,11 @@
         "hostile_arguments": "PASS 1/1",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "get_va_sandbox_health_facility",
@@ -179,7 +239,11 @@
         "hostile_arguments": "PASS 4/4",
         "scope": "N/A public facility lookup"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "search_va_sandbox_health_facilities",
@@ -190,7 +254,11 @@
         "hostile_arguments": "PASS 4/4",
         "scope": "N/A public facility lookup"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "get_va_sandbox_health_facility_service",
@@ -201,7 +269,11 @@
         "hostile_arguments": "PASS 4/4",
         "scope": "N/A public facility lookup"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "get_va_community_care_case_summary",
@@ -212,7 +284,11 @@
         "hostile_arguments": "PASS 4/4",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "get_va_patient_health_sandbox_summary",
@@ -223,7 +299,11 @@
         "hostile_arguments": "PASS 4/4",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "get_va_clinical_health_case_summary",
@@ -234,7 +314,11 @@
         "hostile_arguments": "PASS 4/4",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Not independently verified",
+        "note": "No tool-specific, pinned, current-release IBM selection/argument score is linked to this index.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "get_crm_case",
@@ -245,7 +329,11 @@
         "hostile_arguments": "PASS 4/4",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Historical workflow evidence",
+        "note": "Historical Nov 16 CRM read workflow documented; current-release independent scoring not established.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "record_crm_interaction",
@@ -256,7 +344,11 @@
         "hostile_arguments": "PASS 1/1",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Historical workflow evidence",
+        "note": "Historical Nov 16 IBM-selected CRM interaction write independently persisted; current-release independent score not established.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "create_crm_follow_up",
@@ -267,7 +359,11 @@
         "hostile_arguments": "PASS 1/1",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Historical workflow evidence",
+        "note": "Historical Nov 16 IBM-selected follow-up task creation independently persisted; current-release independent score not established.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "update_crm_follow_up",
@@ -278,35 +374,55 @@
         "hostile_arguments": "PASS 1/1",
         "scope": "PASS 5/5"
       },
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Historical workflow evidence",
+        "note": "Historical Nov 16 IBM-selected follow-up cancellation independently persisted; current-release independent score not established.",
+        "ref": "validation-agent/#ibm-watsonx-orchestrate-and-deepeval"
+      }
     },
     {
       "tool": "search_call_appointments",
       "category": "Avery voice",
       "attached_to_avery": true,
       "nov16_local_25_tool_checks": null,
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Historical voice evidence",
+        "note": "Nov 16 archived voice trial documents appointment search as IBM-selected workflow; per-tool M6.4 accuracy not scored.",
+        "ref": "validation-agent/#end-to-end-voice-trial"
+      }
     },
     {
       "tool": "select_call_appointment",
       "category": "Avery voice",
       "attached_to_avery": true,
       "nov16_local_25_tool_checks": null,
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Historical voice evidence",
+        "note": "Nov 16 archived voice trial documents option selection in IBM-selected workflow; per-tool M6.4 accuracy not scored.",
+        "ref": "validation-agent/#end-to-end-voice-trial"
+      }
     },
     {
       "tool": "book_call_appointment",
       "category": "Avery voice",
       "attached_to_avery": true,
       "nov16_local_25_tool_checks": null,
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Historical voice evidence",
+        "note": "Historical booking request tool selection; actual booking commit was trusted-host controlled and not autonomous IBM booking.",
+        "ref": "validation-agent/#end-to-end-voice-trial"
+      }
     },
     {
       "tool": "search_call_knowledge",
       "category": "Avery voice",
       "attached_to_avery": true,
       "nov16_local_25_tool_checks": null,
-      "m64_ibm_per_tool_verdict": "NOT SCORED"
+      "agent_execution_evidence": {
+        "kind": "Historical voice evidence",
+        "note": "Nov 16 archived voice trial references knowledge search; no current standalone retrieval accuracy result.",
+        "ref": "validation-agent/#end-to-end-voice-trial"
+      }
     }
   ]
 }

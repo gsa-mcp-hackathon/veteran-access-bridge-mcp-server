@@ -26,7 +26,7 @@ The full reviewed catalog contains **29 registered tools**; **21** were attached
   <div class="pt-columns">
     <section class="pt-panel"><h2>Per-tool results</h2><p>Search the exact inventory and select any tool to inspect its bounded evidence.</p>
       <div class="pt-filters"><label>Search<input id="pt-search" type="search" placeholder="Tool name"></label><label>Capability<select id="pt-category"><option value="">All</option></select></label><label>Avery<select id="pt-attached"><option value="">All</option><option value="yes">Attached</option><option value="no">Server-only</option></select></label></div>
-      <div class="pt-scroll"><table><thead><tr><th>Tool</th><th>Contracts</th><th>Hostile arguments</th><th>Scope denial</th><th>IBM M6.4</th></tr></thead><tbody id="pt-rows"><tr><td colspan="5">Loading catalog…</td></tr></tbody></table></div>
+      <div class="pt-scroll"><table><thead><tr><th>Tool</th><th>Contracts</th><th>Hostile arguments</th><th>Scope denial</th><th>Agent execution evidence</th></tr></thead><tbody id="pt-rows"><tr><td colspan="5">Loading catalog…</td></tr></tbody></table></div>
       <p id="pt-count" aria-live="polite"></p>
     </section>
     <section class="pt-panel"><h2>Evaluation scorecard</h2><p>Evidence dimensions, not fabricated 0–100 ratings.</p>
