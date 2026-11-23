@@ -74,6 +74,12 @@ Assesses agent behavior, MCP tool selection and spoken interaction using histori
 - Nov 19: **16/16** gold answers and **135/135** deterministic control checks.
 - Nov 19: voice and database reconciliation found gaps in before/after snapshots for earlier attack sessions.
 
+## Latest M6.4 configuration and focused regression tests
+
+In the reviewed November 18 enabled configuration, **29 tools** were registered, **21** attached to Avery and **8** left server-only. These are inventory observations, not deployment-wide behavioral acceptance. The historical November 16 **108/108** contract probes belong to an earlier **25-tool** configuration.
+
+The catalog-integrity fix at [PR #215](https://github.com/wbgreen0405/veteran-access-bridge/pull/215) passed **48/48 focused checks** locally and in CI at commit `a5bcf827`. This validates the local verifier, **not** IBM pre-dispatch enforcement. [Per-tool scorecard](per-tool.md) · [Security outcomes](security-adversarial.md).
+
 ## What remains open
 
 !!! danger "Open evidence areas"

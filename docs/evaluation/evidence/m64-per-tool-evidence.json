@@ -1,0 +1,312 @@
+{
+  "version": 1,
+  "generated": "2026-11-23",
+  "inventory": "M6.4 Nov 18 reviewed configuration",
+  "historical_checks": "Nov 16 25-tool local evaluation",
+  "note": "Local PASS is limited to each recorded assertion. IBM current-release tool-use accuracy, p95, and Pass^3 are not established here.",
+  "tools": [
+    {
+      "tool": "verify_synthetic_identity",
+      "category": "Identity",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 4/4",
+        "hostile_arguments": "PASS 4/4",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "determine_workflow_state",
+      "category": "Scheduling",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 4/4",
+        "hostile_arguments": "PASS 4/4",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "search_availability",
+      "category": "Scheduling",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 4/4",
+        "hostile_arguments": "PASS 4/4",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "assess_access_standard",
+      "category": "Access",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 4/4",
+        "hostile_arguments": "PASS 4/4",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "check_community_care_eligibility",
+      "category": "Access",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 4/4",
+        "hostile_arguments": "PASS 4/4",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "get_case_lifecycle_state",
+      "category": "Lifecycle",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 4/4",
+        "hostile_arguments": "PASS 4/4",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "get_scheduling_encounter",
+      "category": "Scheduling",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 4/4",
+        "hostile_arguments": "PASS 4/4",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "prepare_scheduling_handoff",
+      "category": "Lifecycle",
+      "attached_to_avery": false,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 5/5",
+        "hostile_arguments": "PASS 1/1",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "get_scheduling_handoff",
+      "category": "Lifecycle",
+      "attached_to_avery": false,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 4/4",
+        "hostile_arguments": "PASS 4/4",
+        "scope": "N/A handoff remote access denied separately"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "validate_option_selection",
+      "category": "Lifecycle",
+      "attached_to_avery": false,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 4/4",
+        "hostile_arguments": "PASS 4/4",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "record_option_selection",
+      "category": "Lifecycle",
+      "attached_to_avery": false,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 5/5",
+        "hostile_arguments": "PASS 1/1",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "prepare_veteran_confirmation_request",
+      "category": "Lifecycle",
+      "attached_to_avery": false,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 5/5",
+        "hostile_arguments": "PASS 1/1",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "record_veteran_confirmation",
+      "category": "Lifecycle",
+      "attached_to_avery": false,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 5/5",
+        "hostile_arguments": "PASS 1/1",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "validate_booking_preconditions",
+      "category": "Lifecycle",
+      "attached_to_avery": false,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 4/4",
+        "hostile_arguments": "PASS 4/4",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "record_lifecycle_event",
+      "category": "Lifecycle",
+      "attached_to_avery": false,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 5/5",
+        "hostile_arguments": "PASS 1/1",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "get_va_sandbox_health_facility",
+      "category": "VA sandbox",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 4/4",
+        "hostile_arguments": "PASS 4/4",
+        "scope": "N/A public facility lookup"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "search_va_sandbox_health_facilities",
+      "category": "VA sandbox",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 4/4",
+        "hostile_arguments": "PASS 4/4",
+        "scope": "N/A public facility lookup"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "get_va_sandbox_health_facility_service",
+      "category": "VA sandbox",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 4/4",
+        "hostile_arguments": "PASS 4/4",
+        "scope": "N/A public facility lookup"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "get_va_community_care_case_summary",
+      "category": "VA sandbox",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 4/4",
+        "hostile_arguments": "PASS 4/4",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "get_va_patient_health_sandbox_summary",
+      "category": "VA sandbox",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 4/4",
+        "hostile_arguments": "PASS 4/4",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "get_va_clinical_health_case_summary",
+      "category": "VA sandbox",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 4/4",
+        "hostile_arguments": "PASS 4/4",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "get_crm_case",
+      "category": "CRM",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 4/4",
+        "hostile_arguments": "PASS 4/4",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "record_crm_interaction",
+      "category": "CRM",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 5/5",
+        "hostile_arguments": "PASS 1/1",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "create_crm_follow_up",
+      "category": "CRM",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 5/5",
+        "hostile_arguments": "PASS 1/1",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "update_crm_follow_up",
+      "category": "CRM",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": {
+        "contract": "PASS 5/5",
+        "hostile_arguments": "PASS 1/1",
+        "scope": "PASS 5/5"
+      },
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "search_call_appointments",
+      "category": "Avery voice",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": null,
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "select_call_appointment",
+      "category": "Avery voice",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": null,
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "book_call_appointment",
+      "category": "Avery voice",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": null,
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    },
+    {
+      "tool": "search_call_knowledge",
+      "category": "Avery voice",
+      "attached_to_avery": true,
+      "nov16_local_25_tool_checks": null,
+      "m64_ibm_per_tool_verdict": "NOT SCORED"
+    }
+  ]
+}
