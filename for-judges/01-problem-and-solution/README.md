@@ -30,15 +30,7 @@ The server does not depend on the channel. Voice is the first channel built; sec
 
 ### How a request works
 
-```mermaid
-flowchart LR
-    A["Request<br/>identify the need"] --> B["Verify<br/>identity, consent, scope"]
-    B --> C["Retrieve<br/>authorized availability"]
-    C --> D["Route<br/>policy and access standards"]
-    D --> E["Confirm<br/>Veteran agrees"]
-    E --> F["Book and wrap up<br/>commit, read back, log"]
-    D -.-> G(["Escalate to human MSA"])
-```
+![How a request works: six steps from request to booking, each owned by a trusted part of the system](../assets/request-flow.png)
 
 Each request ends in one of three ways: **resolved** (information given or appointment booked), **follow-up** (more coordination needed) or **escalated** (sent to a human MSA).
 
