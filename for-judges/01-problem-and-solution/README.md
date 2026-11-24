@@ -1,8 +1,8 @@
 # 01 · Problem and solution
 
-**Use case:** Veteran Access Bridge is a secured MCP server that gives any SI agent 29 validated tools to look up VA health summaries, search open slots and book appointments for Veterans. The IBM watsonx Orchestrate voice agent Avery uses those tools to complete a booking in a single conversation.
+**Use case:** Veteran Access Bridge is a secured MCP server that gives any Super Intelligent (SI) agent 29 validated tools to look up VA health summaries, search open slots and book appointments for Veterans. The IBM watsonx Orchestrate voice agent Avery uses those tools to complete a booking in a single conversation.
 
-**Track:** Service: Write
+**Track:** Service: Read and Write
 
 ## Problem statement
 
@@ -12,9 +12,7 @@
 
 ## Proposed solution
 
-### Overview
-
-Build a **governed MCP server** that sits between any SI agent and VA scheduling services. The agent handles the conversation and chooses tools. The server and its deterministic backend services decide what is valid, permitted and committed. Human MSAs keep authority over complex or sensitive cases.
+**Solution:** Veteran Access Bridge is a governed MCP server that lets SI agents schedule VA care in a single conversation. The agent handles the request. The server verifies the Veteran, checks the rules and confirms each booking in the database. Staff stay in control of complex cases.
 
 The server does not depend on the channel. Voice is the first channel built; secure messaging, chat and other channels can use the same tools and the same controls.
 
