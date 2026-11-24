@@ -1,6 +1,6 @@
 # 03 · Demonstration
 
-> **[Watch the recorded call (MP4, 3:39)](../../docs/assets/avery-demo.mp4)** · [Interactive walkthrough](../../docs/demonstration.md) · **Presentation:** slides 10–11
+> **[Watch the recorded call (MP4, 3:39)](../../docs/assets/avery-demo.mp4)** · [Interactive walkthrough](../../docs/demonstration.md)
 
 [![Avery demonstration call, select to play](../../docs/assets/avery-demo-poster.jpg)](../../docs/assets/avery-demo.mp4)
 
@@ -61,15 +61,19 @@ sequenceDiagram
 
 ## Don't just trust the response. Verify the result.
 
-![Slide 11 · Voice session, tool trace and verified state](../assets/slide-11.png)
+The same booking is checked three independent ways.
 
-The same booking is checked three independent ways:
+**1 · Voice session.** Avery confirms the appointment after the caller agrees (final LiveKit caption).
 
-| Evidence | Source | What it shows |
-|---|---|---|
-| **Voice session** | LiveKit caption | Avery confirms Friday, Dec 4, 2026 at 9 AM CST after the caller agrees |
-| **MCP tool trace** | IBM watsonx Orchestrate | IBM selected `book_call_appointment`; 7 tool calls in the call; payloads redacted by the backend |
-| **Verified state** | Database readback | Booked, independently verified; synthetic confirmation `51976dfb…`, not a real VA appointment |
+![Voice session: Avery says the Primary Care appointment is confirmed for Friday, December 4, 2026 at 9 AM CST](../assets/evidence-voice-caption.png)
+
+**2 · MCP tool trace.** IBM watsonx Orchestrate selected `book_call_appointment`, a write through the MCP server; the call made 7 tool calls in total, with payloads redacted by the backend.
+
+![MCP tool trace: Book Your Appointment, book_call_appointment, complete, write by Avery via MCP, IBM agent selection verified](../assets/evidence-tool-trace.png)
+
+**3 · Verified state.** The database readback shows the slot booked and independently verified. Synthetic confirmation `51976dfb-30da-5f04-a628-e9ca1ec31fd9`; not a real VA appointment.
+
+![Verified state: selected slot 12/4/2026 9:00 AM CST, booking status booked with independent readback verified, synthetic confirmation number](../assets/evidence-verified-state.png)
 
 **Also verified (Nov 16, CRM):** 2 IBM-selected reads, 3 writes and 3 matching database audit receipts.
 

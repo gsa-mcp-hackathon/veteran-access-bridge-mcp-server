@@ -2,13 +2,11 @@
 
 > **The SI can choose a tool. Only the server decides what is allowed.**
 >
-> [Detailed evaluation](../../docs/evaluation/security-adversarial.md) · [Interactive security architecture](../../docs/security-governance.md) · [Sanitized closeout](evidence/m64-security-closeout-summary.md) · **Presentation:** slides 15–17 and 19
+> [Detailed evaluation](../../docs/evaluation/security-adversarial.md) · [Interactive security architecture](../../docs/security-governance.md) · [Sanitized closeout](evidence/m64-security-closeout-summary.md)
 
 ---
 
 ## Four layers of protection
-
-![Slide 15 · Safety is enforced by the server](../assets/slide-15.png)
 
 ```mermaid
 flowchart TB
@@ -34,8 +32,6 @@ flowchart TB
 
 ## When the SI made a mistake, the server stopped it
 
-![Slide 16 · Test A27](../assets/slide-16.png)
-
 In **test A27 (forged request)**, Avery tried to use a forged identity. The SI agent failed the test; the **server refused the request**. No patient data was shared and no booking was made. This is the design working as intended: security does not depend on the model getting it right.
 
 | A27 | Result |
@@ -59,8 +55,6 @@ In **test A27 (forged request)**, Avery tried to use a forged identity. The SI a
 
 ## Security considerations
 
-![Slide 17 · Security considerations](../assets/slide-17.png)
-
 | Area | Controls |
 |---|---|
 | **Authentication and access control** | Bearer-token authentication on remote MCP access; identity verification and case-scoped authorization; unauthorized requests fail closed |
@@ -82,8 +76,6 @@ The fixes for these findings passed **27/27 local checks (Nov 22)**, and the cat
 No unauthorized deployed execution, disclosure or credential forwarding was found. Missing managed telemetry is a gap in evidence, not evidence of a breach.
 
 ## Known limitations and next steps
-
-![Slide 19 · Next steps](../assets/slide-19.png)
 
 | Priority | Work |
 |---|---|
