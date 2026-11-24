@@ -1,17 +1,6 @@
 # 06 · Reproducibility
 
-> Run the MCP server and reproduce the headline numbers in about **10 minutes**. **No IBM Cloud, voice or database credentials needed**: the local path uses bundled synthetic fixtures.
-
----
-
-```mermaid
-flowchart LR
-    S1["1 · Get the code<br/>Codespaces or local"] --> S2["2 · Discover tools<br/>expect 21"]
-    S2 --> S3["3 · MCP request<br/>see a slot excluded"]
-    S3 --> S4["4 · Gold answers<br/>expect 16/16"]
-    S4 --> S5["5 · Probe all 29 tools<br/>expect 126/126 · 86/86"]
-    S5 --> S6["6 · Full test suite<br/>expect 1,630 passed"]
-```
+**Reproducibility:** Anyone can run the MCP server and reproduce the headline numbers in about **10 minutes**, with **no IBM Cloud, voice or database credentials**. The local path uses bundled synthetic fixtures, and every expected output below was captured from the public repository.
 
 ## 1 · Get the code
 
