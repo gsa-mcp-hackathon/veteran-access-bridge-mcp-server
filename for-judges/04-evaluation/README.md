@@ -1,8 +1,6 @@
 # 04 · Final evaluation evidence
 
 > [Evaluation Command Center](../../docs/evaluation/index.md) · [29-tool inline scorecard](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/evaluation/#panel-tools) · [Evidence Library](../../docs/evaluation/reviewer-index.md) · [Final evaluation report (Word)](../deliverables/Veteran-Access-Bridge-Evaluation-Report.docx)
->
-> **Presentation:** slides 12–14 and 18
 
 ---
 
@@ -17,8 +15,6 @@
 | Were the fixes verified? | **27/27** security remediation checks · **48/48** catalog verifier checks | Nov 22 |
 
 ## Methodology
-
-![Slide 12 · Evaluation methodology](../assets/slide-12.png)
 
 The evaluation asks three questions. Each has its own test data, environment and pass rule.
 
@@ -49,8 +45,6 @@ flowchart LR
 
 ## Using SI to grade the SI
 
-![Slide 13 · LLM as a judge](../assets/slide-13.png)
-
 Avery runs on Anthropic Claude Sonnet 4.6. Both judges use different models, so the SI never grades itself.
 
 | | Judge 1 · IBM watsonx Orchestrate Evaluate | Judge 2 · DeepEval, multi-turn MCP use |
@@ -63,8 +57,6 @@ Avery runs on Anthropic Claude Sonnet 4.6. Both judges use different models, so 
 **How we kept the judges honest:** judges grade the recorded trace, not a summary; a judge score cannot override a failed safety, consent or booking check; IBM text-match misses were checked by hand against the trace.
 
 ## Correct results, independently verified
-
-![Slide 14 · Results](../assets/slide-14.png)
 
 | Evidence | Result | Date and scope |
 |---|---|---|
@@ -109,8 +101,6 @@ Reported separately and never pooled with the results above.
 | Scope and schema | 261/261 | Overlapping local assertions |
 
 ## We used the findings to improve the architecture
-
-![Slide 18 · Lessons learned](../assets/slide-18.png)
 
 | Case | Finding | Correction | Verified result or limit |
 |---|---|---|---|

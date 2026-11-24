@@ -2,11 +2,7 @@
 
 **Architecture:** The MCP server is the core of Veteran Access Bridge, and everything else connects through it. It exposes 29 typed tools and checks identity, consent and scope on every call. Avery, the SI agent, uses 21 of those tools to talk with the Veteran, but holds no authority. The other 8 are kept on the server for the human-review handoff. Trusted backend services enforce the scheduling rules and are the only part that can write a booking. The VHA sandbox APIs and Supabase hold the data, and human MSAs take any case the server escalates. A booking counts only after the database confirms it.
 
-**Presentation:** slides 6–9
-
 ## Architecture overview
-
-![Slide 7 · Architecture overview](../assets/slide-07.png)
 
 ![Architecture: the MCP server sits inside the trust boundary between the SI agent and the trusted services, data and human review](../assets/architecture-overview.png)
 
@@ -46,9 +42,7 @@ Full catalog with descriptions and source links: [MCP implementation](../../docs
 
 ## Technical approach and key decisions
 
-![Slide 9 · Engineering decisions](../assets/slide-09.png)
-
-**Four principles** (slide 9):
+**Four principles**
 
 | Principle | How it is implemented |
 |---|---|
@@ -57,7 +51,7 @@ Full catalog with descriptions and source links: [MCP implementation](../../docs
 | **Authority outside the LLM** | Caller identity, session consent, case scope and booking commits are enforced by the trusted host. A generated sentence cannot approve a database commit |
 | **Durable, auditable writes** | Restricted Supabase connections, forced row-level security, idempotency keys and transactional audit receipts. Saved state is verified independently of model claims |
 
-**Seven technology choices** (slide 8):
+**Seven technology choices**
 
 | Choice | Why |
 |---|---|
@@ -68,12 +62,6 @@ Full catalog with descriptions and source links: [MCP implementation](../../docs
 | Synthetic data | Safe, reproducible testing with no real Veteran information |
 | Deterministic controls | Security and accountability that do not depend on model behavior |
 | DeepEval and automated testing | Measurable reliability, graded by independent judges |
-
-## Original calling-scenario design
-
-![Slide 6 · MCP architecture, calling scenario](../assets/slide-06.png)
-
-The original design diagram shows the host application, MCP client and server, VHA interfaces, synthetic CDW, knowledge base and CRM. It depicts an **earlier 21-tool inventory** and is kept for reference; the current server has 29.
 
 ## Source map
 
