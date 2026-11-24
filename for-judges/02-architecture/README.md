@@ -1,35 +1,14 @@
 # 02 · MCP architecture
 
-> **The Python FastMCP server is the deliverable.** Avery is one client of it. Any MCP-capable SI agent can discover the same tools, and none of them receives booking or patient-scope authority by doing so.
->
-> **Presentation:** slides 6–9
+**Architecture:** The MCP server is the core of Veteran Access Bridge, and everything else connects through it. It exposes 29 typed tools and checks identity, consent and scope on every call. Avery, the SI agent, uses 21 of those tools to talk with the Veteran, but holds no authority. The other 8 are kept on the server for the human-review handoff. Trusted backend services enforce the scheduling rules and are the only part that can write a booking. The VHA sandbox APIs and Supabase hold the data, and human MSAs take any case the server escalates. A booking counts only after the database confirms it.
 
----
+**Presentation:** slides 6–9
 
 ## Architecture overview
 
 ![Slide 7 · Architecture overview](../assets/slide-07.png)
 
-```mermaid
-flowchart TB
-    V(["Veteran on a voice call"]) --> LK["LiveKit + Deepgram<br/>voice and speech"]
-    LK --> AV["Avery · SI voice agent<br/>IBM watsonx Orchestrate<br/>Claude Sonnet 4.6 via AWS Bedrock"]
-    AV -- "Selected MCP tools and arguments<br/>JSON-RPC over HTTP/SSE or stdio" --> TB
-
-    subgraph TB["TRUST BOUNDARY · authentication and authorization enforced here"]
-        direction TB
-        MCP["Veteran Access Bridge · FastMCP<br/>29 registered · 21 attached to Avery"]
-        MCP --- G1["VHA APIs<br/>6 tools · read-only"]
-        MCP --- G2["Scheduling<br/>18 tools · 15 core + 3 voice"]
-        MCP --- G3["CRM<br/>4 tools · read/write with RLS"]
-        MCP --- G4["Knowledge base<br/>1 tool · retrieval"]
-    end
-
-    TB -- "Authorized deterministic execution<br/>tool selection grants no booking authority" --> DS["Deterministic scheduling,<br/>policy and authorization services"]
-    DS --> VHA[("VHA sandbox<br/>interfaces")]
-    DS --> SB[("Supabase PostgreSQL<br/>synthetic CDW + CRM")]
-    DS -. "complex or unauthorized" .-> MSA(["Human MSA review"])
-```
+![Architecture: the MCP server sits inside the trust boundary between the SI agent and the trusted services, data and human review](../assets/architecture-overview.png)
 
 | Layer | Technology | Responsibility | Holds authority? |
 |---|---|---|---|
@@ -44,25 +23,7 @@ flowchart TB
 
 ## How one protected request is governed
 
-```mermaid
-sequenceDiagram
-    autonumber
-    participant A as Avery (SI agent)
-    participant M as MCP server
-    participant P as Deterministic services
-    participant H as Trusted voice host
-    participant D as Supabase (synthetic)
-    A->>M: book_call_appointment(arguments)
-    M->>M: Check bearer credential (missing/wrong → 401)
-    M->>M: Check turn capability, case binding, tool allowlist, replay
-    M->>P: Forward only an in-scope request
-    P->>H: Require verified identity, current consent, signed host grant
-    H-->>P: Grant present and fresh?
-    P->>D: Idempotent commit (forged or replayed → rejected)
-    D-->>P: Independent readback of the saved record
-    P-->>M: Structured receipt, or an explicit denial
-    M-->>A: Result. Avery can only report what the server returned
-```
+![How one protected request is governed: request, authenticate, scope, policy, commit once, read back; any failed check returns a structured denial](../assets/protected-request.png)
 
 A failed check at any step returns a **structured denial**, never model prose and never partial data. The server fails closed.
 
