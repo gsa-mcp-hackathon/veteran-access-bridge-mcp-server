@@ -1,47 +1,18 @@
 # 04 · Final evaluation evidence
 
-> [Evaluation Command Center](../../docs/evaluation/index.md) · [29-tool inline scorecard](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/evaluation/#panel-tools) · [Evidence Library](../../docs/evaluation/reviewer-index.md) · [Final evaluation report (Word)](../deliverables/Veteran-Access-Bridge-Evaluation-Report.docx)
+**Evaluation:** Every result was checked by deterministic tests or a database readback, never by trusting the SI. All recorded checks passed locally, in CI and on the deployed server, including 126/126 contract and 86/86 hostile-argument checks on all 29 tools. Four deployed security items remain PARTIAL.
 
----
+[Evaluation Command Center](../../docs/evaluation/index.md) · [29-tool inline scorecard](https://gsa-mcp-hackathon.github.io/veteran-access-bridge-mcp-server/evaluation/#panel-tools) · [Evidence Library](../../docs/evaluation/reviewer-index.md) · [Final evaluation report (Word)](../deliverables/Veteran-Access-Bridge-Evaluation-Report.docx)
 
 ## Results at a glance
 
-| Question | Headline | Date |
-|---|---|---|
-| Does the server give correct answers? | **16/16** gold answers · **135/135** rule checks · **1,630** automated tests passed | Nov 19 |
-| Does every tool behave correctly? | **126/126** contract checks · **86/86** hostile-argument checks, all 29 tools | Nov 21 |
-| Does the deployed server enforce scope? | **21/21** direct MCP checks · **29/29** tools in the catalog · **18/18** protected reads denied without a verified caller | Nov 23 |
-| Does the agent use tools well? | **7/7** IBM Evaluate baseline · **0.95** DeepEval (pass mark 0.80) | Oct 21–Nov 16 |
-| Were the fixes verified? | **27/27** security remediation checks · **48/48** catalog verifier checks | Nov 22 |
+![Results at a glance: correct answers, tool behavior, deployed-server checks and agent tool use, each with its results and date](../assets/results-at-a-glance.png)
 
 ## Methodology
 
-The evaluation asks three questions. Each has its own test data, environment and pass rule.
+![Evaluation methodology: three questions, each with its own test data, environment and pass rule, and three rules applied to every result](../assets/evaluation-method.png)
 
-| | 1 · Correct answers? | 2 · Uses tools well? | 3 · Can it be tricked? |
-|---|---|---|---|
-| **Test data** | Synthetic Primary Care cases with known right answers | Recorded Avery conversations with expected tool calls | Scripted voice attacks; hostile inputs on every tool |
-| **Where it ran** | Local server and GitHub CI | IBM watsonx Orchestrate and DeepEval | Live voice calls, local server and the hosted server |
-| **Pass rule** | Exact match on expected fields and rules | Right tool, right inputs, graded by an SI judge | No prohibited action; database unchanged |
-
-```mermaid
-flowchart LR
-    T["Test case<br/>synthetic data"] --> R["Run against the server<br/>local · CI · hosted · voice"]
-    R --> DC{"Deterministic check<br/>fields, denial, DB snapshot"}
-    R --> J["SI judge<br/>conversation quality"]
-    DC -- fail --> F["FAIL<br/>judge cannot override"]
-    DC -- pass --> P["PASS"]
-    J --> S["Quality score"]
-    P --> REP["Reported by date<br/>never pooled"]
-    F --> REP
-    S --> REP
-```
-
-**Three rules applied to every result:**
-
-1. **Never take the SI's word.** A booking counts only if the database record exists.
-2. **An SI judge can never override a failed safety check.** Deterministic checks decide pass or fail on safety, consent and booking; judges grade conversation quality only.
-3. **Results are reported by date, never pooled.** Historical and current configurations stay separate.
+![How every result is decided: a deterministic check sends each result to pass or fail, an SI judge gives only a quality score, and every result is reported by date and never pooled](../assets/result-decision.png)
 
 ## Using SI to grade the SI
 
@@ -56,7 +27,7 @@ Avery runs on Anthropic Claude Sonnet 4.6. Both judges use different models, so 
 
 **How we kept the judges honest:** judges grade the recorded trace, not a summary; a judge score cannot override a failed safety, consent or booking check; IBM text-match misses were checked by hand against the trace.
 
-## Correct results, independently verified
+## Detailed results and sources
 
 | Evidence | Result | Date and scope |
 |---|---|---|

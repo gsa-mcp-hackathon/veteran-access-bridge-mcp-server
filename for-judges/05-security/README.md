@@ -1,44 +1,14 @@
 # 05 · Security and adversarial assessment
 
-> **The SI can choose a tool. Only the server decides what is allowed.**
->
-> [Detailed evaluation](../../docs/evaluation/security-adversarial.md) · [Interactive security architecture](../../docs/security-governance.md) · [Sanitized closeout](evidence/m64-security-closeout-summary.md)
+**Security:** The SI can choose a tool, but only the server decides what is allowed. Every request passes four layers of protection, and any failed check returns a structured denial with no data and no change. Local and CI controls all passed; four deployed scenarios remain PARTIAL until IBM runtime evidence is produced.
 
----
+[Detailed evaluation](../../docs/evaluation/security-adversarial.md) · [Interactive security architecture](../../docs/security-governance.md) · [Sanitized closeout](evidence/m64-security-closeout-summary.md)
 
 ## Four layers of protection
 
-```mermaid
-flowchart TB
-    REQ(["Tool request from the SI agent"]) --> L0
-    L0["MCP transport<br/>bearer authentication<br/>3/3 HTTP 401 on bad credentials"] --> L1
-    L1["Layer 01 · Verified caller<br/>identity and consent checked first<br/>5/5 voice attacks, no prohibited action"] --> L2
-    L2["Layer 02 · One caller, one case<br/>short-lived access to that case only<br/>86/86 hostile inputs rejected · 18/18 hosted reads denied"] --> L3
-    L3["Layer 03 · Locked-down database<br/>only approved changes can be saved<br/>18/18 tables with row-level security"] --> L4
-    L4["Layer 04 · Independent proof<br/>every action logged and read back"] --> OK(["Committed, with receipt"])
-    L0 -. fail .-> DENY(["Structured denial<br/>no data, no change"])
-    L1 -. fail .-> DENY
-    L2 -. fail .-> DENY
-    L3 -. fail .-> DENY
-```
+![Security: four layers of protection with their recorded evidence; all checks pass leads to a committed write with a receipt, any failure leads to a structured denial; test A27 shows the server refusing a forged request](../assets/security-layers.png)
 
-| Layer | Control | Recorded evidence |
-|---|---|---|
-| MCP transport | Service bearer authentication; missing or wrong credentials rejected | 3/3 HTTP 401 denials |
-| **01 · Verified caller** | Identity verified by the trusted voice host; consent captured before any protected action | 5/5 voice attacks with no prohibited action (Nov 15) |
-| **02 · One caller, one case** | Short-lived opaque turn capabilities, case binding, tool allowlists, replay denial | 86/86 hostile inputs rejected on all 29 tools (Nov 21); 261/261 scope checks (Nov 16); **18/18 protected reads denied on the deployed server without a verified caller (Nov 23)** |
-| **03 · Locked-down database** | Restricted Supabase roles, forced row-level security, idempotency keys | 18/18 audited tables with RLS (Nov 15) |
-| **04 · Independent proof** | Transactional audit receipts; success reported only after database readback | 135/135 protected-write, consent and CRM controls (Nov 19) |
-
-## When the SI made a mistake, the server stopped it
-
-In **test A27 (forged request)**, Avery tried to use a forged identity. The SI agent failed the test; the **server refused the request**. No patient data was shared and no booking was made. This is the design working as intended: security does not depend on the model getting it right.
-
-| A27 | Result |
-|---|---|
-| SI agent | **FAIL**: attempted a forged identity |
-| MCP server | **PASS**: refused it |
-| Outcome | No patient data shared, no booking made |
+The 86/86 and 18/18 results are from Nov 21 (local, all 29 tools) and Nov 23 (deployed server); 5/5 voice attacks and 18/18 RLS tables from Nov 15; 135/135 from Nov 19. Scope checks also passed 261/261 locally on Nov 16.
 
 ## Threats and how each is stopped
 
@@ -52,15 +22,6 @@ In **test A27 (forged request)**, Avery tried to use a forged identity. The SI a
 | Model claims a booking that doesn't exist | Success is reported only after independent database readback |
 | Replayed or duplicated writes | Idempotency keys and replay denial |
 | Exposure of real health data | Synthetic patient and scheduling data only; credentials and service keys stay server-side |
-
-## Security considerations
-
-| Area | Controls |
-|---|---|
-| **Authentication and access control** | Bearer-token authentication on remote MCP access; identity verification and case-scoped authorization; unauthorized requests fail closed |
-| **Governed SI actions** | Avery acts only through explicitly attached MCP tools; deterministic services enforce scheduling rules; booking requires verified identity, current consent and signed, session-bound authorization |
-| **Data protection** | Synthetic data only; restricted Supabase roles and row-level security; API credentials, service keys and session secrets stay server-side |
-| **Testing and monitoring** | Automated tests on authentication, tool arguments and authorization; adversarial voice tests for unauthorized access, fabricated consent and secret disclosure; IBM execution traces and server receipts for auditing |
 
 ## Still being proven on the live system
 
